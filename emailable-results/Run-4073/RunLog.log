@@ -1,0 +1,89 @@
+2021-04-09 11:16:53,230  INFO [main] RunManager:23 - Hey! Manager, Logging everything from here ....
+2021-04-09 11:16:53,234  INFO [main] RunManager:24 - Run ID is --> Run-4073
+2021-04-09 11:16:53,421  INFO [main] StepsBase:19 - Executing S C E N A R I O : TSB001_Validation of Manage clients tab for BRM user
+2021-04-09 11:17:02,404  INFO [main] Type:15 - Type the value [SubhaBrm] into element [onlineBanking.backoffice.login.username]
+2021-04-09 11:17:02,625  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:03,634  INFO [main] Type:15 - Type the value [p@55w0rd] into element [onlineBanking.backoffice.login.password]
+2021-04-09 11:17:03,789  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:13,856  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homePage.accounts]
+2021-04-09 11:17:13,858  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:17:14,283  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:17:14,477  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:17:16,490  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsPage.manageClients]
+2021-04-09 11:17:16,491  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:17:16,862  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:17:17,008  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:17:19,014  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:19,017  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:17:19,396  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:17:19,492  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:17:21,496  INFO [main] Type:15 - Type the value [Subha1] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:21,672  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:25,827  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:17:25,902  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:17:27,923  INFO [main] Type:15 - Type the value [Krish1] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:28,068  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:32,120  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:17:32,170  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:17:34,175  INFO [main] Type:15 - Type the value [9177164171] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:34,265  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:38,338  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:17:38,393  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:17:40,396  INFO [main] Type:15 - Type the value [mamsar_das@yahoo.com] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:40,646  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:44,768  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:17:44,825  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:17:46,828  INFO [main] Type:15 - Type the value [101190027727] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:46,941  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:50,986  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:17:51,009  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:17:53,010  INFO [main] Type:15 - Type the value [123456789123] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:17:53,232  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:17:55,586  INFO [main] Verify:215 - Verification success, Element onlineBanking.backoffice.accountsSearchPage.activeUserID not exist in the page
+2021-04-09 11:17:57,589  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homePage.accounts]
+2021-04-09 11:17:57,590  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:17:57,971  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:17:58,029  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:17:59,029  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homepage.logout]
+2021-04-09 11:17:59,030  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:17:59,372  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:17:59,478  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:00,498  INFO [main] StepsBase:19 - Executing S C E N A R I O : TSBO02_Validation of Fund transfer logs for BRM user
+2021-04-09 11:18:09,493  INFO [main] Type:15 - Type the value [SubhaBrm] into element [onlineBanking.backoffice.login.username]
+2021-04-09 11:18:09,643  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:18:10,654  INFO [main] Type:15 - Type the value [p@55w0rd] into element [onlineBanking.backoffice.login.password]
+2021-04-09 11:18:10,810  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:18:21,586  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homePage.accounts]
+2021-04-09 11:18:21,587  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:22,015  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:22,132  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:24,134  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsPage.manageClients]
+2021-04-09 11:18:24,135  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:24,556  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:24,695  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:26,708  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:18:26,708  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:27,047  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:27,126  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:29,138  INFO [main] Type:15 - Type the value [cbautotest1] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-09 11:18:29,289  INFO [main] Type:19 - Type Successful!
+2021-04-09 11:18:33,427  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-09 11:18:33,476  INFO [main] Verify:135 - Element is Enabled!
+2021-04-09 11:18:35,492  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsSearchPage.activeUserID]
+2021-04-09 11:18:35,492  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:35,807  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:36,002  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:38,008  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accounts.accounts.clientUser.activeAccount]
+2021-04-09 11:18:38,009  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:38,456  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:41,407  INFO [main] Click:34 - Click Successful!
+2021-04-09 11:18:46,415  INFO [main] Verify:22 - Verify element [onlineBanking.backoffice.accounts.clientUser.fundTransferLog] is present
+2021-04-09 11:18:46,444  INFO [main] Verify:24 - Element is present!
+2021-04-09 11:18:46,444  INFO [main] JSClick:21 - Click element [onlineBanking.backoffice.accounts.clientUser.fundTransferLog]
+2021-04-09 11:18:46,444  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:46,803  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:46,858  INFO [main] JSClick:34 - Error while clicking the element onlineBanking.backoffice.accounts.clientUser.fundTransferLog
+2021-04-09 11:18:46,885 ERROR [main] StepsBase:27 - S C E N A R I O    F A I L E D !!!!!
+2021-04-09 11:18:46,886  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-09 11:18:47,265  INFO [main] Screenshot:28 - Captured!
+2021-04-09 11:18:48,184  INFO [main] Test:48 - Report is generated @ emailable-results\Run-4073/Automation-Dashboard.html

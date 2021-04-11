@@ -1,0 +1,71 @@
+2021-04-08 00:07:02,094  INFO [main] RunManager:23 - Hey! 9071, Logging everything from here ....
+2021-04-08 00:07:02,102  INFO [main] RunManager:24 - Run ID is --> Run-4068
+2021-04-08 00:07:02,332  INFO [main] StepsBase:19 - Executing S C E N A R I O : TSBO02_Validation of Fund transfer logs for BRM user
+2021-04-08 00:07:10,830  INFO [main] Type:15 - Type the value [SubhaBrm] into element [onlineBanking.backoffice.login.username]
+2021-04-08 00:07:11,061  INFO [main] Type:19 - Type Successful!
+2021-04-08 00:07:12,063  INFO [main] Type:15 - Type the value [p@55w0rd] into element [onlineBanking.backoffice.login.password]
+2021-04-08 00:07:12,310  INFO [main] Type:19 - Type Successful!
+2021-04-08 00:07:22,426  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homePage.accounts]
+2021-04-08 00:07:22,427  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:22,969  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:23,130  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:25,131  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsPage.manageClients]
+2021-04-08 00:07:25,131  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:25,548  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:25,727  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:27,735  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-08 00:07:27,737  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:28,097  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:28,187  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:30,196  INFO [main] Type:15 - Type the value [cbautotest1] into element [onlineBanking.backoffice.accountSearchPage.search]
+2021-04-08 00:07:30,357  INFO [main] Type:19 - Type Successful!
+2021-04-08 00:07:34,499  INFO [main] Verify:130 - Verify element [onlineBanking.backoffice.accountsSearchPage.activeUserID] is Enabled
+2021-04-08 00:07:34,560  INFO [main] Verify:135 - Element is Enabled!
+2021-04-08 00:07:36,564  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsSearchPage.activeUserID]
+2021-04-08 00:07:36,564  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:36,999  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:37,194  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:39,212  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accounts.accounts.clientUser.activeAccount]
+2021-04-08 00:07:39,212  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:39,657  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:39,937  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:44,941  INFO [main] Verify:22 - Verify element [onlineBanking.backoffice.accounts.clientUser.fundTransferLog] is present
+2021-04-08 00:07:44,980  INFO [main] Verify:24 - Element is present!
+2021-04-08 00:07:50,116  INFO [main] Verify:22 - Verify element [onlineBanking.backoffice.accounts.clientUser.EmailBtn] is present
+2021-04-08 00:07:50,142  INFO [main] Verify:24 - Element is present!
+2021-04-08 00:07:50,142  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accounts.clientUser.EmailBtn]
+2021-04-08 00:07:50,142  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:50,646  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:50,782  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:50,784  INFO [main] Click:30 - Click element [onlineBanking.backoffice.common.NoBtn]
+2021-04-08 00:07:50,784  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:51,362  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:51,548  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:53,550  INFO [main] Verify:22 - Verify element [onlineBanking.backoffice.accounts.clientUser.Email&SMSBtn] is present
+2021-04-08 00:07:53,595  INFO [main] Verify:24 - Element is present!
+2021-04-08 00:07:53,595  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accounts.clientUser.Email&SMSBtn]
+2021-04-08 00:07:53,596  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:54,091  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:54,256  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:54,256  INFO [main] Click:30 - Click element [onlineBanking.backoffice.common.NoBtn]
+2021-04-08 00:07:54,256  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:54,739  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:54,905  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:56,917  INFO [main] Verify:22 - Verify element [onlineBanking.backoffice.accounts.clientUser.SMSBtn] is present
+2021-04-08 00:07:56,948  INFO [main] Verify:24 - Element is present!
+2021-04-08 00:07:56,948  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accounts.clientUser.SMSBtn]
+2021-04-08 00:07:56,949  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:57,375  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:57,542  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:57,543  INFO [main] Click:30 - Click element [onlineBanking.backoffice.common.NoBtn]
+2021-04-08 00:07:57,543  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:58,047  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:07:58,172  INFO [main] Click:34 - Click Successful!
+2021-04-08 00:07:59,190  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homepage.logout]
+2021-04-08 00:07:59,190  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:07:59,615  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:08:00,791  INFO [main] Click:39 - Error while clicking the element onlineBanking.backoffice.homepage.logout
+2021-04-08 00:08:00,817 ERROR [main] StepsBase:27 - S C E N A R I O    F A I L E D !!!!!
+2021-04-08 00:08:00,817  INFO [main] Screenshot:22 - Capture screenshot
+2021-04-08 00:08:01,347  INFO [main] Screenshot:28 - Captured!
+2021-04-08 00:08:02,511  INFO [main] Test:48 - Report is generated @ emailable-results\Run-4068/Automation-Dashboard.html
