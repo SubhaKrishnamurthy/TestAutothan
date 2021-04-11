@@ -32,6 +32,30 @@ Feature: Backoffice functionalities Validation
       Then I verify the list of users related to search
       When I click on the active user
       Then I click active account in customer information page
-      #Then I verify view transfer logs and click one of the logs
-      #Then I Verify and click the Email, SMS, Email and SMS buttons
-      #Then I successfully logout by clicking the Logout Button
+      Then I verify view transfer logs and click one of the logs
+      Then I Verify and click the Email, SMS, Email and SMS buttons
+      Then I successfully logout by clicking the Logout Button
+
+      @B03
+      Scenario:  TSBO03_Validation of Bills paid logs for BRM user
+        Given I am on login page of online banking backoffice application as SubhaBrm user
+        When I click on the manage clients tab
+        When I search for first name as "cbautotest1"
+        Then I verify the list of users related to search
+        When I click on the active user
+        Then I click active account in customer information page
+        Then I verify Bills paid logs and click one of the logs
+        Then I Verify and click the Email, SMS, Email and SMS buttons
+        Then I successfully logout by clicking the Logout Button
+
+        @B04
+        Scenario: TSBO04_Validation of Load Purchase requests for BRM user
+          Given I am on login page of online banking backoffice application as SubhaBrm user
+          When I click on the manage clients tab
+          When I search for first name as "cbautotest1"
+          Then I verify the list of users related to search
+          When I click on the active user
+          Then I click active account in customer information page
+          Then I verify load purchase logs and click one of the logs
+          Then I Verify and click the Email, SMS, Email and SMS buttons
+          Then I successfully logout by clicking the Logout Button

@@ -5,6 +5,7 @@ import cucumber.api.java.cs.A;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Th;
 import helper.PropertyReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -108,5 +109,15 @@ public class BackOffice {
         commonMethods.clickNoBtn();
         commonMethods.clickCloseBtn2();
         commonMethods.clickCloseBtn1();
+    }
+
+    @Then("^I verify Bills paid logs and click one of the logs$")
+    public void I_verify_Bills_paid_logs_and_click_one_of_the_logs() throws Throwable {
+        customerInformationPage.verifyAndClickBillsPaidLog();
+    }
+
+    @Then("^I verify load purchase logs and click one of the logs$")
+    public void I_verify_load_purchase_logs_and_click_one_of_the_logs() throws Throwable {
+        customerInformationPage.verifyAndClickLoadPurchaseRequest();
     }
 }

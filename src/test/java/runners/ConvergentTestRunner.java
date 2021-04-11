@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
-        tags={"@BackOffice"}
+        tags={"@B04"}
 )
 
 public class ConvergentTestRunner extends Test {

@@ -22,5 +22,6 @@ public class BackOffice_HomePage extends Keywords {
 	public void clickLogoutBtn() throws Throwable {
 		actions.Wait.forSeconds(1000);
 		click.elementBy(keyLogoutBtn);
+		actions.Wait.forSeconds(2000);
 	}
 }

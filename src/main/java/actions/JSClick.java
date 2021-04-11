@@ -20,7 +20,7 @@ public class JSClick extends Keywords {
         log.info("Click element [" + locatorKey + "]");
         try {
             Keywords.screenshot.attachScreenshot("Click");
-            element= driver.findElement(By.xpath(locatorKey));
+            element=get.elementBy(locatorKey);
             JavascriptExecutor executor = (JavascriptExecutor)driver;
             executor.executeScript("arguments[0].click();", element);
             log.info("Click Successful!");
