@@ -22,53 +22,53 @@ public class Get extends Keywords{
     public WebElement elementBy(String locatorKey) throws ApplicationException {
         try{
 
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
         }
         catch(TimeoutException ex) {
             log.error("Element ["+locatorKey+"] not found!");
             throw new ApplicationException("Element ["+locatorKey+"] not found!");
         }catch(WebDriverException ex){
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
         }
         return singleTestObj;
     }
 
     public WebElement elementBy(By locator) throws ApplicationException {
         try{
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
         }catch(TimeoutException ex) {
             log.error("Element ["+locator+"] not found!");
             throw new ApplicationException("Element ["+locator+"] not found!");
         }catch(WebDriverException ex){
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
         }
         return singleTestObj;
     }
     
     public WebElement elementBy(String locatorKey,int whichElement) throws ApplicationException {
         try{
-            wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
             singleTestObj=driver.findElements(PropertyReader.locatorOf(locatorKey)).get(whichElement-1);
         }
         catch(TimeoutException ex) {
             log.error("Element ["+locatorKey+"] not found!");
             throw new ApplicationException("Element ["+locatorKey+"] not found!");
         }catch(WebDriverException ex){
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
         }
         return singleTestObj;
     }  
 
      public String elementgetTextBy(String locatorKey) throws ApplicationException {
         try{
-            wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
             getText=driver.findElement(PropertyReader.locatorOf(locatorKey)).getText();
         }
         catch(TimeoutException ex) {
             log.error("Element ["+locatorKey+"] not found!");
             throw new ApplicationException("Element ["+locatorKey+"] not found!");
         }catch(WebDriverException ex){
-            singleTestObj=wait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+            singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
         }
         return getText;
     }

@@ -17,22 +17,23 @@ public class Keywords {
 
     public static WebDriver driver;
     public static WebElement element;
-    public static WebDriverWait wait;
+    public static Wait wait;
+    public static WebDriverWait webDriverWait;
    // public static XPathManager xpathOf=new XPathManager();
     public static Get get=new Get();
     public static Click click=new Click();
     public static JSClick jsClick = new JSClick();
     public static Verify verify=new Verify();
-    public static Wait WAIT=new Wait();
     public static Type type=new Type();
     public static Screenshot screenshot=new Screenshot();
+    public static Select select = new Select();
 
 
     public static void launchApplication() throws EnvironmentException {
         DriverManager webDriverManager = new DriverManager();
             try{
                 driver=webDriverManager.getDriver();
-                wait=webDriverManager.getWait();
+                webDriverWait=webDriverManager.getWait();
                 driver.get(PropertyReader.valueOf("Driver.Applicationurl").trim());
                 driver.manage().window().maximize();
                 driver.manage().deleteAllCookies();

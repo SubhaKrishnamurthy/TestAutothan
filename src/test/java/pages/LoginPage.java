@@ -35,14 +35,14 @@ public class LoginPage extends Keywords {
 	}
 
 	public void enterBOUserName(String username) throws ApplicationException, InterruptedException {
-		actions.Wait.forSeconds(2000);
+		actions.Wait.forSeconds(4000);
 		//Wait.forSeconds(2000);
 		//Thread.sleep(2000);
 		type.data(keyBOUserName,username);
 	}
 
 	public void enterBOPassword(String password) throws ApplicationException, InterruptedException {
-		actions.Wait.forSeconds(1000);
+		actions.Wait.forSeconds(2000);
 		//Wait.forSeconds(2000);
 		//Thread.sleep(2000);
 		type.data(keyBOPassword,password);
