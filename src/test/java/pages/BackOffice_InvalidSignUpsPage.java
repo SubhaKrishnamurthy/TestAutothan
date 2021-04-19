@@ -1,19 +1,33 @@
 package pages;
 
 import base.Keywords;
+import com.github.javafaker.App;
+import exceptions.ApplicationException;
 
-public class BackOffice_AccountsPage extends Keywords {
+public class BackOffice_InvalidSignUpsPage extends Keywords {
 
-	private String keyManageClients="onlineBanking.backoffice.accountsPage.manageClients";
-	private String keyInvalidClients="onlineBanking.backoffice.accountsPage.manageInvalidSignups";
+	private String keySearchResults="onlineBanking.backoffice.accounts.InvalidSignUps.SearchResultsTable";
+	private String keySearchText="onlineBanking.backoffice.accounts.InvalidSignUps.AddFAQType.SearchTxt";
+	private String keySearchBtn="onlineBanking.backoffice.accounts.InvalidSignUps.SearchBtn";
+	private String keyFAQType="onlineBanking.backoffice.accounts.InvalidSignUps.AddFAQType";
+	private String keyCIFType="onlineBanking.backoffice.accounts.InvalidSignUps.CIFType";
 
-	public void clickManageClients() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyManageClients);
+	public void verifySearchResults() throws ApplicationException {
+		wait.forSeconds(3000);
+		verify.elementIsPresent(keySearchResults);
 	}
 
-	public void clickInvalidClientsTab() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyInvalidClients);
+	public void selectFAQType(String data) throws ApplicationException {
+		select.backOffice_selectValueInAnyList(keyFAQType,data);
+	}
+
+	public void enterinSearchText(String text) throws Throwable {
+		type.data(keySearchText,text);
+		click.elementBy(keySearchBtn);
+	}
+
+	public void selectCIFType(String data)throws Throwable {
+		select.backOffice_selectValueInAnyList(keyCIFType,data);
+		click.elementBy(keySearchBtn);
 	}
 }

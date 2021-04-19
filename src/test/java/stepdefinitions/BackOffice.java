@@ -2,6 +2,7 @@ package stepdefinitions;
 
 
 import cucumber.api.java.cs.A;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,6 +22,8 @@ public class BackOffice {
     private BackOffice_AccountsSearchPage accountsSearchPage = new BackOffice_AccountsSearchPage();
     private BackOffice_CustomerInformationPage customerInformationPage = new BackOffice_CustomerInformationPage();
     private CommonMethods commonMethods =  new CommonMethods();
+    private BackOffice_InvalidSignUpsPage invalidSignUpsPage = new BackOffice_InvalidSignUpsPage();
+    private BackOffice_UsersPage usersPage=new BackOffice_UsersPage();
 
     WebDriver driver;
     WebElement element;
@@ -32,10 +35,22 @@ public class BackOffice {
         login.enterBOLogin();
     }
 
+    @Given("^I am on login page of online banking backoffice application as Subha user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_Subha_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername2").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
     @Then("^I successfully logout by clicking the Logout Button$")
     public void I_successfully_logout_by_clicking_the_Logout_Button() throws Throwable {
         homePage.clickAccounts();
         homePage.clickLogoutBtn();
+    }
+
+    @When("^When I click on the accounts tab$")
+    public void When_I_click_on_the_accounts_tab() throws Throwable{
+        homePage.clickAccounts();
     }
 
     @When("^I click on the manage clients tab$")
@@ -119,5 +134,84 @@ public class BackOffice {
     @Then("^I verify load purchase logs and click one of the logs$")
     public void I_verify_load_purchase_logs_and_click_one_of_the_logs() throws Throwable {
         customerInformationPage.verifyAndClickLoadPurchaseRequest();
+    }
+
+    @When("^I click on the manage Invalid SignUps tab$")
+    public void I_click_on_the_manage_Invalid_SignUps_tab() throws Throwable {
+        homePage.clickAccounts();
+        accountsPage.clickInvalidSignUpsTab();
+    }
+
+    @And("^I select Add FAQ Type as \"([^\"]*)\"$")
+    public void I_select_Add_FAQ_Type_as(String data) throws Throwable {
+        invalidSignUpsPage.selectFAQType(data);
+    }
+
+    @And("^I enter \"([^\"]*)\" in search text and click search button$")
+    public void I_enter_in_search_text_and_click_search_button(String arg1) throws Throwable {
+        invalidSignUpsPage.enterinSearchText(arg1);
+    }
+
+    @Then("^I verify Invalid signup search results$")
+    public void I_verify_Invalid_signup_search_results() throws Throwable {
+        invalidSignUpsPage.verifySearchResults();
+    }
+
+    @And("^I select CIF type as \"([^\"]*)\" and click search button$")
+    public void I_select_CIF_type_as_and_click_search_button(String data) throws Throwable {
+        invalidSignUpsPage.selectCIFType(data);
+    }
+
+    @And("^I verify customer Information Title$")
+    public void I_verify_customer_Information_Title() throws Throwable {
+        customerInformationPage.verifyTtile();
+    }
+
+    @And("^I click customer information Deactivate button$")
+    public void I_click_customer_information_Deactivate_button() throws Throwable {
+        customerInformationPage.clickDeactivateBtn();
+    }
+
+    @And("^I click manage profile changes for approval$")
+    public void I_click_manage_profile_changes_for_approval() throws Throwable {
+        customerInformationPage.clickProfileManagesForApprovalLink();
+    }
+
+    @And("^I click users cancel for \"([^\"]*)\"$")
+    public void I_click_users_cancel_for(String data) throws Throwable {
+        usersPage.clickUsersCancel();
+    }
+
+    @And("^I enter cancel reason as \"([^\"]*)\" and click confirm cancel button$")
+    public void I_enter_cancel_reason_as_and_click_confirm_cancel_button(String reason) throws Throwable {
+            usersPage.enterCancelReason(reason);
+            usersPage.clickConfirmCancelBtn();
+    }
+
+    @And("^I verify customer information Deactivate button$")
+    public void I_verify_customer_information_Deactivate_button() throws Throwable {
+        customerInformationPage.verifyDeactivateBtn();
+    }
+
+    @And("^I enter deactivate reason as \"([^\"]*)\" and click confirm deactivate button$")
+    public void I_enter_deactivate_reason_as_and_click_confirm_deactivate_button(String reason) throws Throwable {
+      usersPage.enterCancelReason(reason);
+        customerInformationPage.clickConfirmDeactivateBtn();
+    }
+
+    @When("^I click on the accounts tab$")
+    public void I_click_on_the_accounts_tab() throws Throwable {
+        homePage.clickAccounts();
+    }
+
+    @And("^I click users dispprove for \"([^\"]*)\"$")
+        public void I_click_users_dispprove_for(String data) throws Throwable {
+        usersPage.clickUsersDispprove(data);
+    }
+
+    @And("^I enter disapprove reason as \"([^\"]*)\" and click confirm disapprove button$")
+    public void I_enter_disapprove_reason_as_and_click_confirm_disapprove_button(String reason) throws Throwable {
+        usersPage.enterCancelReason(reason);
+        usersPage.clickConfirmDisapproveBtn();
     }
 }

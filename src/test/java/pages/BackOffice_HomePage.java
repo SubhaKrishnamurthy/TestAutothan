@@ -15,13 +15,13 @@ public class BackOffice_HomePage extends Keywords {
 	private String keyLogoutBtn = "onlineBanking.backoffice.homepage.logout";
 
 	public void clickAccounts() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyAccountsTab);
+		actions.Wait.forSeconds(3000);
+		jsClick.elementBy(keyAccountsTab);
 	}
 
 	public void clickLogoutBtn() throws Throwable {
 		actions.Wait.forSeconds(1000);
-		click.elementBy(keyLogoutBtn);
+		jsClick.elementBy(keyLogoutBtn);
 		actions.Wait.forSeconds(2000);
 	}
 }

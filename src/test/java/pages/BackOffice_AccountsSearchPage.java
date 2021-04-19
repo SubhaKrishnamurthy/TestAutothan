@@ -72,4 +72,6 @@ public class BackOffice_AccountsSearchPage extends Keywords {
 		actions.Wait.forSeconds(2000);
 		click.elementBy(keyActiveUserID);
 	}
+
+
 }

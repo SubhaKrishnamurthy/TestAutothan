@@ -20,7 +20,10 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	private String keySMSBtn="onlineBanking.backoffice.accounts.clientUser.SMSBtn";
 	private String keyBillsPaidLog="onlineBanking.backoffice.accounts.clientUser.billsPaidLog";
 	private String keyLoadPurchaseRequests="onlineBanking.backoffice.accounts.clientUser.loadPurchaseRequests";
-
+	private String keyCustomerInfoTitle="onlineBanking.backoffice.accounts.clientUser.CustomerInfoTitle";
+	private String keyDeactivateBtn="onlineBanking.backoffice.accounts.clientUser.DeactivateBtn";
+	private String keymanageProfileChangesforApprovalLink="onlineBanking.backoffice.accounts.clientUser.manageProfileChangesforApprovalLink";
+	private String keyConfirmDeactivateBtn="onlineBanking.backoffice.accounts.clientUser.ConfirmDeactivateBtn";
 
 	public void clickActiveAccount()throws Throwable {
 		Wait.forSeconds(2000);
@@ -64,6 +67,30 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 		Wait.forSeconds(2000);
 		verify.elementIsPresent(keySMSBtn);
 		click.elementBy(keySMSBtn);
+	}
+
+	public void verifyTtile() throws Throwable {
+		Wait.forSeconds(1000);
+		verify.elementIsPresent(keyCustomerInfoTitle);
+	}
+
+	public void clickDeactivateBtn() throws Throwable {
+		click.elementBy(keyDeactivateBtn);
+	}
+
+	public void clickProfileManagesForApprovalLink() throws Throwable {
+		click.elementBy(keymanageProfileChangesforApprovalLink);
+	}
+
+
+	public void verifyDeactivateBtn() throws Throwable {
+		Wait.forSeconds(4000);
+		verify.elementIsEnabled(keyDeactivateBtn);
+	}
+
+	public void clickConfirmDeactivateBtn() throws Throwable {
+		Wait.forSeconds(3000);
+		jsClick.elementBy(keyConfirmDeactivateBtn);
 	}
 
 }
