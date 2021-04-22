@@ -8,6 +8,6 @@
 Feature: Login Page Validation
 
 
-  @Login1
+  @Login12
   Scenario: Validation of Login functionality with valid and Invalid inputs
     Given I'm on login page of convergent banking mobile application
