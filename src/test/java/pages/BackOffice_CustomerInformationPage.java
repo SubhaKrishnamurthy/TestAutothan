@@ -13,7 +13,7 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	WebElement element;
 	private Verify verify = new Verify();
 
-	private String keyActiveAccount="onlineBanking.backoffice.accounts.accounts.clientUser.activeAccount";
+	private String keyActiveAccount="onlineBanking.backoffice.accounts.clientUser.activeAccount";
 	private String keyfundTransferLog="onlineBanking.backoffice.accounts.clientUser.fundTransferLog";
 	private String keyEmailBtn="onlineBanking.backoffice.accounts.clientUser.EmailBtn";
 	private String keyEmail_SMSBtn="onlineBanking.backoffice.accounts.clientUser.Email&SMSBtn";
@@ -24,6 +24,10 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	private String keyDeactivateBtn="onlineBanking.backoffice.accounts.clientUser.DeactivateBtn";
 	private String keymanageProfileChangesforApprovalLink="onlineBanking.backoffice.accounts.clientUser.manageProfileChangesforApprovalLink";
 	private String keyConfirmDeactivateBtn="onlineBanking.backoffice.accounts.clientUser.ConfirmDeactivateBtn";
+	private String keyEditProfileBtn="onlineBanking.backoffice.accounts.clientUser.EditProfileBtn";
+    private String keyEditProfileLastName="onlineBanking.backoffice.accounts.clientUser.EditProfileLastNameTxt";
+    private String keyCustoInfoApprovalReason="onlineBanking.backoffice.accounts.clientUser.CustomerInfoApprovalReason";
+	private String keyEditUserIDUpdateBtn="onlineBanking.backoffice.accounts.clientUser.EditUserIDUpdateBtn";
 
 	public void clickActiveAccount()throws Throwable {
 		Wait.forSeconds(2000);
@@ -61,8 +65,6 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 		click.elementBy(keyEmail_SMSBtn);
 	}
 
-
-
 	public void verifyAndClickSMS() throws Throwable {
 		Wait.forSeconds(2000);
 		verify.elementIsPresent(keySMSBtn);
@@ -91,6 +93,26 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	public void clickConfirmDeactivateBtn() throws Throwable {
 		Wait.forSeconds(3000);
 		jsClick.elementBy(keyConfirmDeactivateBtn);
+	}
+
+	public void clickEditProfileBtn() throws Throwable {
+		Wait.forSeconds(2000);
+		click.elementBy(keyEditProfileBtn);
+	}
+
+	public void enterLastName(String data) throws Throwable {
+		Wait.forSeconds(2000);
+		type.data(keyEditProfileLastName,data);
+	}
+
+	public void clickKeyEditUSerIDUpdateBtn() throws Throwable {
+		Wait.forSeconds(1000);
+		click.elementBy(keyEditUserIDUpdateBtn);
+	}
+
+	public void enterCustoInfoApprovalReason(String data) throws Throwable {
+		Wait.forSeconds(1000);
+		type.data(keyCustoInfoApprovalReason,data);
 	}
 
 }

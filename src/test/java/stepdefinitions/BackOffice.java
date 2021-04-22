@@ -214,4 +214,39 @@ public class BackOffice {
         usersPage.enterCancelReason(reason);
         usersPage.clickConfirmDisapproveBtn();
     }
+
+    @And("^I click on customer information Edit profile button$")
+    public void I_click_on_customer_information_Edit_profile_button() throws Throwable {
+        customerInformationPage.clickEditProfileBtn();
+    }
+
+    @And("^I edit customer last name as \"([^\"]*)\"$")
+    public void I_edit_customer_last_name_as(String data) throws Throwable {
+        customerInformationPage.enterLastName(data);
+    }
+
+    @And("^I click the edit user ID update button$")
+    public void I_click_the_edit_user_ID_update_button() throws Throwable {
+        customerInformationPage.clickKeyEditUSerIDUpdateBtn();
+    }
+
+    @And("^I enter edit reason as \"([^\"]*)\" and click on Save button$")
+    public void I_enter_edit_reason_as_and_click_on_Save_button(String data) throws Throwable {
+        customerInformationPage.enterCustoInfoApprovalReason(data);
+        commonMethods.clickSaveBtn();
+    }
+
+    @And("^I click users approve for \"([^\"]*)\"$")
+    public void I_click_users_approve_for(String data) throws Throwable {
+        usersPage.clickUsersApprove();
+    }
+
+    @And("^I enter approve reason as \"([^\"]*)\" and click confirm approve button$")
+    public void I_enter_approve_reason_as_and_click_confirm_approve_button(String data) throws Throwable {
+        //customerInformationPage.enterCustoInfoApprovalReason(data);
+       usersPage.enterCancelReason(data);
+       usersPage.clickUsersApprove();
+    }
+
+
 }

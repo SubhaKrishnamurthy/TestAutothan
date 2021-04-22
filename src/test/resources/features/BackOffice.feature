@@ -178,8 +178,6 @@ Feature: Backoffice functionalities Validation
       And I click manage profile changes for approval
       And I click users approve for "Subha2"
       And I enter approve reason as "Please Approve" and click confirm approve button
-
-
       Then I successfully logout by clicking the Logout Button
 
 
