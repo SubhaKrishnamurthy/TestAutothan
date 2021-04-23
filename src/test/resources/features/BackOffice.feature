@@ -164,6 +164,7 @@ Feature: Backoffice functionalities Validation
       And I click users approve for "Subha2"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
+            #Repeat steps
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
       When I search for first name as "Subha2"
@@ -180,5 +181,36 @@ Feature: Backoffice functionalities Validation
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
-
-
+    @BO08
+    Scenario:  TSBO08_Validation of Edit User ID for SSO user
+      Given I am on login page of online banking backoffice application as Subha user
+      When I click on the manage clients tab
+      When I search for first name as "Subha2"
+      When I click on the active user
+      And I verify customer Information Title
+      And I click on customer information Edit UserID button
+      And I edit userID as "automationtesting2nw"
+      And I click the edit user ID update button
+      And I enter edit reason as "testing" and click on Save button
+      Then I successfully logout by clicking the Logout Button
+      Given I am on login page of online banking backoffice application as SubhaBrm user
+      And I click manage User ID changes for approval
+      And I click users approve for "Subha2"
+      And I enter approve reason as "Please Approve" and click confirm approve button
+      Then I successfully logout by clicking the Logout Button
+      #Repeat steps
+      Given I am on login page of online banking backoffice application as Subha user
+      When I click on the manage clients tab
+      When I search for first name as "Subha2"
+      When I click on the active user
+      And I verify customer Information Title
+      And I click on customer information Edit UserID button
+      And I edit userID as "automationtesting2"
+      And I click the edit user ID update button
+      And I enter edit reason as "testing" and click on Save button
+      Then I successfully logout by clicking the Logout Button
+      Given I am on login page of online banking backoffice application as SubhaBrm user
+      And I click manage User ID changes for approval
+      And I click users approve for "Subha2"
+      And I enter approve reason as "Please Approve" and click confirm approve button
+      Then I successfully logout by clicking the Logout Button

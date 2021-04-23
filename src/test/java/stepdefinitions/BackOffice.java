@@ -245,8 +245,22 @@ public class BackOffice {
     public void I_enter_approve_reason_as_and_click_confirm_approve_button(String data) throws Throwable {
         //customerInformationPage.enterCustoInfoApprovalReason(data);
        usersPage.enterCancelReason(data);
-       usersPage.clickUsersApprove();
+       usersPage.clickUsersApprovalApprove();
     }
 
+    @And("^I click on customer information Edit UserID button$")
+    public void I_click_on_customer_information_Edit_UserID_button() throws Throwable {
+        customerInformationPage.clickEditUserIDBtn();
+    }
+
+    @And("^I edit userID as \"([^\"]*)\"$")
+    public void I_edit_userID_as(String data) throws Throwable {
+        customerInformationPage.enterEditUserIDtxt(data);
+    }
+
+    @And("^I click manage User ID changes for approval$")
+    public void I_click_manage_User_ID_changes_for_approval() throws Throwable {
+        accountsPage.clickManageUSerIDForApproval();
+    }
 
 }

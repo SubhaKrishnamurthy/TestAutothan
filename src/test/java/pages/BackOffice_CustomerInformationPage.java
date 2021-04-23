@@ -28,6 +28,8 @@ public class BackOffice_CustomerInformationPage extends Keywords {
     private String keyEditProfileLastName="onlineBanking.backoffice.accounts.clientUser.EditProfileLastNameTxt";
     private String keyCustoInfoApprovalReason="onlineBanking.backoffice.accounts.clientUser.CustomerInfoApprovalReason";
 	private String keyEditUserIDUpdateBtn="onlineBanking.backoffice.accounts.clientUser.EditUserIDUpdateBtn";
+	private String keyEditUserIDBtn="onlineBanking.backoffice.accounts.clientUser.EditUserIDBtn";
+	private String keyEditUserIDtxt="onlineBanking.backoffice.accounts.clientUser.EditUserIDTxt";
 
 	public void clickActiveAccount()throws Throwable {
 		Wait.forSeconds(2000);
@@ -113,6 +115,17 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	public void enterCustoInfoApprovalReason(String data) throws Throwable {
 		Wait.forSeconds(1000);
 		type.data(keyCustoInfoApprovalReason,data);
+	}
+
+	public void clickEditUserIDBtn() throws Throwable {
+		Wait.forSeconds(2000);
+		verify.elementIsPresent(keyEditUserIDBtn);
+		click.elementBy(keyEditUserIDBtn);
+	}
+
+	public void enterEditUserIDtxt(String data) throws Throwable {
+		Wait.forSeconds(1000);
+		type.data(keyEditUserIDtxt,data);
 	}
 
 }
