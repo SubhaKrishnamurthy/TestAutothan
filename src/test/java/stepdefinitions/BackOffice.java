@@ -241,6 +241,11 @@ public class BackOffice {
         usersPage.clickUsersApprove();
     }
 
+    @And("^I click users approve for User ID \"([^\"]*)\"$")
+    public void I_click_users_approve_for_User_ID(String data) throws Throwable {
+        usersPage.clickUsersApproveForID();
+    }
+
     @And("^I enter approve reason as \"([^\"]*)\" and click confirm approve button$")
     public void I_enter_approve_reason_as_and_click_confirm_approve_button(String data) throws Throwable {
         //customerInformationPage.enterCustoInfoApprovalReason(data);
@@ -262,5 +267,17 @@ public class BackOffice {
     public void I_click_manage_User_ID_changes_for_approval() throws Throwable {
         accountsPage.clickManageUSerIDForApproval();
     }
+
+    @And("^I click customer information activate button$")
+    public void I_click_customer_information_activate_button() throws Throwable {
+        customerInformationPage.clickActivateBtn();
+    }
+
+    @And("^I enter activate reason as \"([^\"]*)\" and click confirm activate button$")
+    public void I_enter_activate_reason_as_and_click_confirm_activate_button(String reason) throws Throwable {
+        usersPage.enterCancelReason(reason);
+        customerInformationPage.clickConfirmActivateBtn();
+    }
+
 
 }

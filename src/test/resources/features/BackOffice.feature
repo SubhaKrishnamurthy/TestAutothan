@@ -102,53 +102,8 @@ Feature: Backoffice functionalities Validation
         Then I verify the list of users related to search
         Then I successfully logout by clicking the Logout Button
 
-       @B011
-       Scenario: TSBO11_Validation of Confirm cancel for deactivation of same user for SSO user
-         Given I am on login page of online banking backoffice application as Subha user
-         When I click on the manage clients tab
-         When I search for first name as "Subha2"
-         Then I verify the list of users related to search
-         When I click on the active user
-         And I verify customer Information Title
-         And I click customer information Deactivate button
-         And I enter deactivate reason as "Testing" and click confirm deactivate button
-         When I click on the accounts tab
-         And I click manage profile changes for approval
-         And I click users cancel for "Subha2"
-         And I enter cancel reason as "PleaseApprove" and click confirm cancel button
-         When I click on the manage clients tab
-         When I search for first name as "Subha2"
-         Then I verify the list of users related to search
-         When I click on the active user
-         And I verify customer Information Title
-         And I verify customer information Deactivate button
-         Then I successfully logout by clicking the Logout Button
-
-        @BO10
-        Scenario: TSBO10_Validation of Confirm disapproval for deactivation of user for SSO user
-          Given I am on login page of online banking backoffice application as Subha user
-          When I click on the manage clients tab
-          When I search for first name as "Subha2"
-          Then I verify the list of users related to search
-          When I click on the active user
-          And I verify customer Information Title
-          And I click customer information Deactivate button
-          And I enter deactivate reason as "Testing" and click confirm deactivate button
-          Then I successfully logout by clicking the Logout Button
-          Given I am on login page of online banking backoffice application as SubhaBrm user
-          And I click manage profile changes for approval
-          And I click users dispprove for "Subha2"
-          And I enter disapprove reason as "Please disApprove" and click confirm disapprove button
-          Then I successfully logout by clicking the Logout Button
-          Given I am on login page of online banking backoffice application as Subha user
-          When I click on the manage clients tab
-          When I search for first name as "Subha2"
-          When I click on the active user
-          And I verify customer Information Title
-          And I verify customer information Deactivate button
-
-          @BO07
-     Scenario: TSBO07_Validation of Edit profile for SSO user
+    @B07
+      Scenario: TSBO07_Validation of Edit profile for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
       When I search for first name as "Subha2"
@@ -164,7 +119,7 @@ Feature: Backoffice functionalities Validation
       And I click users approve for "Subha2"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
-            #Repeat steps
+            #Repeat steps to edit profile back to original profile
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
       When I search for first name as "Subha2"
@@ -181,7 +136,7 @@ Feature: Backoffice functionalities Validation
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
-    @BO08
+    @B08
     Scenario:  TSBO08_Validation of Edit User ID for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
@@ -195,10 +150,10 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage User ID changes for approval
-      And I click users approve for "Subha2"
+      And I click users approve for User ID "Subha2"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
-      #Repeat steps
+      #Repeat steps to edit back to original ID
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
       When I search for first name as "Subha2"
@@ -211,6 +166,84 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage User ID changes for approval
-      And I click users approve for "Subha2"
+      And I click users approve for User ID "Subha2"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
+
+      @B09
+        Scenario:  TSBO09_Validation of Confirm approval for deactivation of user for SSO user
+        Given I am on login page of online banking backoffice application as Subha user
+        When I click on the manage clients tab
+        When I search for first name as "Subha2"
+        Then I verify the list of users related to search
+        When I click on the active user
+        And I verify customer Information Title
+        And I click customer information Deactivate button
+        And I enter deactivate reason as "Testing" and click confirm deactivate button
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as SubhaBrm user
+        And I click manage profile changes for approval
+        And I click users approve for "Subha2"
+        And I enter approve reason as "Please Approve" and click confirm approve button
+        Then I successfully logout by clicking the Logout Button
+        #Repeat to activate
+        Given I am on login page of online banking backoffice application as Subha user
+        When I click on the manage clients tab
+        When I search for first name as "Subha2"
+        Then I verify the list of users related to search
+        When I click on the active user
+        And I verify customer Information Title
+        And I click customer information activate button
+        And I enter activate reason as "Testing" and click confirm activate button
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as SubhaBrm user
+        And I click manage profile changes for approval
+        And I click users approve for "Subha2"
+        And I enter approve reason as "Please Approve" and click confirm approve button
+        Then I successfully logout by clicking the Logout Button
+
+  @B10
+  Scenario: TSBO10_Validation of Confirm disapproval for deactivation of user for SSO user
+    Given I am on login page of online banking backoffice application as Subha user
+    When I click on the manage clients tab
+    When I search for first name as "Subha2"
+    Then I verify the list of users related to search
+    When I click on the active user
+    And I verify customer Information Title
+    And I click customer information Deactivate button
+    And I enter deactivate reason as "Testing" and click confirm deactivate button
+    Then I successfully logout by clicking the Logout Button
+    Given I am on login page of online banking backoffice application as SubhaBrm user
+    And I click manage profile changes for approval
+    And I click users dispprove for "Subha2"
+    And I enter disapprove reason as "Please disApprove" and click confirm disapprove button
+    Then I successfully logout by clicking the Logout Button
+    #Repeat for confirmation
+    Given I am on login page of online banking backoffice application as Subha user
+    When I click on the manage clients tab
+    When I search for first name as "Subha2"
+    When I click on the active user
+    And I verify customer Information Title
+    And I verify customer information Deactivate button
+
+  @B11
+  Scenario: TSBO11_Validation of Confirm cancel for deactivation of same user for SSO user
+    Given I am on login page of online banking backoffice application as Subha user
+    When I click on the manage clients tab
+    When I search for first name as "Subha2"
+    Then I verify the list of users related to search
+    When I click on the active user
+    And I verify customer Information Title
+    And I click customer information Deactivate button
+    And I enter deactivate reason as "Testing" and click confirm deactivate button
+    When I click on the accounts tab
+    And I click manage profile changes for approval
+    And I click users cancel for "Subha2"
+    And I enter cancel reason as "PleaseApprove" and click confirm cancel button
+    When I click on the manage clients tab
+    When I search for first name as "Subha2"
+    Then I verify the list of users related to search
+    When I click on the active user
+    And I verify customer Information Title
+    And I verify customer information Deactivate button
+    Then I successfully logout by clicking the Logout Button

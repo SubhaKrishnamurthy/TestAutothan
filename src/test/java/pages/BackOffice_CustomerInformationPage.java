@@ -30,6 +30,8 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	private String keyEditUserIDUpdateBtn="onlineBanking.backoffice.accounts.clientUser.EditUserIDUpdateBtn";
 	private String keyEditUserIDBtn="onlineBanking.backoffice.accounts.clientUser.EditUserIDBtn";
 	private String keyEditUserIDtxt="onlineBanking.backoffice.accounts.clientUser.EditUserIDTxt";
+	private String keyActivateBtn="onlineBanking.backoffice.accounts.clientUser.ActivateBtn";
+	private String keyConfirmActivateBtn="onlineBanking.backoffice.accounts.clientUser.ConfirmActivateBtn";
 
 	public void clickActiveAccount()throws Throwable {
 		Wait.forSeconds(2000);
@@ -82,6 +84,10 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 		click.elementBy(keyDeactivateBtn);
 	}
 
+	public void clickActivateBtn() throws Throwable {
+		click.elementBy(keyActivateBtn);
+	}
+
 	public void clickProfileManagesForApprovalLink() throws Throwable {
 		click.elementBy(keymanageProfileChangesforApprovalLink);
 	}
@@ -95,6 +101,11 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	public void clickConfirmDeactivateBtn() throws Throwable {
 		Wait.forSeconds(3000);
 		jsClick.elementBy(keyConfirmDeactivateBtn);
+	}
+
+	public void clickConfirmActivateBtn() throws Throwable {
+		Wait.forSeconds(3000);
+		jsClick.elementBy(keyConfirmActivateBtn);
 	}
 
 	public void clickEditProfileBtn() throws Throwable {
