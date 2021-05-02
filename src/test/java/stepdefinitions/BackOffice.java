@@ -24,6 +24,7 @@ public class BackOffice {
     private CommonMethods commonMethods =  new CommonMethods();
     private BackOffice_InvalidSignUpsPage invalidSignUpsPage = new BackOffice_InvalidSignUpsPage();
     private BackOffice_UsersPage usersPage=new BackOffice_UsersPage();
+    private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
 
     WebDriver driver;
     WebElement element;
@@ -38,6 +39,13 @@ public class BackOffice {
     @Given("^I am on login page of online banking backoffice application as Subha user$")
     public void I_am_on_login_page_of_online_banking_backoffice_application_as_Subha_user() throws Throwable {
         login.enterBOUserName(PropertyReader.testDataOf("BOUsername2").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
+    @Given("^I am on login page of online banking backoffice application as UBPProductAuto1 user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPProductAuto1_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername3").trim());
         login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
         login.enterBOLogin();
     }
@@ -279,5 +287,29 @@ public class BackOffice {
         customerInformationPage.clickConfirmActivateBtn();
     }
 
+    @When("^I click on the Scheduled Activities Link$")
+    public void I_click_on_the_Scheduled_Activities_Link() throws Throwable {
+        homePage.clickScheduledActivities();
+    }
+
+    @And("^I click on the Failed scheduled Fund Transfer search Link$")
+    public void I_click_on_the_Failed_scheduled_Fund_Transfer_search_Link() throws Throwable {
+        scheduledActivitiesPage.clickFailedScheduledFundTransfer();
+    }
+
+    @And("^I select transaction type as \"([^\"]*)\" and click search button$")
+    public void I_select_transaction_type_as_and_click_search_button(String data) throws Throwable {
+        scheduledActivitiesPage.clickFailedScheduledBillsPaymentSearch(data);
+    }
+
+    @Then("^I verify DailyID,AccountNumbers,Transaction,Message,Status,Action$")
+    public void I_verify_DailyID_AccountNumbers_Transaction_Message_Status_Action() throws Throwable {
+        scheduledActivitiesPage.verifyFailedScheduledElements();
+    }
+
+    @Then("^I verify Source account as no records found \"([^\"]*)\"$")
+    public void I_verify_Source_account_as_no_records_found(String data) throws Throwable{
+        scheduledActivitiesPage.verifyNoRecordsFound(data);
+    }
 
 }

@@ -247,3 +247,21 @@ Feature: Backoffice functionalities Validation
     And I verify customer Information Title
     And I verify customer information Deactivate button
     Then I successfully logout by clicking the Logout Button
+    #TS260
+    @B12
+    Scenario: TS260_Validation Schedule Fund Transfer Valid Transaction dates
+      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+      When I click on the Scheduled Activities Link
+      And I click on the Failed scheduled Fund Transfer search Link
+      And I select transaction type as "For investigation" and click search button
+      Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+      Then I successfully logout by clicking the Logout Button
+      #TS261
+      @B13
+  Scenario: Validation Schedule Fund Transfer InValid Transaction dates
+      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+      When I click on the Scheduled Activities Link
+      And I click on the Failed scheduled Fund Transfer search Link
+      And I select transaction type as "New" and click search button
+      Then I verify Source account as no records found "No Data"
+      Then I successfully logout by clicking the Logout Button

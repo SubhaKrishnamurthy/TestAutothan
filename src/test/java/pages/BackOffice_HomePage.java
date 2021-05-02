@@ -13,6 +13,8 @@ public class BackOffice_HomePage extends Keywords {
 
 	private String keyAccountsTab = "onlineBanking.backoffice.homePage.accounts";
 	private String keyLogoutBtn = "onlineBanking.backoffice.homepage.logout";
+	private String keyScheduledActivities = "onlineBanking.backoffice.homePage.ScheduledActivities";
+
 
 	public void clickAccounts() throws Throwable {
 		actions.Wait.forSeconds(3000);
@@ -24,4 +26,10 @@ public class BackOffice_HomePage extends Keywords {
 		jsClick.elementBy(keyLogoutBtn);
 		actions.Wait.forSeconds(2000);
 	}
+
+	public void clickScheduledActivities() throws Throwable {
+		actions.Wait.forSeconds(3000);
+		jsClick.elementBy(keyScheduledActivities);
+	}
+
 }
