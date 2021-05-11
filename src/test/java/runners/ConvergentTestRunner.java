@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
-        tags={"@B01"}
+        tags={"@Login2"}
 )
 
 public class ConvergentTestRunner extends Test {
@@ -23,7 +23,7 @@ public class ConvergentTestRunner extends Test {
     public static void initialize() throws EnvironmentException{
         String Drivertype=PropertyReader.valueOf("Driver.Drivertype").trim();
         if(Drivertype==null){
-            Drivertype= Browsername.EDGE;
+            Drivertype= Browsername.CHROME;
         }
         setup();
     }

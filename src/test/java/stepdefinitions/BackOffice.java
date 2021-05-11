@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -25,7 +26,7 @@ public class BackOffice {
     private BackOffice_InvalidSignUpsPage invalidSignUpsPage = new BackOffice_InvalidSignUpsPage();
     private BackOffice_UsersPage usersPage=new BackOffice_UsersPage();
     private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
-
+    private BackOffice_RegisterPage RegisterPage = new BackOffice_RegisterPage();
     WebDriver driver;
     WebElement element;
 
@@ -312,4 +313,20 @@ public class BackOffice {
         scheduledActivitiesPage.verifyNoRecordsFound(data);
     }
 
+    @Given("^I'm click the register button in the backoffice application$")
+    public void iMClickTheRegisterButtonInTheBackofficeApplication() throws Throwable {
+        homePage.clickRegister();
+    }
+
+    @When("^I enter the firstname lastname and user creation \"([^\"]*)\" details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationDetails(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickUserBRM();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+    }
 }

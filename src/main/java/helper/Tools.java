@@ -245,6 +245,37 @@ public class Tools {
         return out;
     }
 
+    public static String RANDOMMOBILENUMBER(int Stringlength) {
+        String out=null;
+
+
+            String CHARS = "123456789";
+            StringBuilder sb = new StringBuilder();
+            Random rnd = new Random();
+            while (sb.length() < Stringlength) { // length of the random string.
+                int index = (int) (rnd.nextFloat() * CHARS.length());
+                sb.append(CHARS.charAt(index));
+            }
+            out = "9"+sb.toString();
+
+            return out;
+    }
+
+    public static String RANDOMMAILID(int Stringlength) {
+        String out=null;
+        String CHARS = "abcdefghijklmnopqrstuvwxyz123456789";
+        StringBuilder sb = new StringBuilder();
+        Random rnd = new Random();
+        while (sb.length() < Stringlength) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * CHARS.length());
+            sb.append(CHARS.charAt(index));
+        }
+        out = sb.toString()+"gmail.com";
+
+        return out;
+    }
+
+
 
 
 
