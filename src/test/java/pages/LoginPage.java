@@ -39,6 +39,7 @@ public class LoginPage extends Keywords {
 		//Wait.forSeconds(2000);
 		//Thread.sleep(2000);
 		type.data(keyBOUserName,username);
+		actions.Wait.forSeconds(14000);
 	}
 
 	public void enterBOPassword(String password) throws ApplicationException, InterruptedException {

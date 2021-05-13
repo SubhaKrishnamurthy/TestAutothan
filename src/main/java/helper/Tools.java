@@ -270,7 +270,7 @@ public class Tools {
             int index = (int) (rnd.nextFloat() * CHARS.length());
             sb.append(CHARS.charAt(index));
         }
-        out = sb.toString()+"gmail.com";
+        out = sb.toString()+"@gmail.com";
 
         return out;
     }

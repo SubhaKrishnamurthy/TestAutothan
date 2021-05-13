@@ -1,12 +1,15 @@
 package stepdefinitions;
 
 
+import base.Keywords;
 import cucumber.api.PendingException;
 import cucumber.api.java.cs.A;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import exceptions.ApplicationException;
+import exceptions.EnvironmentException;
 import gherkin.lexer.Th;
 import helper.PropertyReader;
 import org.openqa.selenium.By;
@@ -328,5 +331,50 @@ public class BackOffice {
         RegisterPage.enterLastName();
         RegisterPage.entermobilenumber();
         RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+        //login.enterBOUserName(RegisterPage.Username);
+    }
+
+    @Then("^I launch the application$")
+    public void iLaunchTheApplication() throws EnvironmentException {
+        Keywords.launchApplication();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user$")
+    public void iLoginWithUserAndApproveTheUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user$")
+    public void iLoginWithUserAndSecondApproveTheUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @And("^I Login with new BRM user and logout$")
+    public void iLoginWithNewBRMUserAndLogout() throws Throwable {
+
+        login.enterBOUserName(RegisterPage.Username);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickLogout();
+
     }
 }
