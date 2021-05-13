@@ -7,6 +7,7 @@ import exceptions.ApplicationException;
 public class BackOffice_ScheduledActivitiesPage extends Keywords {
 
 	private String keyFailedScheduledFundTransfer = "onlineBanking.backoffice.ScheduledActivities.FailedScheduledFundTransfer";
+	private String keyFailedScheduledBillsPayment="onlineBanking.backoffice.ScheduledActivities.FailedScheduledBillsPayment";
 	private String keyFailedScheduledBillsPaymentSearch2 = "onlineBanking.backoffice.ScheduledActivities.FailedScheduledBillsPaymentSearch2";
 	private String keyFailedScheduledPaymentSearchBtn = "onlineBanking.backoffice.ScheduledActivities.FailedScheduledPaymentSearchBtn";
 	private String keyFirstElementDailyID = "onlineBanking.backoffice.ScheduledActivities.SearchResults.FirstElementDailyID";
@@ -16,14 +17,27 @@ public class BackOffice_ScheduledActivitiesPage extends Keywords {
 	private String keyFifthElementStatus = "onlineBanking.backoffice.ScheduledActivities.SearchResults.FifthElementStatus";
 	private String keySixthElementAction = "onlineBanking.backoffice.ScheduledActivities.SearchResults.SixthElementAction";
     private String keyNoRecordsFound = "onlineBanking.backoffice.ScheduledActivities.SearchResults.NoRecordsFound";
+	private String getKeyFailedScheduledBillsPaymentSearch1="onlineBanking.backoffice.ScheduledActivities.FailedScheduledBillsPaymentSearch1";
+	private String keyFailedScheduledFundTransferSearchTxt="onlineBanking.backoffice.ScheduledActivities.FailedScheduledFundPaymentSearchTxt";
 
 	public void clickFailedScheduledFundTransfer() throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(keyFailedScheduledFundTransfer);
 	}
 
+	public void clickFailedScheduledBillsPayment() throws Throwable {
+		Wait.forSeconds(2000);
+		click.elementBy(keyFailedScheduledBillsPayment);
+	}
+
 	public void clickFailedScheduledBillsPaymentSearch(String data) throws Throwable {
 		select.backOffice_selectValueInAnyList(keyFailedScheduledBillsPaymentSearch2,data);
+		click.elementBy(keyFailedScheduledPaymentSearchBtn);
+	}
+
+	public void selectSearch1EnterSearchTxtClickSearchBtn(String data,String text) throws Throwable {
+		select.backOffice_selectValueInAnyList(getKeyFailedScheduledBillsPaymentSearch1,data);
+		type.data(keyFailedScheduledFundTransferSearchTxt,text);
 		click.elementBy(keyFailedScheduledPaymentSearchBtn);
 	}
 

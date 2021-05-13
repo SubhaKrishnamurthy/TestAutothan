@@ -247,6 +247,7 @@ Feature: Backoffice functionalities Validation
     And I verify customer Information Title
     And I verify customer information Deactivate button
     Then I successfully logout by clicking the Logout Button
+
     #TS260
     @B12
     Scenario: TS260_Validation Schedule Fund Transfer Valid Transaction dates
@@ -256,6 +257,7 @@ Feature: Backoffice functionalities Validation
       And I select transaction type as "For investigation" and click search button
       Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
       Then I successfully logout by clicking the Logout Button
+
       #TS261
       @B13
   Scenario: Validation Schedule Fund Transfer InValid Transaction dates
@@ -265,3 +267,31 @@ Feature: Backoffice functionalities Validation
       And I select transaction type as "New" and click search button
       Then I verify Source account as no records found "No Data"
       Then I successfully logout by clicking the Logout Button
+
+      #TS258
+      @B14
+      Scenario: Validation Schedule Bill Payment Invalid UserId,Account Number,Biller name and Bank Name
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click on the Scheduled Activities Link
+        And I click on the Failed scheduled Fund Transfer search Link
+        And I select source type as "User ID",Enter text as "ferwew" and click Search button
+        Then I verify Source account as no records found "No Data"
+        When I click on the Scheduled Activities Link
+        And I click on the Failed scheduled Fund Transfer search Link
+        And I select source type as "Source Account",Enter text as "656576856565" and click Search button
+        Then I verify Source account as no records found "No Data"
+        When I click on the Scheduled Activities Link
+        And I click on the Failed scheduled Fund Transfer search Link
+        And I select source type as "Target Bank",Enter text as "ferererer" and click Search button
+        Then I verify Source account as no records found "No Data"
+        Then I successfully logout by clicking the Logout Button
+
+        #TS256
+        @B15
+        Scenario: Validation Schedule Bill Payment InValid Transaction dates
+          Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+          When I click on the Scheduled Activities Link
+          And I click on the Failed scheduled Bills Payment search Link
+          And I select transaction type as "Failed" and click search button
+          Then I verify Source account as no records found "No Data"
+          Then I successfully logout by clicking the Logout Button
