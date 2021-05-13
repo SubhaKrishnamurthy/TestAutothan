@@ -51,6 +51,20 @@ public class BackOffice {
         login.enterBOLogin();
     }
 
+    @Given("^I am on login page of online banking backoffice application as UBPSAC1 user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPSAC1_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername4").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
+    @Given("^I am on login page of online banking backoffice application as UBPSAC2 user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPSAC2_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername5").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
     @Then("^I successfully logout by clicking the Logout Button$")
     public void I_successfully_logout_by_clicking_the_Logout_Button() throws Throwable {
         homePage.clickAccounts();
@@ -298,6 +312,11 @@ public class BackOffice {
         scheduledActivitiesPage.clickFailedScheduledFundTransfer();
     }
 
+    @And("^I click on the Failed scheduled Bills Payment search Link$")
+    public void I_click_on_the_Failed_scheduled_Bills_Payment_search_Link() throws Throwable {
+        scheduledActivitiesPage.clickFailedScheduledBillsPayment();
+    }
+
     @And("^I select transaction type as \"([^\"]*)\" and click search button$")
     public void I_select_transaction_type_as_and_click_search_button(String data) throws Throwable {
         scheduledActivitiesPage.clickFailedScheduledBillsPaymentSearch(data);
@@ -320,13 +339,16 @@ public class BackOffice {
 
     @When("^I enter the firstname lastname and user creation \"([^\"]*)\" details$")
     public void iEnterTheFirstnameLastnameAndUserCreationDetails(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-
         RegisterPage.clickSelectUserrole();
         RegisterPage.clickUserBRM();
         RegisterPage.enterFirstName();
         RegisterPage.enterLastName();
         RegisterPage.entermobilenumber();
         RegisterPage.entermailid();
+    }
+
+    @And("^I select source type as \"([^\"]*)\",Enter text as \"([^\"]*)\" and click Search button$")
+    public void I_select_source_type_as_Enter_text_as_ferwew_and_click_Search_button(String data,String text) throws Throwable {
+        scheduledActivitiesPage.selectSearch1EnterSearchTxtClickSearchBtn(data,text);
     }
 }
