@@ -343,7 +343,7 @@ public class BackOffice {
     @When("^I enter the firstname lastname and user creation \"([^\"]*)\" details$")
     public void iEnterTheFirstnameLastnameAndUserCreationDetails(String arg0) throws Throwable {
         RegisterPage.clickSelectUserrole();
-        RegisterPage.clickUserBRM();
+        RegisterPage.clickUserSAC();
         RegisterPage.enterFirstName();
         RegisterPage.enterLastName();
         RegisterPage.entermobilenumber();
@@ -366,7 +366,7 @@ public class BackOffice {
         login.enterBOPassword("p@55w0rd");
         login.enterBOLogin();
         RegisterPage.clickUserforapproval();
-        RegisterPage.clickEndorse();
+        RegisterPage.clickSACEndorse();
         RegisterPage.enterPleasespecifyreason();
         RegisterPage.clickEndorsebtn();
         RegisterPage.clickLogout();
@@ -379,7 +379,7 @@ public class BackOffice {
         login.enterBOPassword("p@55w0rd");
         login.enterBOLogin();
         RegisterPage.clickUserforapproval();
-        RegisterPage.clickApprove();
+        RegisterPage.clickSACApprove();
         RegisterPage.enterPleasespecifyreason();
         RegisterPage.clickApprovebtn();
         RegisterPage.clickLogout();
@@ -398,5 +398,95 @@ public class BackOffice {
     @And("^I select source type as \"([^\"]*)\",Enter text as \"([^\"]*)\" and click Search button$")
     public void I_select_source_type_as_Enter_text_as_ferwew_and_click_Search_button(String data,String text) throws Throwable {
         scheduledActivitiesPage.selectSearch1EnterSearchTxtClickSearchBtn(data,text);
+    }
+
+
+
+    @And("^I Login with new \"([^\"]*)\" user and logout$")
+    public void iLoginWithNewUserAndLogout(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(RegisterPage.Username);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation SAC details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationSACDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickUserSAC();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @When("^I enter the firstname lastname and user creation CEG Team Lead details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationCEGTeamLeadDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickCEGTeamLead();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user SAC$")
+    public void iLoginWithUserAndApproveTheUserSAC(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickSACEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user SAC$")
+    public void iLoginWithUserAndSecondApproveTheUserSAC(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickSACApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user CEG Team Lead$")
+    public void iLoginWithUserAndApproveTheUserCEGTeamLead(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGTeamLeadEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user CEG Team Lead$")
+    public void iLoginWithUserAndSecondApproveTheUserCEGTeamLead(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGTeamLeadApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
     }
 }

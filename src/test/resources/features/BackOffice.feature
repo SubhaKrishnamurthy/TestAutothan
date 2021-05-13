@@ -295,3 +295,21 @@ Feature: Backoffice functionalities Validation
           And I select transaction type as "Failed" and click search button
           Then I verify Source account as no records found "No Data"
           Then I successfully logout by clicking the Logout Button
+
+      #180
+      @B16
+      Scenario: Validation of Register Endorse and user access the user SAC role
+      Given I'm click the register button in the backoffice application
+      When I enter the firstname lastname and user creation SAC details
+      Then I Login with user "UBPSAC1" and approve the user SAC
+      Then I Login with user "UBPSAC2" and second approve the user SAC
+      And I Login with new "SAC" user and logout
+
+    #181
+    @B17
+    Scenario: Validation of Register Endorse and user access the user CEG Team Lead role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Team Lead details
+    Then I Login with user "UBPSAC1" and approve the user CEG Team Lead
+    Then I Login with user "UBPSAC2" and second approve the user CEG Team Lead
+    And I Login with new "CEG Team Lead" user and logout

@@ -22,6 +22,12 @@ public class BackOffice_RegisterPage extends Keywords {
 	private String Keylogout="onlineBanking.backoffice.homepage.logout";
 	private String KeyApprove="onlineBanking.backoffice.Register.btnBRMApprove";
 	private String KeyApprovebtn="onlineBanking.backoffice.Register.btnApprove";
+	private String keyuserSAC="onlineBanking.backoffice.Register.lblSAC";
+	private String KeySACEndorse="onlineBanking.backoffice.Register.btnSACEndorse";
+	private String KeySACApprove="onlineBanking.backoffice.Register.btnSACApprove";
+	private String KeyCEGTeamLead="onlineBanking.backoffice.Register.lblCEGTeamLead";
+	private String KeyCEGTeamLeadEndorse="onlineBanking.backoffice.Register.btnCEGTeamLeadEndorse";
+	private String KeyCEGTeamLeadApprove="onlineBanking.backoffice.Register.btnCEGTeamLeadApprove";
 
     public static String Username;
 
@@ -97,4 +103,32 @@ public class BackOffice_RegisterPage extends Keywords {
 		actions.Wait.forSeconds(5000);
 		click.elementBy(KeyApprove);
 	}
+
+	public void clickSACEndorse() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeySACEndorse);
+	}
+	public void clickSACApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeySACApprove);
+	}
+
+	public void clickUserSAC() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(keyuserSAC);
+	}
+	public void clickCEGTeamLead() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyCEGTeamLead);
+	}
+
+	public void clickCEGTeamLeadEndorse() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyCEGTeamLeadEndorse);
+	}
+	public void clickCEGTeamLeadApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyCEGTeamLeadApprove);
+	}
+
 }
