@@ -402,15 +402,6 @@ public class BackOffice {
 
 
 
-    @And("^I Login with new \"([^\"]*)\" user and logout$")
-    public void iLoginWithNewUserAndLogout(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        login.enterBOUserName(RegisterPage.Username);
-        login.enterBOPassword("p@55w0rd");
-        login.enterBOLogin();
-        RegisterPage.clickLogout();
-    }
-
     @When("^I enter the firstname lastname and user creation SAC details$")
     public void iEnterTheFirstnameLastnameAndUserCreationSACDetails() throws Throwable {
         RegisterPage.clickSelectUserrole();
@@ -485,6 +476,290 @@ public class BackOffice {
         login.enterBOLogin();
         RegisterPage.clickUserforapproval();
         RegisterPage.clickCEGTeamLeadApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation CEG Agent role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationCEGAgentRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickCEGAgentrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user CEG Agent role$")
+    public void iLoginWithUserAndApproveTheUserCEGAgentRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGAgentEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user CEG Agent role$")
+    public void iLoginWithUserAndSecondApproveTheUserCEGAgentRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGAgentApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation AFU role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationAFURoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickAFUrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user AFU role$")
+    public void iLoginWithUserAndApproveTheUserAFURole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAFUEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user AFU role$")
+    public void iLoginWithUserAndSecondApproveTheUserAFURole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAFUApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation Bills Pay Innovation role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationBillsPayInnovationRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickBillsPayInnovationrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user Bills Pay Innovation role$")
+    public void iLoginWithUserAndApproveTheUserBillsPayInnovationRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayInnovationEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user Bills Pay Innovation role$")
+    public void iLoginWithUserAndSecondApproveTheUserBillsPayInnovationRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayInnovationApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+
+    @And("^I Login with new \"([^\"]*)\" user and logout$")
+    public void iLoginWithNewUserAndLogout(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(RegisterPage.Username);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation Help Desk role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationHelpDeskRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickHelpdeskrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user Help Desk role$")
+    public void iLoginWithUserAndApproveTheUserHelpDeskRole(String arg0) throws Throwable {
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickHelpdeskEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user Help Desk role$")
+    public void iLoginWithUserAndSecondApproveTheUserHelpDeskRole(String arg0) throws Throwable {
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickHelpdeskApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+
+    }
+
+    @When("^I enter the firstname lastname and user creation App Support  role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationAppSupportRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickAppsupportrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user App Support  role$")
+    public void iLoginWithUserAndApproveTheUserAppSupportRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAppsupportEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user App Support  role$")
+    public void iLoginWithUserAndSecondApproveTheUserAppSupportRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAppsupportApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation Union Bank Online Product  role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationUnionBankOnlineProductRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickUnionBankOnlineProductrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user Union Bank Online Product  role$")
+    public void iLoginWithUserAndApproveTheUserUnionBankOnlineProductRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickUnionBankOnlineProductEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user Union Bank Online Product  role$")
+    public void iLoginWithUserAndSecondApproveTheUserUnionBankOnlineProductRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickUnionBankOnlineProductApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @When("^I enter the firstname lastname and user creation QR Maker  role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationQRMakerRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickQRMakerrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user QR Maker role$")
+    public void iLoginWithUserAndApproveTheUserQRMakerRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickQRMakerEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user QR Maker  role$")
+    public void iLoginWithUserAndSecondApproveTheUserQRMakerRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickQRMakerApprove();
         RegisterPage.enterPleasespecifyreason();
         RegisterPage.clickApprovebtn();
         RegisterPage.clickLogout();

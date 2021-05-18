@@ -313,3 +313,67 @@ Feature: Backoffice functionalities Validation
     Then I Login with user "UBPSAC1" and approve the user CEG Team Lead
     Then I Login with user "UBPSAC2" and second approve the user CEG Team Lead
     And I Login with new "CEG Team Lead" user and logout
+
+     #182
+  @B18
+  Scenario: Validation of Register Endorse and user access the user CEG Agent role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Agent role details
+    Then I Login with user "UBPSAC1" and approve the user CEG Agent role
+    Then I Login with user "UBPSAC2" and second approve the user CEG Agent role
+    And I Login with new "CEG Agent role" user and logout
+
+      #183
+  @B19
+  Scenario: Validation of Register Endorse and user access the user AFU role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation AFU role details
+    Then I Login with user "UBPSAC1" and approve the user AFU role
+    Then I Login with user "UBPSAC2" and second approve the user AFU role
+    And I Login with new "AFU role" user and logout
+
+  #184
+  @B20
+  Scenario: Validation of Register Endorse and user access the user Bills Pay Innovation role role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills Pay Innovation role details
+    Then I Login with user "UBPSAC1" and approve the user Bills Pay Innovation role
+    Then I Login with user "UBPSAC2" and second approve the user Bills Pay Innovation role
+    And I Login with new "Bills Pay Innovation role" user and logout
+
+
+     #185
+  @B21
+  Scenario: Validation of Register Endorse and user access the user Help Desk role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Help Desk role details
+    Then I Login with user "UBPSAC1" and approve the user Help Desk role
+    Then I Login with user "UBPSAC2" and second approve the user Help Desk role
+    And I Login with new "Help Desk role" user and logout
+
+         #186
+  @B22
+  Scenario: Validation of Register Endorse and user access the user App Support role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation App Support  role details
+    Then I Login with user "UBPSAC1" and approve the user App Support  role
+    Then I Login with user "UBPSAC2" and second approve the user App Support  role
+    And I Login with new "App Support  role" user and logout
+
+             #187
+  @B23
+  Scenario: Validation of Register Endorse and user access the user Union Bank Online Product role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Union Bank Online Product  role details
+    Then I Login with user "UBPSAC1" and approve the user Union Bank Online Product  role
+    Then I Login with user "UBPSAC2" and second approve the user Union Bank Online Product  role
+    And I Login with new "Union Bank Online Product role" user and logout
+
+                #188
+  @B24
+  Scenario: Validation of Register Endorse and user access the user QR Maker role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation QR Maker  role details
+    Then I Login with user "UBPSAC1" and approve the user QR Maker role
+    Then I Login with user "UBPSAC2" and second approve the user QR Maker  role
+    And I Login with new "QR Maker role" user and logout
