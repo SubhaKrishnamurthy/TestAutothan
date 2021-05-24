@@ -376,4 +376,138 @@ Feature: Backoffice functionalities Validation
     When I enter the firstname lastname and user creation QR Maker  role details
     Then I Login with user "UBPSAC1" and approve the user QR Maker role
     Then I Login with user "UBPSAC2" and second approve the user QR Maker  role
-    And I Login with new "QR Maker role" user and logout
+    And I Login with new "QR Maker role" user and
+
+  @B25
+  Scenario: Validation of Disapproving Endorsement SAC user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation SAC details
+    Then I Login with user "UBPSAC1" and Disapprove the user SAC
+
+  @B26
+  Scenario: Validation of Disapproving Endorsement CEG Team Lead user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Team Lead details
+    Then I Login with user "UBPSAC1" and Disapprove the user CEG Team Lead
+
+  @B27
+  Scenario: Validation of Disapproving Endorsement CEG Agent role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Agent role details
+    Then I Login with user "UBPSAC1" and Disapprove the user CEG Agent role
+
+  @B28
+  Scenario: Validation of Disapproving Endorsement AFU role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation AFU role details
+    Then I Login with user "UBPSAC1" and Disapprove the user AFU role
+
+
+  @B29
+  Scenario: Validation of Disapproving Endorsement QR Maker role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation QR Maker  role details
+    Then I Login with user "UBPSAC1" and Disapprove the user QR Maker role
+
+  @B30
+  Scenario: Validation of Disapproving Endorsement Bills Pay Innovation role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills Pay Innovation role details
+    Then I Login with user "UBPSAC1" and Disapprove the user Bills Pay Innovation role
+
+  @B31
+  Scenario: Validation of Disapproving Endorsement Help Desk role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Help Desk role details
+    Then I Login with user "UBPSAC1" and Disapprove the user Help Desk role
+
+  @B32
+
+  Scenario: Validation of Disapproving Endorsement App Support role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation App Support  role details
+    Then I Login with user "UBPSAC1" and Disapprove the user App Support  role
+
+  @B33
+  Scenario: Validation of Disapproving Endorsement Union Bank Online Product role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Union Bank Online Product  role details
+    Then I Login with user "UBPSAC1" and Disapprove the user Union Bank Online Product  role
+
+  @B34
+  Scenario: Validation of Disapproving Endorsement Bills pay onboarding role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills pay onboarding  role details
+    Then I Login with user "UBPSAC1" and Disapprove the user Bills pay onboardingProduct  role
+
+  @B35
+  Scenario: Validation of Disapproving Endorsement Request Approval SAC user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation SAC details
+    Then I Login with user "UBPSAC1" and approve the user SAC
+    Then I Login with user "UBPSAC2" and Disapprove the user SAC
+
+  @B36
+  Scenario: Validation of Disapproving Endorsement Request Approval CEG Team Lead user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Team Lead details
+    Then I Login with user "UBPSAC1" and approve the user CEG Team Lead
+    Then I Login with user "UBPSAC2" and Disapprove the user CEG Team Lead
+
+  @B37
+  Scenario: Validation of Disapproving Endorsement Request Approval CEG Agent role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation CEG Agent role details
+    Then I Login with user "UBPSAC1" and approve the user CEG Agent role
+    Then I Login with user "UBPSAC2" and Disapprove the user CEG Agent role
+
+  @B38
+  Scenario: Validation of Disapproving Endorsement Request Approval AFU role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation AFU role details
+    Then I Login with user "UBPSAC1" and approve the user AFU role
+    Then I Login with user "UBPSAC2" and Disapprove the user AFU role
+
+
+  @B39
+  Scenario: Validation of Disapproving Endorsement Request Approval QR Maker role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation QR Maker  role details
+    Then I Login with user "UBPSAC1" and approve the user QR Maker role
+    Then I Login with user "UBPSAC2" and Disapprove the user QR Maker role
+
+  @B40
+  Scenario: Validation of Disapproving Endorsement Request Approval Bills Pay Innovation role user request
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills Pay Innovation role details
+    Then I Login with user "UBPSAC1" and approve the user Bills Pay Innovation role
+    Then I Login with user "UBPSAC2" and Disapprove the user Bills Pay Innovation role
+
+  @B41
+  Scenario: Validation of Disapproving Endorsement Request Approval Help Desk role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Help Desk role details
+    Then I Login with user "UBPSAC1" and approve the user Help Desk role
+    Then I Login with user "UBPSAC2" and Disapprove the user Help Desk role
+
+  @B42
+
+  Scenario: Validation of Disapproving Endorsement Request Approval App Support role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation App Support  role details
+    Then I Login with user "UBPSAC1" and approve the user App Support  role
+    Then I Login with user "UBPSAC2" and Disapprove the user App Support  role
+
+  @B43
+  Scenario: Validation of Disapproving Endorsement Request Approval Union Bank Online Product role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Union Bank Online Product  role details
+    Then I Login with user "UBPSAC1" and approve the user Union Bank Online Product  role
+    Then I Login with user "UBPSAC2" and Disapprove the user Union Bank Online Product  role
+
+  @B44
+  Scenario: Validation of Disapproving Endorsement Request Approval Bills pay onboarding role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills pay onboarding  role details
+    Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
+    Then I Login with user "UBPSAC2" and Disapprove the user Bills pay onboardingProduct  role

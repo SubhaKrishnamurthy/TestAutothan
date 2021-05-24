@@ -49,7 +49,19 @@ public class BackOffice_RegisterPage extends Keywords {
 	private String KeyQRMaker="onlineBanking.backoffice.Register.lblAppSupport";
 	private String KeyQRMakerEndorse="onlineBanking.backoffice.Register.btnAppsupportEndorse";
 	private String KeyQRMakerApprove="onlineBanking.backoffice.Register.btnAppsupportApprove";
-
+	private String KeySACDisApprove="onlineBanking.backoffice.Register.btnSACDisApprove";
+	private String KeyDisApprove="onlineBanking.backoffice.Register.btndisapprove";
+	private String KeyCEGTeamLeadDisApprove="onlineBanking.backoffice.Register.btnCEGTeamLeadDisApprove";
+	private String KeyCEGAgentDisApprove="onlineBanking.backoffice.Register.btnCEGDisApprove";
+	private String KeyAFUDisApprove="onlineBanking.backoffice.Register.btnAFUDisApprove";
+	private String KeyQRMakerDisApprove="onlineBanking.backoffice.Register.btnQRMakerDisApprove";
+	private String KeyBillsPayInnovationDisApprove="onlineBanking.backoffice.Register.btnBillspayinnovationDisApprove";
+	private String KeyHelpDeskDisApprove="onlineBanking.backoffice.Register.btnHelpdeskDisApprove";
+	private String KeyAppsupportDisApprove="onlineBanking.backoffice.Register.btnAppsupportDisApprove";
+	private String 	KeyUnionBankOnlineProductDisApprove="onlineBanking.backoffice.Register.btnUBonlineproductDisApprove";
+	private String KeyBillsPayOnboardingDisApprove="onlineBanking.backoffice.Register.btnBillsPayOnboardingDisApprove";
+	private String KeyBillsPayOnboardingrole="onlineBanking.backoffice.Register.lblBillSPayOnboarding";
+	private String KeyBillsPayOnboardingEndorse="onlineBanking.backoffice.Register.btnBillsPayOnboardingEndorse";
     public static String Username;
 
 	public void clickSelectUserrole() throws Throwable {
@@ -245,5 +257,60 @@ public class BackOffice_RegisterPage extends Keywords {
 		actions.Wait.forSeconds(2000);
 		click.elementBy(KeyQRMakerApprove);
 	}
+
+	public void clickDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyDisApprove);
+	}
+	public void clickSACDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeySACDisApprove);
+	}
+	public void clickCEGTeamLeadDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyCEGTeamLeadDisApprove);
+	}
+	public void clickCEGAgentDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyCEGAgentDisApprove);
+	}
+	public void clickAFUDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyAFUDisApprove);
+	}
+	public void clickQRMakerDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyQRMakerDisApprove);
+	}
+	public void clickBillsPayInnovationDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyBillsPayInnovationDisApprove);
+	}
+	public void clickHelpDeskDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyHelpDeskDisApprove);
+	}
+	public void clickAppsupportDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyAppsupportDisApprove);
+	}
+	public void clickUnionBankOnlineProductDisApprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyUnionBankOnlineProductDisApprove);
+	}
+	public void clickBillsPayOnboardingrole() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyBillsPayOnboardingrole);
+	}
+	public void clickBillsPayOnboardingProduct() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyBillsPayOnboardingDisApprove);
+	}
+	public void clickBillsPayOnboardingEndorse() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyBillsPayOnboardingEndorse);
+	}
+
+
 }
 

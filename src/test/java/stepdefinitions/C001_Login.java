@@ -3,6 +3,7 @@ package stepdefinitions;
 
 import actions.Wait;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -40,6 +41,7 @@ public class C001_Login {
         actions.Wait.forSeconds(3000);
         driver.findElement(By.xpath("//*[text()=\"Log In\"]/parent::button")).click();
     }
+
 
 
 }

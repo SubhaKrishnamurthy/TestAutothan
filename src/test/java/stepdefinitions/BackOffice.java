@@ -764,4 +764,151 @@ public class BackOffice {
         RegisterPage.clickApprovebtn();
         RegisterPage.clickLogout();
     }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user SAC$")
+    public void iLoginWithUserAndDisapproveTheUserSAC(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickSACDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user CEG Team Lead$")
+    public void iLoginWithUserAndDisapproveTheUserCEGTeamLead(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGTeamLeadDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user CEG Agent role$")
+    public void iLoginWithUserAndDisapproveTheUserCEGAgentRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickCEGAgentDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user AFU role$")
+    public void iLoginWithUserAndDisapproveTheUserAFURole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAFUDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user QR Maker role$")
+    public void iLoginWithUserAndDisapproveTheUserQRMakerRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickQRMakerDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user Bills Pay Innovation role$")
+    public void iLoginWithUserAndDisapproveTheUserBillsPayInnovationRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayInnovationDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user Help Desk role$")
+    public void iLoginWithUserAndDisapproveTheUserHelpDeskRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickHelpDeskDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user App Support  role$")
+    public void iLoginWithUserAndDisapproveTheUserAppSupportRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickAppsupportDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user Union Bank Online Product  role$")
+    public void iLoginWithUserAndDisapproveTheUserUnionBankOnlineProductRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickUnionBankOnlineProductDisApprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @When("^I enter the firstname lastname and user creation Bills pay onboarding  role details$")
+    public void iEnterTheFirstnameLastnameAndUserCreationBillsPayOnboardingRoleDetails() throws Throwable {
+        RegisterPage.clickSelectUserrole();
+        RegisterPage.clickBillsPayOnboardingrole();
+        RegisterPage.enterFirstName();
+        RegisterPage.enterLastName();
+        RegisterPage.entermobilenumber();
+        RegisterPage.entermailid();
+        RegisterPage.enterusername();
+        RegisterPage.enterpassw0rd();
+        RegisterPage.clickRegister();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and Disapprove the user Bills pay onboardingProduct  role$")
+    public void iLoginWithUserAndDisapproveTheUserBillsPayOnboardingProductRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayOnboardingProduct();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @Then("^I Login with user \"([^\"]*)\" and approve the user Bills pay onboarding  role$")
+    public void iLoginWithUserAndApproveTheUserBillsPayOnboardingRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayOnboardingEndorse();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickEndorsebtn();
+        RegisterPage.clickLogout();
+    }
 }
