@@ -15,6 +15,7 @@ public class BackOffice_UsersPage extends Keywords {
 	private String keyConfirmDisapproveBtn="onlineBanking.backoffice.accounts.clientUser.ConfirmDisapproveBtn";
 	private String keyUsersApprovalApprove="onlineBanking.backoffice.accounts.Users.UsersApprovalApprove";
 	private String KeyUsersApproveForID="onlineBanking.backoffice.accounts.Users.UsersApproveForID";
+	private String keyAccessApprovalApprove="onlineBanking.backoffice.accounts.Users.AccessApprovalApprove";
 
 	public void clickUsersCancel() throws Throwable {
 		Wait.forSeconds(3000);
@@ -53,6 +54,11 @@ public class BackOffice_UsersPage extends Keywords {
 
 	public void clickUsersApprovalApprove() throws Throwable {
 		jsClick.elementBy(keyUsersApprovalApprove);
+		Wait.forSeconds(2000);
+	}
+
+	public void clickAccessApprovalApprove() throws Throwable {
+		jsClick.elementBy(keyAccessApprovalApprove);
 		Wait.forSeconds(2000);
 	}
 }

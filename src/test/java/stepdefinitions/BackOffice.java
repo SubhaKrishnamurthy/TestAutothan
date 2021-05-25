@@ -30,6 +30,7 @@ public class BackOffice {
     private BackOffice_UsersPage usersPage=new BackOffice_UsersPage();
     private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
     private BackOffice_RegisterPage RegisterPage = new BackOffice_RegisterPage();
+    private BackOffice_PushNotificationPage pushNotificationPage = new BackOffice_PushNotificationPage();
     WebDriver driver;
     WebElement element;
 
@@ -50,6 +51,13 @@ public class BackOffice {
     @Given("^I am on login page of online banking backoffice application as UBPProductAuto1 user$")
     public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPProductAuto1_user() throws Throwable {
         login.enterBOUserName(PropertyReader.testDataOf("BOUsername3").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
+    @Given("^I am on login page of online banking backoffice application as UBPProductAuto2 user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPProductAuto2_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername6").trim());
         login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
         login.enterBOLogin();
     }
@@ -915,4 +923,26 @@ public class BackOffice {
         RegisterPage.clickEndorsebtn();
         RegisterPage.clickLogout();
     }
+
+    @When("^I click on Send Notification$")
+    public void I_click_on_Send_Notification() throws Throwable {
+        homePage.clickSendNotification();
+    }
+
+    @And("^I click on Manage Notification$")
+    public void I_click_on_Manage_Notification() throws Throwable {
+        pushNotificationPage.clickManageNotification();
+    }
+
+    @Then("^I add a new notification and submit$")
+    public void I_add_a_new_notification_and_submit() throws Throwable {
+        pushNotificationPage.addNewNotification();
+        commonMethods.clickSaveBtn();
+    }
+
+    @And("^I approve the notification with the reason \"([^\"]*)\"$")
+    public void I_approve_the_notification(String reason) throws Throwable {
+        pushNotificationPage.approveNotification(reason);
+    }
+
 }

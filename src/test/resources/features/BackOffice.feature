@@ -598,3 +598,18 @@ Feature: Backoffice functionalities Validation
     And I select transaction type as "Annually" and click search button
     Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
     Then I successfully logout by clicking the Logout Button
+
+    #251
+    @B50
+    Scenario: Validation of Push Notification
+      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+      When I click on Send Notification
+      And I click on Manage Notification
+      Then I add a new notification and submit
+      Then I successfully logout by clicking the Logout Button
+      Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+      When I click on Send Notification
+      Then I approve the notification with the reason "Please Approve"
+      Then I successfully logout by clicking the Logout Button
+
+
