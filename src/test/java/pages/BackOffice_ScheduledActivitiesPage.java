@@ -41,6 +41,10 @@ public class BackOffice_ScheduledActivitiesPage extends Keywords {
 		click.elementBy(keyFailedScheduledPaymentSearchBtn);
 	}
 
+	public void selectSearch1(String data)throws Throwable {
+		select.backOffice_selectValueInAnyList(getKeyFailedScheduledBillsPaymentSearch1,data);
+	}
+
 	public void verifyFailedScheduledElements() throws Throwable {
 		Wait.forSeconds(2000);
 		verify.elementIsPresent(keyFirstElementDailyID);

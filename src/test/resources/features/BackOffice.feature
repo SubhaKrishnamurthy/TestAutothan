@@ -259,7 +259,7 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
 
       #TS261
-      @B13
+ @B13
   Scenario: Validation Schedule Fund Transfer InValid Transaction dates
       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
       When I click on the Scheduled Activities Link
@@ -269,7 +269,7 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
 
       #TS258
-      @B14
+  @B14
       Scenario: Validation Schedule Bill Payment Invalid UserId,Account Number,Biller name and Bank Name
         Given I am on login page of online banking backoffice application as UBPProductAuto1 user
         When I click on the Scheduled Activities Link
@@ -287,7 +287,7 @@ Feature: Backoffice functionalities Validation
         Then I successfully logout by clicking the Logout Button
 
         #TS256
-        @B15
+   @B15
         Scenario: Validation Schedule Bill Payment InValid Transaction dates
           Given I am on login page of online banking backoffice application as UBPProductAuto1 user
           When I click on the Scheduled Activities Link
@@ -298,7 +298,7 @@ Feature: Backoffice functionalities Validation
 
           #Register cases starts here
       #180
-      @B16
+    @B16
       Scenario: Validation of Register Endorse and user access the user SAC role
       Given I'm click the register button in the backoffice application
       When I enter the firstname lastname and user creation SAC details
@@ -511,3 +511,90 @@ Feature: Backoffice functionalities Validation
     Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
     Then I Login with user "UBPSAC2" and Disapprove the user Bills pay onboardingProduct  role
     #Disapprove cases ends here
+
+  #253
+  @B45
+  Scenario: Validation Schedule Bill Payment Invalid UserId,Account Number,Biller name and Reference Number
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click on the Failed scheduled Bills Payment search Link
+    And I select source type as "User ID",Enter text as "sdsdsds" and click Search button
+    Then I verify Source account as no records found "No Data"
+    And I select source type as "Source Account",Enter text as "00154545512" and click Search button
+    Then I verify Source account as no records found "No Data"
+    And I select source type as "Biller",Enter text as "ABRAfsfsf" and click Search button
+    Then I verify Source account as no records found "No Data"
+    Then I successfully logout by clicking the Logout Button
+
+    #252
+  @B46
+  Scenario: Validation Schedule Bill Payment valid UserId,Account Number,Biller name and Reference Number
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click on the Failed scheduled Bills Payment search Link
+    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select source type as "Biller",Enter text as "VECO" and click Search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    Then I successfully logout by clicking the Logout Button
+
+    #254
+  @B47
+  Scenario: Validation Schedule Bill Payment various frequency
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click on the Failed scheduled Bills Payment search Link
+    And I select source type as "Frequency"
+    And I select transaction type as "Never" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Daily" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Weekly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Every 2 weeks" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Monthly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Quarterly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Semi-annually" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Annually" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    Then I successfully logout by clicking the Logout Button
+
+    #257
+  @B48
+  Scenario:Validation Schedule Bill Payment valid UserId,Account Number,Reference id and Bank Name
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click on the Scheduled Activities Link
+    And I click on the Failed scheduled Fund Transfer search Link
+    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select source type as "Source Account",Enter text as "102310011756" and click Search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select source type as "Target Bank",Enter text as "UnionBank of the Philippines" and click Search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    Then I successfully logout by clicking the Logout Button
+
+    #259
+  @B49
+  Scenario: Validation Schedule Fund Transfer various frequency
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click on the Scheduled Activities Link
+    And I click on the Failed scheduled Fund Transfer search Link
+    And I select source type as "Frequency"
+    And I select transaction type as "Never" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Daily" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Weekly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Every 2 weeks" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Monthly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Quarterly" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Semi-annually" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    And I select transaction type as "Annually" and click search button
+    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+    Then I successfully logout by clicking the Logout Button

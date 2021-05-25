@@ -400,6 +400,10 @@ public class BackOffice {
         scheduledActivitiesPage.selectSearch1EnterSearchTxtClickSearchBtn(data,text);
     }
 
+    @And("^I select source type as \"([^\"]*)\"$")
+    public void I_select_source_type_as(String data)throws Throwable{
+        scheduledActivitiesPage.selectSearch1(data);
+    }
 
 
     @When("^I enter the firstname lastname and user creation SAC details$")
