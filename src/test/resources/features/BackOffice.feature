@@ -296,6 +296,7 @@ Feature: Backoffice functionalities Validation
           Then I verify Source account as no records found "No Data"
           Then I successfully logout by clicking the Logout Button
 
+          #Register cases starts here
       #180
       @B16
       Scenario: Validation of Register Endorse and user access the user SAC role
@@ -341,7 +342,6 @@ Feature: Backoffice functionalities Validation
     Then I Login with user "UBPSAC2" and second approve the user Bills Pay Innovation role
     And I Login with new "Bills Pay Innovation role" user and logout
 
-
      #185
   @B21
   Scenario: Validation of Register Endorse and user access the user Help Desk role
@@ -376,8 +376,9 @@ Feature: Backoffice functionalities Validation
     When I enter the firstname lastname and user creation QR Maker  role details
     Then I Login with user "UBPSAC1" and approve the user QR Maker role
     Then I Login with user "UBPSAC2" and second approve the user QR Maker  role
-    And I Login with new "QR Maker role" user and
-
+    And I Login with new "QR Maker role" user and logout
+    #Register cases ends here
+  #Disapproe cases starts here
   @B25
   Scenario: Validation of Disapproving Endorsement SAC user request
     Given I'm click the register button in the backoffice application
@@ -401,7 +402,6 @@ Feature: Backoffice functionalities Validation
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation AFU role details
     Then I Login with user "UBPSAC1" and Disapprove the user AFU role
-
 
   @B29
   Scenario: Validation of Disapproving Endorsement QR Maker role user request
@@ -468,7 +468,6 @@ Feature: Backoffice functionalities Validation
     Then I Login with user "UBPSAC1" and approve the user AFU role
     Then I Login with user "UBPSAC2" and Disapprove the user AFU role
 
-
   @B39
   Scenario: Validation of Disapproving Endorsement Request Approval QR Maker role user request
     Given I'm click the register button in the backoffice application
@@ -511,3 +510,4 @@ Feature: Backoffice functionalities Validation
     When I enter the firstname lastname and user creation Bills pay onboarding  role details
     Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
     Then I Login with user "UBPSAC2" and Disapprove the user Bills pay onboardingProduct  role
+    #Disapprove cases ends here
