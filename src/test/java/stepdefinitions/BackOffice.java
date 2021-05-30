@@ -31,6 +31,7 @@ public class BackOffice {
     private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
     private BackOffice_RegisterPage RegisterPage = new BackOffice_RegisterPage();
     private BackOffice_PushNotificationPage pushNotificationPage = new BackOffice_PushNotificationPage();
+    private BackOffice_BillerPage BillerPage = new BackOffice_BillerPage();
     WebDriver driver;
     WebElement element;
 
@@ -945,4 +946,105 @@ public class BackOffice {
         pushNotificationPage.approveNotification(reason);
     }
 
+    @Given("^Login with user \"([^\"]*)\"$")
+    public void loginWithUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+    }
+
+    @When("^I search the client user id \"([^\"]*)\"$")
+    public void iSearchTheClientUserId(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        RegisterPage.clickManageclients();
+        RegisterPage.enterUserprofilename(arg0);
+        RegisterPage.clickSearchicon();
+    }
+
+    @Then("^I Click the user and Edit profile change the mobilnumber and mailid$")
+    public void iClickTheUserAndEditProfileChangeTheMobilnumberAndMailid() throws Throwable {
+        RegisterPage.clickUserprofilelink();
+        RegisterPage.clickEditprofile();
+        RegisterPage.enterMobilenumberprofile();
+        RegisterPage.enterMailaddressprofile();
+        RegisterPage.clickUpdatelink();
+        RegisterPage.enterKeyresonforupdating();
+        RegisterPage.clickSubmit();
+        RegisterPage.clickLogout();
+    }
+
+    @And("^I approve the profile change user \"([^\"]*)\"$")
+    public void iApproveTheProfileChangeUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickApprovalclientuser();
+        RegisterPage.clickApproveuserprofile();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+
+
+    }
+
+
+
+    @And("^I verify the user profile changed for user \"([^\"]*)\" \"([^\"]*)\"$")
+    public void iVerifyTheUserProfileChangedForUser(String arg0, String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickManageclients();
+        RegisterPage.enterUserprofilename(arg1);
+        RegisterPage.clickSearchicon();
+        RegisterPage.clickUserprofilelink();
+        RegisterPage.verifyUserprofilechanges();
+    }
+
+    @And("^I Disapprove the profile change user \"([^\"]*)\"$")
+    public void iDisapproveTheProfileChangeUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        RegisterPage.clickApprovalclientuser();
+        RegisterPage.clickDisApproveuserprofile();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @When("^I Click the Managebiller link$")
+    public void iClickTheManagebillerLink() throws Throwable {
+        BillerPage.clickManagebillerlink();
+    }
+
+    @Then("^I Enter the biller code \"([^\"]*)\" in biller search and click the search icon$")
+    public void iEnterTheBillerCodeInBillerSearchAndClickTheSearchIcon(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        BillerPage.enterSearchbiller(arg0);
+        BillerPage.clickSearchbillericon();
+    }
+
+    @And("^Verify the Biller details \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+    public void verifyTheBillerDetails(String arg0, String arg1, String arg2, String arg3) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        BillerPage.verifyBillerdetails(arg0,arg1,arg2,arg3);
+    }
+
+    @Then("^I Enter the biller name \"([^\"]*)\" in biller search and click the search icon$")
+    public void iEnterTheBillerNameInBillerSearchAndClickTheSearchIcon(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        BillerPage.enterSearchbiller(arg0);
+        BillerPage.clickSearchbillericon();
+    }
+
+    @Then("^I Enter the biller account number \"([^\"]*)\" in biller search and click the search icon$")
+    public void iEnterTheBillerAccountNumberInBillerSearchAndClickTheSearchIcon(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        BillerPage.enterSearchbiller(arg0);
+        BillerPage.clickSearchbillericon();
+    }
 }

@@ -612,4 +612,32 @@ Feature: Backoffice functionalities Validation
       Then I approve the notification with the reason "Please Approve"
       Then I successfully logout by clicking the Logout Button
 
+  @B51
+  Scenario: Validation of updating in Edit profile screen and Approval
+    Given Login with user "UBPSAC1"
+    When I search the client user id "senthilactive"
+    Then I Click the user and Edit profile change the mobilnumber and mailid
+    And I approve the profile change user "UBPSAC2"
+    And I verify the user profile changed for user "UBPSAC1" "senthilactive"
+
+  @B52
+  Scenario: Validation of updating in Edit profile screen and DisApproval
+    Given Login with user "UBPSAC1"
+    When I search the client user id "senthilactive"
+    Then I Click the user and Edit profile change the mobilnumber and mailid
+    And I Disapprove the profile change user "UBPSAC2"
+
+  @B53
+  Scenario: Validation of searching Biller by using Biller Name,code,biiler id and account number
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "TA001" in biller search and click the search icon
+    And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
+    Then I Enter the biller name "TEST AUTOMATION BILLER ONE" in biller search and click the search icon
+    And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
+    Then I Enter the biller account number "000000090001" in biller search and click the search icon
+    And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
+
+
+
 

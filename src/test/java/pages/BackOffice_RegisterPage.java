@@ -62,7 +62,27 @@ public class BackOffice_RegisterPage extends Keywords {
 	private String KeyBillsPayOnboardingDisApprove="onlineBanking.backoffice.Register.btnBillsPayOnboardingDisApprove";
 	private String KeyBillsPayOnboardingrole="onlineBanking.backoffice.Register.lblBillSPayOnboarding";
 	private String KeyBillsPayOnboardingEndorse="onlineBanking.backoffice.Register.btnBillsPayOnboardingEndorse";
-    public static String Username;
+	private String KeylblManageclients="onlineBanking.backoffice.profile.lblManageclients";
+	private String Keytxtnamesearch="onlineBanking.backoffice.profile.txtnamesearch";
+	private String Keybtnsearchicon="onlineBanking.backoffice.billers.btnsearchbiller";
+	private String Keyname="onlineBanking.backoffice.profile.lnkname";
+	private String KeyEditprofile="onlineBanking.backoffice.profile.btnEditprofile";
+	private String Keymobilenumberprofile="onlineBanking.backoffice.profile.txtmobilenumber";
+	private String Keyemailaddressprofile="onlineBanking.backoffice.profile.txtemailaddress";
+	private String Keyupdate="onlineBanking.backoffice.profile.btnupdate";
+	private String Keyresonforupdating="onlineBanking.backoffice.profile.txtresonforupdating";
+	private String KeySubmit="onlineBanking.backoffice.profile.btnSubmit";
+	private String Keyapprovalclientuser="onlineBanking.backoffice.profile.lblapprovalclientuser";
+	private String KeyApproveprofile="onlineBanking.backoffice.profile.btnApprove";
+	private String Keyapprovalclientuserprofile="onlineBanking.backoffice.profile.lblapprovalclientuser";
+	private String KeyApproveuserprofile="onlineBanking.backoffice.profile.btnApproveuserprofile";
+	private String Keymobilenumberverify="onlineBanking.backoffice.profile.lblmobilenumber";
+	private String Keyemailaddressverify="onlineBanking.backoffice.profile.lblemailaddress";
+	private String KeyDisApproveprofile="onlineBanking.backoffice.profile.btnDisApproveuserprofile";
+
+	public static String Username;
+	public static String Mobilemuber;
+	public static String Emailaddress;
 
 	public void clickSelectUserrole() throws Throwable {
 		actions.Wait.forSeconds(2000);
@@ -310,6 +330,74 @@ public class BackOffice_RegisterPage extends Keywords {
 		actions.Wait.forSeconds(2000);
 		click.elementBy(KeyBillsPayOnboardingEndorse);
 	}
+	public void clickManageclients() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeylblManageclients);
+	}
+	public void clickSearchicon() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(Keybtnsearchicon);
+		actions.Wait.forSeconds(5000);
+	}
+	public void enterUserprofilename(String username) throws Throwable {
+		actions.Wait.forSeconds(2000);
+		type.data(Keytxtnamesearch, username);
+	}
+
+	public void clickUserprofilelink() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(Keyname);
+	}
+
+	public void clickEditprofile() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyEditprofile);
+	}
+
+	public void enterMobilenumberprofile() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		Mobilemuber=Tools.RANDOMMOBILENUMBER(9);
+		type.data(Keymobilenumberprofile,Mobilemuber );
+	}
+
+	public void enterMailaddressprofile() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		Emailaddress=Tools.RANDOMMAILID(6);
+		type.data(Keyemailaddressprofile,Emailaddress );
+	}
+	public void clickUpdatelink() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(Keyupdate);
+	}
+	public void enterKeyresonforupdating() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		type.data(Keyresonforupdating,"Approved" );
+	}
+	public void clickSubmit() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeySubmit);
+	}
+	public void clickApprovalclientuser() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(Keyapprovalclientuserprofile);
+	}
+
+	public void clickApproveuserprofile() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyApproveuserprofile);
+	}
+
+	public void verifyUserprofilechanges() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		Mobilemuber="+91 "+Mobilemuber;
+		verify.elementTextMatching(Keymobilenumberverify,Mobilemuber);
+		verify.elementTextMatching(Keyemailaddressverify,Emailaddress);
+	}
+	public void clickDisApproveuserprofile() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyDisApproveprofile);
+	}
+
 
 
 }
