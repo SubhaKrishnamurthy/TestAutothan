@@ -600,7 +600,7 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
 
     #251
-    @B50
+  @B50
     Scenario: Validation of Push Notification
       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
       When I click on Send Notification
@@ -612,4 +612,29 @@ Feature: Backoffice functionalities Validation
       Then I approve the notification with the reason "Please Approve"
       Then I successfully logout by clicking the Logout Button
 
+  #250
+  @B51
+  Scenario: Validation of QR CODE generation
+    Given I am on login page of online banking backoffice application as UBPQRMakerAuto user
+    When I click on manage biller
+    Then I search for the biller "7335"
+    And I enter payors name "PINOYID", pin "1357564" and generate QR code
+    And I cancel the QR maker
+    Then I successfully logout by clicking the Logout Button
+
+    #237
+  @B52
+  Scenario: Validation Of Add New FAQ
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click the link for FAQ
+    And I click the manage FAQ
+    And I add FAQ and submit
+    Then I successfully logout by clicking the Logout Button
+    Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+    When I click the link for FAQ
+    Then I approve the FAQ
+    When I click the link for FAQ
+    And I click the manage FAQ
+    #And I edit the FAQ
+    Then I successfully logout by clicking the Logout Button
 

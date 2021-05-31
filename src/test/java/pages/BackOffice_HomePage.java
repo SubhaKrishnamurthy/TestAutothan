@@ -16,6 +16,7 @@ public class BackOffice_HomePage extends Keywords {
 	private String keyScheduledActivities = "onlineBanking.backoffice.homePage.ScheduledActivities";
 	private String keyRegister = "onlineBanking.backoffice.Register.btnregister";
 	private String keySendNotification="onlineBanking.backoffice.homePage.SendNotifications";
+	private String keyFAQ = "onlineBanking.backoffice.homePage.FAQ";
 
 	public void clickAccounts() throws Throwable {
 		actions.Wait.forSeconds(3000);
@@ -23,7 +24,7 @@ public class BackOffice_HomePage extends Keywords {
 	}
 
 	public void clickLogoutBtn() throws Throwable {
-		actions.Wait.forSeconds(1000);
+		actions.Wait.forSeconds(2000);
 		jsClick.elementBy(keyLogoutBtn);
 		actions.Wait.forSeconds(2000);
 	}
@@ -41,5 +42,9 @@ public class BackOffice_HomePage extends Keywords {
 	public void clickSendNotification() throws Throwable {
 		actions.Wait.forSeconds(2000);
 		jsClick.elementBy(keySendNotification);
+	}
+
+	public void clickFAQ() throws Throwable {
+		jsClick.elementBy(keyFAQ);
 	}
 }

@@ -11,11 +11,12 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
+
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
-        tags={"@B35"}
+        tags={"@B52"}
 )
 
 public class ConvergentTestRunner extends Test {

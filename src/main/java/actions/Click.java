@@ -96,6 +96,17 @@ public class Click extends Keywords {
         }
     }
 
+    public void elementFromStoredData(String locator , String data) throws ApplicationException {
+        try {
+            String xpath= "//*[contains(text(),"+data+"]/parent::div//child::div[4]/span[text()='Edit']";
+            get.elementBy(xpath).click();
+            log.info("Click Successful!");
+        }catch (Exception e) {
+            log.info("Error while clicking the element ");
+            throw new ApplicationException(e.getMessage());
+        }
+    }
+
     public void pickdatefromcalendar(String date) {
         String date_Locator = "//android.view.View[@content-desc='" + date + "']";
         WebElement date_to_selected = driver.findElement(By.xpath(date_Locator));
