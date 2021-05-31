@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 
+import actions.Wait;
 import base.Keywords;
 import cucumber.api.PendingException;
 import cucumber.api.java.cs.A;
@@ -1104,5 +1105,79 @@ public class BackOffice {
         // Write code here that turns the phrase above into concrete actions
         BillerPage.enterSearchbiller(arg0);
         BillerPage.clickSearchbillericon();
+    }
+
+    @Then("^I Click the New Biller and enther billerdetails an send for approval$")
+    public void iClickTheNewBillerAndEntherBillerdetailsAnSendForApproval() throws Throwable {
+        BillerPage.entertheBillerdetails();
+        RegisterPage.clickLogout();
+    }
+
+    @And("^Approve the New biller transaction$")
+    public void approveTheNewBillerTransaction() throws Throwable {
+        BillerPage.clicktheBillsapprval();
+        BillerPage.clicktheApprval();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+
+    }
+
+
+
+    @And("^I Verify the New biller and details user \"([^\"]*)\"$")
+    public void iVerifyTheNewBillerAndDetailsUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        BillerPage.clickManagebillerlink();
+        BillerPage.enterSearchbiller(BillerPage.Billercode);
+        BillerPage.clickSearchbillericon();
+        BillerPage.verifyBillerdetails(BillerPage.BillerID,BillerPage.Billercode,BillerPage.Billername,BillerPage.BillerAccountnumber);
+
+    }
+
+    @And("^Approve the the biller approval$")
+    public void approveTheTheBillerApproval() throws Throwable {
+        BillerPage.clicktheBillsapprval();
+        BillerPage.clicktheApprval();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+        RegisterPage.clickLogout();
+    }
+
+    @And("^DisApprove the the biller approval$")
+    public void disapproveTheTheBillerApproval() throws Throwable {
+        BillerPage.clicktheBillsapprval();
+        BillerPage.clicktheDisApprval();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickDisApprove();
+    }
+
+    @And("^I Delete the new biller$")
+    public void iDeleteTheNewBiller() throws Throwable {
+        BillerPage.clicktheBillermore();
+        BillerPage.clicktheBillerdelete();
+
+    }
+
+    @And("^I Edit the biller and update details$")
+    public void iEditTheBillerAndUpdateDetails() throws Throwable {
+        BillerPage.updatetheBillerdetails();
+        RegisterPage.clickLogout();
+    }
+
+    @And("^I Verify the updated biller and details user \"([^\"]*)\"$")
+    public void iVerifyTheUpdatedBillerAndDetailsUser(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        BillerPage.clickManagebillerlink();
+        Wait.forSeconds(2000);
+        BillerPage.enterSearchbiller(BillerPage.Billername);
+        BillerPage.clickSearchbillericon();
+        BillerPage.verifUpdateBillerdetails(BillerPage.Billername);
     }
 }

@@ -637,7 +637,7 @@ Feature: Backoffice functionalities Validation
     And I click the manage FAQ
     #And I edit the FAQ
     Then I successfully logout by clicking the Logout Button
-  @B51
+  @B53
   Scenario: Validation of updating in Edit profile screen and Approval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
@@ -645,14 +645,14 @@ Feature: Backoffice functionalities Validation
     And I approve the profile change user "UBPSAC2"
     And I verify the user profile changed for user "UBPSAC1" "senthilactive"
 
-  @B52
+  @B54
   Scenario: Validation of updating in Edit profile screen and DisApproval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
     Then I Click the user and Edit profile change the mobilnumber and mailid
     And I Disapprove the profile change user "UBPSAC2"
 
-  @B53
+  @B55
   Scenario: Validation of searching Biller by using Biller Name,code,biiler id and account number
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -663,6 +663,43 @@ Feature: Backoffice functionalities Validation
     Then I Enter the biller account number "000000090001" in biller search and click the search icon
     And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
 
+  @B56
+  Scenario: Validation of add new biller and approve biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Click the New Biller and enther billerdetails an send for approval
+    Then Login with user "BillsApprover"
+    And Approve the the biller approval
+    And I Verify the New biller and details user "OnboardAutomation"
 
+  @B57
+  Scenario: Validation of add new biller and approve biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Click the New Biller and enther billerdetails an send for approval
+    Then Login with user "BillsApprover"
+    And DisApprove the the biller approval
+
+    @B58
+    Scenario: Validation of Deleting New Billers and Billers delete Approval
+      Given Login with user "OnboardAutomation"
+      When I Click the Managebiller link
+      Then I Click the New Biller and enther billerdetails an send for approval
+      Then Login with user "BillsApprover"
+      And Approve the the biller approval
+      And I Verify the New biller and details user "OnboardAutomation"
+      And I Delete the new biller
+
+    @B59
+    Scenario: Validation of Updating Existing Billers
+      Given Login with user "OnboardAutomation"
+      When I Click the Managebiller link
+      Then I Click the New Biller and enther billerdetails an send for approval
+      Then Login with user "BillsApprover"
+      And Approve the the biller approval
+      And I Verify the New biller and details user "OnboardAutomation"
+      And I Edit the biller and update details
+      And Approve the the biller approval
+      And I Verify the updated biller and details user "OnboardAutomation"
 
 
