@@ -638,6 +638,43 @@ Feature: Backoffice functionalities Validation
     Then I Enter the biller account number "000000090001" in biller search and click the search icon
     And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
 
+  @B54
+  Scenario: Validation of add new biller and approve biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Click the New Biller and enther billerdetails an send for approval
+    Then Login with user "BillsApprover"
+    And Approve the the biller approval
+    And I Verify the New biller and details user "OnboardAutomation"
 
+  @B55
+  Scenario: Validation of add new biller and approve biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Click the New Biller and enther billerdetails an send for approval
+    Then Login with user "BillsApprover"
+    And DisApprove the the biller approval
+
+    @B56
+    Scenario: Validation of Deleting New Billers and Billers delete Approval
+      Given Login with user "OnboardAutomation"
+      When I Click the Managebiller link
+      Then I Click the New Biller and enther billerdetails an send for approval
+      Then Login with user "BillsApprover"
+      And Approve the the biller approval
+      And I Verify the New biller and details user "OnboardAutomation"
+      And I Delete the new biller
+
+    @B57
+    Scenario: Validation of Updating Existing Billers
+      Given Login with user "OnboardAutomation"
+      When I Click the Managebiller link
+      Then I Click the New Biller and enther billerdetails an send for approval
+      Then Login with user "BillsApprover"
+      And Approve the the biller approval
+      And I Verify the New biller and details user "OnboardAutomation"
+      And I Edit the biller and update details
+      And Approve the the biller approval
+      And I Verify the updated biller and details user "OnboardAutomation"
 
 
