@@ -674,7 +674,58 @@ Feature: Backoffice functionalities Validation
       And Approve the the biller approval
       And I Verify the New biller and details user "OnboardAutomation"
       And I Edit the biller and update details
+      Then Login with user "BillsApprover"
       And Approve the the biller approval
       And I Verify the updated biller and details user "OnboardAutomation"
+
+  @B58
+  Scenario: Validation cancel of updating biller where request is raised by same biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Click the New Biller and enther billerdetails an send for approval
+    Then Login with user "OnboardAutomation"
+    And Cancel the the biller approval
+
+  @B60
+  Scenario: Validation of Updating Favorite Billers
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "BILLERUBPP" in biller search and click the search icon
+    And I Edit the biller and update details
+    Then Login with user "BillsApprover"
+    And Approve the the biller approval
+    And I Verify the updated biller and details user "OnboardAutomation"
+
+  @B61
+  Scenario: Validation of Updating scheduled Billers
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "AUTOSWEEP RFID" in biller search and click the search icon
+    And I Edit the biller and update details
+    Then Login with user "BillsApprover"
+    And Approve the the biller approval
+    And I Verify the updated biller and details user "OnboardAutomation"
+
+  @B62
+  Scenario: Validation of DisApproval for updated biller field for scheduled biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "AUTOSWEEP RFID" in biller search and click the search icon
+    And I Edit the biller and update details
+    Then Login with user "BillsApprover"
+    And DisApprove the the biller approval
+
+
+  @B63
+  Scenario: Validation of DisApproval for updated biller field for Favorite biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "BILLERUBPP" in biller search and click the search icon
+    And I Edit the biller and update details
+    Then Login with user "BillsApprover"
+    And DisApprove the the biller approval
+
+
+
 
 

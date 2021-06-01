@@ -39,6 +39,14 @@ public class BackOffice_BillerPage extends Keywords {
 	private String Keybillerdeletereason="onlineBanking.backoffice.billers.txtbillerdeletereason";
 	private String Keybillerdeletebtn="onlineBanking.backoffice.billers.btnbillerdelete";
 	private String Keybillereditbtn="onlineBanking.backoffice.billers.txtbilleredit";
+	private String Keybillerupdatereason="onlineBanking.backoffice.billers.txtbillerupdatereason";
+	private String Keybillercancel="onlineBanking.backoffice.billers.btnCancel";
+	private String Keybillercancelrequesst="onlineBanking.backoffice.billers.btnCancelRequest";
+	private String Keybilerview="onlineBanking.backoffice.billers.txtbillerview";
+	private String Keybillertypeverifyview="onlineBanking.backoffice.billers.txtbillertyprview";
+	private String KeybillerCodeverifyview="onlineBanking.backoffice.billers.txtbillercodeview";
+	private String Keybilleacctnumberverifyview="onlineBanking.backoffice.billers.txtbillerAccountnumberview";
+	private String Keybillernameverifyview="onlineBanking.backoffice.billers.txtbillerIDview";
 	public static String Billername;
 	public static String Billercode;
 	public static String BillerAccountnumber;
@@ -116,20 +124,43 @@ public class BackOffice_BillerPage extends Keywords {
 	public void updatetheBillerdetails() throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(Keybillereditbtn);
-		Billername=Tools.RANDOMTEXT("RANDOMTEXT",10);
-		Wait.forSeconds(2000);
-		type.data(KeyBillername, Billername);
+//		Billername=Tools.RANDOMTEXT("RANDOMTEXT",10);
+//		Wait.forSeconds(2000);
+//		type.data(KeyBillername, Billername);
+		Billercode=Tools.RANDOMTEXT("RANDOMNUMBER",5);
+		type.data(KeyBillercode,Billercode );
 		click.elementBy(KeybillerNext);
-		Wait.forSeconds(2000);
+		Wait.forSeconds(5000);
 		click.elementBy(Keyreview);
+		type.data(Keybillerupdatereason,"Updatereason");
 		click.elementBy(KeySubmitbutton);
 		Wait.forSeconds(5000);
 	}
 	public void verifUpdateBillerdetails(String Billername) throws Throwable {
 		Wait.forSeconds(2000);
 
-		verify.elementTextMatching(Keybillernameverify,Billername);
+		verify.elementTextMatching(KeybillerCodeverify,Billername);
 		//verify.elementTextMatching(KeyAccountnumbermanagebillerverify,Billeracctnumber);
+	}
+	public void clicktheCancel() throws Throwable {
+		//KeyApprove= "//*[text()="+"'"+BillerID+"'"+"]"+KeyApprove;
+		click.elementBy(Keybillercancel);
+	}
+	public void clicktheCancelrequest() throws Throwable {
+		//KeyApprove= "//*[text()="+"'"+BillerID+"'"+"]"+KeyApprove;
+		click.elementBy(Keybillercancelrequesst);
+	}
+
+	public void clicktheViewbutton() throws Throwable {
+		//KeyApprove= "//*[text()="+"'"+BillerID+"'"+"]"+KeyApprove;
+		click.elementBy(Keybilerview);
+	}
+	public void verifyBillerdetailsview(String Billertype,String Billercode,String Billeracctnumber,String Billername) throws Throwable {
+		Wait.forSeconds(2000);
+		verify.elementTextMatching(Keybillertypeverifyview,Billertype);
+		verify.elementTextMatching(KeybillerCodeverifyview,Billercode);
+		verify.elementTextMatching(Keybilleacctnumberverifyview,Billeracctnumber);
+		verify.elementTextMatching(Keybillernameverifyview,Billername);
 	}
 }
 

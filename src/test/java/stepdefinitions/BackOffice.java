@@ -1107,6 +1107,7 @@ public class BackOffice {
     @And("^I Edit the biller and update details$")
     public void iEditTheBillerAndUpdateDetails() throws Throwable {
         BillerPage.updatetheBillerdetails();
+
         RegisterPage.clickLogout();
     }
 
@@ -1118,8 +1119,29 @@ public class BackOffice {
         login.enterBOLogin();
         BillerPage.clickManagebillerlink();
         Wait.forSeconds(2000);
-        BillerPage.enterSearchbiller(BillerPage.Billername);
+        BillerPage.enterSearchbiller(BillerPage.Billercode);
         BillerPage.clickSearchbillericon();
-        BillerPage.verifUpdateBillerdetails(BillerPage.Billername);
+        BillerPage.verifUpdateBillerdetails(BillerPage.Billercode);
+    }
+
+    @And("^Cancel the the biller approval$")
+    public void cancelTheTheBillerApproval() throws Throwable {
+        BillerPage.clicktheBillsapprval();
+        Wait.forSeconds(2000);
+        BillerPage.clicktheCancel();
+        Wait.forSeconds(2000);
+        BillerPage.clicktheCancelrequest();
+
+    }
+
+    @And("^I click the view button$")
+    public void iClickTheViewButton() throws Throwable {
+        BillerPage.clicktheViewbutton();
+    }
+
+    @And("^Verify the view Biller details \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+    public void verifyTheViewBillerDetails(String arg0, String arg1, String arg2, String arg3) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+      BillerPage.verifyBillerdetailsview(arg0,arg1,arg2,arg3);
     }
 }
