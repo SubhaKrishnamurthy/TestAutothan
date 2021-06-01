@@ -32,6 +32,9 @@ public class BackOffice {
     private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
     private BackOffice_RegisterPage RegisterPage = new BackOffice_RegisterPage();
     private BackOffice_PushNotificationPage pushNotificationPage = new BackOffice_PushNotificationPage();
+    private BackOffice_QRMaker qrMakerPage = new BackOffice_QRMaker();
+    private BackOffice_FAQ faqPage = new BackOffice_FAQ();
+
     private BackOffice_BillerPage BillerPage = new BackOffice_BillerPage();
     WebDriver driver;
     WebElement element;
@@ -74,6 +77,13 @@ public class BackOffice {
     @Given("^I am on login page of online banking backoffice application as UBPSAC2 user$")
     public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPSAC2_user() throws Throwable {
         login.enterBOUserName(PropertyReader.testDataOf("BOUsername5").trim());
+        login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
+        login.enterBOLogin();
+    }
+
+    @Given("^I am on login page of online banking backoffice application as UBPQRMakerAuto user$")
+    public void I_am_on_login_page_of_online_banking_backoffice_application_as_UBPQRMakerAuto_user() throws Throwable {
+        login.enterBOUserName(PropertyReader.testDataOf("BOUsername7").trim());
         login.enterBOPassword(PropertyReader.testDataOf("BOpassword").trim());
         login.enterBOLogin();
     }
@@ -946,6 +956,54 @@ public class BackOffice {
     public void I_approve_the_notification(String reason) throws Throwable {
         pushNotificationPage.approveNotification(reason);
     }
+
+    @When("^I click on manage biller$")
+    public void I_click_on_manage_biller() throws Throwable {
+        qrMakerPage.clickManageBiller();
+    }
+
+    @Then("^I search for the biller \"([^\"]*)\"$")
+    public void I_search_for_the_biller(String name) throws Throwable {
+        qrMakerPage.searchBiller(name);
+    }
+
+    @And("^I enter payors name \"([^\"]*)\", pin \"([^\"]*)\" and generate QR code$")
+    public void I_enter_payors_name_pin_and_generate_QR_code(String name, String pin) throws Throwable {
+        qrMakerPage.EnterDetailsAndGenerateQR(name,pin);
+    }
+
+    @And("^I cancel the QR maker$")
+    public void I_cancel_the_QR_maker() throws Throwable {
+        qrMakerPage.cancelQRMaker();
+    }
+
+    @When("^I click the link for FAQ$")
+    public void I_click_the_link_for_FAQ() throws Throwable {
+        homePage.clickFAQ();
+    }
+
+    @And("^I click the manage FAQ$")
+    public void I_click_the_manage_FAQ() throws Throwable {
+        faqPage.clickManageFAQ();
+    }
+
+    @And("^I add FAQ and submit$")
+    public void I_add_FAQ_and_submit() throws Throwable {
+        faqPage.addFAQ();
+        faqPage.submitFAQ();
+    }
+
+    @Then("^I approve the FAQ$")
+    public void I_approve_the_FAQ() throws Throwable {
+        faqPage.approveFAQ();
+    }
+
+    @And("^I edit the FAQ$")
+    public void I_edit_the_FAQ() throws Throwable {
+        faqPage.editFAQ();
+    }
+
+
 
     @Given("^Login with user \"([^\"]*)\"$")
     public void loginWithUser(String arg0) throws Throwable {

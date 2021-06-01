@@ -27,6 +27,7 @@ public class Keywords {
     public static Type type=new Type();
     public static Screenshot screenshot=new Screenshot();
     public static Select select = new Select();
+    public static Return aReturn = new Return();
 
 
     public static void launchApplication() throws EnvironmentException {

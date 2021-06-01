@@ -612,7 +612,32 @@ Feature: Backoffice functionalities Validation
       Then I approve the notification with the reason "Please Approve"
       Then I successfully logout by clicking the Logout Button
 
+  #250
   @B51
+  Scenario: Validation of QR CODE generation
+    Given I am on login page of online banking backoffice application as UBPQRMakerAuto user
+    When I click on manage biller
+    Then I search for the biller "7335"
+    And I enter payors name "PINOYID", pin "1357564" and generate QR code
+    And I cancel the QR maker
+    Then I successfully logout by clicking the Logout Button
+
+    #237
+  @B52
+  Scenario: Validation Of Add New FAQ
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click the link for FAQ
+    And I click the manage FAQ
+    And I add FAQ and submit
+    Then I successfully logout by clicking the Logout Button
+    Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+    When I click the link for FAQ
+    Then I approve the FAQ
+    When I click the link for FAQ
+    And I click the manage FAQ
+    #And I edit the FAQ
+    Then I successfully logout by clicking the Logout Button
+  @B53
   Scenario: Validation of updating in Edit profile screen and Approval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
@@ -620,14 +645,14 @@ Feature: Backoffice functionalities Validation
     And I approve the profile change user "UBPSAC2"
     And I verify the user profile changed for user "UBPSAC1" "senthilactive"
 
-  @B52
+  @B54
   Scenario: Validation of updating in Edit profile screen and DisApproval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
     Then I Click the user and Edit profile change the mobilnumber and mailid
     And I Disapprove the profile change user "UBPSAC2"
 
-  @B53
+  @B55
   Scenario: Validation of searching Biller by using Biller Name,code,biiler id and account number
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -638,7 +663,7 @@ Feature: Backoffice functionalities Validation
     Then I Enter the biller account number "000000090001" in biller search and click the search icon
     And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
 
-  @B54
+  @B56
   Scenario: Validation of add new biller and approve biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -647,7 +672,7 @@ Feature: Backoffice functionalities Validation
     And Approve the the biller approval
     And I Verify the New biller and details user "OnboardAutomation"
 
-  @B55
+  @B57
   Scenario: Validation of add new biller and approve biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -655,7 +680,7 @@ Feature: Backoffice functionalities Validation
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
 
-    @B56
+    @B58
     Scenario: Validation of Deleting New Billers and Billers delete Approval
       Given Login with user "OnboardAutomation"
       When I Click the Managebiller link
@@ -665,7 +690,7 @@ Feature: Backoffice functionalities Validation
       And I Verify the New biller and details user "OnboardAutomation"
       And I Delete the new biller
 
-    @B57
+    @B59
     Scenario: Validation of Updating Existing Billers
       Given Login with user "OnboardAutomation"
       When I Click the Managebiller link
