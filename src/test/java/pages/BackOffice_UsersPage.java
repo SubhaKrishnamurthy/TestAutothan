@@ -22,7 +22,7 @@ public class BackOffice_UsersPage extends Keywords {
 		click.elementBy(keyUsersCancel);
 	}
 
-	public void clickUsersDispprove(String data) throws Throwable {
+	public void clickUsersDispprove() throws Throwable {
 		Wait.forSeconds(3000);
 		click.elementBy(keyUsersDispprove);
 	}

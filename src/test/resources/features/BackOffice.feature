@@ -24,7 +24,7 @@ Feature: Backoffice functionalities Validation
     Then I verify no list of users
     Then I successfully logout by clicking the Logout Button
 
-    @B02
+   @B02
     Scenario: TSBO02_Validation of Fund transfer logs for BRM user
       Given I am on login page of online banking backoffice application as SubhaBrm user
       When I click on the manage clients tab
@@ -36,7 +36,7 @@ Feature: Backoffice functionalities Validation
       Then I Verify and click the Email, SMS, Email and SMS buttons
       Then I successfully logout by clicking the Logout Button
 
-      @B03
+   @B03
       Scenario:  TSBO03_Validation of Bills paid logs for BRM user
         Given I am on login page of online banking backoffice application as SubhaBrm user
         When I click on the manage clients tab
@@ -48,7 +48,7 @@ Feature: Backoffice functionalities Validation
         Then I Verify and click the Email, SMS, Email and SMS buttons
         Then I successfully logout by clicking the Logout Button
 
-    @B04
+  @B04
       Scenario: TSBO04_Validation of Load Purchase requests for BRM user
       Given I am on login page of online banking backoffice application as SubhaBrm user
       When I click on the manage clients tab
@@ -60,7 +60,7 @@ Feature: Backoffice functionalities Validation
       Then I Verify and click the Email, SMS, Email and SMS buttons
       Then I successfully logout by clicking the Logout Button
 
-    @B05
+   @B05
       Scenario: TSBO05_Validation of Invalid Signup tab for BRM user
       Given I am on login page of online banking backoffice application as SubhaBrm user
       When I click on the manage Invalid SignUps tab
@@ -86,7 +86,7 @@ Feature: Backoffice functionalities Validation
       And I select CIF type as "Card Pro" and click search button
       Then I verify Invalid signup search results
 
-      @B06
+   @B06
       Scenario: TSBO06_Validation of searching client user in search bar by firstName,lastName,Mobile,Email,Account number for SSO user
         Given I am on login page of online banking backoffice application as SubhaBrm user
         When I click on the manage clients tab
@@ -102,7 +102,7 @@ Feature: Backoffice functionalities Validation
         Then I verify the list of users related to search
         Then I successfully logout by clicking the Logout Button
 
-    @B07
+   @B07
       Scenario: TSBO07_Validation of Edit profile for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
@@ -136,7 +136,7 @@ Feature: Backoffice functionalities Validation
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
-    @B08
+  @B08
     Scenario:  TSBO08_Validation of Edit User ID for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
@@ -170,7 +170,7 @@ Feature: Backoffice functionalities Validation
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
-      @B09
+  @B09
         Scenario:  TSBO09_Validation of Confirm approval for deactivation of user for SSO user
         Given I am on login page of online banking backoffice application as Subha user
         When I click on the manage clients tab
@@ -249,7 +249,7 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
 
     #TS260
-    @B12
+  @B12
     Scenario: TS260_Validation Schedule Fund Transfer Valid Transaction dates
       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
       When I click on the Scheduled Activities Link
@@ -600,7 +600,7 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
 
     #251
-    @B50
+   @B50
     Scenario: Validation of Push Notification
       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
       When I click on Send Notification
@@ -622,13 +622,14 @@ Feature: Backoffice functionalities Validation
     And I cancel the QR maker
     Then I successfully logout by clicking the Logout Button
 
+#FAQ starts here
     #237
   @B52
   Scenario: Validation Of Add New FAQ
     Given I am on login page of online banking backoffice application as UBPProductAuto1 user
     When I click the link for FAQ
     And I click the manage FAQ
-    And I add FAQ and submit
+    And I add FAQ type as "About UnionBank Online" and submit
     Then I successfully logout by clicking the Logout Button
     Given I am on login page of online banking backoffice application as UBPProductAuto2 user
     When I click the link for FAQ
@@ -637,7 +638,170 @@ Feature: Backoffice functionalities Validation
     And I click the manage FAQ
     #And I edit the FAQ
     Then I successfully logout by clicking the Logout Button
+
+    #TS242
   @B53
+      Scenario: Validation of  DisApproving Fund Transfer FAQ
+      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+      When I click the link for FAQ
+      And I click the manage FAQ
+      And I add FAQ type as "Fund Transfer" and submit
+      Then I successfully logout by clicking the Logout Button
+      Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+      When I click the link for FAQ
+      Then I disapprove the FAQ
+      Then I successfully logout by clicking the Logout Button
+
+      #TS243
+   @B54
+    Scenario: Validation of DisApproving union Bank FAQ
+    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+    When I click the link for FAQ
+    And I click the manage FAQ
+    And I add FAQ type as "About UnionBank Online" and submit
+    Then I successfully logout by clicking the Logout Button
+    Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+    When I click the link for FAQ
+    Then I disapprove the FAQ
+    Then I successfully logout by clicking the Logout Button
+
+     #TS244
+   @B55
+     Scenario: Validation of Dis Approving Bill Payment FAQ
+       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+       When I click the link for FAQ
+       And I click the manage FAQ
+       And I add FAQ type as "Bills Payment" and submit
+       Then I successfully logout by clicking the Logout Button
+       Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+       When I click the link for FAQ
+       Then I disapprove the FAQ
+       Then I successfully logout by clicking the Logout Button
+
+     #TS245
+   @B56
+     Scenario: Validation of Dis Approving Buy Load FAQ
+       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+       When I click the link for FAQ
+       And I click the manage FAQ
+       And I add FAQ type as "Load Purchase" and submit
+       Then I successfully logout by clicking the Logout Button
+       Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+       When I click the link for FAQ
+       Then I disapprove the FAQ
+       Then I successfully logout by clicking the Logout Button
+
+       #TS246
+    @B57
+     Scenario: Validation of Deletion of FAQ
+       Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+       When I click the link for FAQ
+       And I click the manage FAQ
+       And I add FAQ type as "Load Purchase" and submit
+       Then I successfully logout by clicking the Logout Button
+       Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+       When I click the link for FAQ
+       Then I approve the FAQ
+       When I click the link for FAQ
+       And I click the manage FAQ
+       Then I delete the FAQ
+       Then I successfully logout by clicking the Logout Button
+
+      #TS238
+   @B58
+      Scenario: Validation of  Updating of Union Bank FAQ
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I add FAQ type as "About UnionBank Online" and submit
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I edit the FAQ
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I verify the edited FAQ
+        Then I successfully logout by clicking the Logout Button
+
+      #TS239
+   @B59
+      Scenario: Validation of Updating of  Fund Transfer FAQ
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I add FAQ type as "Fund Transfer" and submit
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I edit the FAQ
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I verify the edited FAQ
+        Then I successfully logout by clicking the Logout Button
+
+      #TS240
+   @B60
+      Scenario: Validation of Updating of  Bill Payment FAQ
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I add FAQ type as "Bills Payment" and submit
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I edit the FAQ
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I verify the edited FAQ
+        Then I successfully logout by clicking the Logout Button
+
+      #TS241
+  @B61
+      Scenario: Validation of Updating of  Buy Load FAQ
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I add FAQ type as "Load Purchase" and submit
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto2 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I edit the FAQ
+        Then I successfully logout by clicking the Logout Button
+        Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+        When I click the link for FAQ
+        Then I approve the FAQ
+        When I click the link for FAQ
+        And I click the manage FAQ
+        And I verify the edited FAQ
+        Then I successfully logout by clicking the Logout Button
+
+#FAQ ends here
+
+  @B62
   Scenario: Validation of updating in Edit profile screen and Approval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
@@ -645,14 +809,14 @@ Feature: Backoffice functionalities Validation
     And I approve the profile change user "UBPSAC2"
     And I verify the user profile changed for user "UBPSAC1" "senthilactive"
 
-  @B54
+  @B63
   Scenario: Validation of updating in Edit profile screen and DisApproval
     Given Login with user "UBPSAC1"
     When I search the client user id "senthilactive"
     Then I Click the user and Edit profile change the mobilnumber and mailid
     And I Disapprove the profile change user "UBPSAC2"
 
-  @B55
+  @B64
   Scenario: Validation of searching Biller by using Biller Name,code,biiler id and account number
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -663,7 +827,7 @@ Feature: Backoffice functionalities Validation
     Then I Enter the biller account number "000000090001" in biller search and click the search icon
     And Verify the Biller details "1001" "TA001" "TEST AUTOMATION BILLER ONE" "000000090001"
 
-  @B56
+  @B65
   Scenario: Validation of add new biller and approve biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -672,7 +836,7 @@ Feature: Backoffice functionalities Validation
     And Approve the the biller approval
     And I Verify the New biller and details user "OnboardAutomation"
 
-  @B57
+  @B66
   Scenario: Validation of add new biller and approve biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -680,7 +844,7 @@ Feature: Backoffice functionalities Validation
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
 
-    @B58
+  @B67
     Scenario: Validation of Deleting New Billers and Billers delete Approval
       Given Login with user "OnboardAutomation"
       When I Click the Managebiller link
@@ -690,7 +854,7 @@ Feature: Backoffice functionalities Validation
       And I Verify the New biller and details user "OnboardAutomation"
       And I Delete the new biller
 
-    @B59
+  @B68
     Scenario: Validation of Updating Existing Billers
       Given Login with user "OnboardAutomation"
       When I Click the Managebiller link
@@ -703,7 +867,7 @@ Feature: Backoffice functionalities Validation
       And Approve the the biller approval
       And I Verify the updated biller and details user "OnboardAutomation"
 
-  @B58
+  @B69
   Scenario: Validation cancel of updating biller where request is raised by same biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -711,7 +875,7 @@ Feature: Backoffice functionalities Validation
     Then Login with user "OnboardAutomation"
     And Cancel the the biller approval
 
-  @B60
+  @B70
   Scenario: Validation of Updating Favorite Billers
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -721,7 +885,7 @@ Feature: Backoffice functionalities Validation
     And Approve the the biller approval
     And I Verify the updated biller and details user "OnboardAutomation"
 
-  @B61
+  @B71
   Scenario: Validation of Updating scheduled Billers
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -731,7 +895,7 @@ Feature: Backoffice functionalities Validation
     And Approve the the biller approval
     And I Verify the updated biller and details user "OnboardAutomation"
 
-  @B62
+  @B72
   Scenario: Validation of DisApproval for updated biller field for scheduled biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
@@ -740,8 +904,7 @@ Feature: Backoffice functionalities Validation
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
 
-
-  @B63
+  @B73
   Scenario: Validation of DisApproval for updated biller field for Favorite biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link

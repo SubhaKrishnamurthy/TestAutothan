@@ -252,7 +252,7 @@ public class BackOffice {
 
     @And("^I click users dispprove for \"([^\"]*)\"$")
         public void I_click_users_dispprove_for(String data) throws Throwable {
-        usersPage.clickUsersDispprove(data);
+        usersPage.clickUsersDispprove();
     }
 
     @And("^I enter disapprove reason as \"([^\"]*)\" and click confirm disapprove button$")
@@ -987,9 +987,9 @@ public class BackOffice {
         faqPage.clickManageFAQ();
     }
 
-    @And("^I add FAQ and submit$")
-    public void I_add_FAQ_and_submit() throws Throwable {
-        faqPage.addFAQ();
+    @And("^I add FAQ type as \"([^\"]*)\" and submit$")
+    public void I_add_FAQ_type_as_and_submit(String type) throws Throwable {
+        faqPage.addFAQ(type);
         faqPage.submitFAQ();
     }
 
@@ -998,12 +998,25 @@ public class BackOffice {
         faqPage.approveFAQ();
     }
 
+    @Then("^I disapprove the FAQ$")
+    public void I_disapprove_the_FAQ() throws Throwable {
+        faqPage.disapproveFAQ();
+    }
+
     @And("^I edit the FAQ$")
     public void I_edit_the_FAQ() throws Throwable {
         faqPage.editFAQ();
     }
 
+    @And("^I verify the edited FAQ$")
+    public void I_verify_the_edited_FAQ() throws Throwable {
+        faqPage.verifyEditedFAQ();
+    }
 
+    @Then("^I delete the FAQ$")
+    public void I_delete_the_FAQ() throws Throwable {
+        faqPage.deleteFAQ();
+    }
 
     @Given("^Login with user \"([^\"]*)\"$")
     public void loginWithUser(String arg0) throws Throwable {

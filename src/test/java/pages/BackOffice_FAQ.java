@@ -6,19 +6,25 @@ import helper.Tools;
 
 public class BackOffice_FAQ extends Keywords {
 		BackOffice_UsersPage usersPage = new BackOffice_UsersPage();
-
+		BackOffice_RegisterPage registerPage = new BackOffice_RegisterPage();
+		CommonMethods commonMethods =  new CommonMethods();
 	private String keyManageFAQ = "onlineBanking.backoffice.FAQ.manageFAQ";
 	private String keyAddFAQType = "onlineBanking.backoffice.FAQ.AddFAQType";
 	private String keyAddNewFAQ = "onlineBanking.backoffice.FAQ.AddNewFAQ";
 	private String keyAddFAQTitle = "onlineBanking.backoffice.FAQ.AddFAQTitle";
-	private String keyAddFAQBody = "onlineBanking.backoffice.FAQ.AddFAQBody";
+	private String keyFAQBody = "onlineBanking.backoffice.FAQ.FAQBody";
 	private String keyAddFAQSubmitForApproval = "onlineBanking.backoffice.FAQ.AddFAQSubmitForApproval";
 	private String keyApprovalForFAQ = "onlineBanking.backoffice.FAQ.ApprovalForFAQ";
 	private String keyConfirmApprovalReason  =  "onlineBanking.backoffice.FAQ.ADDFAQ.ConfirmApprovalReason";
 	private String keyAddFAQApprove = "onlineBanking.backoffice.FAQ.ADDFAQ.Approve";
 	private String keyEditFAQ = "onlineBanking.backoffice.FAQ.EditFAQ";
 	private String keyEditFAQTitle = "onlineBanking.backoffice.FAQ.EditFAQTitle";
-	private String keyEditFAQBody = "onlineBanking.backoffice.FAQ.EditFAQBody";
+	private String keyDisapprove = "onlineBanking.backoffice.FAQ.Disapprove";
+	private String keyDeleteFAQLink = "onlineBanking.backoffice.FAQ.DeleteFAQLink";
+	private String keyDeleteFAQBtn = "onlineBanking.backoffice.FAQ.DeleteFAQBtn";
+	private String keyUpdateReason = "onlineBanking.backoffice.FAQ.UpdateReason";
+	private String keyNextStep = "onlineBanking.backoffice.FAQ.NextStep";
+
 	String storeValue= Tools.RANDOMTEXT("RANDOMTEXT",10);
 
 	public void clickManageFAQ() throws Throwable {
@@ -26,14 +32,14 @@ public class BackOffice_FAQ extends Keywords {
 		click.elementBy(keyManageFAQ);
 	}
 
-	public void addFAQ() throws Throwable {
+	public void addFAQ(String FAQType) throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(keyAddNewFAQ);
 		verify.IfElementExists(keyAddFAQType);
-		select.backOffice_selectValueInAnyList(keyAddFAQType,"About UnionBank Online");
+		select.backOffice_selectValueInAnyList(keyAddFAQType,FAQType);
 		verify.IfElementExists(keyAddFAQTitle);
 		type.data(keyAddFAQTitle,storeValue);
-		type.data(keyAddFAQBody,"TEXT FAQ Test Automation");
+		type.data(keyFAQBody,"TEXT FAQ Test Automation");
 
 	}
 
@@ -48,11 +54,34 @@ public class BackOffice_FAQ extends Keywords {
 		click.elementBy(keyAddFAQApprove);
 	}
 
-	public void editFAQ() throws Throwable {
-		Wait.forSeconds(4000);
-		click.elementFromStoredData(keyEditFAQ,storeValue);
- 		verify.elementTextMatching(keyAddFAQTitle,storeValue);
-		verify.elementTextMatching(keyEditFAQBody,"TEXT FAQ Test Automation");
+	public void disapproveFAQ() throws Throwable {
+		click.elementBy(keyApprovalForFAQ);
+		click.elementBy(keyDisapprove);
+		type.data(keyConfirmApprovalReason,"DisApproved");
+		registerPage.clickDisApprove();
 	}
 
+	public void editFAQ() throws Throwable {
+		Wait.forSeconds(10000);
+ 		click.elementBy(keyEditFAQ);
+		//click.elementFromStoredData(keyEditFAQ,storeValue);
+		type.data(keyEditFAQTitle,Tools.RANDOMTEXT("RANDOMTEXT",10));
+		type.data(keyFAQBody,"TEXT FAQ Test Automation Updating");
+		click.elementBy(keyNextStep);
+		type.data(keyUpdateReason,"update reason");
+		commonMethods.clickSaveBtn();
+	}
+
+	public void verifyEditedFAQ() throws Throwable {
+		Wait.forSeconds(2000);
+		click.elementBy(keyEditFAQ);
+		verify.elementTextMatching(keyFAQBody,"TEXT FAQ Test Automation Updating");
+	}
+
+	public void deleteFAQ() throws Throwable {
+		Wait.forSeconds(2000);
+		click.elementBy(keyDeleteFAQLink);
+		type.data(keyConfirmApprovalReason,"faq deleted");
+		click.elementBy(keyDeleteFAQBtn);
+	}
 }

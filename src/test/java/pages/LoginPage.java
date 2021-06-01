@@ -36,16 +36,12 @@ public class LoginPage extends Keywords {
 
 	public void enterBOUserName(String username) throws ApplicationException, InterruptedException {
 		actions.Wait.forSeconds(4000);
-		//Wait.forSeconds(2000);
-		//Thread.sleep(2000);
 		type.data(keyBOUserName,username);
 		actions.Wait.forSeconds(14000);
 	}
 
 	public void enterBOPassword(String password) throws ApplicationException, InterruptedException {
 		actions.Wait.forSeconds(2000);
-		//Wait.forSeconds(2000);
-		//Thread.sleep(2000);
 		type.data(keyBOPassword,password);
 	}
 
