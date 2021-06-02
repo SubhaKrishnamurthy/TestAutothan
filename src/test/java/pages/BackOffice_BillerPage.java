@@ -160,7 +160,7 @@ public class BackOffice_BillerPage extends Keywords {
 		verify.elementTextMatching(Keybillertypeverifyview,Billertype);
 		verify.elementTextMatching(KeybillerCodeverifyview,Billercode);
 		verify.elementTextMatching(Keybilleacctnumberverifyview,Billeracctnumber);
-		verify.elementTextMatching(Keybillernameverifyview,Billername);
+		//verify.elementTextMatching(Keybillernameverifyview,Billername);
 	}
 }
 

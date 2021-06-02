@@ -297,6 +297,15 @@ Feature: Backoffice functionalities Validation
           Then I successfully logout by clicking the Logout Button
 
           #Register cases starts here
+  @B74
+  Scenario: Validation of register,Endorse and user access the user Bills Pay Onboarding role
+    Given I'm click the register button in the backoffice application
+    When I enter the firstname lastname and user creation Bills pay onboarding  role details
+    Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
+    Then I Login with user "UBPSAC2" and second approve the user Bills pay onboarding  role
+    And I Login with new "Bills pay onboarding" user and logout
+
+
       #180
     @B16
       Scenario: Validation of Register Endorse and user access the user SAC role
@@ -800,7 +809,7 @@ Feature: Backoffice functionalities Validation
         Then I successfully logout by clicking the Logout Button
 
 #FAQ ends here
-
+#Edit profile starts here
   @B62
   Scenario: Validation of updating in Edit profile screen and Approval
     Given Login with user "UBPSAC1"
@@ -815,7 +824,9 @@ Feature: Backoffice functionalities Validation
     When I search the client user id "senthilactive"
     Then I Click the user and Edit profile change the mobilnumber and mailid
     And I Disapprove the profile change user "UBPSAC2"
+#Edit profile ends here
 
+#Biller starts here
   @B64
   Scenario: Validation of searching Biller by using Biller Name,code,biiler id and account number
     Given Login with user "OnboardAutomation"
@@ -913,6 +924,15 @@ Feature: Backoffice functionalities Validation
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
 
+  @B75
+  Scenario: Validation of Biller Logs in Biller
+    Given Login with user "OnboardAutomation"
+    When I Click the Managebiller link
+    Then I Enter the biller code "TA001" in biller search and click the search icon
+    And I click the view button
+    And Verify the view Biller details "AUTOMATIONBILLER" "TA001" "000000090001" "1001"
+
+#Biller ends here
 
 
 

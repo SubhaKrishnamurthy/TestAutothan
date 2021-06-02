@@ -79,6 +79,7 @@ public class BackOffice_RegisterPage extends Keywords {
 	private String Keymobilenumberverify="onlineBanking.backoffice.profile.lblmobilenumber";
 	private String Keyemailaddressverify="onlineBanking.backoffice.profile.lblemailaddress";
 	private String KeyDisApproveprofile="onlineBanking.backoffice.profile.btnDisApproveuserprofile";
+	private String KeyBillsonboardingapprove="onlineBanking.backoffice.Register.btnBillsPayOnboardingApprove";
 
 	public static String Username;
 	public static String Mobilemuber;
@@ -396,6 +397,10 @@ public class BackOffice_RegisterPage extends Keywords {
 	public void clickDisApproveuserprofile() throws Throwable {
 		actions.Wait.forSeconds(2000);
 		click.elementBy(KeyDisApproveprofile);
+	}
+	public void clickBillsPayOnboardingProductapprove() throws Throwable {
+		actions.Wait.forSeconds(2000);
+		click.elementBy(KeyBillsonboardingapprove);
 	}
 
 

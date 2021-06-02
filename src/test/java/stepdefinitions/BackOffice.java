@@ -1215,4 +1215,18 @@ public class BackOffice {
         // Write code here that turns the phrase above into concrete actions
       BillerPage.verifyBillerdetailsview(arg0,arg1,arg2,arg3);
     }
+
+    @Then("^I Login with user \"([^\"]*)\" and second approve the user Bills pay onboarding  role$")
+    public void iLoginWithUserAndSecondApproveTheUserBillsPayOnboardingRole(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Wait.forSeconds(2000);
+        login.enterBOUserName(arg0);
+        login.enterBOPassword("p@55w0rd");
+        login.enterBOLogin();
+        Wait.forSeconds(5000);
+        RegisterPage.clickUserforapproval();
+        RegisterPage.clickBillsPayOnboardingProductapprove();
+        RegisterPage.enterPleasespecifyreason();
+        RegisterPage.clickApprovebtn();
+    }
 }
