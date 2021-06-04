@@ -629,7 +629,7 @@ Feature: Backoffice functionalities Validation
     Then I search for the biller "7335"
     And I enter payors name "PINOYID", pin "1357564" and generate QR code
     And I cancel the QR maker
-    Then I successfully logout by clicking the Logout Button
+    #Then I successfully logout by clicking the Logout Button
 
 #FAQ starts here
     #237
@@ -848,7 +848,7 @@ Feature: Backoffice functionalities Validation
     And I Verify the New biller and details user "OnboardAutomation"
 
   @B66
-  Scenario: Validation of add new biller and approve biller
+  Scenario: Validation of disapproving own new biller request by billeronpay user
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
     Then I Click the New Biller and enther billerdetails an send for approval

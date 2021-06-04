@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
-@Regression @Login
+ @Login
 Feature: Login Page Validation
 
 

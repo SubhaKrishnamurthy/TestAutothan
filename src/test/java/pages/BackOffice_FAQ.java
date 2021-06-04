@@ -18,6 +18,7 @@ public class BackOffice_FAQ extends Keywords {
 	private String keyConfirmApprovalReason  =  "onlineBanking.backoffice.FAQ.ADDFAQ.ConfirmApprovalReason";
 	private String keyAddFAQApprove = "onlineBanking.backoffice.FAQ.ADDFAQ.Approve";
 	private String keyEditFAQ = "onlineBanking.backoffice.FAQ.EditFAQ";
+	private String keyEditedFAQ = "onlineBanking.backoffice.FAQ.EditedFAQ";
 	private String keyEditFAQTitle = "onlineBanking.backoffice.FAQ.EditFAQTitle";
 	private String keyDisapprove = "onlineBanking.backoffice.FAQ.Disapprove";
 	private String keyDeleteFAQLink = "onlineBanking.backoffice.FAQ.DeleteFAQLink";
@@ -74,7 +75,8 @@ public class BackOffice_FAQ extends Keywords {
 
 	public void verifyEditedFAQ() throws Throwable {
 		Wait.forSeconds(2000);
-		click.elementBy(keyEditFAQ);
+		click.elementBy(keyEditedFAQ);
+		Wait.forSeconds(2000);
 		verify.elementTextMatching(keyFAQBody,"TEXT FAQ Test Automation Updating");
 	}
 

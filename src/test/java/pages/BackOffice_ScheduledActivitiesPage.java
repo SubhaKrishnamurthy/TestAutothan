@@ -46,7 +46,7 @@ public class BackOffice_ScheduledActivitiesPage extends Keywords {
 	}
 
 	public void verifyFailedScheduledElements() throws Throwable {
-		Wait.forSeconds(2000);
+		Wait.forSeconds(4000);
 		verify.elementIsPresent(keyFirstElementDailyID);
 		verify.elementIsPresent(keySecondElementAccNos);
 		verify.elementIsPresent(keyThirdElementTransaction);
