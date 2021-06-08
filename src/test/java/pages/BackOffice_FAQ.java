@@ -7,7 +7,7 @@ import helper.Tools;
 public class BackOffice_FAQ extends Keywords {
 		BackOffice_UsersPage usersPage = new BackOffice_UsersPage();
 		BackOffice_RegisterPage registerPage = new BackOffice_RegisterPage();
-		CommonMethods commonMethods =  new CommonMethods();
+		CommonMethodsPage commonMethods =  new CommonMethodsPage();
 	private String keyManageFAQ = "onlineBanking.backoffice.FAQ.manageFAQ";
 	private String keyAddFAQType = "onlineBanking.backoffice.FAQ.AddFAQType";
 	private String keyAddNewFAQ = "onlineBanking.backoffice.FAQ.AddNewFAQ";

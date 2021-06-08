@@ -26,7 +26,7 @@ public class BackOffice {
     private BackOffice_AccountsPage accountsPage = new BackOffice_AccountsPage();
     private BackOffice_AccountsSearchPage accountsSearchPage = new BackOffice_AccountsSearchPage();
     private BackOffice_CustomerInformationPage customerInformationPage = new BackOffice_CustomerInformationPage();
-    private CommonMethods commonMethods =  new CommonMethods();
+    private CommonMethodsPage commonMethods =  new CommonMethodsPage();
     private BackOffice_InvalidSignUpsPage invalidSignUpsPage = new BackOffice_InvalidSignUpsPage();
     private BackOffice_UsersPage usersPage=new BackOffice_UsersPage();
     private BackOffice_ScheduledActivitiesPage scheduledActivitiesPage = new BackOffice_ScheduledActivitiesPage();
