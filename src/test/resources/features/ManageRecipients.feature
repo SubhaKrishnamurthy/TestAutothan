@@ -13,7 +13,6 @@ Feature: Manage Recipients functionalities Validation
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I click the Add recipient button
-    And I select bank name as "UCBP"
-    And I enter account name,number and click save button
+    Then I select bank name as "UCPB" and enter details and Save
     And I delete the recipient
     And I logout of UB online banking application
