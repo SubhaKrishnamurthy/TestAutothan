@@ -53,4 +53,30 @@ public class LoginPage extends Keywords {
 		executor.executeScript("arguments[0].click();", element);
 		Wait.forSeconds(5000);
 	}
+
+	public void clickRecaptcha() throws ApplicationException {
+
+		WebElement iframeSwitch = driver.findElement(By.xpath("(//div/iframe)[1]"));
+		actions.Wait.forSeconds(3000);
+		driver.switchTo().frame(iframeSwitch);
+		actions.Wait.forSeconds(5000);
+		element=driver.findElement(By.xpath("//span[@id='recaptcha-anchor']/div[1]"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+		actions.Wait.forSeconds(3000);
+		driver.switchTo().defaultContent();
+		actions.Wait.forSeconds(5000);
+	}
+
+	public void clickLoginbutton() throws ApplicationException {
+		driver.findElement(By.xpath("//*[text()='Log In']/parent::button")).click();
+	}
+	public void enterOTP(String otp) throws ApplicationException {
+		driver.findElement(By.xpath("//input[@placeholder='Enter 6-digit One-Time Password']")).sendKeys(otp);
+	}
+	public void clickSubmitbutton() throws ApplicationException {
+		driver.findElement(By.xpath("//*[text()='Submit']/parent::button")).click();
+	}
+
+
 }

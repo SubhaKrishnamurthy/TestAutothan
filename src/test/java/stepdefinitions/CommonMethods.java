@@ -32,16 +32,9 @@ public class CommonMethods {
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         //Thread.sleep(3000);
         actions.Wait.forSeconds(3000);
-        WebElement iframeSwitch = driver.findElement(By.xpath("(//div/iframe)[1]"));
-        driver.switchTo().frame(iframeSwitch);
-        element= driver.findElement(By.xpath("//span[@id='recaptcha-anchor']/div[1]"));
-        JavascriptExecutor executor = (JavascriptExecutor)driver;
-        executor.executeScript("arguments[0].click();", element);
-        //TestAttributes.driver.findElement(By.xpath("//span[@id='recaptcha-anchor']")).click();
-        driver.switchTo().defaultContent();
-        //Thread.sleep(8000);
         actions.Wait.forSeconds(3000);
-        driver.findElement(By.xpath("//*[text()=\"Log In\"]/parent::button")).click();
+        login.clickRecaptcha();
+        login.clickLoginbutton();
     }
 
     @And("^I logout of UB online banking application$")
@@ -50,4 +43,19 @@ public class CommonMethods {
     }
 
 
+    @Given("^I'm on login page of UB online banking application with otp \"([^\"]*)\"$")
+    public void iMOnLoginPageOfUBOnlineBankingApplicationWithOtp(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
+        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+        //Thread.sleep(3000);
+        actions.Wait.forSeconds(3000);
+        actions.Wait.forSeconds(3000);
+        login.clickRecaptcha();
+        login.clickLoginbutton();
+        actions.Wait.forSeconds(3000);
+        login.enterOTP(arg0);
+        actions.Wait.forSeconds(3000);
+        login.clickSubmitbutton();
+    }
 }
