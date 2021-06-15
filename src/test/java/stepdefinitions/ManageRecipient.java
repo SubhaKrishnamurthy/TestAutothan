@@ -4,6 +4,7 @@ package stepdefinitions;
 import actions.Wait;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import helper.PropertyReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,19 +35,14 @@ public class ManageRecipient {
         manageRecipient.clickAddRecipient();
     }
 
-    @And("^I select bank name as \"([^\"]*)\"$")
-    public void I_select_bank_name_as() throws Throwable {
-        
-    }
-
-    @And("^I enter account name,number and click save button$")
-    public void I_enter_account_name_number_and_click_save_button() throws Throwable {
-
+    @Then("^I select bank name as \"([^\"]*)\" and enter details and Save$")
+    public void I_select_bank_name_as_and_enter_details_and_Save(String bankName) throws Throwable {
+        manageRecipient.doAddRecipient(bankName);
     }
 
     @And("^I delete the recipient$")
     public void I_delete_the_recipient() throws Throwable {
-
+        manageRecipient.doDeleteRecipient();
     }
 
 }

@@ -11,6 +11,7 @@ public class CommonMethodsPage extends Keywords {
 	private String keyCloseBtn1 = "onlineBanking.backoffice.common.CloseBtn1";
 	private String keySaveBtn = "onlineBanking.backoffice.common.SaveBtn";
 	private String keyLogoutBtn = "onlineBanking.backoffice.common.LogoutBtn";
+	private String keyErrorMessage = "onlineBanking.common.alertMsg.";
 
 	public void clickYesBtn() throws Throwable {
 		click.elementBy(keyYesBtn);
@@ -36,5 +37,9 @@ public class CommonMethodsPage extends Keywords {
 	public void clickLogoutBtn() throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(keyLogoutBtn);
+	}
+
+	public void verifyAlert() throws Throwable {
+		verify.IfElementExists(keyErrorMessage);
 	}
 }
