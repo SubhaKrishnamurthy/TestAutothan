@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@BackOffice @Regression
+@BackOffice
 Feature: Backoffice functionalities Validation
 
   @B01

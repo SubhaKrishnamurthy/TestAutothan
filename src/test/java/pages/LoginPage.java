@@ -35,7 +35,7 @@ public class LoginPage extends Keywords {
 	}
 
 	public void enterBOUserName(String username) throws ApplicationException, InterruptedException {
-		actions.Wait.forSeconds(4000);
+		actions.Wait.forSeconds(8000);
 		type.data(keyBOUserName,username);
 		actions.Wait.forSeconds(14000);
 	}
