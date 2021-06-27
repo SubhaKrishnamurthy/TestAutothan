@@ -22,6 +22,7 @@ public class CommonMethods {
 
     private LoginPage login = new LoginPage();
     private CommonMethodsPage common = new CommonMethodsPage();
+   // private static Logger log = Logger.getLogger(Click.class);
 
     WebDriver driver;
     WebElement element;
@@ -35,6 +36,10 @@ public class CommonMethods {
         actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
+        actions.Wait.forSeconds(5000);
+        login.enterOTP(PropertyReader.testDataOf("Account1_OTP").trim());
+        actions.Wait.forSeconds(2000);
+        login.clickSubmitbutton();
     }
 
     @And("^I logout of UB online banking application$")

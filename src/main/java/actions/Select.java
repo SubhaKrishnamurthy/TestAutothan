@@ -39,4 +39,53 @@ public class Select extends Keywords {
 
         }
     }
+
+    public static void SelectValueInAnyList(String locatorKey, String data) throws ApplicationException {
+        try{
+            String Datatoselect = data.trim();
+            if(Datatoselect.equalsIgnoreCase("Filipino"));
+            {
+                get.elementBy(locatorKey).click();
+                driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys("Filipino");
+               driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys(Keys.ENTER);
+            }
+            if(!Datatoselect.equalsIgnoreCase("Filipino"));{
+                JavascriptExecutor executor = (JavascriptExecutor)driver;
+                executor.executeScript("arguments[0].click();",element);
+                Thread.sleep(10000);
+                String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
+                executor.executeScript("arguments[0].click();", driver.findElement(By.xpath(Datatoselectxpath)));
+                Thread.sleep(2000);
+            }
+        }
+
+        catch(Exception e){
+            try {
+                Thread.sleep(2000);
+                String Datatoselect = data.trim();
+                String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
+                Actions action= new Actions(driver);
+                action.moveToElement(element).build().perform();
+               driver.findElement(By.xpath(Datatoselectxpath)).click();
+                Thread.sleep(2000);
+            }
+            catch (Exception e1) {
+            // TODO Auto-generated catch block
+                try {
+
+                    Thread.sleep(100);
+                    element.click();
+                    //TestAttributes.element.sendKeys(TestAttributes.Data.trim());
+                    driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys("Filipino");
+                   driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys(Keys.ENTER);
+                    log.info("Successfully Value selected from Listbox");
+                }
+                catch(InterruptedException e2)
+                {
+                    e2.printStackTrace();
+                }
+            }
+        }
+    }
+
 }
