@@ -14,7 +14,9 @@ public class CommonMethodsPage extends Keywords {
 	private String keyLogoutBtn = "onlineBanking.backoffice.common.LogoutBtn";
 	private String keyErrorMessage = "onlineBanking.common.alertMsg";
 	private String keyAccNumErrMsg = "onlineBanking.common.Accountnum_amount_Errormessage";
-
+	private String keyCancelBtn = "onlineBanking.common.CancelBtn";
+	private String keySelectAcc = "onlineBanking.common.ClickToSelectAcc";
+	private String keyFromAccNumber = "onlineBanking.common.FromAccNumber";
 
 	public void clickYesBtn() throws Throwable {
 		click.elementBy(keyYesBtn);
@@ -52,5 +54,20 @@ public class CommonMethodsPage extends Keywords {
 
 	public void verifyAccNumNoErrMsg() throws Throwable {
 		verify.IfElementNotExists(keyAccNumErrMsg);
+	}
+
+	public void clickCancelBtn() throws Throwable {
+		verify.IfElementExists(keyCancelBtn);
+		click.elementBy(keyCancelBtn);
+	}
+
+	public void clickkeySelectAcc() throws Throwable {
+		verify.IfElementExists(keySelectAcc);
+		click.elementBy(keySelectAcc);
+	}
+
+	public void clickFromAccNumber() throws Throwable {
+		verify.IfElementExists(keyFromAccNumber);
+		click.elementBy(keyFromAccNumber);
 	}
 }

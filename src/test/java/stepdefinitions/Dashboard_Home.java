@@ -22,5 +22,8 @@ public class Dashboard_Home {
        dashboard.clickSendReceive();
     }
 
-
+    @When("^I click on Foreign Exchange button in dashboard$")
+    public void I_click_on_Foreign_Exchange_button_in_dashboard() throws Throwable {
+        dashboard.clickFX();
+    }
 }
