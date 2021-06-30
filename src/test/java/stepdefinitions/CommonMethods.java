@@ -33,7 +33,7 @@ public class CommonMethods {
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         //Thread.sleep(3000);
         actions.Wait.forSeconds(3000);
-        actions.Wait.forSeconds(3000);
+        //actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
         actions.Wait.forSeconds(5000);
