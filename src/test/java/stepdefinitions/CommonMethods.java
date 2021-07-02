@@ -31,9 +31,7 @@ public class CommonMethods {
     public void Im_on_login_page_of_UB_online_banking_application() throws Throwable {
         login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        //Thread.sleep(3000);
         actions.Wait.forSeconds(3000);
-        //actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
         actions.Wait.forSeconds(5000);
