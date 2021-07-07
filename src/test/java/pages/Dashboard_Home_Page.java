@@ -29,9 +29,10 @@ public class Dashboard_Home_Page extends Keywords {
 	private String UITFElement = "onlineBanking.Dashboard.UITFElement";
 	private String UITFLink = "onlineBanking.Dashboard.UITFLink";
 	private String GetStartedBtn = "onlineBanking.Dashboard.GetStartedBtn";
+	private String buyLoad = "onlineBanking.Dashboard.BuyLoadLink";
 
 	public void clickSendReceive() throws Throwable {
-		Wait.forSeconds(5000);
+		Wait.forSeconds(6000);
 		click.elementBy(SendReceive);
 	}
 
@@ -112,5 +113,10 @@ public class Dashboard_Home_Page extends Keywords {
 	public void clickGetStartedBtn() throws Throwable {
 		Wait.forSeconds(1000);
 		click.elementBy(GetStartedBtn);
+	}
+
+	public void clickBuyloadLink() throws Throwable {
+		Wait.forSeconds(2000);
+		click.elementBy(buyLoad);
 	}
 }

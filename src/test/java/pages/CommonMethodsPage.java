@@ -17,6 +17,9 @@ public class CommonMethodsPage extends Keywords {
 	private String keyCancelBtn = "onlineBanking.common.CancelBtn";
 	private String keySelectAcc = "onlineBanking.common.ClickToSelectAcc";
 	private String keyFromAccNumber = "onlineBanking.common.FromAccNumber";
+	private String keyToAccNumber = "onlineBanking.Fundtransfer.Toaccountnumber";
+	private String keyCancelBtn1 = "onlineBanking.common.CancelBtn1";
+	private String keyAccNumBGColor = "onlineBanking.common.AccNumBGColor";
 
 	public void clickYesBtn() throws Throwable {
 		click.elementBy(keyYesBtn);
@@ -61,6 +64,11 @@ public class CommonMethodsPage extends Keywords {
 		click.elementBy(keyCancelBtn);
 	}
 
+	public void clickCancelBtn1() throws Throwable {
+		verify.IfElementExists(keyCancelBtn1);
+		click.elementBy(keyCancelBtn1);
+	}
+
 	public void clickkeySelectAcc() throws Throwable {
 		verify.IfElementExists(keySelectAcc);
 		click.elementBy(keySelectAcc);
@@ -69,5 +77,14 @@ public class CommonMethodsPage extends Keywords {
 	public void clickFromAccNumber() throws Throwable {
 		verify.IfElementExists(keyFromAccNumber);
 		click.elementBy(keyFromAccNumber);
+	}
+
+	public void verifyAccNumBGColor() throws Throwable {
+		verify.IfElementExists(keyAccNumBGColor);
+	}
+
+	public void verifyFrom_To_Account() throws Throwable {
+		verify.IfElementExists(keyFromAccNumber);
+		verify.IfElementExists(keyToAccNumber);
 	}
 }

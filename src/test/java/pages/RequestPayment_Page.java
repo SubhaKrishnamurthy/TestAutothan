@@ -2,8 +2,10 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import cucumber.api.java.es.Y;
 import gherkin.lexer.Th;
 import helper.PropertyReader;
+import jnr.posix.util.DefaultPOSIXHandler;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -54,7 +56,7 @@ public class RequestPayment_Page extends Keywords {
     private String Description_RequestPayment = "onlineBanking.RequestPayment.Description_RequestPayment";
     private String RequestingFrom_Input1 = "onlineBanking.RequestPayment.RequestingFrom_Input1";
     private String Hangon = "onlineBanking.RequestPayment.Hangon";
-    private String RequestPaymentAmount2 = "onlineBanking.RequestPayment.amount2";
+    private String Amount2 = "onlineBanking.RequestPayment.amount2";
     private String RequesingFrom_amount = "onlineBanking.RequestPayment.RequesingFrom_amount";
     private String RequestingFrom_mobile2 = "onlineBanking.RequestPayment.RequestingFrom_mobile2";
     private String RequestingFrom_name1 = "onlineBanking.RequestPayment.RequestingFrom_name1";
@@ -63,6 +65,9 @@ public class RequestPayment_Page extends Keywords {
     private String Amount1 = "onlineBanking.RequestPayment.amount1";
     private String AddPeople_Name = "onlineBanking.RequestPayment.AddPeople.Name";
     private String AddPeople_MobileNumber= "onlineBanking.RequestPayment.AddPeople.MobileNumber";
+    private String Search = "onlineBanking.SENDREQUEST_MANAGEDTRANSFERS.Search";
+    private String SplitBills = "onlineBanking.RequestPayment.SplitBills";
+
 
     public void clickRequestPaymentLink() throws Throwable
     {
@@ -70,6 +75,10 @@ public class RequestPayment_Page extends Keywords {
         click.elementBy(RequestPaymentLink);
     }
 
+    public void clickSplitBillsLink() throws Throwable {
+        click.elementBy(AnotherUnionBackAcc);
+        click.elementBy(SplitBills);
+    }
     public void selectOption(String option) throws Throwable {
         Wait.forSeconds(2000);
         select.backOffice_selectValueInAnyList(EvenOrUneven_new,option);
@@ -124,7 +133,18 @@ public class RequestPayment_Page extends Keywords {
         verify.elementTextContains(Depositto_accountnumber,PropertyReader.testDataOf("Depositto_accountnumber"));
         }
 
-    public void verifyCongMsg_OtherDetails_2Participants(String amount1,String amount2,String totalAmt) throws Throwable{
+    public void verifyCongMsg_OtherDetails1() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.IfElementExists(Congratulations);
+        verify.elementTextMatching(Requesingfrom_accountname, PropertyReader.testDataOf("Requesingfrom_accountname"));
+        verify.elementTextMatching(Requesingfrom_accountnumber,PropertyReader.testDataOf("Requesingfrom_accountnumber"));
+        verify.elementTextMatching(RequesingFrom_amount,PropertyReader.testDataOf("RequesingFrom_amount"));
+        verify.elementTextMatching(Totalamount,PropertyReader.testDataOf("Totalamount"));
+        verify.elementTextMatching(ReqPayMsg_Fnal,PropertyReader.testDataOf("Requestpayment_message"));
+        verify.elementTextContains(Depositto_accountname,PropertyReader.testDataOf("Depositto_accountname1"));
+        verify.elementTextContains(Depositto_accountnumber,PropertyReader.testDataOf("Depositto_accountnumber1"));
+    }
+        public void verifyCongMsg_OtherDetails_2Participants(String amount1,String amount2,String totalAmt) throws Throwable{
         Wait.forSeconds(2000);
         verify.IfElementExists(Congratulations);
         verify.elementTextMatching(RequestingFrom_name2, PropertyReader.testDataOf("Requestingfrom_name2"));
@@ -176,4 +196,70 @@ public class RequestPayment_Page extends Keywords {
         verify.elementIsPresent(TotalAmount_ErrorMsg);
     }
 
+    public void verifyAmountDisabled(String amt1, String amt2) throws Throwable {
+        Wait.forSeconds(4000);
+       /*
+        // verify.elementTextContains(RequestingFrom_Input1,amt1);
+       // verify.elementTextContains(RequestingFrom_Input2,amt2);
+        String input1= driver.findElement(By.xpath("(//span[@class=\"ant-input-wrapper ant-input-group\"]/span/input)[1]")).getText();
+        verify.elementTextMatching(input1,amt1);
+        String input2 = driver.findElement(By.xpath("(//span[@class=\"ant-input-wrapper ant-input-group\"]/span/input)[2]")).getText();
+        verify.elementTextMatching(input2,amt2);
+        */
+        verify.elementIsDisabled(RequestingFrom_Input1);
+        verify.elementIsDisabled(RequestingFrom_Input2);
+    }
+
+    public void verifyAmountEnabled(String amt1,String amt2) throws Throwable {
+        Wait.forSeconds(4000);
+        //verify.elementTextContains(RequestingFrom_Input1,amt1);
+        //verify.elementTextMatching(RequestingFrom_Input1,amt1);
+        //verify.elementTextContains(RequestingFrom_Input2,amt2);
+        verify.elementIsEnabled(RequestingFrom_Input1);
+        verify.elementIsEnabled(RequestingFrom_Input2);
+    }
+
+    public void confirmCancelRequest() throws Throwable {
+        click.elementBy(RequestPayment_CancelRequest);
+    }
+
+    public void verifyAccountName_Number() throws Throwable {
+        verify.elementTextMatching(Requesingfrom_accountname, PropertyReader.testDataOf("Requesingfrom_accountname"));
+        verify.elementTextMatching(Requesingfrom_accountnumber,PropertyReader.testDataOf("Requesingfrom_accountnumber"));
+    }
+
+    public void clickDepositToAccNum() throws Throwable{
+        click.elementBy(Depositto_accountnumber);
+    }
+
+    public void verifyDepositToAccNum() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementTextContains(Depositto_accountnumber,PropertyReader.testDataOf("Depositto_accountnumberFull"));
+    }
+
+    public void clickEditBtn() throws Throwable {
+        Wait.forSeconds(2000);
+        click.elementBy(Edit_RequestPayment);
+    }
+
+    public void verifyCongMsg_OtherDetails_SplitBills(String fromAccName,String FromAccNumber,String RequesingAmount,String TotalBill,String YourAmount,String message,String DepositToAccName,String DepositToAccNumber) throws Throwable {
+        verify.IfElementExists(Congratulations);
+        verify.elementTextMatching(Requesingfrom_accountname,fromAccName);
+        verify.elementTextMatching(Requesingfrom_accountnumber,FromAccNumber);
+        verify.elementTextMatching(RequesingFrom_amount,RequesingAmount);
+        verify.elementTextMatching(TotalBillAmt,TotalBill);
+        verify.elementTextMatching(YourPortionAmt,YourAmount);
+        //verify.elementTextMatching(Requestpayment_message,message);
+        verify.elementTextMatching(Depositto_accountname,DepositToAccName);
+        verify.elementTextMatching(Depositto_accountnumber,DepositToAccNumber);
+    }
+
+    public void clickGoToDashboard() throws Throwable {
+        click.elementBy(GoToDashboard);
+    }
+
+    public void splitYourPortionAmt_RequesingAmt(String YourPortionAmt,String RequesingAmt) throws Throwable {
+        type.data(Amount1,YourPortionAmt);
+        type.data(Amount2,RequesingAmt);
+    }
 }
