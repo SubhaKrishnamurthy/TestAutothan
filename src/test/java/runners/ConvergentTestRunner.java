@@ -15,7 +15,8 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
-        tags={"@EonAccount8"}
+       // dryRun = true,
+        tags={"@G03"}
 )
 
 public class ConvergentTestRunner extends Test {
