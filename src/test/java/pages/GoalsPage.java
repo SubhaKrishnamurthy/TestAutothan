@@ -41,8 +41,8 @@ public class GoalsPage extends Keywords {
     private String Topup_review_amount ="onlineBanking.MyGoals.Topup_review_amount";
     private String Goalname ="onlineBanking.MyGoals.Goalname";
     private String Dashboard_Add ="onlineBanking.MyGoals.Dashboard_Add";
-    private String GoalReviewAndEdit_FromAccount_Edit ="onlineBanking.MyGoals.GoalReviewAnd Edit_FromAccount_Edit";
-    private String GoalReviewandEdit_AmounttoSave_Edit ="onlineBanking.MyGoals.Goal Review andEdit_AmounttoSave_Edit";
+    private String GoalReviewAndEdit_FromAccount_Edit ="onlineBanking.MyGoals.GoalReviewAndEdit_FromAccount_Edit";
+    private String GoalReviewandEdit_AmounttoSave_Edit ="onlineBanking.MyGoals.GoalReviewAndEdit_AmounttoSave_Edit";
     private String Manage ="onlineBanking.MyGoals.Manage";
     private String Gadget ="onlineBanking.MyGoals.Gadget";
     private String Savingsaccount4 ="onlineBanking.MyGoals.Savingsaccount4";
@@ -95,11 +95,16 @@ public class GoalsPage extends Keywords {
     private String Edit_target_amount_plus ="onlineBanking.MyGoals.Edit_target_amount_plus";
     private String Topup_reviewEdit ="onlineBanking.MyGoals.Topup_reviewEdit";
     private String GoalsManageBtn = "onlineBanking.Goals.ManageBtn";
-
-//Goals Dashboard
-
+    //Goals-Review Page
+    private String ReviewGoalsName = "onlineBanking.MyGoalsReview.Goalsname";
+    private String Review_Save = "onlineBanking.MyGoalsReview.Save";
+    private String Review_Goalsamount = "onlineBanking.MyGoalsReview.Goalsamount";
+    private String Review_GoalsAccountName = "onlineBanking.MyGoalsReview.Goalsfromaccountname";
+    private String Review_GoalsAccNumber = "onlineBanking.MyGoalsReview.Goalsfromaccountnumber";
+    //Goals Dashboard
     private String Goals = "onlineBanking.GoalsDashboard.Goals";
-
+    private String Goals_Existing = "onlineBanking.GoalsDashboard.Existing";
+    private String Goals_Existing2 = "onlineBanking.GoalsDashboard.Existing2";
 
     public void verifyGoalsLbl() throws Throwable {
         Wait.forSeconds(5000);
@@ -139,6 +144,11 @@ public class GoalsPage extends Keywords {
 
     public void verifyNextBtnDisabled() throws Throwable {
         verify.elementIsDisabled(Next);
+    }
+
+    public void clickNextBtn() throws Throwable {
+        Wait.forSeconds(1000);
+        jsClick.elementBy(Next);
     }
 
     public void verifyGoalNameErr(String error) throws Throwable {
@@ -192,4 +202,147 @@ public class GoalsPage extends Keywords {
     public void selectSavingAccount() throws Throwable {
         click.elementBy(Savingsaccount1);
     }
+
+    public void selectSavingAccount2() throws Throwable {
+        click.elementBy(Savingsaccount2);
+    }
+
+    public void clickMaybeLaterBtn() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(Maybelater);
+        click.elementBy(Maybelater);
+    }
+
+    public void verifyReviewPageHeader() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(Reviewpage_header);
+    }
+
+    public void clickReview_CancelBtn() throws Throwable {
+        click.elementBy(Review_Cancel);
+    }
+
+    public void clickDepositPHPBtn() throws Throwable {
+        click.elementBy(Popup_OkTransferphp);
+    }
+
+    public void verifyGoalName(String goalName) throws Throwable {
+        verify.elementTextMatching(ReviewGoalsName,goalName);
+    }
+
+    public void editGoalName(String name) throws Throwable {
+        click.elementBy(Targetamount_Edit);
+        type.data(Goalname,name);
+        click.elementBy(Review_Save);
+    }
+
+    public void editGoalAmount() throws Throwable {
+        click.elementBy(Review_targetamountedit);
+        Wait.forSeconds(2000);
+        click.elementBy(Edit_target_amount_minus);
+        click.elementBy(Edit_target_amount_Save);
+    }
+
+    public void editGoalAccount() throws Throwable {
+        click.elementBy(GoalReviewAndEdit_FromAccount_Edit);
+        click.elementBy(selectfromaccount);
+        Wait.forSeconds(1000);
+        click.elementBy(Savingsaccount1);
+    }
+
+    public void verifyGoalsAmt_ReviewPage(String amount) throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementTextContains(Review_Goalsamount,amount);
+    }
+
+    public void verifyGoalsAccName_GoalsAccNumber(String accName,String accNumber) throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementTextMatching(Review_GoalsAccountName,accName);
+        verify.elementTextMatching(Review_GoalsAccNumber,accNumber);
+    }
+
+    public void selectExistingGoal() throws Throwable {
+        verify.elementIsPresent(Goals_Existing);
+        click.elementBy(Goals_Existing);
+    }
+
+    public void clickTopUpBtn() throws Throwable {
+        verify.elementIsPresent(Goalstopup);
+        click.elementBy(Goalstopup);
+    }
+
+    public void click100PHPElement() throws Throwable {
+        verify.elementIsPresent(Topup_100php);
+        click.elementBy(Topup_100php);
+    }
+
+    public void enterTopupAmount(String amount) throws Throwable{
+        type.data(Topupamount_input,amount);
+        Wait.forSeconds(2000);
+    }
+
+    public void verifyErrorMsg_TopUpAmt() throws Throwable {
+        verify.elementIsPresent(Topup_errormessage);
+    }
+
+    public void verifyTopUpAmt(String amount) throws Throwable {
+        verify.elementTextContains(Topup_review_amount,amount);
+    }
+
+    public void clickTopUbReviewEditBtn() throws Throwable {
+        click.elementBy(Topup_reviewEdit);
+    }
+
+    public void clickTopUpSubmitBtn() throws Throwable {
+        click.elementBy(Topup_review_topup);
+    }
+
+    public void clickGoalsOkBtn() throws Throwable {
+        Wait.forSeconds(2000);
+        click.elementBy(OK);
+    }
+
+    public void pauseGoal() throws Throwable {
+        if(verify.IfElementExistsboolean(PauseGoal)){
+            click.elementBy(PauseGoal);
+            click.elementBy(Pausegoal_submit);
+            verify.elementIsPresent(Pausegoal_GoalsSuccessfullyresumed);
+            clickGoalsOkBtn();
+        }
+    }
+
+    public void resumeGoal() throws Throwable {
+        if(verify.IfElementExistsboolean(ResumeGoal)){
+            click.elementBy(ResumeGoal);
+            click.elementBy(Next);
+            click.elementBy(resumegoal_submit);
+            verify.elementIsPresent(resumegoal_resumed);
+            clickBackToDashboard();
+        }
+    }
+
+    public void clickStartSavingBtn() throws Throwable {
+       click.elementBy(Review_Termsandconditions);
+        click.elementBy(Review_Startsaving);
+    }
+
+    public void verifyGoalSuccessMsg() throws Throwable{
+        verify.elementIsPresent(Successful);
+    }
+
+    public void clickBackToDashboard() throws Throwable {
+        click.elementBy(Gotodashboard);
+    }
+
+    public void withdrawGoal() throws Throwable {
+        click.elementBy(Edit_page_withdrawFunds);
+        Wait.forSeconds(2000);
+        type.data(WithdrawAmount_input,"500");
+        click.elementBy(Next);
+        click.elementBy(WithdrawPHP);
+        verify.elementIsPresent(Goalhasended);
+        click.elementBy(OK);
+        clickBackToDashboard();
+    }
+
 }

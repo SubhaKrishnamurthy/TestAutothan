@@ -1,7 +1,9 @@
 package stepdefinitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.CommonMethodsPage;
 import pages.Dashboard_Home_Page;
 import pages.GoalsPage;
 import pages.RequestPayment_Page;
@@ -10,6 +12,7 @@ public class Goals {
 
     Dashboard_Home_Page dashboardHomePage = new Dashboard_Home_Page();
     GoalsPage goalsPage = new GoalsPage();
+    CommonMethodsPage common = new CommonMethodsPage();
 
     @Then("^I Verify the Goals section in the dashboard$")
     public void i_Verify_the_Goals_section_in_the_dashboard() throws Throwable {
@@ -101,15 +104,157 @@ public class Goals {
         goalsPage.verifySavingAccNumbers();
     }
 
+    @Then("^I Select the savings account number2 displaying$")
+    public void i_Select_the_savings_account_number2_displaying() throws Throwable {
+        goalsPage.selectSavingAccount2();
+    }
+
     @Then("^I Select the savings account number displaying$")
     public void i_Select_the_savings_account_number_displaying() throws Throwable {
         goalsPage.selectSavingAccount();
     }
 
+    @Then("^I verify and click may be later button$")
+    public void i_verify_and_click_may_be_later_button() throws Throwable {
+        goalsPage.clickMaybeLaterBtn();
+    }
+
+    @Then("^I verify the review page header$")
+    public void i_verify_the_review_page_header() throws Throwable {
+        goalsPage.verifyReviewPageHeader();
+    }
+
+    @And("^I click the Goals review page cancel button$")
+    public void I_click_the_Goals_review_page_cancel_button() throws Throwable {
+        goalsPage.clickReview_CancelBtn();
+    }
+
+    @And("^I click the Deposit PHP button$")
+    public void I_click_the_Deposit_PHP_button() throws Throwable {
+        goalsPage.clickDepositPHPBtn();
+    }
 
 
+    @Then("^I Verify the goal name as \"([^\"]*)\"$")
+    public void i_Verify_the_goal_name_as(String arg1) throws Throwable {
+       goalsPage.verifyGoalName(arg1);
+    }
+
+    @When("^I Edit the goal name as \"([^\"]*)\"$")
+    public void I_Edit_the_goal_name_as(String name) throws  Throwable {
+        goalsPage.editGoalName(name);
+    }
 
 
+    @Then("^I Verify the review page Goals amount as \"([^\"]*)\"$")
+    public void i_Verify_the_review_page_Goals_amount_as(String arg1) throws Throwable {
+        goalsPage.verifyGoalsAmt_ReviewPage(arg1);
+    }
+
+    @Then("^I edit the goal amount$")
+    public void i_edit_the_goal_amount() throws Throwable {
+        goalsPage.editGoalAmount();
+    }
+
+
+    @Then("^I verify the Goals account name as \"([^\"]*)\" and account number as \"([^\"]*)\"$")
+    public void i_verify_the_Goals_account_name_as_and_account_number_as(String accName, String accNumber) throws Throwable {
+        goalsPage.verifyGoalsAccName_GoalsAccNumber(accName,accNumber);
+    }
+
+    @Then("^I edit the goal account$")
+    public void i_edit_the_goal_account() throws Throwable {
+        goalsPage.editGoalAccount();
+    }
+
+
+    @Then("^I select the existing goal$")
+    public void i_select_the_existing_goal() throws Throwable {
+        goalsPage.selectExistingGoal();
+    }
+
+    @Then("^I click the top up button$")
+    public void i_click_the_top_up_button() throws Throwable {
+        goalsPage.clickTopUpBtn();
+    }
+
+    @Then("^I Click  the \\+(\\d+)php element in the goals section$")
+    public void i_Click_the_php_element_in_the_goals_section(int arg1) throws Throwable {
+        goalsPage.click100PHPElement();
+    }
+
+    @When("^I Enter the top up amount as \"([^\"]*)\"$")
+    public void i_Enter_the_top_up_amount_as(String amt) throws Throwable {
+        goalsPage.enterTopupAmount(amt);
+    }
+
+    @Then("^I Verify the error message for topup amount$")
+    public void i_Verify_the_error_message_for_topup_amount() throws Throwable {
+        goalsPage.verifyErrorMsg_TopUpAmt();
+    }
+
+
+    @Then("^I verify the top up amount amount as \"([^\"]*)\"$")
+    public void i_verify_the_top_up_amount_amount_as(String arg1) throws Throwable {
+       goalsPage.verifyTopUpAmt(arg1);
+    }
+
+    @Then("^I click the topup review edit button$")
+    public void i_click_the_topup_review_edit_button() throws Throwable {
+        goalsPage.clickTopUbReviewEditBtn();
+    }
+
+    @When("^I Click the topup submit button in review page$")
+    public void i_Click_the_topup_submit_button_in_review_page() throws Throwable {
+        goalsPage.clickTopUpSubmitBtn();
+    }
+
+    @Then("^I click the goals ok button$")
+    public void i_click_the_goals_ok_button() throws Throwable {
+        goalsPage.clickGoalsOkBtn();
+    }
+
+    @And("^I click the goals next button$")
+    public void I_click_the_goalsnextbutton() throws Throwable {
+        goalsPage.clickNextBtn();
+    }
+
+
+    @Then("^I pass goal and submit if pause goal button exists$")
+    public void i_pass_goal_and_submit_if_pause_goal_button_exists() throws Throwable {
+        goalsPage.pauseGoal();
+    }
+
+    @Then("^I resume goal and submit if resume goal button exists$")
+    public void i_resume_goal_and_submit_if_resume_goal_button_exists() throws Throwable {
+        goalsPage.resumeGoal();
+    }
+
+
+    @Then("^I click start saving button$")
+    public void i_click_start_saving_button() throws Throwable {
+        goalsPage.clickStartSavingBtn();
+    }
+
+    @Then("^I Verify the goal success message$")
+    public void i_Verify_the_goal_success_message() throws Throwable {
+        goalsPage.verifyGoalSuccessMsg();
+    }
+
+    @Then("^I Click the Back to Go dashboard$")
+    public void i_Click_the_Back_to_Go_dashboard() throws Throwable {
+        goalsPage.clickBackToDashboard();
+    }
+
+    @Then("^I withdraw the goal$")
+    public void i_withdraw_the_goal() throws Throwable {
+        goalsPage.withdrawGoal();
+    }
+
+    @Then("^I do page refresh$")
+    public void i_do_page_refresh() throws Throwable {
+        common.pageRefresh();
+    }
 
 
 }

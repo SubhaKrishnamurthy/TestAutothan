@@ -3,9 +3,12 @@ package pages;
 import actions.Wait;
 import base.Keywords;
 import gherkin.lexer.Th;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriverBuilder;
 
 public class CommonMethodsPage extends Keywords {
 
+	WebDriver driver;
 	private String keyYesBtn = "onlineBanking.backoffice.common.YesBtn";
 	private String keyNoBtn="onlineBanking.backoffice.common.NoBtn";
 	private String keyCloseBtn2 = "onlineBanking.backoffice.common.CloseBtn2";
@@ -86,5 +89,9 @@ public class CommonMethodsPage extends Keywords {
 	public void verifyFrom_To_Account() throws Throwable {
 		verify.IfElementExists(keyFromAccNumber);
 		verify.IfElementExists(keyToAccNumber);
+	}
+
+	public void pageRefresh() throws Throwable {
+		driver.navigate().refresh();
 	}
 }
