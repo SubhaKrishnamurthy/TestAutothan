@@ -1219,14 +1219,18 @@ public class BackOffice {
     @Then("^I Login with user \"([^\"]*)\" and second approve the user Bills pay onboarding  role$")
     public void iLoginWithUserAndSecondApproveTheUserBillsPayOnboardingRole(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        Wait.forSeconds(2000);
+        Wait.forSeconds(5000);
         login.enterBOUserName(arg0);
         login.enterBOPassword("p@55w0rd");
         login.enterBOLogin();
         Wait.forSeconds(5000);
         RegisterPage.clickUserforapproval();
+        Wait.forSeconds(8000);
         RegisterPage.clickBillsPayOnboardingProductapprove();
+        Wait.forSeconds(3000);
         RegisterPage.enterPleasespecifyreason();
         RegisterPage.clickApprovebtn();
+        Wait.forSeconds(5000);
+        RegisterPage.clickLogout();
     }
 }

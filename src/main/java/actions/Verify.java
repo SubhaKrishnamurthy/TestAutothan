@@ -250,7 +250,20 @@ public class Verify extends Keywords{
 	}
 
 
+	public void elementIsnotEnabled(String locatorKey) throws ApplicationException {
+		log.info("Verify element ["+locatorKey+"] is Enabled");
+		try{
+			Boolean enable=get.elementBy(locatorKey).isEnabled();
+			//Assert.assertTrue(enable.booleanValue());
+			//Assert.assertTrue( get.elementBy(locatorKey).isEnabled());
+			if(enable==false) {
+				log.info("Element is not Enabled!");
+			}
 
+		}catch(Exception e){
+			throw new ApplicationException(e.getMessage());
+		}
+	}
 
 
 }

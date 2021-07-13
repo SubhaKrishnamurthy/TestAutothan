@@ -146,7 +146,7 @@ public class BackOffice_RegisterPage extends Keywords {
 	}
 
 	public void clickLogout() throws Throwable {
-		actions.Wait.forSeconds(10000);
+		actions.Wait.forSeconds(8000);
 		click.elementBy(Keylogout);
 	}
 	public void clickApprovebtn() throws Throwable {

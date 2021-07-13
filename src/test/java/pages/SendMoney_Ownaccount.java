@@ -132,12 +132,12 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void selectFrequency(String Frequency) throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		click.elementBy(keyrepeat);
 		click.elementBy(keyfrequency);
 		Wait.forSeconds(2000);
 		driver.findElement(By.xpath("("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]")).click();
-
+		Wait.forSeconds(3000);
 	}
 	public void clickFromaccountedit() throws Throwable {
 		Wait.forSeconds(1000);

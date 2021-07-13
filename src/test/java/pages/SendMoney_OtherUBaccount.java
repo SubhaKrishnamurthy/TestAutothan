@@ -86,4 +86,35 @@ public class SendMoney_OtherUBaccount extends Keywords {
 		type.data(keymobilenumber, Mobile);
 		type.data(keymsgtorecipient,  Tools.RANDOMTEXT("RANDOMTEXT",258));
 	}
+
+	public void entertheMobileEmail(String Email,String Mobile) throws Throwable {
+		Wait.forSeconds(3000);
+		type.data(keyinputemail,Email);
+		type.data(keymobilenumber,Mobile);
+
+	}
+	public void verifyNextbuttonisnotenabled() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementIsnotEnabled(KeyNext);
+	}
+
+
+	public void searchRecipientfrommyrecipient(String Recipient) throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keyselectfromrecipient);
+		click.elementBy(keybtnmyrecipient);
+		Wait.forSeconds(5000);
+		type.data(keysearchrecipient,Recipient);
+		Wait.forSeconds(10000);
+
+	}
+	public void searchRecipientfromfavouriterecipient(String Recipient) throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keyselectfromrecipient);
+		click.elementBy(keyfavourite);
+		Wait.forSeconds(5000);
+		type.data(keysearchrecipient,Recipient);
+		Wait.forSeconds(10000);
+
+	}
 }
