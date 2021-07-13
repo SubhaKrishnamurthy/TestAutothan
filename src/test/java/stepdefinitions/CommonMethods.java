@@ -31,8 +31,6 @@ public class CommonMethods {
     public void Im_on_login_page_of_UB_online_banking_application() throws Throwable {
         login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        //Thread.sleep(3000);
-        actions.Wait.forSeconds(3000);
         actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
@@ -64,6 +62,21 @@ public class CommonMethods {
         login.clickSubmitbutton();
     }
 
+    @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\"$")
+    public void Im_on_login_page_of_UB_online_banking_application_with_user(String arg0) throws Throwable {
+        login.enterUsernme(arg0);
+        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+        //Thread.sleep(3000);
+        actions.Wait.forSeconds(3000);
+        actions.Wait.forSeconds(3000);
+        login.clickRecaptcha();
+        login.clickLoginbutton();
+        actions.Wait.forSeconds(5000);
+        login.enterOTP(PropertyReader.testDataOf("Account1_OTP").trim());
+        actions.Wait.forSeconds(2000);
+        login.clickSubmitbutton();
+    }
+
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
     public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -79,6 +92,7 @@ public class CommonMethods {
         actions.Wait.forSeconds(3000);
         login.clickSubmitbutton();
     }
+
 
 
 }
