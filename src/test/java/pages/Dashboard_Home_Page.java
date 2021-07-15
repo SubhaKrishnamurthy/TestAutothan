@@ -30,6 +30,7 @@ public class Dashboard_Home_Page extends Keywords {
 	private String UITFLink = "onlineBanking.Dashboard.UITFLink";
 	private String GetStartedBtn = "onlineBanking.Dashboard.GetStartedBtn";
 	private String buyLoad = "onlineBanking.Dashboard.BuyLoadLink";
+	private String MBBSection = "onlineBanking.Dashboard.MBBSection";
 
 	public void clickSendReceive() throws Throwable {
 		Wait.forSeconds(6000);
@@ -118,5 +119,11 @@ public class Dashboard_Home_Page extends Keywords {
 	public void clickBuyloadLink() throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(buyLoad);
+	}
+
+	public void clickMBBSection() throws Throwable {
+		Wait.forSeconds(2000);
+		verify.IfElementExists(MBBSection);
+		click.elementBy(MBBSection);
 	}
 }
