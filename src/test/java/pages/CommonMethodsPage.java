@@ -59,6 +59,7 @@ public class CommonMethodsPage extends Keywords {
 	}
 
 	public void verifyAccNumErrMsg1(String message) throws Throwable {
+		Wait.forSeconds(2000);
 		verify.elementTextContains(keyAccNumErrMsg,message);
 	}
 
