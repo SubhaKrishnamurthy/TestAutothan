@@ -2,7 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
-import org.python.antlr.op.Eq;
+//import org.python.antlr.op.Eq;
 
 public class UITF_Page extends Keywords {
 

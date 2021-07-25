@@ -168,4 +168,14 @@ public class OwnaccountFundtransfer {
     }
 
 
+    @And("^I Store the Reference Number and transaction date$")
+    public void iStoreTheReferenceNumberAndTransactionDate() throws Throwable {
+        Ownaccount.StoreTxndateandReferencenumber();
+    }
+
+    @Then("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\"  and \"([^\"]*)\" in Recenent transactions$")
+    public void iVerifyTheValuesAndAndInRecenentTransactions(String arg0, String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+
+    }
 }

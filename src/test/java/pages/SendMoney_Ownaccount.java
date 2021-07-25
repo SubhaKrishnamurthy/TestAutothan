@@ -34,7 +34,11 @@ public class SendMoney_Ownaccount extends Keywords {
 	private String keyfromaccountedit="onlineBanking.Fundtransfer.BtnFromaccountedit";
 	private String keytoaccountedit="onlineBanking.Fundtransfer.BtnToaccountedit";
 	private String keyamountedit="onlineBanking.Fundtransfer.Btnamountedit";
+	private String keytxndatetransfersuccessful="onlineBanking.Fundtransfer.lbltxndatetransfersuccessful";
+	private String keyReferenceNumbertransfersuccessful="onlineBanking.Fundtransfer.lblReferenceNumbertransfersuccessful";
 
+   public String txndate;
+   public String ReferenceNumber;
 
 
 
@@ -47,7 +51,7 @@ public class SendMoney_Ownaccount extends Keywords {
 		click.elementBy(keyOwnaccounts);
 	}
 	public void clickFromaccount() throws Throwable {
-		Wait.forSeconds(5000);
+		Wait.forSeconds(10000);
 		click.elementBy(keyFromaccount);
 	}
 	public void clickToaccount() throws Throwable {
@@ -61,6 +65,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 	public void clickNextbutton() throws Throwable {
 		Wait.forSeconds(3000);
+		//verify.elementIsEnabled(KeyNext);
 		click.elementBy(KeyNext);
 		Wait.forSeconds(3000);
 	}
@@ -81,11 +86,12 @@ public class SendMoney_Ownaccount extends Keywords {
 		click.elementBy(keyOTPfield);
 	}
 	public void entertheOTPOTPpage(String OTP) throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(3000);
       type.data(keyOTPtxt,OTP);
+		Wait.forSeconds(3000);
 	}
 	public void clickSubmit() throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(2000);
 		click.elementBy(keysubmit);
 	}
 
@@ -168,4 +174,18 @@ public class SendMoney_Ownaccount extends Keywords {
 		type.data(keyAmount,Amt);
 		type.data(KeyRemarks, Tools.RANDOMTEXT("RANDOMTEXT",258));
 	}
+
+	public void VerifyNextisenabled() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementIsEnabled(KeyNext);
+		Wait.forSeconds(3000);
+	}
+
+	public void StoreTxndateandReferencenumber() throws Throwable {
+		Wait.forSeconds(3000);
+		txndate=driver.findElement(By.xpath("//*[text()='Transaction Date']/following-sibling::output")) .getText();
+		ReferenceNumber=driver.findElement(By.xpath("//*[text()='Reference Number']/following-sibling::output")) .getText();
+	}
+
+
 }

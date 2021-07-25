@@ -72,6 +72,7 @@ public class LoginPage extends Keywords {
 		driver.findElement(By.xpath("//*[text()='Log In']/parent::button")).click();
 	}
 	public void enterOTP(String otp) throws ApplicationException {
+		Wait.forSeconds(5000);
 		driver.findElement(By.xpath("//input[@placeholder='Enter 6-digit One-Time Password']")).sendKeys(otp);
 	}
 	public void clickSubmitbutton() throws ApplicationException {

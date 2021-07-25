@@ -231,7 +231,7 @@ public class Verify extends Keywords{
 		boolean val=false;
 		try{
 			//attachScreenshot("Click_"+ locatorKey.replace(".","_"));
-			webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.id(locatorKey)));
+			//webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.id(locatorKey)));
 			List<WebElement> a=driver.findElements(By.id(locatorKey));
 			for (int i = 0; i <a.size(); i++) {
 				if((a.get(i).getText().trim()).contentEquals(ivalue.trim()))
