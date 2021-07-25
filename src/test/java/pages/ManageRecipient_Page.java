@@ -24,10 +24,12 @@ public class ManageRecipient_Page extends Keywords {
 	private String SaveAsFavoriteOn = "onlineBanking.ManageRecipient.SaveAsFavoriteOn";
 	private String FavoriteLink = "onlineBanking.ManageRecipient.FavoriteLink";
 	public String keyAllertErrMsg = "onlineBanking.common.alertErrorMessage";
+	private String Update= "onlineBanking.RequestPayment.Update";
 
 	private BackOffice_RegisterPage registerPage = new BackOffice_RegisterPage();
 	private CommonMethodsPage commonMethods = new CommonMethodsPage();
 	String randomAccountNumber = Tools.RANDOMTEXT("RANDOMNUMBER",12);
+	public static String UpdatedaccNum = "";
 
 	public void clickAddRecipient() throws Throwable {
 		Wait.forSeconds(3000);
@@ -106,9 +108,42 @@ public class ManageRecipient_Page extends Keywords {
 		commonMethods.verifyAlert();
 	}
 
+	public void doDeleteRecipient_Recent() throws Throwable {
+		Wait.forSeconds(3000);
+		type.data(accountNumberSearch,UpdatedaccNum);
+		aReturn.clickEnter(accountNumberSearch);
+		Wait.forSeconds(6000);
+		click.elementBy(menuBar);
+		Wait.forSeconds(3000);
+		click.elementBy(delete);
+		click.elementBy(deleteRecipient);
+		Wait.forSeconds(3000);
+		/*
+		type.data(accountNumberSearch,UpdatedaccNum);
+		aReturn.clickEnter(accountNumberSearch);
+		Wait.forSeconds(2000);
+		commonMethods.verifyAlert();
+		 */
+	}
 	public void searchRecipient(String name) throws Throwable {
 		Wait.forSeconds(3000);
 		type.data(accountNumberSearch,name);
+		aReturn.clickEnter(accountNumberSearch);
+		Wait.forSeconds(6000);
+		click.elementBy(SearchResultRecipient);
+	}
+
+	public void searchRecipient_Recent() throws Throwable{
+		Wait.forSeconds(3000);
+		type.data(accountNumberSearch,randomAccountNumber);
+		aReturn.clickEnter(accountNumberSearch);
+		Wait.forSeconds(6000);
+		click.elementBy(SearchResultRecipient);
+	}
+
+	public void searchRecipient_Recent1() throws Throwable {
+		Wait.forSeconds(3000);
+		type.data(accountNumberSearch,UpdatedaccNum);
 		aReturn.clickEnter(accountNumberSearch);
 		Wait.forSeconds(6000);
 		click.elementBy(SearchResultRecipient);
@@ -138,6 +173,14 @@ public class ManageRecipient_Page extends Keywords {
 		WebElement element = driver.findElement(By.cssSelector("div.header-foreground > div > div.left.part > a > svg"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().build().perform();
+		Wait.forSeconds(2000);
+	}
+
+	public void editAccountNumber1() throws Throwable {
+		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
+		type.data(accountNumber, Tools.RANDOMTEXT("RANDOMNUMBER",12));
+		element = driver.findElement(By.xpath("//input[@placeholder='Account Number']"));
+		UpdatedaccNum = element.getText();
 		Wait.forSeconds(2000);
 	}
 
@@ -198,6 +241,10 @@ public class ManageRecipient_Page extends Keywords {
 		aReturn.clickEnter(accountNumberSearch);
 		Wait.forSeconds(2000);
 		commonMethods.verifyAlert();
+	}
+
+	public void clickUpdate() throws Throwable {
+		click.elementBy(Update);
 	}
 
 }

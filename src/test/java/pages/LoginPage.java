@@ -5,6 +5,7 @@ import base.Keywords;
 import com.github.javafaker.App;
 import exceptions.ApplicationException;
 import exceptions.EnvironmentException;
+import gherkin.lexer.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,7 @@ public class LoginPage extends Keywords {
 	private String keyBOUserName="onlineBanking.backoffice.login.username";
 	private String keyBOPassword="onlineBanking.backoffice.login.password";
 	private String keyLoginBtn="onlineBanking.backoffice.login.loginBtn";
-
+	private String keepmeloggedinbtn = "convergent.login.keepmeloggedinbtn";
 
 	public void enterUsernme(String usernmae) throws ApplicationException {
 		type.data(Keyusername,usernmae);
@@ -79,5 +80,10 @@ public class LoginPage extends Keywords {
 		driver.findElement(By.xpath("//*[text()='Submit']/parent::button")).click();
 	}
 
-
+	public void clickkeepmeloggedinbtn() throws Throwable {
+		if(verify.IfElementExistsboolean(keepmeloggedinbtn))
+		{
+			click.elementBy(keepmeloggedinbtn);
+		}
+	}
 }

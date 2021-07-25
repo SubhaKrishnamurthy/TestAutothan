@@ -37,6 +37,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	public void enterthAmount(String Amt) throws Throwable {
 		Wait.forSeconds(3000);
 		type.data(keyAmount,Amt);
+
 	}
 
 	public void verifyOTPErrorisexist() throws Throwable {

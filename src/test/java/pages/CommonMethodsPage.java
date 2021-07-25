@@ -58,6 +58,11 @@ public class CommonMethodsPage extends Keywords {
 		verify.elementTextMatching(keyAccNumErrMsg,message);
 	}
 
+	public void verifyAccNumErrMsg1(String message) throws Throwable {
+		Wait.forSeconds(2000);
+		verify.elementTextContains(keyAccNumErrMsg,message);
+	}
+
 	public void verifyAccNumNoErrMsg() throws Throwable {
 		verify.IfElementNotExists(keyAccNumErrMsg);
 	}
@@ -94,4 +99,6 @@ public class CommonMethodsPage extends Keywords {
 	public void pageRefresh() throws Throwable {
 		driver.navigate().refresh();
 	}
+
+
 }

@@ -44,6 +44,11 @@ public class ManageRecipient {
         manageRecipient.doDeleteRecipient();
     }
 
+    @And("^I delete the recent recipient$")
+    public void I_delete_the_recent_recipient() throws Throwable {
+        manageRecipient.doDeleteRecipient_Recent();
+    }
+
     @Then("^I enter accountName less than 4 digits and verify Error message$")
     public void I_enter_accountName_less_than_4_digits_and_verify_Error_message() throws Throwable {
         manageRecipient.doAddRecipient_AccountNameErrorMessage();
@@ -103,4 +108,27 @@ public class ManageRecipient {
     public void I_delete_the_existing_recipient() throws Throwable{
         manageRecipient.deleteExistingRecipient();
     }
+
+    @Then("^I search for the recipient, change accountNumber(\\d+) and update$")
+    public void i_search_for_the_recipient_change_accountNumber_and_update(String arg1) throws Throwable {
+        if(arg1.equalsIgnoreCase("1"))
+        {
+        manageRecipient.searchRecipient_Recent();
+        manageRecipient.editAccountNumber();
+        manageRecipient.clickUpdate();
+        }
+        else if(arg1.equalsIgnoreCase("2"))
+        {
+            manageRecipient.searchRecipient_Recent1();
+            manageRecipient.editAccountNumber1();
+            manageRecipient.clickUpdate();
+        }
+        else if(arg1.equalsIgnoreCase("3"))
+        {
+            manageRecipient.searchRecipient_Recent1();
+            manageRecipient.editAccountNumber1();
+            manageRecipient.clickUpdate();
+        }
+    }
+
 }
