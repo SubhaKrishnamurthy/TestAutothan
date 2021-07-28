@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @RC
+ @RC @Regression
 Feature: Remittancecenter
 
   @RC1

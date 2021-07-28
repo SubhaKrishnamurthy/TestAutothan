@@ -3,8 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-
- @OtherUBaccount
+ @OtherUBaccount @Regression
 Feature: Another Unionbank FundTransfer
 
 

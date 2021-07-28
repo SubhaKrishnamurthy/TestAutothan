@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @PDDTS
+ @PDDTS @Regression
 Feature: PesoNet Fund Transfer
 
   @PDDTS1

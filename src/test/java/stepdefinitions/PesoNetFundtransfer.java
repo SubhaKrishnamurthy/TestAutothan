@@ -50,4 +50,11 @@ public class PesoNetFundtransfer {
         // Write code here that turns the phrase above into concrete actions
         Pesonet.entertheLeaveaPurpose(arg0);
     }
+
+
+    @Then("^I Verify the \"([^\"]*)\" is not displayed in listbox$")
+    public void i_Verify_the_is_not_displayed_in_listbox(String arg1) throws Throwable {
+       Pesonet.verify_BankNotDisplayed(arg1);
+    }
+
 }

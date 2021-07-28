@@ -365,7 +365,23 @@ public class Verify extends Keywords{
 		}
 	}
 
+	public void VERIFYBANKNAMENOTINLIST(String Data) {
 
+		driver.findElement(By.xpath("(//div[@class='ant-select-selection__rendered'])[1] | (//div[@class='ant-select-selector'])[1]")).click();
+		try{
+
+
+			String Datatoselectxpath= "("+"//*[text()="+"'"+Data+"'"+"]"+")"+"[1]";
+			WebElement test=driver.findElement(By.xpath(Datatoselectxpath));
+			log.info("Failed");
+		}
+		catch(Exception e){
+			log.info("Passed");
+			log.info("Successfully verified in Bank List");
+		}
+
+
+	}
 
 
 }
