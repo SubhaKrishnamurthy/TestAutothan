@@ -81,9 +81,16 @@ public class LoginPage extends Keywords {
 	}
 
 	public void clickkeepmeloggedinbtn() throws Throwable {
-		if(verify.IfElementExistsboolean(keepmeloggedinbtn))
-		{
-			click.elementBy(keepmeloggedinbtn);
+		Boolean b = false;
+		try {
+			 b = verify.IfElementExistsboolean(keepmeloggedinbtn);
+			if(b.equals(true))
+			{
+				click.elementBy(keepmeloggedinbtn);
+			}
+		} catch (ApplicationException e) {
+			e.printStackTrace();
 		}
+
 	}
 }

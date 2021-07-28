@@ -71,9 +71,10 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 	public void verifytheGotitbutton() throws Throwable {
 		//Wait.forSeconds(3000);
-		if(verify.IfElementExistsboolean(keygotit)){
+		if(verify.IfElementExistsboolean(keygotit))
+		{
 			Wait.forSeconds(2000);
-			click.elementBy(keygotit);
+			jsClick.elementBy(keygotit);
 			Wait.forSeconds(2000);
 		}
 	}

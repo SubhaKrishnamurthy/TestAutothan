@@ -4,12 +4,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import pages.CommonMethodsPage;
+import pages.LoginPage;
 import pages.PayBillsPage;
 
 public class PayBills {
 
     PayBillsPage payBills = new PayBillsPage();
     CommonMethodsPage common = new CommonMethodsPage();
+    LoginPage loginPage = new LoginPage();
 
     @When("^I am on the PayBills page$")
     public void i_am_on_the_PayBills_page() throws Throwable {
@@ -38,8 +40,8 @@ public class PayBills {
         payBills.searchBiller_FavouritesList(arg1);
     }
 
-    @Then("^I search for the billler \"([^\"]*)\" in MyBillers$")
-    public void i_search_for_the_billler_in_MyBillers(String arg1) throws Throwable {
+    @Then("^I search for the biller \"([^\"]*)\" in MyBillers$")
+    public void i_search_for_the_biller_in_MyBillers(String arg1) throws Throwable {
         payBills.searchBiller_MyBillers(arg1);
     }
 
@@ -108,4 +110,67 @@ public class PayBills {
     public void i_click_the_Pay_Bills_php_button() throws Throwable {
        payBills.click_PayPHP();
     }
+
+    @Then("^I verify visa number value as \"([^\"]*)\"$")
+    public void i_verify_visa_number_value_as(String arg1) throws Throwable {
+        payBills.verify_VisaNumber(arg1);
+    }
+
+    @Then("^I verify the date value as \"([^\"]*)\"$")
+    public void i_verify_the_date_value_as(String arg1) throws Throwable {
+        payBills.verify_DateValue(arg1);
+    }
+
+    @Then("^I verify pay Bills payment successful message$")
+    public void i_verify_pay_Bills_payment_successful_message() throws Throwable {
+        payBills.verify_PaymentSuccessful();
+    }
+
+    @Then("^I Verify from account number field masked as \"([^\"]*)\" and after unmasking as \"([^\"]*)\"$")
+    public void i_Verify_from_account_number_field_masked_as_and_after_unmasking_as(String arg1, String arg2) throws Throwable {
+        payBills.verify_FromAccountNumber(arg1,arg2);
+    }
+
+    @Then("^I verify card number filed masked as \"([^\"]*)\" and after unmaking as \"([^\"]*)\"$")
+    public void i_verify_card_number_filed_masked_as_and_after_unmaking_as(String arg1, String arg2) throws Throwable {
+        payBills.verify_CardNumber(arg1,arg2);
+    }
+
+    @Then("^I click the GotIt button if displayed$")
+    public void i_click_the_GotIt_button_if_displayed() throws Throwable {
+        payBills.click_GotitBtn();
+       // loginPage.clickkeepmeloggedinbtn();
+    }
+
+    @Then("^I click new payment button in final page$")
+    public void i_click_new_payment_button_in_final_page() throws Throwable {
+        payBills.click_NewPaymentBtn();
+    }
+
+    @Then("^I Verify BillerName as \"([^\"]*)\" FromAccountNumber as \"([^\"]*)\" PolicyOwnerNumber as \"([^\"]*)\" Amount as \"([^\"]*)\"$")
+    public void i_Verify_BillerName_as_FromAccountNumber_as_PolicyOwnerNumber_as_Amount_as(String BillerName, String FromAccNumber, String PolicyOwnerNo, String Amount) throws Throwable {
+       payBills.verify_FinalPage(BillerName,FromAccNumber,PolicyOwnerNo,Amount);
+    }
+
+    @Then("^I click calender date$")
+    public void i_click_calender_date() throws Throwable {
+        payBills.click_Calender();
+    }
+
+
+    @Then("^I edit from account number$")
+    public void i_edit_from_account_number() throws Throwable {
+        payBills.edit_AccountNumber();
+    }
+
+    @Then("^I edit the biller details$")
+    public void i_edit_the_biller_details() throws Throwable {
+        payBills.edit_BillerDetails();
+    }
+
+    @Then("^I edit the amount$")
+    public void i_edit_the_amount() throws Throwable {
+       payBills.edit_Amount();
+    }
+
 }

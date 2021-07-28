@@ -6,6 +6,9 @@ import exceptions.ApplicationException;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -254,8 +257,6 @@ public class Verify extends Keywords{
 		log.info("Verify element ["+locatorKey+"] is Enabled");
 		try{
 			Boolean enable=get.elementBy(locatorKey).isEnabled();
-			//Assert.assertTrue(enable.booleanValue());
-			//Assert.assertTrue( get.elementBy(locatorKey).isEnabled());
 			if(enable==false) {
 				log.info("Element is not Enabled!");
 			}
@@ -264,6 +265,107 @@ public class Verify extends Keywords{
 			throw new ApplicationException(e.getMessage());
 		}
 	}
+
+	public void elementIsnotPresent(String locatorKey) throws ApplicationException {
+		log.info("Verify element ["+locatorKey+"] is not present");
+		try{
+			Boolean enable=get.elementBy(locatorKey).isDisplayed();
+			if(enable==false) {
+				log.info("Element is not Present!");
+			}
+
+		}catch(Exception e){
+			throw new ApplicationException(e.getMessage());
+		}
+	}
+
+	public static void VERIFYDATE(String locatorKey,String Dateval) {
+
+		try {
+
+		//	String Dateval = TestAttributes.Data;
+			int Dateval2 = Integer.parseInt(Dateval);
+
+			DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+			Calendar cal = Calendar.getInstance();
+			cal.add(Calendar.DATE,Dateval2);
+			String dateFormatted = (String)(dateFormat.format(cal.getTime()));
+
+			String Strmonth=dateFormatted.substring(0,2);
+			String Strday= dateFormatted.substring(3,5);
+			String Stryear= dateFormatted.substring(6,10);
+			switch(Strmonth)
+			{
+				case "01":
+					Strmonth="January";
+					break;
+				case "02":
+					Strmonth="February";
+					break;
+				case "03":
+					Strmonth="March";
+					break;
+				case "04":
+					Strmonth="April";
+					break;
+				case "05":
+					Strmonth="May";
+					break;
+				case "06":
+					Strmonth="June";
+					break;
+				case "07":
+					Strmonth="July";
+					break;
+				case "08":
+					Strmonth="August";
+					break;
+				case "09":
+					Strmonth="September";
+					break;
+				case "10":
+					Strmonth="October";
+					break;
+				case "11":
+					Strmonth="November";
+					break;
+				case "12":
+					Strmonth="December";
+					break;
+			}
+
+			dateFormatted=Strmonth+" "+Strday+","+Stryear;
+			System.out.println(dateFormatted);
+			//TestAttributes.TakeScreenShotFlag= true;
+			String ActualValue = "";
+			String[] arrInput = Dateval.split("@@");
+
+			if (element != null) {
+
+				ActualValue = element.getText().trim().replace("\n", "").replace(" ", "");
+				if (ActualValue.equalsIgnoreCase(dateFormatted.trim())) {
+					log.info("Passed");
+					log.info("Expected Value ["+dateFormatted+"] matches with the value in the application.");
+
+				} else {
+					log.info("Error");
+					//Settings.ifError=true;
+					log.info("Expected Value is  ["+dateFormatted+"] . But the Actual value is  ["+ActualValue+"]  ");
+				}
+			}
+
+		}
+		catch (Exception e) {
+			//TestAttributes.TakeScreenShotFlag= true;
+			log.info("Error");
+			//TestAttributes.Status = "Error";
+			//log.info("Expected Value is  ["+dateFormatted+"] . But the Actual value is  ["+ActualValue+"]  ");
+			//TestAttributes.ActualResult = "Error while verifying the value '" + TestAttributes.Data + "' in the field '" + TestAttributes.Field_Name + "' of the screen '" + TestAttributes.Screen_Name + "'.";
+			//TestAttributes.ActualResult = TestAttributes.ActualResult + " " + e.getMessage() + ".";
+		}
+	}
+
+
 
 
 }

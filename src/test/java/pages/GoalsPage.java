@@ -303,7 +303,8 @@ public class GoalsPage extends Keywords {
     }
 
     public void pauseGoal() throws Throwable {
-        if(verify.IfElementExistsboolean(PauseGoal)){
+        Boolean t = verify.IfElementExistsboolean(PauseGoal);
+        if(t.equals(true)){
             click.elementBy(PauseGoal);
             click.elementBy(Pausegoal_submit);
             verify.elementIsPresent(Pausegoal_GoalsSuccessfullyresumed);
@@ -312,7 +313,9 @@ public class GoalsPage extends Keywords {
     }
 
     public void resumeGoal() throws Throwable {
-        if(verify.IfElementExistsboolean(ResumeGoal)){
+       Boolean t = verify.IfElementExistsboolean(ResumeGoal);
+        if(t.equals(true))
+        {
             click.elementBy(ResumeGoal);
             click.elementBy(Next);
             click.elementBy(resumegoal_submit);

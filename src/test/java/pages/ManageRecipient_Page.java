@@ -212,7 +212,7 @@ public class ManageRecipient_Page extends Keywords {
 		aReturn.clickEnter(accountNumberSearch);
 		Wait.forSeconds(6000);
 		Boolean t = verify.IfElementExistsboolean(keyAllertErrMsg);
-		if (t=true)
+		if (t.equals(true))
 		{
 			click.elementBy(addRecipient);
 			Wait.forSeconds(2000);

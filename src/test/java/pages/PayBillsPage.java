@@ -2,6 +2,8 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import cucumber.api.java.eo.Se;
+import exceptions.ApplicationException;
 import gherkin.lexer.Th;
 
 import java.sql.Ref;
@@ -12,7 +14,7 @@ public class PayBillsPage extends Keywords {
     private String MyBillers = "onlineBanking.PayBills.MyBillers";
     private String PolicyOwnwernumber = "onlineBanking.PayBills.PolicyOwnwernumber";
     private String ManageBillers = "onlineBanking.PayBills.ManageBillers";
-    private String PaymentSuccessful1 = "onlineBanking.PayBills.PaymentSuccessful";
+    private String PaymentSuccessful1 = "onlineBanking.PayBills.PaymentSuccessful1";
     private String RepeatinPayBill = "onlineBanking.PayBills.RepeatinPayBill";
     private String PaymentSuccessful = "onlineBanking.PayBills.PaymentSuccessful";
     private String BillPaymentsFAQ = "onlineBanking.PayBills.BillPaymentsFAQ";
@@ -59,8 +61,20 @@ public class PayBillsPage extends Keywords {
     private String EndDate = "onlineBanking.backoffice.ScheduledActivities.FailedScheduledBillsPaymentSearch2";
     private String ToBillerEdit = "onlineBanking.PayBills.ToBillerEdit";
     private String Review_ErrMsg = "onlineBanking.PayBills.Review.ErrorMsg";
+    private String keygotit="onlineBanking.Fundtransfer.BtnGotit";
+    private String CalenderNextBtn = "onlineBanking.Common.WebLnk_CalendarNextButton";
+    private String CalenderBackBtn = "onlineBanking.Common.WebLnk_CalendarBackButton";
+    private String CalenderDate = "onlineBanking.Common.WrbBtn_CalendarDate";
+    private String keyAmount="onlineBanking.Fundtransfer.TxtAmount";
 
+    public SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
     public ManageRecipient_Page manageRecipientPage = new ManageRecipient_Page();
+    public CommonMethodsPage common = new CommonMethodsPage();
+
+    public void verify_PayBills() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(PayBills);
+    }
 
     public void clickPayBills() throws Throwable {
         Wait.forSeconds(2000);
@@ -139,8 +153,8 @@ public class PayBillsPage extends Keywords {
     }
 
     public void click_PayPHP() throws Throwable {
-       Wait.forSeconds(1000);
-        click.elementBy(Payphp);
+      Wait.forSeconds(2000);
+        jsClick.elementBy(Payphp);
     }
 
     public void enterVisaNumber(String no) throws Throwable {
@@ -151,5 +165,90 @@ public class PayBillsPage extends Keywords {
     public void verifyErrMsg(String Msg) throws Throwable {
         Wait.forSeconds(1000);
         verify.elementTextContains(Review_ErrMsg,Msg);
+    }
+
+    public void verify_VisaNumber(String no) throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementTextContains(VisaNumber,no);
+    }
+
+    public void verify_DateValue(String datevalue) throws Throwable {
+        Wait.forSeconds(2000);
+        verify.VERIFYDATE(Datevalue,datevalue);
+    }
+
+    public void verify_PaymentSuccessful() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(PaymentSuccessful1);
+    }
+
+    public void verify_FromAccountNumber(String beforeMask,String afterMask) throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementTextContains(FromAccountNumberMask,beforeMask);
+        jsClick.elementBy(FromAccountNumberMask);
+        verify.elementTextContains(FromAccountNumberMask,afterMask);
+
+    }
+
+    public void verify_CardNumber(String beforeMask,String afterMask) throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementTextContains(BillercardNumbermask,beforeMask);
+        jsClick.elementBy(BillercardNumbermask);
+        verify.elementTextContains(BillercardNumbermask,afterMask);
+    }
+
+    public void click_GotitBtn() throws Throwable {
+        /*
+        // Boolean t = false;
+        try {
+           Boolean t = verify.IfElementExistsboolean(keygotit);
+            if (t.equals(true)) {
+                jsClick.elementBy(keygotit);
+            }
+        } catch (ApplicationException e) {
+            e.printStackTrace();
+        }
+        */
+        Wait.forSeconds(1000);
+    click.elementBy(keygotit);
+    }
+
+    public void click_NewPaymentBtn() throws Throwable {
+        Wait.forSeconds(1000);
+        click.elementBy(NewPayment);
+    }
+
+    public void verify_FinalPage(String BillerName, String FromAccNumber, String PolicyOwnerNo, String AmountValue) throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementTextContains(ToBilllername,BillerName);
+        verify.elementTextContains(FromAccountNumber,FromAccNumber);
+        verify.elementTextContains(BillerAccountID,PolicyOwnerNo);
+        verify.elementTextContains(Amount,AmountValue);
+    }
+
+    public void click_Calender() throws Throwable {
+        click.elementBy(DateInput);
+        click.elementBy(CalenderNextBtn);
+        click.elementBy(CalenderDate);
+    }
+
+    public void edit_AccountNumber() throws Throwable {
+        Ownaccount.clickFromaccountedit();
+        common.clickFromAccNumber();
+       // click_GotitBtn();
+    }
+
+    public void edit_BillerDetails() throws Throwable {
+        clickEditBtn();
+        type.data(PaybillsPAYMENTREFERENCENO, "0006992990424204");
+        Ownaccount.clickUpdate();
+        //click_GotitBtn();
+    }
+
+    public void edit_Amount() throws Throwable {
+        Ownaccount.clickamountedit();
+        type.data(keyAmount,"150");
+        Ownaccount.clickUpdate();
+        click_GotitBtn();
     }
 }
