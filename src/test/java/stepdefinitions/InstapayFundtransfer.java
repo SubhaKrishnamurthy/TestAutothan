@@ -73,4 +73,40 @@ public class InstapayFundtransfer {
         // Write code here that turns the phrase above into concrete actions
         OtherUBaccount.searchRecipientfromfavouriterecipient(arg0);
     }
+
+    @And("^I select the bank \"([^\"]*)\" from listbox$")
+    public void iSelectTheBankFromListbox(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.selectBank(arg0);
+    }
+
+    @And("^I Enter the Accountnumber\"([^\"]*)\"$")
+    public void iEnterTheAccountnumber(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.enterAccountnumber(arg0);
+    }
+
+    @And("^I enter the Accountname\"([^\"]*)\"$")
+    public void iEnterTheAccountname(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.enterAccountname(arg0);
+    }
+
+    @Then("^I verify the error message\"([^\"]*)\"$")
+    public void iVerifyTheErrorMessage(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.verifyAccountnameisrequired();
+    }
+
+    @Then("^I verify the error message accout number \"([^\"]*)\"$")
+    public void iVerifyTheErrorMessageAccoutNumber(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.verifyAccountnumberisrequired();
+    }
+
+    @Then("^I verify the error message accout name \"([^\"]*)\"$")
+    public void iVerifyTheErrorMessageAccoutName(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Instapay.verifyAccountnamevalidation();
+    }
 }

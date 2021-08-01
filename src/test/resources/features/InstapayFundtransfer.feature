@@ -192,3 +192,55 @@ Feature: Instapay Fund Transfer
     And I Verify the Ownaccount Link
     And I Click the Logout Button
 
+  @Instapay13
+  Scenario:Validation of Amount Number digits in InstaPay
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Instapay link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"###"
+    Then I verify the error message"Account name is required"
+
+
+
+  @Instapay14
+  Scenario:Validation of Account Name filed in transfer page for Other Bank
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Instapay link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"AB"
+    Then I verify the error message accout name "Account name should be at least 4 characters long"
+
+  @Instapay15
+  Scenario:Validation of Account Number filed in transfer page for Other Bank InstaPay
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Instapay link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber""
+    And I enter the Accountname"ABCDEFGH"
+    Then I verify the error message accout number "Accountnumber is required"
+
+  @Instapay16
+  Scenario:Validation of Next button is enabled when recipient bank select from bank list and enter the mandatory fields
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Instapay link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"ABCDEFGH"
+    And I verify Next button is enabled
+    And I click the Next Button
+
+

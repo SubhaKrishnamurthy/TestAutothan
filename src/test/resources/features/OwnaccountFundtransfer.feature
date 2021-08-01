@@ -247,7 +247,17 @@ Feature: Own Account FundTransfer
     And I Verify the Fromaccount"Peso Regular Savings **** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2,500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
-    And I Click the Logout Button
+    And I Click the Logout
+
+  @Ownaccount11
+  Scenario:Validation of amount field in the Transfer
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I Click Ownacount link
+    And I click the from account number
+    And I click the to account number
+    And I Enter the Amount "9999999999" in ub account transfer
+    Then I verify the validation message for than account balance "Amount is greater than your current balance"
 
     #Scenario: Verifying the Transaction History for the Own Account Transfer
 

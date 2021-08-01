@@ -50,4 +50,9 @@ public class PesoNetFundtransfer {
         // Write code here that turns the phrase above into concrete actions
         Pesonet.entertheLeaveaPurpose(arg0);
     }
+
+    @Then("^I verify the previous date button is not exist$")
+    public void iVerifyThePreviousDateButtonIsNotExist() throws Throwable {
+        OtherUBaccount.verifyCalendarprviousdatebuttonisnotexist();
+    }
 }

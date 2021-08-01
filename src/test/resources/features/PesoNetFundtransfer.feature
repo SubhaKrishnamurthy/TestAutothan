@@ -368,3 +368,114 @@ Feature: PesoNet Fund Transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I verify Next button is not enabled
 
+  @PesoNet14
+  Scenario:Validation of Amount Number digits in Pesonet
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"###"
+    Then I verify the error message"Account name is required"
+
+  @PesoNet15
+  Scenario:Validation of Next button is enabled when recipient bank select from bank list and enter the mandatory fields
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"ABCDEFGH"
+    And I verify Next button is enabled
+    And I click the Next Button
+
+
+  @PesoNet16
+  Scenario:Validation of Account Name filed in transfer page for Other Bank
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"AB"
+    Then I verify the error message accout name "Account name should be at least 4 characters long"
+
+  @PesoNet17
+  Scenario:Validation of Account Number filed in transfer page for Other Bank Pesonet
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber""
+    And I enter the Accountname"ABCDEFGH"
+    Then I verify the error message accout number "Account number is required"
+
+  @PesoNet18
+  Scenario:Validation of entering future date in date field for PesoNet Transaction
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the Account number from favourite recipient "101400001643"
+    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
+    And I click the Next Button
+    And I Enter the Amount "2500" in ub account transfer
+    And I Select the future date
+    And I click the Repeat checkbox and select frequency as "Quarterly"
+    And I select the reason2 "ADVERTISING"
+    And I click the Next Button
+
+
+  @PesoNet19
+  Scenario:Validation of entering previous date in date field
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the Account number from favourite recipient "101400001643"
+    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
+    And I click the Next Button
+    And I Enter the Amount "2500" in ub account transfer
+    Then I verify the previous date button is not exist
+
+
+  @PesoNet20
+  Scenario:Validation of submit transaction when recipient bank select from bank list and enter the mandatory fields
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click the Pesonet link
+    And I click the from account number
+    And I select the bank "Asia United Bank" from listbox
+    And I Enter the Accountnumber"123412341234"
+    And I enter the Accountname"ABCDEFGH"
+    And I verify Next button is enabled
+    And I click the Next Button
+    And I Enter the Amount "1500" in ub account transfer
+    And I select the reason "ADVERTISING"
+    And I click the Next Button
+    And I verify the Gotit button displayed or not
+    And I click the Transfer button
+    And I click the proceed with transfer
+    Then I Verify the OTP Filed is page is displayed
+    And I Enter the OTP "222222" in OTP Page
+    And I click the Submit Button
+    Then I verify the Successful message is displayed
+    Then I Click the New Transaction button Link
+    And I Verify the Ownaccount Link
+    And I Click the Logout Button
+
+
+
+
+

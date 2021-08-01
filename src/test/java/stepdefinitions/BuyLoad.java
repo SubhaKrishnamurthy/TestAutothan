@@ -139,4 +139,70 @@ public class BuyLoad {
         // Write code here that turns the phrase above into concrete actions
         Buyload.verifyInvalidmobileerrormsg();
     }
+
+    @And("^I enter the name\"([^\"]*)\"$")
+    public void iEnterTheName(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.entertheSearchname(arg0);
+
+    }
+
+    @And("^I verify the search results \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void iVerifyTheSearchResultsAnd(String arg0, String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.verifySearcresult(arg0,arg1);
+    }
+
+    @And("^I click the search icon in buyload$")
+    public void iClickTheSearchIconInBuyload() throws Throwable {
+        Buyload.clickSearchicon();
+    }
+
+    @And("^I click the favourite link in buyload$")
+    public void iClickTheFavouriteLinkInBuyload() throws Throwable {
+        OtherUBaccount.clickfavourite();
+    }
+
+    @And("^I click the addcontact in buyload$")
+    public void iClickTheAddcontactInBuyload() throws Throwable {
+        Buyload.clickAddcontact();
+    }
+
+    @And("^I enter the name \"([^\"]*)\" and mobile\"([^\"]*)\" in add contact deatils$")
+    public void iEnterTheNameAndMobileInAddContactDeatils(String arg0, String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.enterContactnameandmobile(arg0,arg1);
+    }
+
+    @And("^I click the save button in manage contact$")
+    public void iClickTheSaveButtonInManageContact() throws Throwable {
+        Buyload.clickSave();
+    }
+
+    @And("^I click the search result link$")
+    public void iClickTheSearchResultLink() throws Throwable {
+        Buyload.clickSearchfirstresult();
+    }
+
+    @And("^I click the edit button in manage contact$")
+    public void iClickTheEditButtonInManageContact() throws Throwable {
+        Buyload.clickEdit();
+    }
+
+    @And("^I change the buyload contat name\"([^\"]*)\"$")
+    public void iChangeTheBuyloadContatName(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.enterContactnameandmobile(arg0,"09841011885");
+    }
+
+    @And("^I click the delete button in manage contact$")
+    public void iClickTheDeleteButtonInManageContact() throws Throwable {
+        Buyload.clickDelete();
+    }
+
+    @And("^I verify \"([^\"]*)\"$")
+    public void iVerify(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.verifySearcresultNoenrolledcontactsfound();
+    }
 }

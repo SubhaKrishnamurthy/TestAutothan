@@ -2,6 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 
@@ -22,6 +23,10 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	private String keymsgtorecipient="onlineBanking.Fundtransfer.TxtMessagetorecipient";
 	private String KeyNext="onlineBanking.Fundtransfer.BtnNext";
 	private String keyfavourite="onlineBanking.Fundtransfer.BtnFavouriteRecipients";
+	private String keyDateinput="onlineBanking.Fundtransfer.btnDateinput";
+	private String keyCalendarnextbutton="onlineBanking.Fundtransfer.btnCalendarnextbutton";
+	private String keyCalendardate="onlineBanking.Fundtransfer.btnCalendardate";
+	private String keyCalendarpreviousdate="onlineBanking.Fundtransfer.lnkpreviousdate";
 
 
 
@@ -115,6 +120,36 @@ public class SendMoney_OtherUBaccount extends Keywords {
 		Wait.forSeconds(5000);
 		type.data(keysearchrecipient,Recipient);
 		Wait.forSeconds(10000);
+
+	}
+
+	public void Selectthefututdate() throws ApplicationException {
+		click.elementBy(keyDateinput);
+		Wait.forSeconds(3000);
+		click.elementBy(keyCalendarnextbutton);
+		Wait.forSeconds(3000);
+		click.elementBy(keyCalendardate);
+
+	}
+
+
+	public void verifyCalendarprviousdatebuttonisnotexist() throws Throwable {
+		Wait.forSeconds(3000);
+
+		click.elementBy(keyDateinput);
+		Wait.forSeconds(3000);
+		click.elementBy(keyCalendarpreviousdate);
+		Wait.forSeconds(3000);
+		verify.elementIsnotEnabled(keyCalendardate);
+
+
+	}
+
+	public void clickfavourite() throws Throwable {
+		Wait.forSeconds(3000);
+
+		click.elementBy(keyfavourite);
+		Wait.forSeconds(5000);
 
 	}
 }

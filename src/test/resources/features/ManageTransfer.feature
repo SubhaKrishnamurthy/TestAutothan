@@ -9,10 +9,11 @@ Feature: ManageTransfer
 
   @ManageTransfer1
   Scenario:Validation of Fund transfer - to own bank under transferred tab
-    Given I'm on login page of UB online banking application with user "cbautotest2" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
     When I click the Send/Request
     Then I Click Ownacount link
     And I click the from account number
+    And I click the to account number
     And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -22,7 +23,7 @@ Feature: ManageTransfer
     And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Store the Reference Number and transaction date
-    Then I Verify the values "PHP10.00" and "102220021750"  and "102310011756" in Recenent transactions
+    Then I Verify the values "PHP 10.00" and "102220021750"  and "102310011756" in Recenent transactions
     And I Click the Logout Button
 
   @ManageTransfer2

@@ -248,8 +248,31 @@ Feature: Another Unionbank FundTransfer
     And I click the Submit Button
     Then I verify the Successful message is displayed
 
+  @OtherUBaccount10
+  Scenario: Validation of Transfer to another UBP account with future date
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I Click UBacount link
+    And I click the from account number
+    And I select the Account number from favourite recipient "100570037881"
+    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
+    And I verify Next button is enabled
+    And I click the Next Button
+    And I Enter the Amount "1500" in ub account transfer
+    And I Select the future date
+    And I click the Repeat checkbox and select frequency as "Quarterly"
+    And I click the Next Button
 
 
-
-  #TS014: Validation of Transfer to another UBP account with future date
-  #TS018: Validation of amount field in the Transfer Page
+  @OtherUBaccount11
+   Scenario:Validation of amount field in the Transfer Page
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I Click UBacount link
+    And I click the from account number
+    And I select the Account number from favourite recipient "100570037881"
+    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
+    And I verify Next button is enabled
+    And I click the Next Button
+    And I Enter the Amount "9999999999" in ub account transfer
+    Then I verify the validation message for than account balance "Amount is greater than your current balance"

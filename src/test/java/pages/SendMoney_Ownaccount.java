@@ -36,6 +36,11 @@ public class SendMoney_Ownaccount extends Keywords {
 	private String keyamountedit="onlineBanking.Fundtransfer.Btnamountedit";
 	private String keytxndatetransfersuccessful="onlineBanking.Fundtransfer.lbltxndatetransfersuccessful";
 	private String keyReferenceNumbertransfersuccessful="onlineBanking.Fundtransfer.lblReferenceNumbertransfersuccessful";
+	private String keyManageTransfers="onlineBanking.Fundtransfer.txtManageTransfers.XPATH";
+	private String keySearchRecent="onlineBanking.Fundtransfer.txtSearchRecent";
+
+
+
 
    public String txndate;
    public String ReferenceNumber;
@@ -185,6 +190,28 @@ public class SendMoney_Ownaccount extends Keywords {
 		Wait.forSeconds(3000);
 		txndate=driver.findElement(By.xpath("//*[text()='Transaction Date']/following-sibling::output")) .getText();
 		ReferenceNumber=driver.findElement(By.xpath("//*[text()='Reference Number']/following-sibling::output")) .getText();
+	}
+
+	public void verifytheRecenttrasaction(String Amount,String fromacc,String toacc) throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keytransfersuccessfulnewtransaction);
+		click.elementBy(keyManageTransfers);
+		click.elementBy(keySearchRecent);
+		String txndateval=txndate;
+		String txndatevalout[]=txndateval.split(" ");
+		String monthval1=txndatevalout[0].substring(0, 1);
+		String monthval2=txndatevalout[0].substring(1, 3);
+		String monthval=monthval1.toUpperCase()+monthval2.toLowerCase();
+		String time=txndatevalout[3].substring(0, 2);
+		if(time.contains(":"))
+		{
+			txndatevalout[3]="0"+txndatevalout[3];
+
+		}
+
+		txndateval=monthval+" "+txndatevalout[1]+" "+txndatevalout[2]+","+" "+txndatevalout[3]+" "+txndatevalout[4];
+		String dbval="//*[contains(text(),'"+txndateval+"')]";
+		driver.findElement(By.xpath(dbval)).click();
 	}
 
 

@@ -5,6 +5,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import exceptions.ApplicationException;
 import pages.Dashboard_Home_Page;
 import pages.LoginPage;
 import pages.SendMoney_OtherUBaccount;
@@ -82,5 +83,10 @@ public class AnotherUnionbankFundtransfer {
     public void iEnterTheRecipientEmailMobilenumberAndRemarksMorethan(String arg0, String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         OtherUBaccount.entertheMobileEmaileithRemarksmorethan256chars(arg0,arg1,arg2);
+    }
+
+    @And("^I Select the future date$")
+    public void iSelectTheFutureDate() throws ApplicationException {
+        OtherUBaccount.Selectthefututdate();
     }
 }

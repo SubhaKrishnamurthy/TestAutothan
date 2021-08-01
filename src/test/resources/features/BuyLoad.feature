@@ -240,3 +240,75 @@ Feature: BuyLoad
     And I enter the mobilenumber "09841011885"
     And I verify the "Please enter a valid PH Mobile Number." error message
 
+  @BuyLoad14
+  Scenario:Validation of mycontacts and favourites search using Name,Mobile Number
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I enter the name"sundar"
+    And I click the search icon in buyload
+    And I verify the search results "Sundar" and "09457946537"
+    And I enter the name"09457946537"
+    And I click the search icon in buyload
+    And I verify the search results "Sundar" and "09457946537"
+    And I click the favourite link in buyload
+    And I enter the name"sundar"
+    And I click the search icon in buyload
+    And I verify the search results "Sundar" and "09457946537"
+    And I enter the name"09457946537"
+    And I click the search icon in buyload
+    And I verify the search results "Sundar" and "09457946537"
+
+  @BuyLoad15
+  Scenario:Validation of edit and delete contact in mycontacts
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the addcontact in buyload
+    And I enter the name "mycontacts" and mobile"09841011885" in add contact deatils
+    And I click the save button in manage contact
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify the search results "mycontacts" and "09841011885"
+    And I click the search result link
+    And I click the edit button in manage contact
+    And I change the buyload contat name"mycontactsnew"
+    And I click the update Button
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify the search results "mycontactsnew" and "09841011885"
+    And I click the search result link
+    And I click the delete button in manage contact
+    And I click the Yes button
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify "No enrolled contacts found"
+
+  @BuyLoad16
+  Scenario:Validation of edit and delete contact in favuorites
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the favourite link in buyload
+    And I click the addcontact in buyload
+    And I enter the name "favuorites" and mobile"09841011885" in add contact deatils
+    And I click the save button in manage contact
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify the search results "favuorites" and "09841011885"
+    And I click the search result link
+    And I click the edit button in manage contact
+    And I change the buyload contat name"favuoritesnew"
+    And I click the update Button
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify the search results "favuoritesnew" and "09841011885"
+    And I click the search result link
+    And I click the delete button in manage contact
+    And I click the Yes button
+    And I enter the name"09841011885"
+    And I click the search icon in buyload
+    And I verify "No enrolled contacts found"
+
+
+

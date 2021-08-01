@@ -217,3 +217,16 @@ Feature: EonAccount Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
+
+  @EonAccount9
+  Scenario:Validation of amount field in the Transfer Page
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I Click the EOnaccount fundtransfer Link
+    And I click the from account number
+    And Enter the Eon Account Number "109453257914"
+    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
+    And I verify Next button is enabled
+    And I click the Next Button
+    And I Enter the Amount "9999999999" in ub account transfer
+    Then I verify the validation message for than account balance "Amount is greater than your current balance"

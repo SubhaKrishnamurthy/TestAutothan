@@ -2,6 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import exceptions.ApplicationException;
 import org.openqa.selenium.By;
 
 public class BuyloadPage extends Keywords {
@@ -35,6 +36,22 @@ public class BuyloadPage extends Keywords {
 	private String KeyBuyloadcancelpurchase="onlineBanking.BuyLoad.btncancelpurchase";
 	private String Keymobilenumber="onlineBanking.BuyLoad.txtmobilenumber";
 	private String Keyinvaligmobilenumbererrormsg="onlineBanking.BuyLoad.lbltinvalidmobilenumbererrormsg";
+	private String KeyManageContacts="onlineBanking.BuyLoad.lnkManageContacts";
+    private String KeytxtSearch="onlineBanking.BuyLoad.txtSearch";
+	private String KeytxtSearchresult1="onlineBanking.BuyLoad.lblresult1";
+	private String KeytxtSearchresult2="onlineBanking.BuyLoad.lblresult2";
+	private String keybtnsearchicon="onlineBanking.BuyLoad.btnSearchicon";
+	private String keyAddmobilenumber="onlineBanking.BuyLoad.txtAddmobilenumber";
+	private String keyAddcontact="onlineBanking.BuyLoad.btnAddcontact";
+	private String keyAddname="onlineBanking.BuyLoad.txtAddname";
+	private String keybtnSave="onlineBanking.BuyLoad.btnSave";
+	private String keybtnEdit="onlineBanking.BuyLoad.btnEdit";
+	private String keybtnUpdate="onlineBanking.BuyLoad.btnUpdate";
+	private String keybtnDelete="onlineBanking.BuyLoad.btnDelete";
+	private String keybtnYes="onlineBanking.BuyLoad.btnYes";
+	private String keybtnNoenrolledcontactsfound="onlineBanking.BuyLoad.lblNoenrolledcontactsfound";
+
+
 
 	public void clickManageContacts() throws Throwable {
 		verify.IfElementExists(ManageContacts);
@@ -145,4 +162,53 @@ public class BuyloadPage extends Keywords {
 
 	}
 
+	public void entertheSearchname(String searchname) throws Throwable {
+		type.data(keySearchcontact,searchname);
+		Wait.forSeconds(3000);
+	}
+	public void clickSearchicon() throws Throwable {
+		click.elementBy(keybtnsearchicon);
+	}
+
+	public void verifySearcresult(String result1,String result2) throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementTextMatching(KeytxtSearchresult1,result1);
+		verify.elementTextMatching(KeytxtSearchresult2,result2);
+
+	}
+
+	public void clickAddcontact() throws Throwable {
+		click.elementBy(keyAddcontact);
+	}
+
+	public void enterContactnameandmobile(String name,String mobile) throws ApplicationException {
+		type.data(keyAddname, name);
+		type.data(keyAddmobilenumber, mobile);
+	}
+	public void clickSave() throws Throwable {
+		click.elementBy(keybtnSave);
+	}
+	public void clickEdit() throws Throwable {
+		click.elementBy(keybtnEdit);
+	}
+
+	public void clickDelete() throws Throwable {
+		click.elementBy(keybtnDelete);
+	}
+
+	public void clickYes() throws Throwable {
+		click.elementBy(keybtnYes);
+	}
+	public void clickUpdate() throws Throwable {
+		click.elementBy(keybtnUpdate);
+	}
+	public void clickSearchfirstresult() throws Throwable {
+		driver.findElement(By.cssSelector("div > div > div.operations > div:nth-child(2) > a")).click();
+	}
+
+	public void verifySearcresultNoenrolledcontactsfound() throws Throwable {
+		Wait.forSeconds(3000);
+        verify.elementIsPresent(keybtnNoenrolledcontactsfound);
+
+	}
 }
