@@ -52,6 +52,9 @@ public class SendMoney_Pesonet extends Keywords {
 	public void entertheLeaveaPurpose(String LeaveaPurpose) throws Throwable {
 		Wait.forSeconds(3000);
 		type.data(keypesonetpurpose,LeaveaPurpose);
+	}
 
+	public void verify_BankNotDisplayed(String bankName) throws Throwable {
+		verify.VERIFYBANKNAMENOTINLIST(bankName);
 	}
 }

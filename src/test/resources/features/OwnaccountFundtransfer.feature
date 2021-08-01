@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @Ownaccount
+ @Ownaccount @Regression
 Feature: Own Account FundTransfer
 
 

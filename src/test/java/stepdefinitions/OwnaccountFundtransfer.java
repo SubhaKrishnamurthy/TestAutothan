@@ -135,7 +135,6 @@ public class OwnaccountFundtransfer {
 
     @And("^I Click the fromaccountnumber edit$")
     public void iClickTheFromaccountnumberEdit() throws Throwable {
-
         Ownaccount.clickFromaccountedit();
     }
 

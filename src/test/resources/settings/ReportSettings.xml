@@ -14,7 +14,7 @@
         <documentTitle>Automation Dashboard</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>UnionBank-Philippines-Project-Convergent Banking</reportName>
+        <reportName>UnionBank-Philippines-Project-Online Banking</reportName>
 
         <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
         <dateFormat>dd-MM-yyyy</dateFormat>

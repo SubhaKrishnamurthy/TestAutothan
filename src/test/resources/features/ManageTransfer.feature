@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @ManageTransfer
+ @ManageTransfer @Regression
 Feature: ManageTransfer
 
   @ManageTransfer1
