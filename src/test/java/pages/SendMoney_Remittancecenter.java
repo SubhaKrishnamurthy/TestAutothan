@@ -48,6 +48,8 @@ public class SendMoney_Remittancecenter extends Keywords {
 	private String keyRemittanceCenterReviewandsendSendproceedwithtransfer="onlineBanking.Fundtransfer.RemittanceCenterReviewandsendSendproceedwithtransfer";
 	private String keyRemittanceCentertransfersuccessful="onlineBanking.Fundtransfer.RemittanceCentertransfersuccessful";
 	private String keyRemittanceCenterSubmit="onlineBanking.Fundtransfer.btnRemittanceCenterSubmit";
+	private String keyRemittanceCenterEdit="onlineBanking.Fundtransfer.btnRemittanceCenterEdit";
+	private String keyRemittanceCenterUpdate="onlineBanking.Fundtransfer.btnRemittanceCenterUpdate";
 
 
 	public void clickRemittancecenter() throws Throwable {
@@ -123,10 +125,10 @@ public class SendMoney_Remittancecenter extends Keywords {
 
 	}
 	public void selectNationality() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		//click.elementBy(keynationality);
         type.data(keynationality,"Filipino");
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
         Robot robot=new Robot();
 		//robot.keyPress(KeyEvent.VK_TAB);
 		Wait.forSeconds(3000);
@@ -136,7 +138,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
 		//driver.findElement(By.xpath(Datatoselectxpath)).click();
 		click.elementBy(keybirthcalendardate);
-		Datatoselect="15";
+		Datatoselect="2";
 		Wait.forSeconds(3000);
 		Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
         driver.findElement(By.xpath(Datatoselectxpath)).click();
@@ -205,6 +207,17 @@ public class SendMoney_Remittancecenter extends Keywords {
 	public void Verifypalawanexpressexist() throws Throwable {
 		Wait.forSeconds(3000);
 		verify.elementIsPresent(keyPalawanexpress);
+		Wait.forSeconds(3000);
+	}
+
+	public void clickRemittanceCenterEdit() throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keyRemittanceCenterEdit);
+		Wait.forSeconds(3000);
+	}
+	public void clickRemittanceCenterUpdate() throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keyRemittanceCenterUpdate);
 		Wait.forSeconds(3000);
 	}
 }

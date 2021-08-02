@@ -145,4 +145,20 @@ public class Remittancecenter {
     }
 
 
+    @And("^I leave the Address is blank and verify the validation$")
+    public void iLeaveTheAddressIsBlankAndVerifyTheValidation() throws Throwable {
+    PDDTS.VerifytheAddressfieldwhenblank();
+    }
+
+    @And("^I click the edit button in remittance center$")
+    public void iClickTheEditButtonInRemittanceCenter() throws Throwable {
+        RC.clickRemittanceCenterEdit();
+    }
+
+    @And("^I click the update button in remittance center$")
+    public void iClickTheUpdateButtonInRemittanceCenter() throws Throwable {
+        RC.clickRemittanceCenterUpdate();
+    }
+
+
 }

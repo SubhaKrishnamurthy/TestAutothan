@@ -17,6 +17,7 @@ public class SendMoney_PDDTS extends Keywords {
 	private String keyPDDTSpopmessage="onlineBanking.Fundtransfer.lblPDDTSpopupmessage";
 	private String keygotit="onlineBanking.Fundtransfer.BtnGotit";
 	private String keysendto="onlineBanking.Fundtransfer.lblTransferSendto";
+	private String keythisfieldisrequired="onlineBanking.Fundtransfer.lblThisfieldisrequired";
 
 
 
@@ -69,6 +70,35 @@ public class SendMoney_PDDTS extends Keywords {
 		//Wait.forSeconds(3000);
 		verify.elementIsPresent(keysendto);
 		Wait.forSeconds(2000);
+	}
+
+	public void VerifytheAddressfieldwhenblank() throws Throwable{
+		type.data(keyPDDTSAddresshousenumber,"");
+		type.data(keyPDDTSStreetname,"MainStreet");
+		verify.elementIsPresent(keythisfieldisrequired);
+		type.data(keyPDDTSAddresshousenumber,"12");
+		type.data(keyPDDTSStreetname,"");
+		type.data(keyPDDTSAddresshousenumber,"12");
+		verify.elementIsPresent(keythisfieldisrequired);
+		type.data(keyPDDTSAddresshousenumber,"12");
+		type.data(keyPDDTSStreetname,"MainStreet");
+		type.data(keyPDDTSSvillage,"");
+		type.data(keyPDDTSStreetname,"MainStreet");
+		verify.elementIsPresent(keythisfieldisrequired);
+		type.data(keyPDDTSSvillage,"Manila");
+		Wait.forSeconds(3000);
+//		click.elementBy(keyPDDTSprovince);
+//		String Datatoselect;
+//		Datatoselect="Metro Manila";
+//		Wait.forSeconds(3000);
+//		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
+//		driver.findElement(By.xpath(Datatoselectxpath)).click();
+//		Wait.forSeconds(3000);
+//		click.elementBy(keyPDDTScity);
+//		Datatoselect="Manila";
+//		Wait.forSeconds(3000);
+//		Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
+//		driver.findElement(By.xpath(Datatoselectxpath)).click();
 	}
 
 }
