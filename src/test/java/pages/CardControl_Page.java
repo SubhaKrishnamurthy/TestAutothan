@@ -23,6 +23,7 @@ public class CardControl_Page extends Keywords {
     public static String status ;
 
     public void selectCard() throws Throwable {
+        Wait.forSeconds(4000);
         jsClick.elementBy(AccountsNextslide);
         jsClick.elementBy(AccountsNextslide);
         click.elementBy(CreditCard);

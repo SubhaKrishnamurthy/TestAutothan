@@ -48,6 +48,98 @@ public class MobileBranchBanking {
         mbbPage.verifyViewMoreBtn();
     }
 
+    @When("^I search the branch as \"([^\"]*)\"$")
+    public void i_search_the_branch_as(String arg1) throws Throwable {
+       mbbPage.searchBranch(arg1);
+    }
 
+    @Then("^I verify the branch address as \"([^\"]*)\"$")
+    public void i_verify_the_branch_address_as(String arg1) throws Throwable {
+        mbbPage.verify_BranchAddress(arg1);
+    }
 
+    @When("^I select the date as \"([^\"]*)\"$")
+    public void i_select_the_date_as(String date) throws Throwable {
+        mbbPage.selectDate(date);
+    }
+
+    @When("^I click add transaction button$")
+    public void i_click_add_transaction_button() throws Throwable {
+        mbbPage.click_AddTransactionBtn();
+    }
+
+    @When("^I click add cash deposit button$")
+    public void i_click_add_cash_deposit_button() throws Throwable {
+        mbbPage.click_AddCashDepositBtn();
+    }
+
+    @When("^I enter account number as \"([^\"]*)\"$")
+    public void i_enter_account_number_as(String arg1) throws Throwable {
+        mbbPage.enterAccNumber(arg1);
+    }
+
+    @When("^I enter amount as \"([^\"]*)\"$")
+    public void i_enter_amount_as(String arg1) throws Throwable {
+        mbbPage.enterAmt(arg1);
+    }
+
+    @Then("^I verify no error message is displayed$")
+    public void i_verify_no_error_message_is_displayed() throws Throwable {
+        commonpage.verifyAccNumNoErrMsg();
+    }
+
+    @Then("^I verify review visit account number value as \"([^\"]*)\"$")
+    public void i_verify_review_visit_account_number_value_as(String arg1) throws Throwable {
+        mbbPage.verify_ReviewVisit_AccNumberValue(arg1);
+    }
+
+    @Then("^I verify account number value as \"([^\"]*)\"$")
+    public void i_verify_account_number_value_as(String arg1) throws Throwable {
+        mbbPage.verify_AccNumberValue(arg1);
+    }
+
+    @Then("^I verify review visit amount as \"([^\"]*)\"$")
+    public void i_verify_review_visit_amount_as(String arg1) throws Throwable {
+        mbbPage.verify_ReviewVisit_AmountValue(arg1);
+    }
+
+    @Then("^I click the cancel visit review button$")
+    public void i_click_the_cancel_visit_review_button() throws Throwable {
+        mbbPage.click_CancelVisitReview();
+    }
+
+    @Then("^I verify the select branch option is available$")
+    public void i_verify_the_select_branch_option_is_available() throws Throwable {
+        mbbPage.verify_SelectBranch();
+    }
+
+    @Then("^I book visit if todays date is enabled$")
+    public void i_book_visit_if_todays_date_is_enabled() throws Throwable {
+        mbbPage.bookVisit_TodaysDate();
+    }
+
+    @Then("^I verify error message after selecting todays date$")
+    public void i_verify_error_message_after_selecting_todays_date() throws Throwable {
+        mbbPage.VerifyError_TodaysDate();
+    }
+
+    @When("^I select todays date$")
+    public void i_select_todays_date() throws Throwable {
+        mbbPage.selectTodaysDate();
+    }
+
+    @When("^I edit the amount from review page$")
+    public void i_edit_the_amount_from_review_page() throws Throwable {
+        mbbPage.editAmount();
+    }
+
+    @Then("^I click book visit button$")
+    public void i_click_book_visit_button() throws Throwable {
+        mbbPage.click_BookVisit();
+    }
+
+    @Then("^I cancel the visit$")
+    public void i_cancel_the_visit() throws Throwable {
+        mbbPage.CancelTodaysVisit();
+    }
 }
