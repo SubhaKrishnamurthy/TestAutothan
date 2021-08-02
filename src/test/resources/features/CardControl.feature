@@ -9,7 +9,7 @@ Feature: Card Control Functionality Validation
   #TS130
   @CC01
  Scenario: Validation of navigating to account details screen on clicking back button from transaction control screen
-   Given I'm on login page of UB online banking application with user "vinithatest1" otp "111111"
+   Given I'm on login page of UB online banking application with user "vinithatest1" otp "222222"
    When I Select the card number in the dashboard
    And I Click the Transaction controls
    And I Click Back button
@@ -19,7 +19,7 @@ Feature: Card Control Functionality Validation
     #TS131
    @CC02
   Scenario: Validation of navigating to dashboard screen on clicking back button from account details screen
-     Given I'm on login page of UB online banking application with user "vinithatest1" otp "111111"
+     Given I'm on login page of UB online banking application with user "vinithatest1" otp "222222"
      When I Select the card number in the dashboard
      And I Click the Transaction controls
      And I Click Back button
@@ -29,7 +29,7 @@ Feature: Card Control Functionality Validation
   #TS129
   @CC03
   Scenario: Validation of card control functionality in Transaction control screen when the card is unlocked
-    Given I'm on login page of UB online banking application with user "vinithatest1" otp "111111"
+    Given I'm on login page of UB online banking application with user "vinithatest1" otp "222222"
     When I Select the card number in the dashboard
     Then I unlock the card if card id locked
 
@@ -37,7 +37,7 @@ Feature: Card Control Functionality Validation
     #TS126
     @CC04
    Scenario: Validation of card control functionality in account details screen when the card is unlocked
-      Given I'm on login page of UB online banking application with user "vinithatest1" otp "111111"
+      Given I'm on login page of UB online banking application with user "vinithatest1" otp "222222"
       When I Select the card number in the dashboard
       Then I verify the card status and validate the functions
 
