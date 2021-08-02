@@ -54,7 +54,7 @@ public class BuyLoad {
     @And("^I Verify the buyload details \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
     public void iVerifyTheBuyloadDetailsAndAnd(String arg0, String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-
+        Buyload.verifySuccessfulscreenvalidations(arg0, arg1, arg2);
     }
 
     @And("^I enter the name \"([^\"]*)\" in search field$")
@@ -204,5 +204,45 @@ public class BuyLoad {
     public void iVerify(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         Buyload.verifySearcresultNoenrolledcontactsfound();
+    }
+
+    @And("^I click the favorite button$")
+    public void iClickTheFavoriteButton() throws Throwable {
+        Buyload.clickfavouritebutton();
+    }
+
+    @And("^I verify the validation error message in add contact$")
+    public void iVerifyTheValidationErrorMessageInAddContact() throws Throwable {
+        Buyload.verifyValidationinaddcontact();
+    }
+
+    @And("^I verify the validation error message \"([^\"]*)\" contact already contact already exist$")
+    public void iVerifyTheValidationErrorMessageContactAlreadyContactAlreadyExist(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.verifyErrormessage(arg0);
+
+    }
+
+    @Then("^I click the FAQ link in Buyload page$")
+    public void iClickTheFAQLinkInBuyloadPage() throws Throwable {
+        Buyload.clickFAQ();
+
+    }
+
+    @And("^I verify the FAQ links are exist in FAQ page$")
+    public void iVerifyTheFAQLinksAreExistInFAQPage() throws Throwable {
+        Buyload.verifyFAQscreens();
+
+    }
+
+    @Then("^I enter the value\"([^\"]*)\" in search filed$")
+    public void iEnterTheValueInSearchFiled(String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Buyload.enterFAQsearchr(arg0);
+    }
+
+    @And("^I verify the results displayed$")
+    public void iVerifyTheResultsDisplayed() throws Throwable {
+        Buyload.verifyFAQsearchresults();
     }
 }

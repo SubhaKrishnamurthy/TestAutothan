@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions"},
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
        // dryRun = true,
-        tags={"@RC5"}
+        tags={"@BuyLoad2"}
 )
 
 public class ConvergentTestRunner extends Test {

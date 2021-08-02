@@ -50,8 +50,18 @@ public class BuyloadPage extends Keywords {
 	private String keybtnDelete="onlineBanking.BuyLoad.btnDelete";
 	private String keybtnYes="onlineBanking.BuyLoad.btnYes";
 	private String keybtnNoenrolledcontactsfound="onlineBanking.BuyLoad.lblNoenrolledcontactsfound";
-
-
+	private String keybtnfavourite="onlineBanking.BuyLoad.btnfavorite";
+	private String keynameisrequired="onlineBanking.BuyLoad.lblNameisrequired";
+	private String keyMobileNumbershouldhave11digits="onlineBanking.BuyLoad.lblMobileNumbershouldhave11digits";
+	private String keyErrormessage="onlineBanking.BuyLoad.Errormessage";
+	private String keyFAQ="onlineBanking.BuyLoad.btnFAQ";
+	private String keyCanIbuyloadforothers="onlineBanking.BuyLoad.lblCanIbuyloadforothers";
+	private String keyWhatairtimedenominationsmayIload="onlineBanking.BuyLoad.lblWhatairtimedenominationsmayIload";
+	private String keysearchFAQ="onlineBanking.BuyLoad.txtsearchFAQ";
+	private String keysearchresult="onlineBanking.BuyLoad.lblsearchresult";
+	private String keyfromaccountnumber="onlineBanking.BuyLoad.lblfromaccountnumber";
+	private String keymobilenumbervalidate="onlineBanking.BuyLoad.lblmobilenumber";
+	private String keyamount="onlineBanking.BuyLoad.lblamount";
 
 	public void clickManageContacts() throws Throwable {
 		verify.IfElementExists(ManageContacts);
@@ -209,6 +219,57 @@ public class BuyloadPage extends Keywords {
 	public void verifySearcresultNoenrolledcontactsfound() throws Throwable {
 		Wait.forSeconds(3000);
         verify.elementIsPresent(keybtnNoenrolledcontactsfound);
+
+	}
+	public void clickfavouritebutton() throws Throwable {
+		Wait.forSeconds(3000);
+		click.elementBy(keybtnfavourite);
+
+	}
+	public void verifyValidationinaddcontact() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementIsPresent(keynameisrequired);
+		verify.elementIsPresent(keyMobileNumbershouldhave11digits);
+		Wait.forSeconds(3000);
+		driver.findElement(By.cssSelector("div > div > div.ant-drawer-header > div > div > div.header-foreground > div > div.left.part > a > svg")).click();
+
+	}
+
+	public void verifyErrormessage(String result1) throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementTextMatching(keyErrormessage,result1);
+
+
+	}
+
+	public void clickFAQ() throws Throwable {
+
+		click.elementBy(keyFAQ);
+	}
+
+
+	public void verifyFAQscreens() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementIsPresent(keyCanIbuyloadforothers);
+		verify.elementIsPresent(keyWhatairtimedenominationsmayIload);
+
+	}
+
+	public void enterFAQsearchr(String FAQsearch) throws ApplicationException {
+		type.data(keysearchFAQ, FAQsearch);
+
+	}
+
+	public void verifyFAQsearchresults() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementIsPresent(keysearchresult);
+	}
+
+	public void verifySuccessfulscreenvalidations(String acctnum,String mobileno,String amount) throws Throwable {
+		Wait.forSeconds(3000);
+		verify.elementTextMatching(keyfromaccountnumber,acctnum);
+		verify.elementTextMatching(keymobilenumbervalidate,mobileno);
+		verify.elementTextMatching(keyamount,amount);
 
 	}
 }

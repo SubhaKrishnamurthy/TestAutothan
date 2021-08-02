@@ -30,7 +30,7 @@ Feature: BuyLoad
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
-    #And I Verify the buyload details "" and "" and ""
+    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad3
   Scenario:Validation of contacts in contacts screen using Mobile number of user in MyContacts
@@ -49,7 +49,7 @@ Feature: BuyLoad
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
-    #And I Verify the buyload details "" and "" and ""
+    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad4
   Scenario:Validation of contacts in contacts screen using Mobile number of user in Favorites
@@ -69,7 +69,7 @@ Feature: BuyLoad
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
-    #And I Verify the buyload details "" and "" and ""
+    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad5
   Scenario:Validation of contacts in contacts screen using name of user in Favorites
@@ -89,7 +89,7 @@ Feature: BuyLoad
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
-    #And I Verify the buyload details "" and "" and ""
+    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad6
   Scenario:Validation of Buyload more than account current balance
@@ -291,6 +291,7 @@ Feature: BuyLoad
     And I click the favourite link in buyload
     And I click the addcontact in buyload
     And I enter the name "favuorites" and mobile"09841011885" in add contact deatils
+    And I click the favorite button
     And I click the save button in manage contact
     And I enter the name"09841011885"
     And I click the search icon in buyload
@@ -309,5 +310,84 @@ Feature: BuyLoad
     And I click the search icon in buyload
     And I verify "No enrolled contacts found"
 
+  @BuyLoad17
+  Scenario:Validation of add Contact with Invalid Name and Mobile number
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the favourite link in buyload
+    And I click the addcontact in buyload
+    And I enter the name "" and mobile"9841011885" in add contact deatils
+    And I verify the validation error message in add contact
 
 
+  @BuyLoad18
+  Scenario:Validation of add Contact with Invalid Name and Mobile number
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the favourite link in buyload
+    And I click the addcontact in buyload
+    And I enter the name "Test" and mobile"09457946537" in add contact deatils
+    And I click the save button in manage contact
+    And I verify the validation error message "Sorry, the contact number you are trying to add already exists." contact already contact already exist
+
+  @BuyLoad19
+  Scenario:Validation of add Contact with Invalid Name and Mobile number
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the favourite link in buyload
+    And I click the addcontact in buyload
+    And I enter the name "Test" and mobile"09457946537" in add contact deatils
+    And I click the save button in manage contact
+    And I verify the validation error message "Sorry, the contact number you are trying to add already exists." contact already contact already exist
+
+  @BuyLoad20
+  Scenario:Validation of add Contact with Invalid Name and Mobile number
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I Click the Manage contacts link in the Buyload
+    And I click the favourite link in buyload
+    And I click the addcontact in buyload
+    And I enter the name "Test" and mobile"09457946537" in add contact deatils
+    And I click the save button in manage contact
+    And I verify the validation error message "Sorry, the contact number you are trying to add already exists." contact already contact already exist
+
+  @BuyLoad21
+  Scenario:Validation of buy load related queries and answers in buy load FAQ
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I click the FAQ link in Buyload page
+    And I verify the FAQ links are exist in FAQ page
+
+
+  @BuyLoad22
+  Scenario:Validation of searching of any queries related to buy load in buy load FAQ Screen
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I enter the value"Can I buy load for others" in search filed
+    And I verify the results displayed
+
+  @BuyLoad23
+ Scenario:Validation Mobile Number,Amount and account deatils in buyload successful screen
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the BuyLoad link in the send request page
+    Then I click select contact in the buyload page
+    And I verify the mobile number is exist
+    And I click the select from list
+    And I enter the name "Sundar" in search field
+    And I click the search result
+    And I click the Next Button
+    And I click the from account number
+    And I select the value "100" in buy load screen
+    And I click the Next Button
+    And I click purchaseload button
+    And I Enter the OTP "222222" in OTP Page
+    And I click the Submit Button in buyload
+    And I verify tansfer successful displayed
+    And I Verify the buyload details "**** **** 1756" and "09457946537" and "PHP 100.00"
+
+
+
+    #279Validation of Recent purchases by clicking Recent purchase tab

@@ -128,3 +128,17 @@ Feature: PesoNet Fund Transfer
     And I click PDDTS Link
     And I click the from account number
     Then I verify the Sendto page is displayed
+
+  @PDDTS10
+  Scenario:Verification of blank field error content in Transfer To screen
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    When I click the Send/Request
+    Then I click the Other banks or Ewallet
+    And I click PDDTS Link
+
+
+
+  @PDDTS11
+  Scenario:Verification of invalid data error content in Transfer To screen
+
+
