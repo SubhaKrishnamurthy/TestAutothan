@@ -14,9 +14,6 @@ public class PesoNetFundtransfer {
     private SendMoney_Instapay Instapay= new SendMoney_Instapay();
     private SendMoney_Pesonet Pesonet= new SendMoney_Pesonet();
 
-
-
-
     @And("^I click the Pesonet link$")
     public void iClickThePesonetLink() throws Throwable {
         Pesonet.clickPesonet();
@@ -54,5 +51,12 @@ public class PesoNetFundtransfer {
     @Then("^I verify the previous date button is not exist$")
     public void iVerifyThePreviousDateButtonIsNotExist() throws Throwable {
         OtherUBaccount.verifyCalendarprviousdatebuttonisnotexist();
+    }
+
+
+    @Then("^I Verify the \"([^\"]*)\" is not displayed in listbox$")
+    public void i_Verify_the_is_not_displayed_in_listbox(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+            Pesonet.verify_BankNotDisplayed(arg1);
     }
 }

@@ -6,7 +6,7 @@
  @Login @Regression
 Feature: Login Page Validation
 
-
+ #TS075
   @Login1
   Scenario: Validation of Login functionality with valid and Invalid inputs
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
