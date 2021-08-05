@@ -73,7 +73,7 @@ Feature: Mobile Branch Banking Functionality Validation
       Then I verify no error message is displayed
       And I enter account number as "23235545455456780123"
       And I enter amount as "100"
-      Then I verify account number value as "2323554545545678"
+      Then I verify account number value as "2323554545542323"
 
      #TS294
      @MBB08
@@ -133,6 +133,13 @@ Feature: Mobile Branch Banking Functionality Validation
    #TS300
   @MBB11
     Scenario:  Validation of error message and completing the flow when user tries to schedule a visit for current day
+    Given I'm on login page of UB online banking application with user "Accnumtest5"
+    When I click visit branch from dashboard
+    And I click the select branch option
+    And I search the branch as "Medical City"
+    Then I book visit if todays date is enabled
+    And I edit the visit after selecting todays date
+    And I logout of UB online banking application
 
     #TS303
     @MBB12

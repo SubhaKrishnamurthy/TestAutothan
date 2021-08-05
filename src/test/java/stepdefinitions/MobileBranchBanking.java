@@ -142,4 +142,10 @@ public class MobileBranchBanking {
     public void i_cancel_the_visit() throws Throwable {
         mbbPage.CancelTodaysVisit();
     }
+
+    @Then("^I edit the visit after selecting todays date$")
+    public void i_edit_the_visit_after_selecting_todays_date() throws Throwable {
+        mbbPage.editTodaysVisit();
+    }
+
 }

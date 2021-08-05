@@ -260,6 +260,7 @@ public class RequestPayment_Page extends Keywords {
     }
 
     public void splitYourPortionAmt_RequesingAmt(String YourPortionAmt,String RequesingAmt) throws Throwable {
+        Wait.forSeconds(2000);
         type.data(Amount1,YourPortionAmt);
         type.data(Amount2,RequesingAmt);
     }

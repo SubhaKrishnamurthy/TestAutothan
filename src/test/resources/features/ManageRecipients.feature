@@ -58,7 +58,7 @@ Feature: Manage Recipients functionalities Validation
     And I click the manage recipient link
     And I search for the recipient "testts"
     Then I edit the account name
-    And I logout of UB online banking application
+    #And I logout of UB online banking application
 
     #TS084
   @MR06
@@ -68,7 +68,7 @@ Feature: Manage Recipients functionalities Validation
     And I click the manage recipient link
     And I search for the recipient "testts"
     Then I edit the account number
-    And I logout of UB online banking application
+    #And I logout of UB online banking application
 
     #TS086
   @MR07

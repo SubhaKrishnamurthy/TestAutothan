@@ -23,7 +23,7 @@ Feature: SplitBills Functionality Validation
     And I Click the Logout Button
     Examples:
     |FromAccountName| FromAccountNumber |RequesingAmount|TotalBill  |YourAmount|message   |DepositToAccName|DepositToAccNumber|
-    |Sundar         | 09457946537       | PHP 50.00     | PHP 100.00|PHP 50.00 |Testing01 |CARIN - ACTIVE  |    1750          |
+    |Sundar         | 09457946537       | PHP 50.00     | PHP 100.00|PHP 50.00 |Testing01 |CARIN - ACTIVE  | 1022 2002 1750   |
 
     #TSSB02
     @SB02
@@ -55,7 +55,7 @@ Feature: SplitBills Functionality Validation
       And I add one participant as "Sundar"
       And I enter the request payment message as "Testing02"
       And I Select the from account in the displayed account list
-      And I enter YourPortion amount as "150" and RequesingFrom amount as "50"
+      #And I enter YourPortion amount as "150" and RequesingFrom amount as "50"
       And I click the next button
       And I click the Request payemnt php button
       Then I Verify Congratulation message,"<FromAccountName>","<FromAccountNumber>","<RequesingAmount>","<TotalBill>","<YourAmount>","<message>","<DepositToAccName>","<DepositToAccNumber>"
@@ -63,7 +63,7 @@ Feature: SplitBills Functionality Validation
       And I Click the Logout Button
       Examples:
         |FromAccountName| FromAccountNumber |RequesingAmount|TotalBill   |YourAmount |message  |DepositToAccName|DepositToAccNumber|
-        |Sundar         | 09457946537        | PHP 50.00    | PHP 200.00 |PHP 150.00 |Testing02|CARIN - ACTIVE   | 1022 2002 1750  |
+        |Sundar         | 09457946537       | PHP 200.00    | PHP 400.00 |PHP 200.00 |Testing02|CARIN - ACTIVE   | 1022 2002 1750  |
 
       #TSSB04
       @SB04
@@ -87,7 +87,7 @@ Feature: SplitBills Functionality Validation
 
         Examples:
           |FromAccountName     | FromAccountNumber |RequesingAmount|TotalBill   |YourAmount |message  |DepositToAccName|DepositToAccNumber|
-          |aaOKG1kLcFJs1DVkZaed | 62235584891      | PHP 100.00    | PHP 100.00 |PHP 300.00 |Testing04|CARIN - ACTIVE  | 1022 2002 1750 |
+          |aaOKG1kLcFJs1DVkZaed | 62235584891      | PHP 100.00    | PHP 300.00 |PHP 100.00 |Testing04|CARIN - ACTIVE  | 1022 2002 1750 |
 
      #TSSB05
     @SB05

@@ -63,10 +63,12 @@ public class ForeignExchange_Page extends Keywords {
 
 	public void verifyEnoughFundErrMsg() throws Throwable
 	{
+		Wait.forSeconds(2000);
 		verify.elementIsPresent(EnoughFundErrMsg);
 	}
 
 	public void verifyAmtExceedsErrMsg() throws Throwable {
+		Wait.forSeconds(2000);
 		verify.elementIsPresent(AmountExceedsErrMsg);
 	}
 

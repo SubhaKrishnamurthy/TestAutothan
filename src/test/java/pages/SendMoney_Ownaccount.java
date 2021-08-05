@@ -118,7 +118,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void verifyOwnaccountsexist() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(4000);
 		verify.IfElementExists(keyOwnaccounts);
 	}
 	public void clickLogout() throws Throwable {

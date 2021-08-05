@@ -74,7 +74,7 @@ public class InsurancePage extends Keywords {
         verify.elementIsPresent(LifeInsurance1);
         verify.elementIsPresent(LifeInsurance2);
         verify.elementIsPresent(LifeInsurance3);
-        verify.elementIsPresent(LifeInsurance4);
+      //  verify.elementIsPresent(LifeInsurance4);
         jsClick.elementBy(ViewInsurance);
     }
 

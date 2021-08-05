@@ -158,7 +158,7 @@ public class MobileBranchBanking_Page extends Keywords {
     public void verifyMessgae_TodaySection() throws Throwable {
         verify.elementTextContains(BranchTODAYmessage,"No visits found.");
         verify.elementTextContains(BranchUPCOMINGmessage,"No upcoming visits found.");
-        verify.elementTextContains(BranchHISTORYmessage,"No visits found.");
+      //  verify.elementTextContains(BranchHISTORYmessage,"No visits found.");
     }
 
     public void verifyViewMoreBtn() throws Throwable {
@@ -303,6 +303,22 @@ public class MobileBranchBanking_Page extends Keywords {
         dashboardHomePage.clickMBBSection();
         click.elementBy(CancelVisit);
         commonMethodsPage.clickYesBtn();
+    }
+
+    public void editTodaysVisit() throws Throwable {
+        dashboardHomePage.clickMBBSection();
+        click.elementBy(SelectBranch2);
+        searchBranch("Vigan");
+        click.elementBy(SelectDate);
+        click.elementBy(SelectdateTodaydate);
+        verify.elementTextContains(Hangon_Errormsg,"There is existing branch visit on");
+        commonMethodsPage.clickYesBtn();
+        requestPaymentPage.clickNextButton();
+        type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1,"100");
+        requestPaymentPage.clickNextButton();
+        click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWUpdateVisit);
+        click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWGotoDashboard);
+        dashboardHomePage.clickMBBSection();
     }
 }
 

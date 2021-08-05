@@ -95,6 +95,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void verifyValue_SearchResult1(String name) throws Throwable {
+       Wait.forSeconds(2000);
         verify.elementTextContains(Billersearchresult1,name);
     }
 

@@ -43,7 +43,7 @@ public class UITF_Page extends Keywords {
     private String UnitToRedem = "onlineBanking.UITF.UnitToRedem";
     private String RedeemValue = "onlineBanking.UITF.RedemValue";
     private String CancelRedemptionBtn = "onlineBanking.UITF.CancelRedemptionBtn";
-    private String RedemptionDetailsLabel = "onlineBanking.UITF.RedemptionDetailsLabel";
+    private String RedemptionDetailsLabel = "onlineBanking.UITF.RedemptionLbl";
     private String RedeemBtnFinal = "onlineBanking.UITF.RedemBtnFinal";
     private String AccNumberTxt = "onlineBanking.UITF.AccNumberTxt";
     private String Errormessage_NonExistingUITFAccNo = "onlineBanking.UITF.Errormessage_NonExistingUITFAccNo";
