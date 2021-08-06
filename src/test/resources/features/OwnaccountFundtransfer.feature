@@ -247,7 +247,7 @@ Feature: Own Account FundTransfer
     And I Verify the Fromaccount"Peso Regular Savings **** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2,500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
-    And I Click the Logout
+    And I Click the Logout Button
 
   @Ownaccount11
   Scenario:Validation of amount field in the Transfer
