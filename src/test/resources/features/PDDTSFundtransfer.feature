@@ -142,6 +142,6 @@ Feature: PesoNet Fund Transfer
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
     When I click the Send/Request
     Then I click the Other banks or Ewallet
-    And I click PDDTS
+    And I click PDDTS Link
 
 
