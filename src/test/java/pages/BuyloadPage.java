@@ -243,7 +243,6 @@ public class BuyloadPage extends Keywords {
 	}
 
 	public void clickFAQ() throws Throwable {
-
 		click.elementBy(keyFAQ);
 	}
 
@@ -255,14 +254,14 @@ public class BuyloadPage extends Keywords {
 
 	}
 
-	public void enterFAQsearchr(String FAQsearch) throws ApplicationException {
+	public void enterFAQsearch(String FAQsearch) throws ApplicationException {
 		type.data(keysearchFAQ, FAQsearch);
-
 	}
 
 	public void verifyFAQsearchresults() throws Throwable {
-		Wait.forSeconds(3000);
-		verify.elementIsPresent(keysearchresult);
+		Wait.forSeconds(1000);
+		verify.elementTextContains(keysearchresult,"Yes, UnionBank Online allows you to buy load not only for yourself but for others too. Simply enter the mobile number of the intended recipient. You also have the option of saving this mobile number as one of your Favorites.");
+		//verify.elementIsPresent(keysearchresult);
 	}
 
 	public void verifySuccessfulscreenvalidations(String acctnum,String mobileno,String amount) throws Throwable {

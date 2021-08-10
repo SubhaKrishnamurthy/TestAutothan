@@ -211,19 +211,21 @@ public class ManageRecipient_Page extends Keywords {
 		type.data(accountNumberSearch,"testautomation4");
 		aReturn.clickEnter(accountNumberSearch);
 		Wait.forSeconds(6000);
-		Boolean t = verify.IfElementExistsboolean(keyAllertErrMsg);
-		if (t.equals(true))
-		{
-			click.elementBy(addRecipient);
-			Wait.forSeconds(2000);
-			click.elementBy(keybankName);
-			Wait.forSeconds(2000);
-			click.elementBy(keyBankNameUCPB);
-			Wait.forSeconds(2000);
-			type.data(accountName,"testautomation4" );
-			type.data(accountNumber,randomAccountNumber);
-			commonMethods.clickSaveBtn();
-			verify.IfElementExists(addRecipient);
+		try {
+			if (keyAllertErrMsg != null) {
+				click.elementBy(addRecipient);
+				Wait.forSeconds(2000);
+				click.elementBy(keybankName);
+				Wait.forSeconds(2000);
+				click.elementBy(keyBankNameUCPB);
+				Wait.forSeconds(2000);
+				type.data(accountName, "testautomation4");
+				type.data(accountNumber, randomAccountNumber);
+				commonMethods.clickSaveBtn();
+				verify.IfElementExists(addRecipient);
+			}
+		} catch (Throwable throwable) {
+			throwable.printStackTrace();
 		}
 	}
 

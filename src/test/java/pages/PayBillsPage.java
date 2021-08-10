@@ -5,6 +5,8 @@ import base.Keywords;
 import cucumber.api.java.eo.Se;
 import exceptions.ApplicationException;
 import gherkin.lexer.Th;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.sql.Ref;
 
@@ -66,6 +68,7 @@ public class PayBillsPage extends Keywords {
     private String CalenderBackBtn = "onlineBanking.Common.WebLnk_CalendarBackButton";
     private String CalenderDate = "onlineBanking.Common.WrbBtn_CalendarDate";
     private String keyAmount="onlineBanking.Fundtransfer.TxtAmount";
+    private String BackButton = "onlineBanking.PayBills.BackButton";
 
     public SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
     public ManageRecipient_Page manageRecipientPage = new ManageRecipient_Page();
@@ -199,19 +202,15 @@ public class PayBillsPage extends Keywords {
     }
 
     public void click_GotitBtn() throws Throwable {
-        /*
-        // Boolean t = false;
-        try {
-           Boolean t = verify.IfElementExistsboolean(keygotit);
-            if (t.equals(true)) {
-                jsClick.elementBy(keygotit);
-            }
-        } catch (ApplicationException e) {
-            e.printStackTrace();
-        }
-        */
-        Wait.forSeconds(1000);
-    click.elementBy(keygotit);
+        //WebElement element = driver.findElement(By.xpath("//span[text()='Got it']/parent::button"));
+       try{
+           if (keygotit != null) {
+               jsClick.elementBy(keygotit);
+           }
+       } catch (ApplicationException e) {
+           e.printStackTrace();
+       }
+
     }
 
     public void click_NewPaymentBtn() throws Throwable {
@@ -251,5 +250,10 @@ public class PayBillsPage extends Keywords {
         type.data(keyAmount,"150");
         Ownaccount.clickUpdate();
         click_GotitBtn();
+    }
+
+    public void click_BackBtn() throws Throwable {
+        Wait.forSeconds(1000);
+        click.elementBy(BackButton);
     }
 }

@@ -176,9 +176,9 @@ public class MobileBranchBanking_Page extends Keywords {
 
     public void verify_BranchAddress(String branchAddress) throws Throwable {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        //jse.executeScript("window.scrollBy(0,1000)","");
-        jse.executeScript("arguments[0].scrollIntoView();",BranchAddress );
-        Wait.forSeconds(4000);
+        jse.executeScript("window.scrollBy(0,1000)","");
+        //jse.executeScript("arguments[0].scrollIntoView();",BranchAddress );
+        Wait.forSeconds(2000);
         verify.elementTextContains(BranchAddress,branchAddress);
     }
 
@@ -253,8 +253,10 @@ public class MobileBranchBanking_Page extends Keywords {
 
     public void bookVisit_TodaysDate() throws Throwable {
         click.elementBy(SelectDate);
-        Wait.forSeconds(2000);
-        if(verify.IfElementExistsboolean(SelectdateTodaydate)){
+        Wait.forSeconds(1000);
+        try{
+        if(SelectdateTodaydate!=null)
+        {
             click.elementBy(SelectdateTodaydate);
             requestPaymentPage.clickNextButton();
             click.elementBy(MOBILEBRANCHBANKINGBOOKVISITAddTransaction);
@@ -266,6 +268,9 @@ public class MobileBranchBanking_Page extends Keywords {
             click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWBookVisit);
             Wait.forSeconds(2000);
             jsClick.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWGotoDashboard);
+        }
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
         }
     }
 

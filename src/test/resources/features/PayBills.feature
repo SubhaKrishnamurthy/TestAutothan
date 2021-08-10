@@ -85,7 +85,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I enter the amount field as "100"
     And I click the Submit Button
     And I Click the Edit button
-    And I Click Back button
+    And I Click pay Bills Back button
     Then I verify the pay php button
     Then I logout of UB online banking application
 
@@ -187,7 +187,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I Select the from account
       And I enter the amount field as "100"
       And I click the Submit Button
-      #And I click the GotIt button if displayed
+      And I click the GotIt button if displayed
       And I click the Pay Bills php button
       And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
@@ -235,7 +235,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
-      And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP100.00"
+      And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 100.00"
       Then I logout of UB online banking application
 
     #TS163
@@ -311,7 +311,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I Select the from account
       And I enter the amount field as "100"
       And I click the Submit Button
-      #And I click the GotIt button if displayed
+      And I click the GotIt button if displayed
       And I edit from account number
       And I edit the biller details
       And I edit the amount
@@ -335,7 +335,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
         And I Select the from account
         And I enter the amount field as "100"
         And I click the Submit Button
-        #And I click the GotIt button if displayed
+        And I click the GotIt button if displayed
         And I Verify from account number field masked as "**** **** 1750" and after unmasking as "1022 2002 1750"
         And I verify card number filed masked as "**** **** **** 5678" and after unmaking as "**** **** **** 5678"
         Then I logout of UB online banking application

@@ -23,17 +23,23 @@ public class ForeignExchange_Page extends Keywords {
 
 	public void clickBuyUSD() throws Throwable {
 		verify.elementIsPresent(BuyUSD);
-		Wait.forSeconds(1000);
+		/*
+		Wait.forSeconds(2000);
 		jsClick.elementBy(BuyUSD);
+		WebElement element = driver.findElement(By.xpath("//*[contains(text(),\"Buy USD\")]//parent::div/parent::div/parent::div/parent::div"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
 		Wait.forSeconds(1000);
 		verify.elementIsPresent(AddAccount);
 		commonMethods.clickCancelBtn();
+
+		 */
 	}
 
 	public void clickSellUSD() throws Throwable {
 		verify.elementIsPresent(SellUSD);
 		Wait.forSeconds(1000);
-		jsClick.elementBy(SellUSD);
+		click.elementBy(SellUSD);
 		Wait.forSeconds(1000);
 		verify.elementIsPresent(AddAccount);
 		commonMethods.clickCancelBtn();

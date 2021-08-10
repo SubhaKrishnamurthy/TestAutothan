@@ -173,4 +173,9 @@ public class PayBills {
        payBills.edit_Amount();
     }
 
+    @And("^I Click pay Bills Back button$")
+    public void I_Click_pay_Bills_Back_button() throws Throwable {
+        payBills.click_BackBtn();
+    }
+
 }

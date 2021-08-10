@@ -27,8 +27,6 @@ public class Verify extends Keywords{
 		log.info("Element is present!");
 	}
 
-
-
 	public void elementIsPresent(By locator) throws ApplicationException {
 		log.info("Verify element ["+locator+"] is present");
 		get.elementBy(locator);
@@ -164,7 +162,6 @@ public class Verify extends Keywords{
 		}
 
 	}
-
 
 	public void elementTextMatching(String locatorKey,int whichElement,String expectedValue) throws ApplicationException {
 		log.info("Verify element ["+locatorKey+"] text is matching with ["+expectedValue+"]");

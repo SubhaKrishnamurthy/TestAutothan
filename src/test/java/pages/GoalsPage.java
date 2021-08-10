@@ -302,19 +302,25 @@ public class GoalsPage extends Keywords {
         click.elementBy(OK);
     }
 
-    public void pauseGoal() throws Throwable {
-        Boolean t = verify.IfElementExistsboolean(PauseGoal);
-        if(t.equals(true)){
-            click.elementBy(PauseGoal);
-            click.elementBy(Pausegoal_submit);
-            verify.elementIsPresent(Pausegoal_GoalsSuccessfullyresumed);
-            clickGoalsOkBtn();
+    public void pauseGoal() throws Throwable
+    {
+        try {
+            if (PauseGoal != null)
+            {
+                click.elementBy(PauseGoal);
+                click.elementBy(Pausegoal_submit);
+                verify.elementIsPresent(Pausegoal_GoalsSuccessfullyresumed);
+                clickGoalsOkBtn();
+            }
+        }
+        catch (Throwable throwable) {
+            throwable.printStackTrace();
         }
     }
 
     public void resumeGoal() throws Throwable {
-       Boolean t = verify.IfElementExistsboolean(ResumeGoal);
-        if(t.equals(true))
+       try{
+        if(ResumeGoal!=null)
         {
             click.elementBy(ResumeGoal);
             click.elementBy(Next);
@@ -322,6 +328,10 @@ public class GoalsPage extends Keywords {
             verify.elementIsPresent(resumegoal_resumed);
             clickBackToDashboard();
         }
+       }
+       catch (Throwable throwable) {
+           throwable.printStackTrace();
+       }
     }
 
     public void clickStartSavingBtn() throws Throwable {

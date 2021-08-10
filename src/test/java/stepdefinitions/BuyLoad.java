@@ -238,7 +238,8 @@ public class BuyLoad {
     @Then("^I enter the value\"([^\"]*)\" in search filed$")
     public void iEnterTheValueInSearchFiled(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        Buyload.enterFAQsearchr(arg0);
+        Buyload.clickFAQ();
+        Buyload.enterFAQsearch(arg0);
     }
 
     @And("^I verify the results displayed$")

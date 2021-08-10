@@ -8,7 +8,7 @@ Feature: Request Payment Functionality Validation
 
   #TS093
   @RP01
-    Scenario: Validation of proceeding to next page without enetering amount - Request Payment
+    Scenario: Validation of proceeding to next page without entering amount Request Payment
     Given I'm on login page of UB online banking application
     When I click the Request payment under receive money
     And I enter the amount field as ""

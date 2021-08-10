@@ -2,6 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import exceptions.ApplicationException;
 
 public class InsurancePage extends Keywords {
 
@@ -51,6 +52,7 @@ public class InsurancePage extends Keywords {
     private String ProceedBtn = "onlineBanking.UITF.ProceedBtn";
     private String Inbox = "onlineBanking.Insurance.Inbox";
     private String Transactions = "onlineBanking.Insurance.Transactions";
+    private String SubmitBtn = "onlineBanking.Insurance.SubmitBtn";
 
     CommonMethodsPage commonMethods = new CommonMethodsPage();
     SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
@@ -99,14 +101,20 @@ public class InsurancePage extends Keywords {
 
     public void cancelPreviousAccident() throws Throwable{
         click.elementBy(ProductUnderMyInsurance1);
-        if(verify.IfElementExistsboolean(CancelInsuranceBtn)){
-            jsClick.elementBy(CancelInsuranceBtn);
-            verify.elementIsPresent(CancelPurchasePopUpTilte);
-            jsClick.elementBy(CancelReason);
-            jsClick.elementBy(CancelPurchaseBtn);
-            verify.elementIsPresent(PurchaseCancelledTitle);
-            verify.elementIsPresent(ContinueBrowsingBtn);
-            jsClick.elementBy(ContinueBrowsingBtn);
+        try {
+            if (CancelInsuranceBtn != null)
+            {
+                jsClick.elementBy(CancelInsuranceBtn);
+                verify.elementIsPresent(CancelPurchasePopUpTilte);
+                jsClick.elementBy(CancelReason);
+                jsClick.elementBy(CancelPurchaseBtn);
+                verify.elementIsPresent(PurchaseCancelledTitle);
+                verify.elementIsPresent(ContinueBrowsingBtn);
+                jsClick.elementBy(ContinueBrowsingBtn);
+            }
+        }
+        catch (ApplicationException e) {
+            e.printStackTrace();
         }
     }
 
@@ -127,7 +135,7 @@ public class InsurancePage extends Keywords {
         click.elementBy(ProceedBtn);
         Ownaccount.verifyOTPpageisdisplayed();
         Ownaccount.entertheOTPOTPpage("222222");
-        Ownaccount.clickSubmit();
+        click.elementBy(SubmitBtn);
     }
 
     public void verify_PurchaseSuccessTitle() throws Throwable {

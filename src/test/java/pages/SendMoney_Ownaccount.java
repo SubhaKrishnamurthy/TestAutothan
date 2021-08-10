@@ -2,6 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 
@@ -39,13 +40,9 @@ public class SendMoney_Ownaccount extends Keywords {
 	private String keyManageTransfers="onlineBanking.Fundtransfer.txtManageTransfers.XPATH";
 	private String keySearchRecent="onlineBanking.Fundtransfer.txtSearchRecent";
 
-
-
-
    public String txndate;
    public String ReferenceNumber;
-
-
+	private LoginPage loginPage = new LoginPage();
 
 	public void verifyOwnaccountsNotexist() throws Throwable {
 		Wait.forSeconds(3000);
@@ -69,28 +66,31 @@ public class SendMoney_Ownaccount extends Keywords {
 		type.data(KeyRemarks,Remarks);
 	}
 	public void clickNextbutton() throws Throwable {
-		Wait.forSeconds(3000);
-		//verify.elementIsEnabled(KeyNext);
+		Wait.forSeconds(1000);
 		click.elementBy(KeyNext);
-		Wait.forSeconds(3000);
 	}
 	public void verifytheGotitbutton() throws Throwable {
-		//Wait.forSeconds(3000);
-		if(verify.IfElementExistsboolean(keygotit))
+		try{
+		if(keygotit!=null)
 		{
-			Wait.forSeconds(2000);
 			jsClick.elementBy(keygotit);
-			Wait.forSeconds(2000);
 		}
+		}
+		catch (ApplicationException e) {
+			e.printStackTrace();
+		}
+		loginPage.clickkeepmeloggedinbtn();
 	}
+
 	public void clickTransferbutton() throws Throwable {
-		Wait.forSeconds(3000);
 		click.elementBy(keytransfer);
 	}
+
 	public void verifyOTPpageisdisplayed() throws Throwable {
 		Wait.forSeconds(3000);
 		click.elementBy(keyOTPfield);
 	}
+
 	public void entertheOTPOTPpage(String OTP) throws Throwable {
 		Wait.forSeconds(3000);
       type.data(keyOTPtxt,OTP);
@@ -105,6 +105,7 @@ public class SendMoney_Ownaccount extends Keywords {
 		Wait.forSeconds(3000);
 		verify.IfElementExists(keytransfersuccessful);
 		}
+
 	public void verifytransferdetailsinsuccessfulpage(String Fromacc,String Toacc,String Amount) throws Throwable {
 		Wait.forSeconds(3000);
 		verify.elementTextMatching(keytransfersuccessfultoacct,Toacc);
@@ -113,14 +114,15 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	}
 	public void clickNewtransaction() throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(2000);
 		click.elementBy(keytransfersuccessfulnewtransaction);
 	}
 
 	public void verifyOwnaccountsexist() throws Throwable {
-		Wait.forSeconds(4000);
+		Wait.forSeconds(3000);
 		verify.IfElementExists(keyOwnaccounts);
 	}
+
 	public void clickLogout() throws Throwable {
 		Wait.forSeconds(1000);
 		click.elementBy(keyLogout);

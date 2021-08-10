@@ -80,17 +80,17 @@ public class LoginPage extends Keywords {
 		driver.findElement(By.xpath("//*[text()='Submit']/parent::button")).click();
 	}
 
+
 	public void clickkeepmeloggedinbtn() throws Throwable {
-		Boolean b = false;
 		try {
-			 b = verify.IfElementExistsboolean(keepmeloggedinbtn);
-			if(b.equals(true))
+			if(keepmeloggedinbtn!=null)
 			{
-				click.elementBy(keepmeloggedinbtn);
+				jsClick.elementBy(keepmeloggedinbtn);
 			}
 		} catch (ApplicationException e) {
 			e.printStackTrace();
 		}
-
 	}
+
+
 }

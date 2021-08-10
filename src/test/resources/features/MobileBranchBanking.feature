@@ -73,7 +73,7 @@ Feature: Mobile Branch Banking Functionality Validation
       Then I verify no error message is displayed
       And I enter account number as "23235545455456780123"
       And I enter amount as "100"
-      Then I verify account number value as "2323554545542323"
+      Then I verify account number value as "2323554545545678"
 
      #TS294
      @MBB08
