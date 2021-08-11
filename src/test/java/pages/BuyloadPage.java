@@ -259,6 +259,7 @@ public class BuyloadPage extends Keywords {
 	}
 
 	public void verifyFAQsearchresults() throws Throwable {
+		click.elementBy(keyCanIbuyloadforothers);
 		Wait.forSeconds(1000);
 		verify.elementTextContains(keysearchresult,"Yes, UnionBank Online allows you to buy load not only for yourself but for others too. Simply enter the mobile number of the intended recipient. You also have the option of saving this mobile number as one of your Favorites.");
 		//verify.elementIsPresent(keysearchresult);
