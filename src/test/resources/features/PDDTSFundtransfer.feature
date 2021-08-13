@@ -5,7 +5,7 @@
 
 
  @PDDTS @Regression
-Feature: PesoNet Fund Transfer
+Feature: PDDTS Fund Transfer
 
   @PDDTS1
   Scenario:Validaiton of PDDTS Transfer option content

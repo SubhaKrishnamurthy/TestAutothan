@@ -386,7 +386,7 @@ Feature: BuyLoad
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1756" and "09457946537" and "PHP 100.00"
+    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
 
 

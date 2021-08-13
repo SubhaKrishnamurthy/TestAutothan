@@ -20,7 +20,7 @@ Scenario: Validate that the error message is displayed when the user has no USD 
     Given I'm on login page of UB online banking application
     When I click on Foreign Exchange button in dashboard
     And I click BUYUSD button, select account and enter USD amount "10,000,000"
-    Then I verify the enough fund error message
+    Then I verify the amount exceeds error message
 
     #TCN005
   @FX03
@@ -28,7 +28,7 @@ Scenario: Validate that the error message is displayed when the user has no USD 
     Given I'm on login page of UB online banking application
     When I click on Foreign Exchange button in dashboard
     And I click SELLUSD button, select account and enter USD amount "10,000,000"
-    Then I verify the enough fund error message
+    Then I verify the amount exceeds error message
 
     #TCN006
   @FX04

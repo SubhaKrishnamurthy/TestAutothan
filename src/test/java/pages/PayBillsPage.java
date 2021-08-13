@@ -129,6 +129,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void clickCancel() throws Throwable {
+        Wait.forSeconds(2000);
         click.elementBy(CancelVisitReview);
     }
 
@@ -202,8 +203,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void click_GotitBtn() throws Throwable {
-        //WebElement element = driver.findElement(By.xpath("//span[text()='Got it']/parent::button"));
-       try{
+           try{
            if (keygotit != null) {
                jsClick.elementBy(keygotit);
            }
@@ -235,14 +235,14 @@ public class PayBillsPage extends Keywords {
     public void edit_AccountNumber() throws Throwable {
         Ownaccount.clickFromaccountedit();
         common.clickFromAccNumber();
-       // click_GotitBtn();
+        click_GotitBtn();
     }
 
     public void edit_BillerDetails() throws Throwable {
         clickEditBtn();
         type.data(PaybillsPAYMENTREFERENCENO, "0006992990424204");
         Ownaccount.clickUpdate();
-        //click_GotitBtn();
+        click_GotitBtn();
     }
 
     public void edit_Amount() throws Throwable {
