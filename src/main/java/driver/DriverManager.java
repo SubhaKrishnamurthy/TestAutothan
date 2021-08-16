@@ -67,7 +67,7 @@ public class DriverManager {
                 driver = new ChromeDriver();
                 break;
             case "EDGE" :
-                System.setProperty("webdriver.edge.driver","src/main/java/driver/windows/edgedriver.exe" );
+                System.setProperty("webdriver.edge.driver","src/main/java/driver/windows/msedgedriver.exe" );
                 driver = new EdgeDriver();
                 break;
         }

@@ -66,7 +66,7 @@ public class SendMoney_Ownaccount extends Keywords {
 		type.data(KeyRemarks,Remarks);
 	}
 	public void clickNextbutton() throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(4000);
 		click.elementBy(KeyNext);
 	}
 	public void verifytheGotitbutton() throws Throwable {

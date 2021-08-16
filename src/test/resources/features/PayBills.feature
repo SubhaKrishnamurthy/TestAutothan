@@ -338,4 +338,4 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
         And I click the GotIt button if displayed
         And I Verify from account number field masked as "**** **** 1750" and after unmasking as "1022 2002 1750"
         And I verify card number filed masked as "**** **** **** 5678" and after unmaking as "**** **** **** 5678"
-        Then I logout of UB online banking application
+        #Then I logout of UB online banking application
