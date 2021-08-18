@@ -87,6 +87,7 @@ public class BuyloadPage extends Keywords {
 	}
 
 	public void selectvaluefromthetext(String Datatoselect) throws Throwable {
+		Wait.forSeconds(5000);
 		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
 		driver.findElement(By.xpath(Datatoselectxpath)).click();
 	}

@@ -41,7 +41,7 @@ Feature: Another Unionbank FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "111111" in OTP Page
+    And I Enter the OTP "555555" in OTP Page
     And I click the Submit Button
     Then I verify the Invalid OTP error message
 

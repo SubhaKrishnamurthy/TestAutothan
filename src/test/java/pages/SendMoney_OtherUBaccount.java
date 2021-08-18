@@ -14,6 +14,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	private String keyAmount="onlineBanking.Fundtransfer.TxtAmount";
 	private String keyotperror="onlineBanking.Fundtransfer.lblOTPError";
 	private String keyerrormsg="onlineBanking.Fundtransfer.lblErrormessage";
+	private String keyaccerrormsg="onlineBanking.Fundtransfer.lblinvalidatargetaccountErrormessage";
 	private String keyselectfromrecipient="onlineBanking.Fundtransfer.BtnSelectfromreceipient";
 	private String keybtnmyrecipient="onlineBanking.Fundtransfer.BtnMyRecipients";
 	private String keysearchrecipient="onlineBanking.Fundtransfer.TxtSearchRecipients";
@@ -52,7 +53,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 
 	public void verifyErrormessagevalidation(String Expected) throws Throwable {
 		Wait.forSeconds(3000);
-		verify.elementTextMatching(keyerrormsg,Expected);
+		verify.elementTextMatching(keyaccerrormsg,Expected);
 	}
 
 	public void selectRecipientfrommyrecipient(String Recipient) throws Throwable {
