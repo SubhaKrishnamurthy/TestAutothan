@@ -39,6 +39,7 @@ public class WesternUnionPage extends Keywords {
             click.elementBy(OK);
         }
          */
+        Wait.forSeconds(6000);
         click.elementBy(getStartedBtn);
         Wait.forSeconds(6000);
         click.elementBy(WesternUnion);

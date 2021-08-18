@@ -129,7 +129,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void clickCancel() throws Throwable {
-        Wait.forSeconds(2000);
+        Wait.forSeconds(4000);
         click.elementBy(CancelVisitReview);
     }
 
