@@ -189,7 +189,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Submit Button
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
-      And I Verify the OTP Filed is page is displayed
+      #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
@@ -210,7 +210,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
        And I click the Submit Button
        And I click the GotIt button if displayed
        And I click the Pay Bills php button
-       And I Verify the OTP Filed is page is displayed
+       #And I Verify the OTP Filed is page is displayed
        And I Enter the OTP "222222" in OTP Page
        And I click the Submit Button
        Then I verify pay Bills payment successful message
@@ -231,7 +231,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Submit Button
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
-      And I Verify the OTP Filed is page is displayed
+      #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
@@ -251,7 +251,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Submit Button
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
-      And I Verify the OTP Filed is page is displayed
+      #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
@@ -272,7 +272,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Submit Button
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
-      And I Verify the OTP Filed is page is displayed
+      #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
@@ -293,7 +293,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I click calender date
     And I click the Next Button
     And I click the Pay Bills php button
-    And I Verify the OTP Filed is page is displayed
+    #And I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify pay Bills payment successful message
@@ -316,7 +316,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I edit the biller details
       And I edit the amount
       And I click the Pay Bills php button
-      And I Verify the OTP Filed is page is displayed
+      #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
       And I click the Submit Button
       Then I verify pay Bills payment successful message
