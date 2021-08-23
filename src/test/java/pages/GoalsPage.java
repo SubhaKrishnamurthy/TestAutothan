@@ -353,7 +353,8 @@ public class GoalsPage extends Keywords {
         type.data(WithdrawAmount_input,"500");
         click.elementBy(Next);
         click.elementBy(WithdrawPHP);
-        verify.elementIsPresent(Goalhasended);
+       // verify.elementIsPresent(Goalhasended);
+        Wait.forSeconds(1000);
         click.elementBy(OK);
         clickBackToDashboard();
     }

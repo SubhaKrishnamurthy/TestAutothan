@@ -120,7 +120,8 @@ public class UITF_Page extends Keywords {
     }
 
         public void clickSubscribeBtn() throws Throwable {
-            click.elementBy(SubscribeBtn);
+        Wait.forSeconds(3000);
+        click.elementBy(SubscribeBtn);
         }
 
         public void enterSubscriptionDetails() throws Throwable {
@@ -147,6 +148,7 @@ public class UITF_Page extends Keywords {
         }
 
         public void clickRedeemBtn() throws Throwable {
+        Wait.forSeconds(3000);
         click.elementBy(RedeemBtn);
         }
 
