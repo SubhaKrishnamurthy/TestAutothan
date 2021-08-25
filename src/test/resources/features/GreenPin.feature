@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 @GreenPin @Regression
-Feature: GreenPin-ChangePin Functionality Validation
+Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   ##Change Pin
   @CP01
