@@ -73,4 +73,8 @@ public class GreenPin {
      greenPin.verify_InvalidOTPErrMsg();
     }
 
+    @And("^Click on Set Pin$")
+    public void Click_on_Set_Pin() throws Throwable {
+        greenPin.click_SetPin();
+    }
 }

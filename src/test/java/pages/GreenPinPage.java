@@ -26,6 +26,7 @@ public class GreenPinPage extends Keywords {
     private String OkayBtn = "onlineBanking.GreenPin.OkayBtn";
     private String NextBtn = "onlineBanking.GreenPin.NextBtn";
     private String ConfirmBtn= "onlineBanking.GreenPin.ConfirmBtn";
+    private String SetPin = "onlineBanking.GreenPin.SetPin";
 
     public void click_PlayEveryDayCard() throws Throwable {
         click.elementBy(PlayEverDayCard);
@@ -89,5 +90,13 @@ public class GreenPinPage extends Keywords {
         Wait.forSeconds(2000);
         verify.elementIsPresent(InvalidOTPErr);
         click.elementBy(OkayBtn);
+    }
+
+    public void click_SetPin() throws Throwable {
+        Wait.forSeconds(2000);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,250)");
+        Wait.forSeconds(2000);
+        jsClick.elementBy(SetPin);
     }
 }
