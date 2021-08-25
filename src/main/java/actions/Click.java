@@ -1,6 +1,7 @@
 package actions;
 
 import base.Keywords;
+import driver.DriverManager;
 import exceptions.ApplicationException;
 import helper.PropertyReader;
 import io.appium.java_client.AppiumDriver;
@@ -29,19 +30,30 @@ public class Click extends Keywords {
     public static String ElementType= "";
     public static String LocatorValue = "";
 
+    DriverManager driverMangerbrowser=new DriverManager();
+    String Drivertype=driverMangerbrowser.Drivertype;
+    String EnvironmentType=driverMangerbrowser.EnvironmentType;
+
     public void elementBy(String locatorKey) throws ApplicationException {
         log.info("Click element [" + locatorKey + "]");
         try {
-            Keywords.screenshot.attachScreenshot("Click");
-            get.elementBy(locatorKey).click();
-            log.info("Click Successful!");
+            if(Drivertype.equalsIgnoreCase("safari") || Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac") ){
+                  get.elementBy(locatorKey).click();
+                JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("arguments[0].value ='';", get.elementBy(locatorKey));
+                log.info("Click Successful!");
+            }
+            else {
+                Keywords.screenshot.attachScreenshot("Click");
+                get.elementBy(locatorKey).click();
+                log.info("Click Successful!");
+            }
         } catch (StaleElementReferenceException ex) {
             get.elementBy(locatorKey).click();
         } catch (Exception e) {
             // TODO: handle exception
             log.info("Error while clicking the element " + locatorKey);
             throw new ApplicationException(e.getMessage());
-
         }
     }
 
