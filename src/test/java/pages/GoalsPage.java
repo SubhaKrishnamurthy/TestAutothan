@@ -298,8 +298,8 @@ public class GoalsPage extends Keywords {
     }
 
     public void clickGoalsOkBtn() throws Throwable {
-        Wait.forSeconds(2000);
-        click.elementBy(OK);
+        Wait.forSeconds(5000);
+        jsClick.elementBy(OK);
     }
 
     public void pauseGoal() throws Throwable
