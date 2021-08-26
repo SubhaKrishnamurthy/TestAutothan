@@ -268,6 +268,7 @@ Feature: PesoNet Fund Transfer
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
     And I select the reason2 "ADVERTISING"
     And I click the Next Button
+    And I verify the Gotit button displayed or not
     And I click the Cancel button
     And I click the Yes button
     And I verify the Gotit button displayed or not

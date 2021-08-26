@@ -32,11 +32,6 @@ public class GreenPin {
         greenPin.enter_Pin(pin1,pin2,pin3,pin4,pin5,pin6);
     }
 
-    @Then("^User able to reenter six digits as pin$")
-    public void User_able_to_reenter_six_digits_as_pin() throws Throwable {
-        //greenPin.reenter_Pin();
-    }
-
     @Then("^User should be displayed with consecutive Numeric Values ErrMsg$")
     public void user_should_be_displayed_with_consecutive_Numeric_Values_ErrMsg() throws Throwable {
        greenPin.consecutiveErrMsg();

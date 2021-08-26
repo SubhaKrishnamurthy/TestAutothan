@@ -149,7 +149,7 @@ public class InsurancePage extends Keywords {
     }
 
     public void verify_Details_PurchasedProduct() throws Throwable {
-         verify.elementIsPresent(InsuranceCancelled);
+         //verify.elementIsPresent(InsuranceCancelled);
          verify.elementIsPresent(InsurancePurchaseSuccessful);
          click.elementBy(InsurancePurchaseSuccessful);
          Wait.forSeconds(1000);

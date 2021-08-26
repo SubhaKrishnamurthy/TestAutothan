@@ -239,10 +239,10 @@ public class ManageRecipient_Page extends Keywords {
 		click.elementBy(delete);
 		click.elementBy(deleteRecipient);
 		Wait.forSeconds(3000);
-		type.data(accountNumberSearch,"testautomation4");
-		aReturn.clickEnter(accountNumberSearch);
-		Wait.forSeconds(2000);
-		commonMethods.verifyAlert();
+		//type.data(accountNumberSearch,"testautomation4");
+		//aReturn.clickEnter(accountNumberSearch);
+		//Wait.forSeconds(2000);
+		//commonMethods.verifyAlert();
 	}
 
 	public void clickUpdate() throws Throwable {
