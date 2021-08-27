@@ -80,6 +80,8 @@ public class CommonMethods {
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
     public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        //actions.Wait.forSeconds(50000);
+        actions.Wait.forSeconds(3000);
         login.enterUsernme(arg0);
         actions.Wait.forSeconds(3000);
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());

@@ -34,13 +34,14 @@ public class Click extends Keywords {
     String Drivertype=driverMangerbrowser.Drivertype;
     String EnvironmentType=driverMangerbrowser.EnvironmentType;
 
+
     public void elementBy(String locatorKey) throws ApplicationException {
         log.info("Click element [" + locatorKey + "]");
         try {
-            if(Drivertype.equalsIgnoreCase("safari") || Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac") ){
-                  get.elementBy(locatorKey).click();
+                if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+            {
                 JavascriptExecutor js = (JavascriptExecutor) driver;
-                js.executeScript("arguments[0].value ='';", get.elementBy(locatorKey));
+                js.executeScript("arguments[0].click();", get.elementBy(locatorKey));
                 log.info("Click Successful!");
             }
             else {
