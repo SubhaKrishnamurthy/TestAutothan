@@ -33,7 +33,7 @@ public class GreenPinPage extends Keywords {
     }
 
     public void click_ManageCards() throws Throwable {
-       Wait.forSeconds(4000);
+       Wait.forSeconds(2000);
         click.elementBy(ManageCards);
     }
 

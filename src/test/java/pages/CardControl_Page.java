@@ -17,15 +17,17 @@ public class CardControl_Page extends Keywords {
     private String DashboardLink = "onlineBanking.HomePage.DashboardLink";
     private String Unlock = "onlineBanking.CC.Unlock";
     private String Lock = "onlineBanking.CC.Lock";
+    private String ManageCard = "onlineBanking.CC.ManageCard";
 
     LoginPage login = new LoginPage();
-
+    SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
     public static String status ;
+
 
     public void selectCard() throws Throwable {
         Wait.forSeconds(4000);
-        jsClick.elementBy(AccountsNextslide);
-        jsClick.elementBy(AccountsNextslide);
+        //jsClick.elementBy(AccountsNextslide);
+        //jsClick.elementBy(AccountsNextslide);
         click.elementBy(CreditCard);
     }
 
@@ -36,20 +38,26 @@ public class CardControl_Page extends Keywords {
     public void unlockCard() throws Throwable {
        Wait.forSeconds(10000);
        verify.IfElementExists(Card_Status);
-        element = driver.findElement(By.xpath("//small[@class='text-muted mt-1']"));
+        element = driver.findElement(By.xpath("//div[@class='w-100']/br"));
         status=element.getText();
-        if(status.equalsIgnoreCase("Card is Unlocked")){
-            click.elementBy(Transaction_Controls);
-            verify.elementIsPresent(CardlockandUnlock_off);
-        }
-        else {
-            click.elementBy(DashboardLink);
-            click.elementBy(Transaction_Controls);
-            click.elementBy(CardlockandUnlock_on);
-            click.elementBy(Unlock);
-            Wait.forSeconds(8000);
-            verify.elementTextContains(lockunlock_status,"Card is unlocked");
-        }
+      try {
+          if (status.equalsIgnoreCase("Card is unlocked")) {
+              //click.elementBy(Transaction_Controls);
+              verify.elementIsPresent(CardlockandUnlock_off);
+          } else {
+              //click.elementBy(DashboardLink);
+              //click.elementBy(Transaction_Controls);
+              click.elementBy(CardlockandUnlock_on);
+              click.elementBy(Unlock);
+              login.enterOTP("111111");
+              Ownaccount.clickSubmit();
+              Wait.forSeconds(3000);
+              verify.elementTextContains(Card_Status, "Card is unlocked");
+          }
+      } catch (Throwable throwable) {
+          throwable.printStackTrace();
+      }
+
     }
 
     public void verifyCardStatus_ValidateFunctionality() throws Throwable
@@ -86,5 +94,9 @@ public class CardControl_Page extends Keywords {
             click.elementBy(CreditCard);
             verify.elementTextContains(lockunlock_status,"Card is unlocked");
         }
+    }
+
+    public void ManageCard() throws Throwable {
+        click.elementBy(ManageCard);
     }
 }

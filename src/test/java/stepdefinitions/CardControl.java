@@ -1,13 +1,16 @@
 package stepdefinitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.CardControl_Page;
+import pages.GreenPinPage;
 import pages.WesternUnionPage;
 
 public class CardControl {
 
     CardControl_Page ccPage = new CardControl_Page();
+    GreenPinPage greenPinPage = new GreenPinPage();
 
     @When("^I Select the card number in the dashboard$")
     public void i_Select_the_card_number_in_the_dashboard() throws Throwable {
@@ -29,4 +32,8 @@ public class CardControl {
         ccPage.verifyCardStatus_ValidateFunctionality();
     }
 
+    @And("^Click on manage cards only$")
+    public void clickOnManageCardsOnly() throws Throwable {
+        ccPage.ManageCard();
+    }
 }
