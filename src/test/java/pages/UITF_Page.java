@@ -50,6 +50,7 @@ public class UITF_Page extends Keywords {
     private String ErrorOKButton = "onlineBanking.UITF.ErrorOKButton";
 
     public SendMoney_Ownaccount ownaccount = new SendMoney_Ownaccount();
+    public Dashboard_Home_Page dashboardHomePage = new Dashboard_Home_Page();
 
     public void FilterAll() throws Throwable {
         verify.IfElementExists(AllBtn);
@@ -120,14 +121,16 @@ public class UITF_Page extends Keywords {
     }
 
         public void clickSubscribeBtn() throws Throwable {
-        Wait.forSeconds(3000);
+        Wait.forSeconds(4000);
         click.elementBy(SubscribeBtn);
+        Wait.forSeconds(3000);
         }
 
         public void enterSubscriptionDetails() throws Throwable {
-            Wait.forSeconds(2000);
-            verify.elementIsPresent(SubscriptionDetailsLabel);
+            Wait.forSeconds(3000);
+            //verify.elementIsPresent(SubscriptionDetailsLabel);
             type.data(SubAmt,"1");
+            Wait.forSeconds(1000);
             click.elementBy(NextButton);
         }
 
@@ -144,7 +147,7 @@ public class UITF_Page extends Keywords {
         public void verifySubscriptionSuccess() throws Throwable {
         verify.elementIsPresent(SubscriptionSuccessLbl);
         verify.elementIsPresent(SubsAmtLbl);
-        verify.elementTextMatching(SubsAmtValue,"1");
+        verify.elementTextMatching(SubsAmtValue,"USD 1.00");
         }
 
         public void clickRedeemBtn() throws Throwable {

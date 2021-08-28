@@ -40,6 +40,7 @@ public class Dashboard_Home_Page extends Keywords {
 	public void clickFX() throws Throwable {
 		Wait.forSeconds(5000);
 		click.elementBy(fx);
+		Wait.forSeconds(2000);
 	}
 
 	public void clickAccountsManageBtn() throws Throwable {
@@ -54,7 +55,7 @@ public class Dashboard_Home_Page extends Keywords {
 	}
 
 	public void clickUITFAccount() throws Throwable {
-		Wait.forSeconds(4000);
+		Wait.forSeconds(5000);
 		click.elementBy(UITFAccount);
 	}
 

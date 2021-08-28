@@ -9,10 +9,10 @@ Feature: Foreign Exchange functionality Validation
   #TCN003
 @FX01
 Scenario: Validate that the error message is displayed when the user has no USD and PHP accounts enrolled.
-  Given I'm on login page of UB online banking application with user "subbu1"
+  Given I'm on login page of UB online banking application with user "subbu1" otp "111111"
   When I click on Foreign Exchange button in dashboard
-  Then I verify Add Account and Cancel buttons by clicking BUYUSD button
   Then I verify Add Account and Cancel buttons by clicking SELLUSD button
+  Then I verify Add Account and Cancel buttons by clicking BUYUSD button
 
   #TCN004
   @FX02
