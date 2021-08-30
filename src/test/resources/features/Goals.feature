@@ -179,6 +179,7 @@ Feature: Goals Functionality Validation
         When I Edit the goal name as "GoalNameChange"
         Then I Verify the goal name as "GoalNameChange"
 
+
 #TS312
     @G07
     Scenario: Validate Edit Target amount under review and set goal
@@ -322,9 +323,8 @@ Feature: Goals Functionality Validation
         And I verify the review page header
         And I click start saving button
         Then I Verify the goal success message
-        And I Click the Back to Go dashboard
+        And I click the goals ok button
         And I select the existing goal
         And I withdraw the goal
-        And I do page refresh
-        And I do page refresh
+        And I click the goals ok button
         And I Click the Logout Button

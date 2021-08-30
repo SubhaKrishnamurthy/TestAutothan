@@ -101,6 +101,7 @@ public class GoalsPage extends Keywords {
     private String Review_Goalsamount = "onlineBanking.MyGoalsReview.Goalsamount";
     private String Review_GoalsAccountName = "onlineBanking.MyGoalsReview.Goalsfromaccountname";
     private String Review_GoalsAccNumber = "onlineBanking.MyGoalsReview.Goalsfromaccountnumber";
+    private String YesBtn = "onlineBanking.MyGoals.YesBtn";
     //Goals Dashboard
     private String Goals = "onlineBanking.GoalsDashboard.Goals";
     private String Goals_Existing = "onlineBanking.GoalsDashboard.Existing";
@@ -262,8 +263,8 @@ public class GoalsPage extends Keywords {
     }
 
     public void selectExistingGoal() throws Throwable {
-        verify.elementIsPresent(Goals_Existing);
-        click.elementBy(Goals_Existing);
+        verify.elementIsPresent(Goals_Existing2);
+        click.elementBy(Goals_Existing2);
     }
 
     public void clickTopUpBtn() throws Throwable {
@@ -300,6 +301,7 @@ public class GoalsPage extends Keywords {
     public void clickGoalsOkBtn() throws Throwable {
         Wait.forSeconds(5000);
         jsClick.elementBy(OK);
+        Wait.forSeconds(3000);
     }
 
     public void pauseGoal() throws Throwable
@@ -352,11 +354,9 @@ public class GoalsPage extends Keywords {
         Wait.forSeconds(2000);
         type.data(WithdrawAmount_input,"500");
         click.elementBy(Next);
-        click.elementBy(WithdrawPHP);
-       // verify.elementIsPresent(Goalhasended);
-        Wait.forSeconds(1000);
-        click.elementBy(OK);
-        clickBackToDashboard();
+        click.elementBy(YesBtn);
+        click.elementBy(Withdrawandclosegoal);
+        Wait.forSeconds(6000);
     }
 
 }
