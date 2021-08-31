@@ -333,7 +333,7 @@ public class GoalsPage extends Keywords {
             click.elementBy(Next);
             click.elementBy(resumegoal_submit);
             verify.elementIsPresent(resumegoal_resumed);
-            clickBackToDashboard();
+            clickGoalsOkBtn();
         }
        }
        catch (Throwable throwable) {
