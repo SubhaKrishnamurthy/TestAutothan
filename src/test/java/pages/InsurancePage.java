@@ -112,6 +112,9 @@ public class InsurancePage extends Keywords {
                 verify.elementIsPresent(ContinueBrowsingBtn);
                 jsClick.elementBy(ContinueBrowsingBtn);
             }
+            else {
+                verify.elementIsPresent(Accident);
+            }
         }
         catch (ApplicationException e) {
             e.printStackTrace();
