@@ -173,6 +173,11 @@ public class Goals {
         goalsPage.selectExistingGoal();
     }
 
+    @Then("^I select the existing goal test$")
+    public void i_select_the_existing_goal_test() throws Throwable {
+        goalsPage.selectExistingGoal_Test();
+    }
+
     @Then("^I click the top up button$")
     public void i_click_the_top_up_button() throws Throwable {
         goalsPage.clickTopUpBtn();

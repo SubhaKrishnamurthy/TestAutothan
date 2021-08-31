@@ -250,7 +250,7 @@ Feature: Goals Functionality Validation
      Given I'm on login page of UB online banking application
      Then I Verify from account number page should be displayed
      Then I Verify the Goals section in the dashboard
-     And I select the existing goal
+     And I select the existing goal test
      And I click the top up button
      And I Click  the +100php element in the goals section
      When I Enter the top up amount as "20"
@@ -264,7 +264,7 @@ Feature: Goals Functionality Validation
         Given I'm on login page of UB online banking application
         Then I Verify from account number page should be displayed
         Then I Verify the Goals section in the dashboard
-        And I select the existing goal
+        And I select the existing goal test
         And I click the top up button
         And I Click  the +100php element in the goals section
         When I Enter the top up amount as "100"
@@ -283,7 +283,7 @@ Feature: Goals Functionality Validation
         Given I'm on login page of UB online banking application
         Then I Verify from account number page should be displayed
         Then I Verify the Goals section in the dashboard
-        And I select the existing goal
+        And I select the existing goal test
         Then I pass goal and submit if pause goal button exists
 
      #TS337
@@ -292,7 +292,7 @@ Feature: Goals Functionality Validation
         Given I'm on login page of UB online banking application
         Then I Verify from account number page should be displayed
         Then I Verify the Goals section in the dashboard
-        And I select the existing goal
+        And I select the existing goal test
         Then I resume goal and submit if resume goal button exists
 
     #TS338

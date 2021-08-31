@@ -267,6 +267,11 @@ public class GoalsPage extends Keywords {
         click.elementBy(Goals_Existing2);
     }
 
+    public void selectExistingGoal_Test() throws Throwable {
+        verify.elementIsPresent(Goals_Existing);
+        click.elementBy(Goals_Existing);
+    }
+
     public void clickTopUpBtn() throws Throwable {
         verify.elementIsPresent(Goalstopup);
         click.elementBy(Goalstopup);
