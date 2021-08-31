@@ -18,9 +18,20 @@ public class Type extends Keywords{
     String EnvironmentType=driverMangerbrowser.EnvironmentType;
 
     public void data(String locatorKey,String value) throws ApplicationException {
-        if(Drivertype.equalsIgnoreCase("safari") || Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac") )
+       // if(Drivertype.equalsIgnoreCase("safari") || Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac") )
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
             get.elementBy(locatorKey).click();
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].value ='';", get.elementBy(locatorKey));
+            get.elementBy(locatorKey).sendKeys(value);
+            log.info("Type Successful!");
+        }
+        else if(Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac"))
+        {
+            log.info("Type the value ["+value+"] into element ["+locatorKey+"]");
+            get.elementBy(locatorKey).clear();
+            get.elementBy(locatorKey).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].value ='';", get.elementBy(locatorKey));
             get.elementBy(locatorKey).sendKeys(value);
