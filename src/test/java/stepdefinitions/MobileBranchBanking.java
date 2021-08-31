@@ -48,7 +48,7 @@ public class MobileBranchBanking {
         mbbPage.verifyViewMoreBtn();
     }
 
-    @When("^I search the branch as \"([^\"]*)\"$")
+    @When("^I search the branch as (\\D+)$")
     public void i_search_the_branch_as(String arg1) throws Throwable {
        mbbPage.searchBranch(arg1);
     }

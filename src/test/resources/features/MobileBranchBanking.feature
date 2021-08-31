@@ -51,8 +51,8 @@ Feature: Mobile Branch Banking Functionality Validation
     Given I'm on login page of UB online banking application with user "Autoloan1"
     When I click visit branch from dashboard
     And I click the select branch option
-    And I search the branch as "Medical City"
-    Then I verify the branch address as "G/F The Medical Arts Tower, Medical City Hospital,  1605 Ortigas Avenue Brgy. Rosario  PASIG"
+    And I search the branch as Medical City
+    Then I verify the branch address as "G/F The Medical City South Luzon, United Blvd, Brgy Don Jose, LAGUNA"
 
     #TS290
     @MBB07
@@ -60,7 +60,7 @@ Feature: Mobile Branch Banking Functionality Validation
       Given I'm on login page of UB online banking application with user "Autoloan1"
       When I click visit branch from dashboard
       And I click the select branch option
-      And I search the branch as "Vigan"
+      And I search the branch as Vigan
       And I select the date as "4"
       And I click the next button
       And I click add transaction button
@@ -81,7 +81,7 @@ Feature: Mobile Branch Banking Functionality Validation
        Given I'm on login page of UB online banking application with user "Autoloan1"
        When I click visit branch from dashboard
        And I click the select branch option
-       And I search the branch as "Vigan"
+       And I search the branch as Vigan
        And I select the date as "4"
        And I click the next button
        And I click add transaction button
@@ -105,7 +105,7 @@ Feature: Mobile Branch Banking Functionality Validation
        Given I'm on login page of UB online banking application with user "Autoloan1"
        When I click visit branch from dashboard
        And I click the select branch option
-       And I search the branch as "Medical City"
+       And I search the branch as Medical City
        And I select the date as "3"
        And I click the next button
        And I click add transaction button
@@ -125,7 +125,7 @@ Feature: Mobile Branch Banking Functionality Validation
         Given I'm on login page of UB online banking application with user "Autoloan1"
         When I click visit branch from dashboard
         And I click the select branch option
-        And I search the branch as "Medical City"
+        And I search the branch as Medical City
         Then I book visit if todays date is enabled
         And I verify error message after selecting todays date
         And I logout of UB online banking application
@@ -136,9 +136,10 @@ Feature: Mobile Branch Banking Functionality Validation
     Given I'm on login page of UB online banking application with user "Accnumtest5"
     When I click visit branch from dashboard
     And I click the select branch option
-    And I search the branch as "Medical City"
+    And I search the branch as Medical City
     Then I book visit if todays date is enabled
     And I edit the visit after selecting todays date
+    And I cancel the visit
     And I logout of UB online banking application
 
     #TS303
@@ -147,7 +148,7 @@ Feature: Mobile Branch Banking Functionality Validation
       Given I'm on login page of UB online banking application with user "Autoloan1"
       When I click visit branch from dashboard
       And I click the select branch option
-      And I search the branch as "The Ark - Insular Ayala"
+      And I search the branch as Ayala Insular "The Ark"
       And I select todays date
       And I click the next button
       And I click add transaction button
@@ -158,7 +159,7 @@ Feature: Mobile Branch Banking Functionality Validation
       And I edit the amount from review page
       Then I click book visit button
       And I cancel the visit
-      And I logout of UB online banking application
+      #And I logout of UB online banking application
 
 
 

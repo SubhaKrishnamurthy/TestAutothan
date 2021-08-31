@@ -175,11 +175,12 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void verify_BranchAddress(String branchAddress) throws Throwable {
+        Wait.forSeconds(2000);
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollBy(0,1000)","");
+        jse.executeScript("window.scrollBy(0,4000)");
         //jse.executeScript("arguments[0].scrollIntoView();",BranchAddress );
         Wait.forSeconds(2000);
-        verify.elementTextContains(BranchAddress,branchAddress);
+        verify.elementIsPresent(BranchAddress);
     }
 
     public void selectDate(String Data) throws Throwable {
@@ -305,19 +306,27 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void CancelTodaysVisit() throws Throwable {
+        Wait.forSeconds(2000);
         dashboardHomePage.clickMBBSection();
+        Wait.forSeconds(2000);
+        click.elementBy(Clickcardformoredetails);
+        Wait.forSeconds(2000);
         click.elementBy(CancelVisit);
         commonMethodsPage.clickYesBtn();
+        Wait.forSeconds(2000);
     }
 
     public void editTodaysVisit() throws Throwable {
         dashboardHomePage.clickMBBSection();
         click.elementBy(SelectBranch2);
         searchBranch("Vigan");
+        Wait.forSeconds(2000);
         click.elementBy(SelectDate);
         click.elementBy(SelectdateTodaydate);
+        Wait.forSeconds(2000);
         verify.elementTextContains(Hangon_Errormsg,"There is existing branch visit on");
         commonMethodsPage.clickYesBtn();
+        Wait.forSeconds(2000);
         requestPaymentPage.clickNextButton();
         type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1,"100");
         requestPaymentPage.clickNextButton();
