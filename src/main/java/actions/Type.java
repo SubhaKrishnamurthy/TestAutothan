@@ -18,7 +18,6 @@ public class Type extends Keywords{
     String EnvironmentType=driverMangerbrowser.EnvironmentType;
 
     public void data(String locatorKey,String value) throws ApplicationException {
-       // if(Drivertype.equalsIgnoreCase("safari") || Drivertype.equalsIgnoreCase("chrome") && EnvironmentType.equalsIgnoreCase("mac") )
         if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
             get.elementBy(locatorKey).click();
