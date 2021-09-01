@@ -23,7 +23,7 @@ Feature: Another Unionbank FundTransfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"Peso Regular Savings **** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 1,500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -89,7 +89,7 @@ Feature: Another Unionbank FundTransfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"Peso Regular Savings **** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 2,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 2,500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
