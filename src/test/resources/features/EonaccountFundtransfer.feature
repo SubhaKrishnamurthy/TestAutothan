@@ -111,7 +111,7 @@ Feature: EonAccount Fund Transfer
     And I select the Account number from favourite recipient "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Eon Account Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -120,7 +120,7 @@ Feature: EonAccount Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 1.00"and
     Then I Click the New Transaction button Link
     And I Verify the Eonaccount Link
     And I Click the Logout Button
@@ -135,7 +135,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -147,7 +147,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Daily"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -159,7 +159,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Weekly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -171,7 +171,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Every 2 weeks"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -183,7 +183,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Monthly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -195,7 +195,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -207,7 +207,7 @@ Feature: EonAccount Fund Transfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not

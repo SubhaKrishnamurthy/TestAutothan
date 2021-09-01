@@ -165,7 +165,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -177,7 +177,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Daily"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -189,7 +189,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Weekly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -201,7 +201,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Every 2 weeks"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -213,7 +213,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Monthly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -225,7 +225,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -237,7 +237,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -257,7 +257,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1" in ub account transfer
     And I Select the future date
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button

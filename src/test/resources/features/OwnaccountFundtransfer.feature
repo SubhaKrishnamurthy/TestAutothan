@@ -67,7 +67,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -78,7 +78,7 @@ Feature: Own Account FundTransfer
     And I click the to account number
     And I verify the Gotit button displayed or not
     And I Click the Amount details edit
-    And I Enter the Amount "2500" and remarks "OwnaccountDepositchange"
+    And I Enter the Amount "2" and remarks "OwnaccountDepositchange"
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
@@ -86,7 +86,7 @@ Feature: Own Account FundTransfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -98,7 +98,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -107,7 +107,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Daily"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -116,7 +116,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Weekly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -125,7 +125,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Every 2 weeks"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -134,7 +134,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Monthly"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -143,7 +143,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -152,7 +152,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Annually"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -161,7 +161,7 @@ Feature: Own Account FundTransfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -211,7 +211,7 @@ Feature: Own Account FundTransfer
     Then I Click Ownacount link
     And I click the from account number
     And I click the to account number
-    And I Enter the Amount "1500" and remarks "OwnaccountDeposit"
+    And I Enter the Amount "1" and remarks "OwnaccountDeposit"
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I click the Next Button
     And I verify the Gotit button displayed or not

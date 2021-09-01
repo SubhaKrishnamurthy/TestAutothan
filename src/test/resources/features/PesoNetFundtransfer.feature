@@ -189,7 +189,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "2500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I select the reason2 "ADVERTISING"
     And I click the Next Button
@@ -203,7 +203,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
    # And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Daily"
     And I select the reason2 "ADVERTISING"
@@ -218,7 +218,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
    # And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Weekly"
     And I select the reason2 "ADVERTISING"
@@ -233,7 +233,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     #And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Every 2 weeks"
     And I select the reason2 "ADVERTISING"
@@ -248,7 +248,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     #And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Monthly"
     And I select the reason2 "ADVERTISING"
@@ -263,7 +263,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     #And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
     And I select the reason2 "ADVERTISING"
@@ -279,7 +279,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
    # And I select the reason2 "ADVERTISING"
     And I click the Repeat checkbox and select frequency as "Annually"
     And I select the reason2 "ADVERTISING"
@@ -291,7 +291,7 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 2,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 200.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -345,7 +345,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "2500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I select the reason2 "ADVERTISING"
     And I click the Next Button
@@ -365,7 +365,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "2500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I verify Next button is not enabled
 
@@ -429,7 +429,7 @@ Feature: PesoNet Fund Transfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "2500" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     And I Select the future date
     And I click the Repeat checkbox and select frequency as "Quarterly"
     And I select the reason2 "ADVERTISING"
