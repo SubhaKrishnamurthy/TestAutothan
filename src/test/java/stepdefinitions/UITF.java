@@ -4,6 +4,7 @@ import actions.Wait;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Th;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.*;
@@ -188,4 +189,8 @@ public class UITF {
         uitfPage.enterNonExistingNum_VerifyErrMsg();
     }
 
+    @When("^I Click the Dashboard link$")
+    public void IClicktheDashboardlink() throws Throwable{
+        uitfPage.click_Dashboard();
+    }
 }

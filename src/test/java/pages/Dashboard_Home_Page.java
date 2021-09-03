@@ -33,7 +33,7 @@ public class Dashboard_Home_Page extends Keywords {
 	private String MBBSection = "onlineBanking.Dashboard.MBBSection";
 
 	public void clickSendReceive() throws Throwable {
-		Wait.forSeconds(6000);
+		Wait.forSeconds(8000);
 		click.elementBy(SendReceive);
 	}
 
@@ -55,7 +55,7 @@ public class Dashboard_Home_Page extends Keywords {
 	}
 
 	public void clickUITFAccount() throws Throwable {
-		Wait.forSeconds(5000);
+		Wait.forSeconds(8000);
 		click.elementBy(UITFAccount);
 	}
 

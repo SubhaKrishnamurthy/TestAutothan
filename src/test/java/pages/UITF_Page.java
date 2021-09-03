@@ -48,9 +48,14 @@ public class UITF_Page extends Keywords {
     private String AccNumberTxt = "onlineBanking.UITF.AccNumberTxt";
     private String Errormessage_NonExistingUITFAccNo = "onlineBanking.UITF.Errormessage_NonExistingUITFAccNo";
     private String ErrorOKButton = "onlineBanking.UITF.ErrorOKButton";
+    private String DashboardLink = "onlineBanking.HomePage.DashboardLink";
 
     public SendMoney_Ownaccount ownaccount = new SendMoney_Ownaccount();
     public Dashboard_Home_Page dashboardHomePage = new Dashboard_Home_Page();
+
+    public void click_Dashboard() throws Throwable {
+     jsClick.elementBy(DashboardLink);
+    }
 
     public void FilterAll() throws Throwable {
         verify.IfElementExists(AllBtn);
@@ -121,15 +126,15 @@ public class UITF_Page extends Keywords {
     }
 
         public void clickSubscribeBtn() throws Throwable {
-        Wait.forSeconds(4000);
+        Wait.forSeconds(15000);
         click.elementBy(SubscribeBtn);
-        Wait.forSeconds(3000);
+        Wait.forSeconds(8000);
         }
 
         public void enterSubscriptionDetails() throws Throwable {
-            Wait.forSeconds(3000);
+            //Wait.forSeconds(3000);
             //verify.elementIsPresent(SubscriptionDetailsLabel);
-            type.data(SubAmt,"1");
+            type.data(SubAmt,"100");
             Wait.forSeconds(1000);
             click.elementBy(NextButton);
         }
@@ -147,18 +152,19 @@ public class UITF_Page extends Keywords {
         public void verifySubscriptionSuccess() throws Throwable {
         verify.elementIsPresent(SubscriptionSuccessLbl);
         verify.elementIsPresent(SubsAmtLbl);
-        verify.elementTextMatching(SubsAmtValue,"USD 1.00");
+        verify.elementTextMatching(SubsAmtValue,"USD 100.00");
         }
 
         public void clickRedeemBtn() throws Throwable {
-        Wait.forSeconds(3000);
+        Wait.forSeconds(15000);
         click.elementBy(RedeemBtn);
+            Wait.forSeconds(8000);
         }
 
         public void enterRedemptionDetails() throws Throwable {
-            Wait.forSeconds(2000);
-            verify.elementIsPresent(RedemptionDetailsLabel);
-            type.data(SubAmt,"100");
+            //Wait.forSeconds(2000);
+            //verify.elementIsPresent(RedemptionDetailsLabel);
+            type.data(SubAmt,"1");
             click.elementBy(NextButton);
         }
 
@@ -175,7 +181,7 @@ public class UITF_Page extends Keywords {
         public void verifyRedemptionSuccess() throws Throwable {
             verify.elementIsPresent(RedemptionSucceessLbl);
             verify.elementIsPresent(UnitToRedem);
-            verify.elementTextMatching(RedeemValue,"100");
+            verify.elementTextMatching(RedeemValue,"1.000000 Units");
         }
 
         public void enterBlank_VerifyNextBtn() throws Throwable {
