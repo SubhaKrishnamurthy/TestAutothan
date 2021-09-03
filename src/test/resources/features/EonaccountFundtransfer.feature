@@ -42,7 +42,7 @@ Feature: EonAccount Fund Transfer
     When I click the Send/Request
     Then I Click the EOnaccount fundtransfer Link
     And I Click Back button
-    And I Verify the Eonaccount Link
+    And I Verify the Dashboard page is displayed
     And I Click the Logout Button
 
   @EonAccount4

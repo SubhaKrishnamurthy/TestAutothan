@@ -16,6 +16,11 @@ public class GreenPin {
         greenPin.click_PlayEveryDayCard();
     }
 
+    @When("^user clicks an playeveryday card2$")
+    public void user_clicks_an_playeveryday_card2() throws Throwable {
+        greenPin.click_PlayEveryDayCard2();
+    }
+
     @And("^Click on manage cards$")
     public void Click_on_manage_cards() throws Throwable {
         greenPin.click_ManageCards();

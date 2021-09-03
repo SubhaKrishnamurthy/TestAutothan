@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 public class GreenPinPage extends Keywords {
 
     private String PlayEverDayCard = "onlineBanking.GreenPin.PlayEverDayCard";
+    private String PlayEverDayCard2 = "onlineBanking.GreenPin.PlayEverDayCard2";
     private String ManageCards = "onlineBanking.GreenPin.ManageCards";
     private String PlayEveryDayCardImg = "onlineBanking.GreenPin.PlayEveryDayCardImg";
     private String ChangePin ="onlineBanking.GreenPin.ChangePin";
@@ -27,11 +28,17 @@ public class GreenPinPage extends Keywords {
     private String NextBtn = "onlineBanking.GreenPin.NextBtn";
     private String ConfirmBtn= "onlineBanking.GreenPin.ConfirmBtn";
     private String SetPin = "onlineBanking.GreenPin.SetPin";
+    private String AccountsNextslide  = "onlineBanking.CC.AccountsNextslide";
 
     public void click_PlayEveryDayCard() throws Throwable {
         click.elementBy(PlayEverDayCard);
     }
-
+    public void click_PlayEveryDayCard2() throws Throwable {
+        verify.elementIsPresent(PlayEverDayCard2);
+        jsClick.elementBy(AccountsNextslide);
+        jsClick.elementBy(AccountsNextslide);
+        jsClick.elementBy(PlayEverDayCard2);
+    }
     public void click_ManageCards() throws Throwable {
        Wait.forSeconds(2000);
         click.elementBy(ManageCards);
