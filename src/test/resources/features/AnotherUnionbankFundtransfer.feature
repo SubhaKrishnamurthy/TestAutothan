@@ -9,6 +9,7 @@ Feature: Another Unionbank FundTransfer
 
   @OtherUBaccount1
   Scenario: Validation of navigating transfer to UB Account for valid Account number
+    When I store the version of the application
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
     When I click the Send/Request
     Then I Click UBacount link

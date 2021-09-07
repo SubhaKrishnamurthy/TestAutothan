@@ -19,6 +19,7 @@ public class LoginPage extends Keywords {
 	private String keyBOPassword="onlineBanking.backoffice.login.password";
 	private String keyLoginBtn="onlineBanking.backoffice.login.loginBtn";
 	private String keepmeloggedinbtn = "convergent.login.keepmeloggedinbtn";
+	private String Version = "convergent.login.Version";
 
 	public void enterUsernme(String usernmae) throws ApplicationException {
 		type.data(Keyusername,usernmae);
@@ -92,5 +93,9 @@ public class LoginPage extends Keywords {
 		}
 	}
 
+	public void store_Version() throws Throwable {
+		String version = get.elementBy(Version).getText();
+		System.out.println("The version of the application is "+version);
+	}
 
 }

@@ -26,4 +26,9 @@ public class Dashboard_Home {
     public void I_click_on_Foreign_Exchange_button_in_dashboard() throws Throwable {
         dashboard.clickFX();
     }
+
+    @When("^I store the version of the application$")
+    public void I_store_the_version_of_the_application() throws Throwable {
+       login.store_Version();
+    }
 }
