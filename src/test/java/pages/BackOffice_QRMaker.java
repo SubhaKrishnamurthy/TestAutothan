@@ -31,8 +31,8 @@ public class BackOffice_QRMaker extends Keywords {
 	public void EnterDetailsAndGenerateQR(String name, String pin) throws Throwable {
 		type.data(keyPayorsName,name);
 		type.data(keyPinOyPin, pin);
-		Wait.forSeconds(1000);
-		click.elementBy(keyGenerate);
+		Wait.forSeconds(2000);
+		jsClick.elementBy(keyGenerate);
 		verify.elementIsPresent(keyQRCode);
 	}
 

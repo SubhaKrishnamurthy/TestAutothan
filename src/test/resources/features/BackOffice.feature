@@ -499,7 +499,6 @@ Feature: Backoffice functionalities Validation
     Then I Login with user "UBPSAC2" and Disapprove the user Help Desk role
 
   @B42
-
   Scenario: Validation of Disapproving Endorsement Request Approval App Support role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation App Support  role details

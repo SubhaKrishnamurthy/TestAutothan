@@ -43,10 +43,10 @@ public class BackOffice_RegisterPage extends Keywords {
 	private String KeyAppsupport="onlineBanking.backoffice.Register.lblAppSupport";
 	private String KeyAppsupportEndorse="onlineBanking.backoffice.Register.btnAppsupportEndorse";
 	private String KeyAppsupportApprove="onlineBanking.backoffice.Register.btnAppsupportApprove";
-	private String KeyUnionBankOnlineProduct="onlineBanking.backoffice.Register.lblAppSupport";
+	private String KeyUnionBankOnlineProduct="onlineBanking.backoffice.Register.lblUBOnlineProduct";
 	private String KeyUnionBankOnlineProductEndorse="onlineBanking.backoffice.Register.btnAppsupportEndorse";
 	private String KeyUnionBankOnlineProductApprove="onlineBanking.backoffice.Register.btnAppsupportApprove";
-	private String KeyQRMaker="onlineBanking.backoffice.Register.lblAppSupport";
+	private String KeyQRMaker="onlineBanking.backoffice.Register.lblQRMaker";
 	private String KeyQRMakerEndorse="onlineBanking.backoffice.Register.btnAppsupportEndorse";
 	private String KeyQRMakerApprove="onlineBanking.backoffice.Register.btnAppsupportApprove";
 	private String KeySACDisApprove="onlineBanking.backoffice.Register.btnSACDisApprove";

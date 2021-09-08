@@ -56,7 +56,7 @@ public class BackOffice_ScheduledActivitiesPage extends Keywords {
 	}
 
 	public void verifyNoRecordsFound(String data) throws Throwable {
-		Wait.forSeconds(6000);
+		Wait.forSeconds(8000);
 		verify.elementTextMatching(keyNoRecordsFound,data);
 
 	}

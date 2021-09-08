@@ -137,8 +137,7 @@ public class BackOffice_BillerPage extends Keywords {
 		Wait.forSeconds(5000);
 	}
 	public void verifUpdateBillerdetails(String Billername) throws Throwable {
-		Wait.forSeconds(2000);
-
+		Wait.forSeconds(5000);
 		verify.elementTextMatching(KeybillerCodeverify,Billername);
 		//verify.elementTextMatching(KeyAccountnumbermanagebillerverify,Billeracctnumber);
 	}
