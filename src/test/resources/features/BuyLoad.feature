@@ -78,7 +78,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -98,7 +98,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -114,7 +114,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -135,7 +135,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -153,7 +153,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -168,7 +168,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -187,7 +187,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -213,7 +213,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -231,7 +231,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I click the favourite link
+    #And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     #And I enter the mobilenumber "09457946537"
@@ -387,7 +387,5 @@ Feature: BuyLoad
     And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
-
-
 
     #279Validation of Recent purchases by clicking Recent purchase tab
