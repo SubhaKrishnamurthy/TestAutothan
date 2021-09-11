@@ -18,9 +18,9 @@ Feature: EonAccount Fund Transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 1,500.00"and
     Then I Click the New Transaction button Link
@@ -77,9 +77,9 @@ Feature: EonAccount Fund Transfer
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 2,500.00"and
     Then I Click the New Transaction button Link
@@ -116,9 +116,9 @@ Feature: EonAccount Fund Transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 1.00"and
     Then I Click the New Transaction button Link
@@ -212,9 +212,9 @@ Feature: EonAccount Fund Transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
 
   @EonAccount9

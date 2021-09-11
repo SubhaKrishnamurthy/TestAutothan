@@ -191,7 +191,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
-      And I click the Submit Button
+      #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify from account number field masked as "**** **** 1750" and after unmasking as "1022 2002 1750"
       And I verify card number filed masked as "**** **** **** 6843" and after unmaking as "**** **** **** 6843"
@@ -212,7 +212,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
        And I click the Pay Bills php button
        #And I Verify the OTP Filed is page is displayed
        And I Enter the OTP "222222" in OTP Page
-       And I click the Submit Button
+       #And I click the Submit Button
        Then I verify pay Bills payment successful message
        And I click new payment button in final page
        Then I verify dashboard page
@@ -233,7 +233,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
-      And I click the Submit Button
+      #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 100.00"
       Then I logout of UB online banking application
@@ -253,7 +253,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
-      And I click the Submit Button
+      #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "UNIONBANK VISA" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "**** **** **** 6843" Amount as "PHP 100.00"
       Then I logout of UB online banking application
@@ -274,7 +274,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
-      And I click the Submit Button
+      #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 10.00"
       Then I logout of UB online banking application
@@ -295,7 +295,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I click the Pay Bills php button
     #And I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify pay Bills payment successful message
     And I Verify BillerName as "VECO UNINON BANK OF PHILIPPINES" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "82028711016" Amount as "PHP 100.00"
     Then I logout of UB online banking application
@@ -318,7 +318,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page
-      And I click the Submit Button
+      #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 150.00"
       Then I logout of UB online banking application

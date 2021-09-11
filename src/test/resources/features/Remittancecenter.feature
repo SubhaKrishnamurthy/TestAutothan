@@ -110,7 +110,7 @@ Feature: Remittancecenter
     And I click the cancel button in remittance center reviewandsend
     And I click the reviewandsend php button
     And I click the proceed with transfer
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit in remittance center
     Then I verify the Successful message is displayed

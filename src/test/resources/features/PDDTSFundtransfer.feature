@@ -87,7 +87,7 @@ Feature: PDDTS Fund Transfer
     And I click the Transfer button
     Then I verify the popup message"Transfers to other banks before the 3:00 PM cut-off are processed on the same banking day. Transfers after cut-off or on holidays are processed on the next banking day. Transfers to other banks are deemed valid and final. Please review transfer details before sending. Additional charges may be applied by the receiving bank for returned transaction due to incomplete or incorrect transfer details. The beneficiary may be charged by the receiving bank for any incoming transfer/remittance fee. For inquiries, please contact our 24-Hour Customer Service at +63 2 8841-8600 or send us an email at customer.service@unionbankph.com."
     And I click the proceed with transfer
-    Then I Verify the OTP Filed is page is displayed
+    #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
     And I click the Submit Button
     Then I verify the Successful message is displayed

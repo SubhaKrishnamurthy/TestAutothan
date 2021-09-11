@@ -43,6 +43,7 @@ public class SendMoney_Ownaccount extends Keywords {
    public String txndate;
    public String ReferenceNumber;
 	private LoginPage loginPage = new LoginPage();
+	private GreenPinPage greenPinPage = new GreenPinPage();
 
 	public void verifyOwnaccountsNotexist() throws Throwable {
 		Wait.forSeconds(3000);
@@ -94,7 +95,9 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	public void entertheOTPOTPpage(String OTP) throws Throwable {
 		Wait.forSeconds(3000);
-      type.data(keyOTPtxt,OTP);
+		char[] ch=OTP.toCharArray();
+		greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
+				String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
 		Wait.forSeconds(3000);
 	}
 	public void clickSubmit() throws Throwable {

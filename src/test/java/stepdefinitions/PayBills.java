@@ -139,7 +139,7 @@ public class PayBills {
     @Then("^I click the GotIt button if displayed$")
     public void i_click_the_GotIt_button_if_displayed() throws Throwable {
         payBills.click_GotitBtn();
-       // loginPage.clickkeepmeloggedinbtn();
+       loginPage.clickkeepmeloggedinbtn();
     }
 
     @Then("^I click new payment button in final page$")

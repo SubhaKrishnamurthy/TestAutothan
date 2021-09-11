@@ -92,8 +92,6 @@ public class CommonMethods {
         login.enterUsernme(arg0);
         actions.Wait.forSeconds(3000);
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        //Thread.sleep(3000);
-        actions.Wait.forSeconds(3000);
         actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
