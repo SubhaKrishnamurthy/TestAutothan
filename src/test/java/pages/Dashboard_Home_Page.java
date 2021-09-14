@@ -2,7 +2,13 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import gherkin.lexer.Da;
 import gherkin.lexer.Th;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class Dashboard_Home_Page extends Keywords {
 
@@ -31,6 +37,7 @@ public class Dashboard_Home_Page extends Keywords {
 	private String GetStartedBtn = "onlineBanking.Dashboard.GetStartedBtn";
 	private String buyLoad = "onlineBanking.Dashboard.BuyLoadLink";
 	private String MBBSection = "onlineBanking.Dashboard.MBBSection";
+	private String Dashboard = "onlineBanking.HomePage.DashboardLink";
 
 	public void clickSendReceive() throws Throwable {
 		Wait.forSeconds(8000);
@@ -75,7 +82,7 @@ public class Dashboard_Home_Page extends Keywords {
 	}
 
 	public void clickSubsProduct() throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(4000);
 		click.elementBy(SubscriptionProduct);
 	}
 
@@ -91,6 +98,11 @@ public class Dashboard_Home_Page extends Keywords {
 		verify.elementIsPresent(DescriptionSubs);
 		verify.elementIsPresent(SubscriptionAmt);
 		verify.elementIsPresent(SettlementDate);
+		Wait.forSeconds(2000);
+		jsClick.elementBy(Dashboard);
+		Wait.forSeconds(2000);
+		driver.findElement(By.xpath("(//*[contains(text(),\"UITF\")])[3]")).click();
+
 	}
 
 	public void verifyRedempDetails() throws Throwable {

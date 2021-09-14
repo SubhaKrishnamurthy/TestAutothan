@@ -140,7 +140,7 @@ Feature: Mobile Branch Banking Functionality Validation
     Then I book visit if todays date is enabled
     And I edit the visit after selecting todays date
     And I cancel the visit
-    And I logout of UB online banking application
+    #And I logout of UB online banking application
 
     #TS303
     @MBB12

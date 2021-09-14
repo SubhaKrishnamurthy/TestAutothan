@@ -331,6 +331,7 @@ public class MobileBranchBanking_Page extends Keywords {
         type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1,"100");
         requestPaymentPage.clickNextButton();
         click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWUpdateVisit);
+        Wait.forSeconds(2000);
         click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWGotoDashboard);
         dashboardHomePage.clickMBBSection();
     }

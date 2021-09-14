@@ -200,10 +200,10 @@ Feature: BuyLoad
     And I enter the mobilenumber "09457946537"
     And I click the Next Button
     And I select the value "100" in buy load screen
-    And I click the Next Button
+    And I click the update Button
     And I click the amount edit button
     And I select the value "100" in buy load screen
-    And I click the Next Button
+    And I click the update Button
 
 
   @BuyLoad12

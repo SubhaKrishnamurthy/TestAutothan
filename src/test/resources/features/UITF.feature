@@ -32,9 +32,9 @@ Feature: UITF Validation
     Then I verify the recent transactions label and view more button
     When I click on the Subscription product
     Then I Verify whether the Subscription Transaction details screen is displayed
-    When I click on the UITF account in the dashboard
-    When I click on the Redemption product
-    Then I Verify whether the Redemption Transaction details screen is displayed
+    #When I click on the UITF account in the dashboard
+    #When I click on the Redemption product
+    #Then I Verify whether the Redemption Transaction details screen is displayed
 
   #TCUITF07
   @UITF04
