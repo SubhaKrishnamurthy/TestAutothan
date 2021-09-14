@@ -20,7 +20,7 @@ Feature: ManageTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Store the Reference Number and transaction date
     Then I Verify the values "PHP 10.00" and "102220021750"  and "102310011756" in Recenent transactions
@@ -40,7 +40,7 @@ Feature: ManageTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 1,500.00"and
 
@@ -59,7 +59,7 @@ Feature: ManageTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1094 5325 7914" and Amount"PHP 1,500.00"and
 
@@ -82,6 +82,6 @@ Feature: ManageTransfer
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 1,500.00"and

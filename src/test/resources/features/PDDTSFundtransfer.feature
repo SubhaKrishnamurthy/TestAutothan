@@ -89,7 +89,7 @@ Feature: PDDTS Fund Transfer
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 0695" and Toaccount "1014 0000 1643" and Amount"USD 10.00"and
     Then I Click the New Transaction button Link

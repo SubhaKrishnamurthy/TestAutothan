@@ -28,7 +28,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1,500.00"and
     Then I Click the New Transaction button Link
@@ -84,7 +84,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2.00"and
     Then I Click the New Transaction button Link
@@ -159,7 +159,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1.00"and
     Then I Click the New Transaction button Link
@@ -179,7 +179,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1,500.00"and
     Then I Click the New Transaction button Link
@@ -198,7 +198,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
@@ -242,7 +242,7 @@ Feature: Own Account FundTransfer
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button
+    #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2,500.00"and
     Then I Click the New Transaction button Link
