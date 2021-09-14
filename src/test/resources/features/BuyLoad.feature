@@ -28,7 +28,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
@@ -47,7 +47,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
@@ -67,7 +67,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
@@ -87,7 +87,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
@@ -123,7 +123,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I verify the new purchase link
     And I verify the select contact is exist
@@ -177,7 +177,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "555555" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify the Invalid OTP error message
 
   @BuyLoad11
@@ -384,7 +384,7 @@ Feature: BuyLoad
     And I click the Next Button
     And I click purchaseload button
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit Button in buyload
+    #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
