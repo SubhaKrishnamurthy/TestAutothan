@@ -19,6 +19,9 @@ import pages.LoginPage;
 import runners.ConvergentTestRunner;
 import actions.*;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class CommonMethods {
 
     private LoginPage login = new LoginPage();
@@ -30,7 +33,13 @@ public class CommonMethods {
     WebElement element;
 
     @Given("^I'm on login page of UB online banking application$")
-    public void Im_on_login_page_of_UB_online_banking_application() throws Throwable {
+    public void Im_on_login_page_of_UB_online_banking_application() throws Throwable
+    {
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(50000);
+        }
+        actions.Wait.forSeconds(3000);
         login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         actions.Wait.forSeconds(3000);
@@ -50,8 +59,14 @@ public class CommonMethods {
 
 
     @Given("^I'm on login page of UB online banking application with otp \"([^\"]*)\"$")
-    public void iMOnLoginPageOfUBOnlineBankingApplicationWithOtp(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+    public void iMOnLoginPageOfUBOnlineBankingApplicationWithOtp(String arg0) throws Throwable
+    {
+
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(50000);
+        }
+        actions.Wait.forSeconds(3000);
         login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         //Thread.sleep(3000);
@@ -69,7 +84,13 @@ public class CommonMethods {
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\"$")
-    public void Im_on_login_page_of_UB_online_banking_application_with_user(String arg0) throws Throwable {
+    public void Im_on_login_page_of_UB_online_banking_application_with_user(String arg0) throws Throwable
+    {
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(50000);
+        }
+        actions.Wait.forSeconds(3000);
         login.enterUsernme(arg0);
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         //Thread.sleep(3000);
@@ -85,9 +106,13 @@ public class CommonMethods {
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
-    public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //actions.Wait.forSeconds(50000);
+    public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable
+    {
+
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(50000);
+        }
         actions.Wait.forSeconds(3000);
         login.enterUsernme(arg0);
         actions.Wait.forSeconds(3000);
