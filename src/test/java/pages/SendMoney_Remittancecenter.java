@@ -128,15 +128,15 @@ public class SendMoney_Remittancecenter extends Keywords {
 		Wait.forSeconds(5000);
 		//click.elementBy(keynationality);
         type.data(keynationality,"Filipino");
-		Wait.forSeconds(5000);
+		Wait.forSeconds(3000);
         Robot robot=new Robot();
-		//robot.keyPress(KeyEvent.VK_TAB);
-		Wait.forSeconds(3000);
 		robot.keyPress(KeyEvent.VK_ENTER);
-		Wait.forSeconds(3000);
+		robot.keyPress(KeyEvent.VK_TAB);
 		String Datatoselect="Filipino";
 		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
 		//driver.findElement(By.xpath(Datatoselectxpath)).click();
+		//driver.findElement(By.xpath("(//*[text()=\"Filipino\"])[1]"));
+
 		click.elementBy(keybirthcalendardate);
 		Datatoselect="2";
 		Wait.forSeconds(3000);

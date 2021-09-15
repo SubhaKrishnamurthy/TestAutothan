@@ -24,7 +24,7 @@ public class SendMoney_Instapay extends Keywords {
 
 
 	public void clickOtherbank() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		click.elementBy(keyOtherbank);
 	}
 	public void clickInstapay() throws Throwable {

@@ -112,7 +112,7 @@ Feature: Remittancecenter
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
-    And I click the Submit in remittance center
+    #And I click the Submit in remittance center
     Then I verify the Successful message is displayed
     Then I Click the New Transaction button Link
     And I click palawan express link is exist
