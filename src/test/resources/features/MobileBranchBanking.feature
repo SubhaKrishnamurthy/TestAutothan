@@ -128,7 +128,8 @@ Feature: Mobile Branch Banking Functionality Validation
         And I search the branch as Medical City
         Then I book visit if todays date is enabled
         And I verify error message after selecting todays date
-        And I logout of UB online banking application
+        And I cancel the visit
+        #And I logout of UB online banking application
 
    #TS300
   @MBB11

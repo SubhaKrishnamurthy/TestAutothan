@@ -138,7 +138,7 @@ public class InsurancePage extends Keywords {
         click.elementBy(ProceedBtn);
         Ownaccount.verifyOTPpageisdisplayed();
         Ownaccount.entertheOTPOTPpage("222222");
-        click.elementBy(SubmitBtn);
+        //click.elementBy(SubmitBtn);
     }
 
     public void verify_PurchaseSuccessTitle() throws Throwable {

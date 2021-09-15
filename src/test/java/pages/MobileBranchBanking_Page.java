@@ -276,7 +276,7 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void VerifyError_TodaysDate() throws Throwable {
-        dashboardHomePage.clickMBBSection();
+       dashboardHomePage.clickMBBSection();
         click.elementBy(SelectBranch2);
         searchBranch("Vigan");
         click.elementBy(SelectDate);

@@ -13,7 +13,7 @@ Feature: PDDTS Fund Transfer
     When I click the Send/Request
     Then I click the Other banks or Ewallet
     And I Verify PDDTS link isexist
-    And I Verify the PDDTS Text verification "USD 10,000 transaction limit." and "Transactions before 3:00 PM cut-off are processed the same banking day. Transactions after cut-off, weekends or holidays are processed the next banking day."
+    And I Verify the PDDTS Text verification "PHP 50,000 transaction limit." and "No cut-off."
 
   @PDDTS2
   Scenario:Validation of error message when transaction amount less than 10 USD

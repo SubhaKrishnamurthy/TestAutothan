@@ -44,7 +44,7 @@ public class ForeignExchange_Page extends Keywords {
 		verify.elementIsPresent(BuyUSD);
 		Wait.forSeconds(1000);
 		jsClick.elementBy(BuyUSD);
-		Wait.forSeconds(1000);
+		Wait.forSeconds(4000);
 		commonMethods.clickkeySelectAcc();
 		commonMethods.clickFromAccNumber();
 		type.data(EnterUSD,usd);

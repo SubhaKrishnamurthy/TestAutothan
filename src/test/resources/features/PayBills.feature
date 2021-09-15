@@ -215,7 +215,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
        #And I click the Submit Button
        Then I verify pay Bills payment successful message
        And I click new payment button in final page
-       Then I verify dashboard page
+       #Then I verify dashboard page
        #Then I logout of UB online banking application
 
      #TS162
@@ -321,7 +321,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 150.00"
-      Then I logout of UB online banking application
+      #Then I logout of UB online banking application
 
       #TS169
       @PB20
