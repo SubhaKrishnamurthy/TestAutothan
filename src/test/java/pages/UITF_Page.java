@@ -146,7 +146,7 @@ public class UITF_Page extends Keywords {
            click.elementBy(ProceedBtn);
             ownaccount.verifyOTPpageisdisplayed();
             ownaccount.entertheOTPOTPpage("222222");
-            ownaccount.clickSubmit();
+            //ownaccount.clickSubmit();
         }
 
         public void verifySubscriptionSuccess() throws Throwable {
@@ -175,7 +175,7 @@ public class UITF_Page extends Keywords {
             click.elementBy(ProceedBtn);
             ownaccount.verifyOTPpageisdisplayed();
             ownaccount.entertheOTPOTPpage("222222");
-            ownaccount.clickSubmit();
+            //ownaccount.clickSubmit();
         }
 
         public void verifyRedemptionSuccess() throws Throwable {

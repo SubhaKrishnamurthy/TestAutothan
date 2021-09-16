@@ -122,7 +122,7 @@ Feature: PDDTS Fund Transfer
 
   @PDDTS9
   Scenario:Validation of Transfer from screen for user with mutliple USD account
-    Given I'm on login page of UB online banking application with user "huawei" otp "111111"
+    Given I'm on login page of UB online banking application with user "huawei" otp "222222"
     When I click the Send/Request
     Then I click the Other banks or Ewallet
     And I click PDDTS Link

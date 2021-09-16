@@ -90,7 +90,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void searchBiller_BillersList(String name) throws Throwable {
-        Wait.forSeconds(2000);
+        Wait.forSeconds(3000);
         jsClick.elementBy(BillerList);
         Wait.forSeconds(2000);
         type.data(Searchbiller,name);
