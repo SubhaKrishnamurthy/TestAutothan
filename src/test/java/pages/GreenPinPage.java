@@ -12,12 +12,18 @@ public class GreenPinPage extends Keywords {
     private String ManageCards = "onlineBanking.GreenPin.ManageCards";
     private String PlayEveryDayCardImg = "onlineBanking.GreenPin.PlayEveryDayCardImg";
     private String ChangePin ="onlineBanking.GreenPin.ChangePin";
-    private String Pin1 ="onlineBanking.GreenPin.Pin1";
-    private String Pin2 ="onlineBanking.GreenPin.Pin2";
+    private String Pin1 = "onlineBanking.GreenPin.Pin1";
+    private String Pin2 = "onlineBanking.GreenPin.Pin2";
     private String Pin3 = "onlineBanking.GreenPin.Pin3";
     private String Pin4 =  "onlineBanking.GreenPin.Pin4";
     private String Pin5 =  "onlineBanking.GreenPin.Pin5";
     private String Pin6 =  "onlineBanking.GreenPin.Pin6";
+    private String OTPPin1 = "onlineBanking.GreenPin.OTPPin1";
+    private String OTPPin2 = "onlineBanking.GreenPin.OTPPin2";
+    private String OTPPin3 = "onlineBanking.GreenPin.OTPPin3";
+    private String OTPPin4 = "onlineBanking.GreenPin.OTPPin4";
+    private String OTPPin5 = "onlineBanking.GreenPin.OTPPin5";
+    private String OTPPin6 = "onlineBanking.GreenPin.OTPPin6";
     private String consecutiveNumericValuesErrMsg = "onlineBanking.GreenPin.consecutiveNumericValuesErrMsg";
     private String SamePinErrMsg = "onlineBanking.GreenPin.SamePinErrMsg";
     private String doesntMatchPreviousPINInput = "onlineBanking.GreenPin.doesntMatchPreviousPINInput";
@@ -64,7 +70,17 @@ public class GreenPinPage extends Keywords {
         type.data(Pin4,pin4);
         type.data(Pin5,pin5);
         type.data(Pin6,pin6);
-        Wait.forSeconds(2000);
+        Wait.forSeconds(5000);
+    }
+
+    public void enter_OTPPin(String pin1,String pin2,String pin3,String pin4,String pin5,String pin6) throws Throwable {
+        type.data(OTPPin1,pin1);
+        type.data(OTPPin2,pin2);
+        type.data(OTPPin3,pin3);
+        type.data(OTPPin4,pin4);
+        type.data(OTPPin5,pin5);
+        type.data(OTPPin6,pin6);
+        Wait.forSeconds(5000);
     }
 
     public void consecutiveErrMsg() throws Throwable {
@@ -85,6 +101,7 @@ public class GreenPinPage extends Keywords {
 
     public void click_confirmBtn() throws Throwable {
         click.elementBy(ConfirmBtn);
+        Wait.forSeconds(5000);
     }
 
     public void verifyReminders() throws Throwable {

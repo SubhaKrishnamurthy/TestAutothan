@@ -128,7 +128,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 		Wait.forSeconds(5000);
 		//click.elementBy(keynationality);
         type.data(keynationality,"Filipino");
-		Wait.forSeconds(3000);
+		Wait.forSeconds(2000);
         Robot robot=new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyPress(KeyEvent.VK_TAB);

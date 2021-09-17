@@ -94,7 +94,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void entertheOTPOTPpage(String OTP) throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(8000);
 		char[] ch=OTP.toCharArray();
 		greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
 				String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));

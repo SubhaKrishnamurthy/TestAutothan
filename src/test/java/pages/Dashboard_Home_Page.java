@@ -99,9 +99,9 @@ public class Dashboard_Home_Page extends Keywords {
 		verify.elementIsPresent(SubscriptionAmt);
 		verify.elementIsPresent(SettlementDate);
 		Wait.forSeconds(2000);
-		jsClick.elementBy(Dashboard);
-		Wait.forSeconds(2000);
-		driver.findElement(By.xpath("(//*[contains(text(),\"UITF\")])[3]")).click();
+		//jsClick.elementBy(Dashboard);
+		//Wait.forSeconds(2000);
+		//driver.findElement(By.xpath("(//*[contains(text(),\"UITF\")])[3]")).click();
 
 	}
 

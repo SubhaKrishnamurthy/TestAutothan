@@ -17,7 +17,7 @@ Feature: Remittancecenter
     And I verify remittancecenterlbl link
 
   @RC2
-  Scenario:Validation if user is able to initiate a Palwan Express transaction when click Next transaction details screen
+  Scenario:ValidaRC10tion if user is able to initiate a Palwan Express transaction when click Next transaction details screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
     When I click the Send/Request
     Then I verify the remittancecenter link

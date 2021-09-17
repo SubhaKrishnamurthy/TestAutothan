@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import actions.Wait;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -77,4 +78,14 @@ public class GreenPin {
     public void Click_on_Set_Pin() throws Throwable {
         greenPin.click_SetPin();
     }
+
+    @Then("^I Enter the OTP Pin \"([^\"]*)\" in OTP Page$")
+    public void i_Enter_the_OTP_Pin_in_OTP_Page(String OTP) throws Throwable {
+        Wait.forSeconds(8000);
+        char[] ch=OTP.toCharArray();
+        greenPin.enter_OTPPin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
+                String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
+        Wait.forSeconds(3000);
+    }
+
 }
