@@ -10,6 +10,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class Dashboard_Home_Page extends Keywords {
 
 	private String SendReceive = "onlineBanking.Dashboard.SendReceive";
@@ -40,7 +43,11 @@ public class Dashboard_Home_Page extends Keywords {
 	private String Dashboard = "onlineBanking.HomePage.DashboardLink";
 
 	public void clickSendReceive() throws Throwable {
-		Wait.forSeconds(8000);
+		Wait.forSeconds(10000);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			Wait.forSeconds(15000);
+		}
 		click.elementBy(SendReceive);
 	}
 

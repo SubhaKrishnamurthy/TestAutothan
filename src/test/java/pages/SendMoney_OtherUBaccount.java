@@ -6,6 +6,9 @@ import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class SendMoney_OtherUBaccount extends Keywords {
 
 	private String keyOtherUBaccount = "onlineBanking.Fundtransfer.AnotherUnionBankAccount";
@@ -32,7 +35,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 
 
 	public void clickUBaccount() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(8000);
 		click.elementBy(keyOtherUBaccount);
 	}
 	public void enterUBaccount(String Accountname,String Accountnumber) throws Throwable {
@@ -57,7 +60,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	}
 
 	public void selectRecipientfrommyrecipient(String Recipient) throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(9000);
 		click.elementBy(keyselectfromrecipient);
 		click.elementBy(keybtnmyrecipient);
 		Wait.forSeconds(5000);
@@ -125,11 +128,20 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	}
 
 	public void Selectthefututdate() throws ApplicationException {
-		click.elementBy(keyDateinput);
-		Wait.forSeconds(3000);
-		click.elementBy(keyCalendarnextbutton);
-		Wait.forSeconds(3000);
-		click.elementBy(keyCalendardate);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ){
+			get.elementBy(keyDateinput).click();
+			Wait.forSeconds(3000);
+			get.elementBy(keyCalendarnextbutton).click();
+			Wait.forSeconds(3000);
+			get.elementBy(keyCalendardate).click();
+		}
+		else {
+			click.elementBy(keyDateinput);
+			Wait.forSeconds(3000);
+			click.elementBy(keyCalendarnextbutton);
+			Wait.forSeconds(3000);
+			click.elementBy(keyCalendardate);
+		}
 
 	}
 

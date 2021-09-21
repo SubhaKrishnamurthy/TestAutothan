@@ -129,7 +129,6 @@ public class OwnaccountFundtransfer {
 
     @And("^I click the Repeat checkbox and select frequency as \"([^\"]*)\"$")
     public void iClickTheRepeatCheckboxAndSelectFrequencyAs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         Ownaccount.selectFrequency(arg0);
     }
 

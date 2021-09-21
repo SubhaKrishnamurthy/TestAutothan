@@ -2,9 +2,15 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import com.aventstack.extentreports.model.TestAttribute;
 import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class SendMoney_Ownaccount extends Keywords {
 
@@ -152,10 +158,24 @@ public class SendMoney_Ownaccount extends Keywords {
 	public void selectFrequency(String Frequency) throws Throwable {
 		Wait.forSeconds(5000);
 		click.elementBy(keyrepeat);
-		click.elementBy(keyfrequency);
-		Wait.forSeconds(2000);
-		driver.findElement(By.xpath("("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]")).click();
-		Wait.forSeconds(3000);
+        Wait.forSeconds(4000);
+
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ){
+
+			get.elementBy(keyfrequency).click();
+			Wait.forSeconds(3000);
+            String Datatoselectxpath= "("+"//*[text()="+"'"+Frequency+"'"+"]"+")"+"[1]";
+            driver.findElement(By.xpath(Datatoselectxpath)).click();
+
+		}
+		else {
+
+            click.elementBy(keyfrequency);
+            Wait.forSeconds(4000);
+		    driver.findElement(By.xpath("(" + "//*[text()=" + "'" + Frequency + "'" + "]" + ")" + "[1]" + "|" + "(" + "//*[text()=" + "'" + Frequency + "'" + "]" + ")" + "[1]" + "|" + "(" + "//*[text()=" + "'" + Frequency + "'" + "]" + ")" + "[1]")).click();
+			Wait.forSeconds(3000);
+		}
+
 	}
 	public void clickFromaccountedit() throws Throwable {
 		Wait.forSeconds(1000);

@@ -127,6 +127,10 @@ public class CommonMethods {
         char[] ch=arg1.toCharArray();
         greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                 String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(8000);
+        }
     }
 
 
