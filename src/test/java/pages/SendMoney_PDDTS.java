@@ -4,6 +4,9 @@ import actions.Wait;
 import base.Keywords;
 import org.openqa.selenium.By;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class SendMoney_PDDTS extends Keywords {
 
 	private String keyPDDTS="onlineBanking.Fundtransfer.LnkPDDTS";
@@ -41,14 +44,26 @@ public class SendMoney_PDDTS extends Keywords {
       type.data(keyPDDTSStreetname,"MainStreet");
       type.data(keyPDDTSSvillage,"Manila");
 		Wait.forSeconds(3000);
-      click.elementBy(keyPDDTSprovince);
+      //click.elementBy(keyPDDTSprovince);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keyPDDTSprovince).click();
+		}
+		else {
+			click.elementBy(keyPDDTSprovince);
+		}
        String Datatoselect;
 		Datatoselect="Metro Manila";
 		Wait.forSeconds(3000);
 		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
       driver.findElement(By.xpath(Datatoselectxpath)).click();
 		Wait.forSeconds(3000);
-      click.elementBy(keyPDDTScity);
+      //click.elementBy(keyPDDTScity);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keyPDDTScity).click();
+		}
+		else {
+			click.elementBy(keyPDDTScity);
+		}
 		Datatoselect="Manila";
 		Wait.forSeconds(3000);
 		Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";

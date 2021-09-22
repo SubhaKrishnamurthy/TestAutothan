@@ -7,6 +7,10 @@ import helper.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebElement;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class ManageRecipient_Page extends Keywords {
 
 	private String addRecipient = "onlineBanking.ManageRecipient.AddRecipient";
@@ -38,7 +42,13 @@ public class ManageRecipient_Page extends Keywords {
 
 	public void doAddRecipient() throws Throwable {
 		Wait.forSeconds(4000);
-		click.elementBy(keybankName);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			get.elementBy(keybankName).click();
+		}
+		else {
+			click.elementBy(keybankName);
+		}
 		Wait.forSeconds(2000);
 		click.elementBy(keyBankNameUCPB);
 		Wait.forSeconds(2000);

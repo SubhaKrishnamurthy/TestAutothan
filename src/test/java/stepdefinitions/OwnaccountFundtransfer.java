@@ -88,7 +88,6 @@ public class OwnaccountFundtransfer {
 
     @And("^I Verify the Fromaccount\"([^\"]*)\" and Toaccount \"([^\"]*)\" and Amount\"([^\"]*)\"and$")
     public void iVerifyTheFromaccountAndToaccountAndAmountAnd(String arg0, String arg1, String arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         Ownaccount.verifytransferdetailsinsuccessfulpage(arg0,arg1,arg2);
     }
 

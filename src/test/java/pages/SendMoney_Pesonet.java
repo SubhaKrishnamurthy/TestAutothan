@@ -6,6 +6,9 @@ import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class SendMoney_Pesonet extends Keywords {
 
 	private String keyPesonet="onlineBanking.Fundtransfer.LnkPesonet";
@@ -23,8 +26,12 @@ public class SendMoney_Pesonet extends Keywords {
 
 	public void selectthereason(String Reason) throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keyPesonetreason);
-
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keyPesonetreason).click();
+		}
+		else {
+			click.elementBy(keyPesonetreason);
+		}
 		Wait.forSeconds(5000);
 		driver.findElement(By.xpath("("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]")).click();
 		Wait.forSeconds(2000);

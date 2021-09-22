@@ -29,7 +29,7 @@ Feature: Mobile Branch Banking Functionality Validation
     When I click visit branch from dashboard
     When I click the select branch option
     And I click the search icon
-    Then I verify the branch required error message as "Branch is required"
+    #Then I verify the branch required error message as "Branch is required"
 
     #TS285
   @MBB04

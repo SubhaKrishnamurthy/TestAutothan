@@ -148,13 +148,22 @@ public class SendMoney_OtherUBaccount extends Keywords {
 
 	public void verifyCalendarprviousdatebuttonisnotexist() throws Throwable {
 		Wait.forSeconds(3000);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
 
-		click.elementBy(keyDateinput);
-		Wait.forSeconds(3000);
-		click.elementBy(keyCalendarpreviousdate);
-		Wait.forSeconds(3000);
-		verify.elementIsnotEnabled(keyCalendardate);
+			get.elementBy(keyDateinput).click();
+			Wait.forSeconds(3000);
+			get.elementBy(keyCalendarpreviousdate).click();
+			Wait.forSeconds(3000);
+			verify.elementIsnotEnabled(keyCalendardate);
+		}
+		else{
 
+			click.elementBy(keyDateinput);
+			Wait.forSeconds(3000);
+			click.elementBy(keyCalendarpreviousdate);
+			Wait.forSeconds(3000);
+			verify.elementIsnotEnabled(keyCalendardate);
+		}
 
 	}
 

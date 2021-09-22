@@ -6,6 +6,9 @@ import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class SendMoney_Instapay extends Keywords {
 
 	private String keyOtherbank = "onlineBanking.Fundtransfer.LnkOtherbanks";
@@ -52,7 +55,13 @@ public class SendMoney_Instapay extends Keywords {
 
 	public void selectBank(String Bankname) throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keysselectbank);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			get.elementBy(keysselectbank).click();
+		}
+		else {
+			click.elementBy(keysselectbank);
+		}
 		Wait.forSeconds(3000);
 		driver.findElement(By.xpath("("+"//*[text()="+"'"+Bankname+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Bankname+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Bankname+"'"+"]"+")"+"[1]")).click();
 	}

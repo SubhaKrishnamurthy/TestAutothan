@@ -99,17 +99,28 @@ public class Dashboard_Home_Page extends Keywords {
 	}
 
 	public void verifySubsDetails() throws Throwable {
+
 		Wait.forSeconds(2000);
-		verify.elementIsPresent(ReferenceNo);
-		verify.elementIsPresent(TransactionDate);
-		verify.elementIsPresent(DescriptionSubs);
-		verify.elementIsPresent(SubscriptionAmt);
-		verify.elementIsPresent(SettlementDate);
+
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			verify.elementISPresent_MacSafari(ReferenceNo);
+			verify.elementISPresent_MacSafari(TransactionDate);
+			verify.elementISPresent_MacSafari(DescriptionSubs);
+			verify.elementISPresent_MacSafari(SubscriptionAmt);
+			verify.elementISPresent_MacSafari(SettlementDate);
+		}
+		else{
+			verify.elementIsPresent(ReferenceNo);
+			verify.elementIsPresent(TransactionDate);
+			verify.elementIsPresent(DescriptionSubs);
+			verify.elementIsPresent(SubscriptionAmt);
+			verify.elementIsPresent(SettlementDate);
+		}
+
 		Wait.forSeconds(2000);
 		//jsClick.elementBy(Dashboard);
 		//Wait.forSeconds(2000);
 		//driver.findElement(By.xpath("(//*[contains(text(),\"UITF\")])[3]")).click();
-
 	}
 
 	public void verifyRedempDetails() throws Throwable {

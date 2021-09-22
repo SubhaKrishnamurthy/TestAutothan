@@ -3,9 +3,13 @@ package pages;
 import actions.Wait;
 import base.Keywords;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class SendMoney_Remittancecenter extends Keywords {
 
@@ -97,7 +101,12 @@ public class SendMoney_Remittancecenter extends Keywords {
 	}
 	public void verifyServicefeeisexist() throws Throwable {
 		Wait.forSeconds(3000);
-		verify.IfElementExists(keyRemittancecenterServicefee);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			verify.elementISPresent_MacSafari(keyRemittancecenterServicefee);
+		}
+		else {
+			verify.IfElementExists(keyRemittancecenterServicefee);
+		}
 	}
 	public void verifyCancelandproceedisexist() throws Throwable {
 		Wait.forSeconds(3000);
@@ -124,25 +133,43 @@ public class SendMoney_Remittancecenter extends Keywords {
 		click.elementBy(keybirthcalendardate);
 
 	}
+
 	public void selectNationality() throws Throwable {
 		Wait.forSeconds(5000);
-		//click.elementBy(keynationality);
-        type.data(keynationality,"Filipino");
-		Wait.forSeconds(2000);
-        Robot robot=new Robot();
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyPress(KeyEvent.VK_TAB);
-		String Datatoselect="Filipino";
-		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
-		//driver.findElement(By.xpath(Datatoselectxpath)).click();
-		//driver.findElement(By.xpath("(//*[text()=\"Filipino\"])[1]"));
 
-		click.elementBy(keybirthcalendardate);
-		Datatoselect="2";
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keynationality).click();
+			Wait.forSeconds(2000);
+			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys("Filipino");
+			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys(Keys.RETURN);
+		}
+
+		else {
+
+			type.data(keynationality, "Filipino");
+			Wait.forSeconds(2000);
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyPress(KeyEvent.VK_TAB);
+			String Datatoselect = "Filipino";
+			String Datatoselectxpath = "(" + "//*[text()=" + "'" + Datatoselect + "'" + "]" + ")" + "[1]";
+			//driver.findElement(By.xpath(Datatoselectxpath)).click();
+			//driver.findElement(By.xpath("(//*[text()=\"Filipino\"])[1]"));
+		}
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keybirthcalendardate).click();
+		}
+		else{
+			click.elementBy(keybirthcalendardate);
+		}
+
+		String Datatoselect="2";
 		Wait.forSeconds(3000);
-		Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
+		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
         driver.findElement(By.xpath(Datatoselectxpath)).click();
+
 	}
+
 	public void entertheNames(String fname,String mname,String lname) throws Throwable{
 		type.data(keyfname,fname);
 		type.data(keymname,mname);

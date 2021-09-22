@@ -21,7 +21,6 @@ public class PesoNetFundtransfer {
 
     @And("^I select the reason \"([^\"]*)\"$")
     public void iSelectTheReason(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         Pesonet.selectthereason(arg0);
     }
 

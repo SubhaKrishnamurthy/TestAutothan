@@ -1,8 +1,13 @@
 package pages;
 
-import actions.Wait;
 import base.Keywords;
+import base.Test;
+import actions.Wait;
 import exceptions.ApplicationException;
+import org.apache.log4j.Logger;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class InsurancePage extends Keywords {
 
@@ -80,23 +85,43 @@ public class InsurancePage extends Keywords {
         jsClick.elementBy(ViewInsurance);
     }
 
-    public void verify_InlifePurchasedProduct() throws Throwable {
+    public void verify_InlifePurchasedProduct() throws ApplicationException {
         verify.elementIsPresent(Accident);
         verify.elementIsPresent(Life);
         verify.elementIsPresent(ViewMore);
         jsClick.elementBy(ViewMore);
-        verify.elementIsPresent(MyInsurancesTitle);
+        Wait.forSeconds(2000);
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+            verify.elementISPresent_MacSafari(MyInsurancesTitle);
+        } else {
+            Wait.forSeconds(2000);
+            verify.elementIsPresent(MyInsurancesTitle);
+        }
         click.elementBy(LifeProductUnderMyInsurances);
         Wait.forSeconds(2000);
-        verify.elementIsPresent(PurchaseDetailsTitle);
-        verify.elementIsPresent(ReferenceNumber);
-        verify.elementIsPresent(PurchasedOn);
-        verify.elementIsPresent(FromAccount);
-        verify.elementIsPresent(Coverage);
-        verify.elementIsPresent(Status);
-        verify.elementIsPresent(Amount);
-        verify.elementIsPresent(ViewReminders);
-        jsClick.elementBy(ViewInsurance);
+
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+            verify.elementISPresent_MacSafari(PurchaseDetailsTitle);
+            verify.elementISPresent_MacSafari(ReferenceNumber);
+            verify.elementISPresent_MacSafari(PurchasedOn);
+            verify.elementISPresent_MacSafari(FromAccount);
+            verify.elementISPresent_MacSafari(Coverage);
+            verify.elementISPresent_MacSafari(Status);
+            verify.elementISPresent_MacSafari(Amount);
+            verify.elementISPresent_MacSafari(ViewReminders);
+            jsClick.elementBy(ViewInsurance);
+        }
+        else {
+            verify.elementIsPresent(PurchaseDetailsTitle);
+            verify.elementIsPresent(ReferenceNumber);
+            verify.elementIsPresent(PurchasedOn);
+            verify.elementIsPresent(FromAccount);
+            verify.elementIsPresent(Coverage);
+            verify.elementIsPresent(Status);
+            verify.elementIsPresent(Amount);
+            verify.elementIsPresent(ViewReminders);
+            jsClick.elementBy(ViewInsurance);
+        }
     }
 
     public void cancelPreviousAccident() throws Throwable{

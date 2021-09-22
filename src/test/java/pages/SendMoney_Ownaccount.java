@@ -119,7 +119,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	public void verifytransferdetailsinsuccessfulpage(String Fromacc,String Toacc,String Amount) throws Throwable {
 		Wait.forSeconds(3000);
 		verify.elementTextMatching(keytransfersuccessfultoacct,Toacc);
-		verify.elementTextMatching(keytransfersuccessfulfromacct,Fromacc);
+		//verify.elementTextMatching(keytransfersuccessfulfromacct,Fromacc);
 		verify.elementTextMatching(keytransfersuccessfulamt,Amount);
 
 	}

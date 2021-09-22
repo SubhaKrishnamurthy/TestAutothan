@@ -45,11 +45,13 @@ public class CommonMethods {
         actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(3000);
+        }
         actions.Wait.forSeconds(3000);
         greenPinPage.enter_Pin("2","2","2","2","2","2");
-        //login.enterOTP(PropertyReader.testDataOf("Account1_OTP").trim());
-        //actions.Wait.forSeconds(2000);
-        //login.clickSubmitbutton();
+
     }
 
     @And("^I logout of UB online banking application$")
@@ -75,9 +77,10 @@ public class CommonMethods {
         login.clickRecaptcha();
         login.clickLoginbutton();
         actions.Wait.forSeconds(3000);
-        //login.enterOTP(arg0);
-        //actions.Wait.forSeconds(3000);
-        //login.clickSubmitbutton();
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(3000);
+        }
         char[] ch=arg0.toCharArray();
         greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                 String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
@@ -95,14 +98,15 @@ public class CommonMethods {
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
         //Thread.sleep(3000);
         actions.Wait.forSeconds(3000);
-        actions.Wait.forSeconds(3000);
         login.clickRecaptcha();
         login.clickLoginbutton();
         actions.Wait.forSeconds(3000);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(3000);
+        }
         greenPinPage.enter_Pin("2","2","2","2","2","2");
-        //login.enterOTP(PropertyReader.testDataOf("Account1_OTP").trim());
-        //actions.Wait.forSeconds(2000);
-        //login.clickSubmitbutton();
+
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
@@ -113,17 +117,18 @@ public class CommonMethods {
         {
             actions.Wait.forSeconds(50000);
         }
-        actions.Wait.forSeconds(3000);
+        actions.Wait.forSeconds(6000);
         login.enterUsernme(arg0);
-        actions.Wait.forSeconds(3000);
+        actions.Wait.forSeconds(5000);
         login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        actions.Wait.forSeconds(3000);
+        actions.Wait.forSeconds(8000);
         login.clickRecaptcha();
         login.clickLoginbutton();
-        //actions.Wait.forSeconds(8000);
-        //login.enterOTP(arg1);
         actions.Wait.forSeconds(3000);
-        //login.clickSubmitbutton();
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            actions.Wait.forSeconds(3000);
+        }
         char[] ch=arg1.toCharArray();
         greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                 String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));

@@ -17,15 +17,31 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class Verify extends Keywords{
 
 	private static Logger log=Logger.getLogger(Verify.class);
 
 	public void elementIsPresent(String locatorKey) throws ApplicationException {
-		log.info("Verify element ["+locatorKey+"] is present");
-		get.elementBy(locatorKey);
-		log.info("Element is present!");
+			log.info("Verify element [" + locatorKey + "] is present");
+			get.elementBy(locatorKey);
+			log.info("Element is present!");
 	}
+
+	public void elementISPresent_MacSafari(String locatorKey)throws ApplicationException {
+
+		if(locatorKey == null)
+		{
+			log.info("Element is not present!");
+		}
+		else if(locatorKey != null)
+		{
+			log.info("Element is present!");
+		}
+	}
+
 
 	public void elementIsPresent(By locator) throws ApplicationException {
 		log.info("Verify element ["+locator+"] is present");
@@ -188,7 +204,6 @@ public class Verify extends Keywords{
 	public void IfElementExists(String locatorKey) throws ApplicationException {
 		try{
 			get.elementBy(locatorKey);
-
 			log.info("Verification success, Element " + locatorKey + " exists in the page");
 		}catch(Exception e){
 			throw new ApplicationException(e.getMessage());

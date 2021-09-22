@@ -7,6 +7,11 @@ import gherkin.lexer.Th;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class MobileBranchBanking_Page extends Keywords {
 
@@ -151,7 +156,16 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void clickSearchIcon() throws Throwable {
-        click.elementBy(SearchIcon);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            get.elementBy(SearchIcon).click();
+            //WebElement element = driver.findElement(By.xpath("//span[@class='ant-input-group-addon']//span[@role='img']/child::*"));
+            //Actions actions = new Actions(driver);
+            //actions.moveToElement(element).click().build().perform();
+        }
+        else{
+            click.elementBy(SearchIcon);
+        }
+
         Wait.forSeconds(2000);
     }
 
@@ -184,7 +198,12 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void selectDate(String Data) throws Throwable {
-        click.elementBy(SelectDate);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            get.elementBy(SelectDate).click();
+        }
+        else {
+            click.elementBy(SelectDate);
+        }
         Wait.forSeconds(2000);
         try {
            String Data1 =Data.trim();
@@ -253,7 +272,12 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void bookVisit_TodaysDate() throws Throwable {
-        click.elementBy(SelectDate);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            get.elementBy(SelectDate).click();
+        }
+        else {
+            click.elementBy(SelectDate);
+        }
         Wait.forSeconds(1000);
         try{
         if(SelectdateTodaydate!=null)
@@ -279,7 +303,12 @@ public class MobileBranchBanking_Page extends Keywords {
        dashboardHomePage.clickMBBSection();
         click.elementBy(SelectBranch2);
         searchBranch("Vigan");
-        click.elementBy(SelectDate);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            get.elementBy(SelectDate).click();
+        }
+        else {
+            click.elementBy(SelectDate);
+        }
         click.elementBy(SelectdateTodaydate);
         verify.elementTextContains(Hangon_Errormsg,"There is existing branch visit on");
         commonMethodsPage.clickNoBtn();
@@ -287,9 +316,17 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void selectTodaysDate() throws Throwable {
-        click.elementBy(SelectDate);
-        click.elementBy(SelectdateTodaydate);
-    }
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            get.elementBy(SelectDate).click();
+        }
+        else
+            {
+            click.elementBy(SelectDate);
+        }
+            click.elementBy(SelectdateTodaydate);
+        }
+
 
     public void editAmount() throws Throwable{
         click.elementBy(ReviewEdit);
@@ -321,7 +358,12 @@ public class MobileBranchBanking_Page extends Keywords {
         click.elementBy(SelectBranch2);
         searchBranch("Vigan");
         Wait.forSeconds(2000);
-        click.elementBy(SelectDate);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            get.elementBy(SelectDate).click();
+        }
+        else {
+            click.elementBy(SelectDate);
+        }
         click.elementBy(SelectdateTodaydate);
         Wait.forSeconds(2000);
         verify.elementTextContains(Hangon_Errormsg,"There is existing branch visit on");

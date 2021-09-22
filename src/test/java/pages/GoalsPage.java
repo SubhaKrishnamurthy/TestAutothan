@@ -6,6 +6,10 @@ import gherkin.lexer.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class GoalsPage extends Keywords {
 
@@ -186,9 +190,19 @@ public class GoalsPage extends Keywords {
     }
 
     public void clickTomorrowDate() throws Throwable {
-        Wait.forSeconds(1000);
-        click.elementBy(date);
-        click.elementBy(Tommorowsdate);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            Wait.forSeconds(1000);
+            WebElement element2= driver.findElement(By.xpath("//input[@placeholder='Saving Start Date']"));
+            Actions action= new Actions(driver);
+            action.moveToElement(element2).click().perform();
+            click.elementBy(Tommorowsdate);
+        }
+        else {
+            Wait.forSeconds(1000);
+            click.elementBy(date);
+            click.elementBy(Tommorowsdate);
+        }
     }
 
     public void selectAccount_GoalsSection() throws Throwable {
@@ -279,7 +293,13 @@ public class GoalsPage extends Keywords {
 
     public void click100PHPElement() throws Throwable {
         verify.elementIsPresent(Topup_100php);
-        click.elementBy(Topup_100php);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            get.elementBy(Topup_100php).click();
+        }
+        else {
+            click.elementBy(Topup_100php);
+        }
     }
 
     public void enterTopupAmount(String amount) throws Throwable{

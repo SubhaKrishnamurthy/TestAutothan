@@ -2,6 +2,9 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 //import org.python.antlr.op.Eq;
 
 public class UITF_Page extends Keywords {
@@ -140,13 +143,23 @@ public class UITF_Page extends Keywords {
         }
 
         public void clickSubscribeFinalBtn() throws Throwable {
-            Wait.forSeconds(2000);
-           click.elementBy(SubscribeBtnFinal);
-           verify.IfElementExists(ImpPopupLabel);
-           click.elementBy(ProceedBtn);
+
+            if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+                Wait.forSeconds(2000);
+                get.elementBy(SubscribeBtnFinal).click();
+                verify.elementISPresent_MacSafari(ImpPopupLabel);
+                click.elementBy(ProceedBtn);
+
+            }
+            else{
+                Wait.forSeconds(2000);
+                click.elementBy(SubscribeBtnFinal);
+                verify.IfElementExists(ImpPopupLabel);
+                click.elementBy(ProceedBtn);
+
+            }
             ownaccount.verifyOTPpageisdisplayed();
             ownaccount.entertheOTPOTPpage("222222");
-            //ownaccount.clickSubmit();
         }
 
         public void verifySubscriptionSuccess() throws Throwable {
