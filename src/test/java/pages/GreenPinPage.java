@@ -37,7 +37,9 @@ public class GreenPinPage extends Keywords {
     private String AccountsNextslide  = "onlineBanking.CC.AccountsNextslide";
 
     public void click_PlayEveryDayCard() throws Throwable {
-        click.elementBy(PlayEverDayCard);
+        Wait.forSeconds(6000);
+       // jsClick.elementBy(AccountsNextslide);
+        jsClick.elementBy(PlayEverDayCard);
     }
     public void click_PlayEveryDayCard2() throws Throwable {
         verify.elementIsPresent(PlayEverDayCard2);
