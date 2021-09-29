@@ -5,6 +5,9 @@ import base.Keywords;
 import exceptions.ApplicationException;
 import org.openqa.selenium.By;
 
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
+
 public class BuyloadPage extends Keywords {
 
 	private String ManageContacts = "onlineBanking.BuyLoad.ManageContacts";
@@ -78,7 +81,6 @@ public class BuyloadPage extends Keywords {
 		click.elementBy(keybuyload);
 	}
 	public void clickselectcontact() throws Throwable {
-
 		click.elementBy(keyselectcontact);
 	}
 	public void verifyelementisexist() throws Throwable {
@@ -268,9 +270,17 @@ public class BuyloadPage extends Keywords {
 
 	public void verifySuccessfulscreenvalidations(String acctnum,String mobileno,String amount) throws Throwable {
 		Wait.forSeconds(3000);
-		verify.elementTextMatching(keyfromaccountnumber,acctnum);
-		verify.elementTextMatching(keymobilenumbervalidate,mobileno);
-		verify.elementTextMatching(keyamount,amount);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			verify.elementTextMatching_MacSafari(keyfromaccountnumber, acctnum);
+			verify.elementTextMatching_MacSafari(keymobilenumbervalidate, mobileno);
+			verify.elementTextMatching_MacSafari(keyamount, amount);
 
+		}
+		else {
+			verify.elementTextMatching(keyfromaccountnumber, acctnum);
+			verify.elementTextMatching(keymobilenumbervalidate, mobileno);
+			verify.elementTextMatching(keyamount, amount);
+		}
 	}
 }

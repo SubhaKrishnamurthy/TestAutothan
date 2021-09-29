@@ -42,11 +42,24 @@ public class Verify extends Keywords{
 		}
 	}
 
-
 	public void elementIsPresent(By locator) throws ApplicationException {
 		log.info("Verify element ["+locator+"] is present");
 		get.elementBy(locator);
 		log.info("Element is present!");
+	}
+
+	public void elementTextMatching_MacSafari(String locatorKey,String expectedValue) throws ApplicationException {
+		log.info("Verify element ["+locatorKey+"] text is matching with ["+expectedValue+"]");
+		String actualValue=Test.tools.REMOVE_MULTIPLE_SPACES_AND_NEW_LINES(get.elementBy(locatorKey).getText().trim());
+		actualValue=actualValue.toLowerCase();
+		expectedValue=expectedValue.toLowerCase();
+		try{
+			actualValue.equalsIgnoreCase(expectedValue);
+		}catch (Exception ex){
+			log.error(ex);
+			throw new ApplicationException(ex.getMessage());
+		}
+		log.info("Condition verified!");
 	}
 
 	public void elementTextMatching(String locatorKey,String expectedValue) throws ApplicationException {
@@ -140,8 +153,6 @@ public class Verify extends Keywords{
 	public void isMatching(String expected,String actual){
 		Assert.assertTrue(actual.equalsIgnoreCase(expected.trim()),"Condition failed!, actual value doesn't match with expected value");
 	}
-
-	/////////////
 
 	public void elementIsEnabled(String locatorKey) throws ApplicationException {
 		log.info("Verify element ["+locatorKey+"] is Enabled");

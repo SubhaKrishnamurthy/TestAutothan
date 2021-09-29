@@ -327,4 +327,4 @@ Feature: Goals Functionality Validation
         And I select the existing goal
         And I withdraw the goal
         And I click the goals ok button
-        And I Click the Logout Button
+        #And I Click the Logout Button
