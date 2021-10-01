@@ -61,8 +61,9 @@ public class InsurancePage extends Keywords {
 
     CommonMethodsPage commonMethods = new CommonMethodsPage();
     SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
+   // private Wait ;
 
-     public void click_viewInsuranceBtn() throws Throwable {
+    public void click_viewInsuranceBtn() throws Throwable {
         verify.elementIsPresent(GetProtected);
         verify.elementIsPresent(ViewInsurance);
         jsClick.elementBy(ViewInsurance);
@@ -148,6 +149,7 @@ public class InsurancePage extends Keywords {
 
     public void purchase_AccidentProduct() throws Throwable {
         verify.elementIsPresent(Accident);
+        Wait.forSeconds(3000);
         click.elementBy(Accident);
         click.elementBy(AccidentInsurance1);
         jsClick.elementBy(PurchaseFor);
@@ -161,7 +163,7 @@ public class InsurancePage extends Keywords {
         jsClick.elementBy(PurchaseFor);
         verify.IfElementExists(ImpPopupLabel);
         click.elementBy(ProceedBtn);
-        Ownaccount.verifyOTPpageisdisplayed();
+       // Ownaccount.verifyOTPpageisdisplayed();
         Ownaccount.entertheOTPOTPpage("222222");
         //click.elementBy(SubmitBtn);
     }
