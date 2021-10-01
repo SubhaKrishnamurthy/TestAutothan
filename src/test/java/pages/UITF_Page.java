@@ -158,7 +158,7 @@ public class UITF_Page extends Keywords {
                 click.elementBy(ProceedBtn);
 
             }
-            ownaccount.verifyOTPpageisdisplayed();
+            Wait.forSeconds(2000);
             ownaccount.entertheOTPOTPpage("222222");
         }
 
@@ -181,14 +181,23 @@ public class UITF_Page extends Keywords {
             click.elementBy(NextButton);
         }
 
-        public void clickRedeemFinalBtn() throws Throwable {
+        public void clickRedeemFinalBtn() throws Throwable
+        {
+            if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+                Wait.forSeconds(2000);
+                get.elementBy(RedeemBtnFinal).click();
+                verify.elementISPresent_MacSafari(ImpPopupLabel);
+                click.elementBy(ProceedBtn);
+            }
+            else{
+                Wait.forSeconds(2000);
+                click.elementBy(RedeemBtnFinal);
+                verify.IfElementExists(ImpPopupLabel);
+                click.elementBy(ProceedBtn);
+            }
             Wait.forSeconds(2000);
-            click.elementBy(RedeemBtnFinal);
-            verify.IfElementExists(ImpPopupLabel);
-            click.elementBy(ProceedBtn);
-            ownaccount.verifyOTPpageisdisplayed();
             ownaccount.entertheOTPOTPpage("222222");
-            //ownaccount.clickSubmit();
+
         }
 
         public void verifyRedemptionSuccess() throws Throwable {

@@ -23,6 +23,7 @@ public class BackOffice_PushNotificationPage extends Keywords {
 	public void addNewNotification() throws Throwable {
 		Wait.forSeconds(2000);
 		click.elementBy(addNewNotiBtn);
+		Wait.forSeconds(3000);
 		type.data(addNewNotiTitle,"Automation");
 		type.data(addNewNotiMsg,"For Autoation purpose");
 	}

@@ -73,7 +73,8 @@ public class SendMoney_PDDTS extends Keywords {
 	public void verifyPDDTSpopuptextvalidation(String text1) throws Throwable {
 		Wait.forSeconds(3000);
 		verify.elementTextMatching(keyPDDTSpopmessage,text1);
-
+		//String getText = get.elementgetTextBy(keyPDDTSpopmessage);
+		//System.out.println("getText = "+getText);
 	}
 
 	public void verifytheGotitbutton() throws Throwable {
