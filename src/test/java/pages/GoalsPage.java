@@ -123,6 +123,7 @@ public class GoalsPage extends Keywords {
     }
 
     public void clickAddBtn() throws Throwable {
+        Wait.forSeconds(2000);
         click.elementBy(Dashboard_Add);
     }
 

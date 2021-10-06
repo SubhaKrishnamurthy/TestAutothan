@@ -35,23 +35,36 @@ public class CommonMethods {
     @Given("^I'm on login page of UB online banking application$")
     public void Im_on_login_page_of_UB_online_banking_application() throws Throwable
     {
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        if (Drivertype.equalsIgnoreCase("firefox"))
         {
-            actions.Wait.forSeconds(50000);
-        }
-        actions.Wait.forSeconds(3000);
-        login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
-        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        actions.Wait.forSeconds(3000);
-        login.clickRecaptcha();
-        login.clickLoginbutton();
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
+            actions.Wait.forSeconds(5000);
+            login.clickRecaptcha();
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
+            actions.Wait.forSeconds(3000);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            actions.Wait.forSeconds(3000);
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
             actions.Wait.forSeconds(3000);
         }
-        actions.Wait.forSeconds(3000);
-        greenPinPage.enter_Pin("2","2","2","2","2","2");
-
+        else {
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(50000);
+            }
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            actions.Wait.forSeconds(3000);
+            login.clickRecaptcha();
+            login.clickLoginbutton();
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(3000);
+            }
+            actions.Wait.forSeconds(3000);
+            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+        }
     }
 
     @And("^I logout of UB online banking application$")
@@ -61,83 +74,120 @@ public class CommonMethods {
 
 
     @Given("^I'm on login page of UB online banking application with otp \"([^\"]*)\"$")
-    public void iMOnLoginPageOfUBOnlineBankingApplicationWithOtp(String arg0) throws Throwable
-    {
-
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
-            actions.Wait.forSeconds(50000);
-        }
-        actions.Wait.forSeconds(3000);
-        login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
-        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        //Thread.sleep(3000);
-        actions.Wait.forSeconds(3000);
-        actions.Wait.forSeconds(3000);
-        login.clickRecaptcha();
-        login.clickLoginbutton();
-        actions.Wait.forSeconds(3000);
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
+    public void iMOnLoginPageOfUBOnlineBankingApplicationWithOtp(String arg0) throws Throwable {
+        if (Drivertype.equalsIgnoreCase("firefox")) {
+            actions.Wait.forSeconds(5000);
+            login.clickRecaptcha();
             actions.Wait.forSeconds(3000);
+            login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
+            actions.Wait.forSeconds(3000);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            actions.Wait.forSeconds(3000);
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            char[] ch = arg0.toCharArray();
+            greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
+                    String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
+            actions.Wait.forSeconds(3000);
+        } else {
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(50000);
+            }
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            //Thread.sleep(3000);
+            actions.Wait.forSeconds(3000);
+            actions.Wait.forSeconds(3000);
+            login.clickRecaptcha();
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(3000);
+            }
+            char[] ch = arg0.toCharArray();
+            greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
+                    String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
         }
-        char[] ch=arg0.toCharArray();
-        greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
-                String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\"$")
     public void Im_on_login_page_of_UB_online_banking_application_with_user(String arg0) throws Throwable
     {
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        if (Drivertype.equalsIgnoreCase("firefox"))
         {
-            actions.Wait.forSeconds(50000);
-        }
-        actions.Wait.forSeconds(3000);
-        login.enterUsernme(arg0);
-        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        //Thread.sleep(3000);
-        actions.Wait.forSeconds(3000);
-        login.clickRecaptcha();
-        login.clickLoginbutton();
-        actions.Wait.forSeconds(3000);
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
+            actions.Wait.forSeconds(5000);
+            login.clickRecaptcha();
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(arg0);
+            actions.Wait.forSeconds(3000);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            actions.Wait.forSeconds(3000);
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
             actions.Wait.forSeconds(3000);
         }
-        greenPinPage.enter_Pin("2","2","2","2","2","2");
-
+        else {
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(50000);
+            }
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(arg0);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            //Thread.sleep(3000);
+            actions.Wait.forSeconds(3000);
+            login.clickRecaptcha();
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(3000);
+            }
+            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+        }
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
-    public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable
-    {
-
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+    public void iMOnLoginPageOfUBOnlineBankingApplicationWithUserOtp(String arg0, String arg1) throws Throwable {
+        if (Drivertype.equalsIgnoreCase("firefox"))
         {
-            actions.Wait.forSeconds(50000);
-        }
-        actions.Wait.forSeconds(6000);
-        login.enterUsernme(arg0);
-        actions.Wait.forSeconds(5000);
-        login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-        actions.Wait.forSeconds(8000);
-        login.clickRecaptcha();
-        login.clickLoginbutton();
-        actions.Wait.forSeconds(3000);
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
+            actions.Wait.forSeconds(5000);
+            login.clickRecaptcha();
+            actions.Wait.forSeconds(3000);
+            login.enterUsernme(arg0);
+            actions.Wait.forSeconds(3000);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
+            actions.Wait.forSeconds(3000);
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            char[] ch = arg1.toCharArray();
+            greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
+                    String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
             actions.Wait.forSeconds(3000);
         }
-        char[] ch=arg1.toCharArray();
-        greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
-                String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
-        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
-        {
+        else
+            {
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(50000);
+            }
+            actions.Wait.forSeconds(6000);
+            login.enterUsernme(arg0);
+            actions.Wait.forSeconds(5000);
+            login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
             actions.Wait.forSeconds(8000);
+            login.clickRecaptcha();
+            login.clickLoginbutton();
+            actions.Wait.forSeconds(3000);
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(3000);
+            }
+            char[] ch = arg1.toCharArray();
+            greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
+                    String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
+            if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+                actions.Wait.forSeconds(8000);
+            }
         }
     }
-
-
 
 }

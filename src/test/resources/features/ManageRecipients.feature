@@ -76,9 +76,9 @@ Feature: Manage Recipients functionalities Validation
     Given I'm on login page of UB online banking application
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
-    And I search for the recipient "testautomationedit2"
+    And I search for the recipient "Atest2"
     Then I save the recipient as favorite and update
-    And I search for the recipient "testautomationedit2"
+    And I search for the recipient "Atest2"
     Then I save the recipient back to un favorite and update
     And I logout of UB online banking application
 
