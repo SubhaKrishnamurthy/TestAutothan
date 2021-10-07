@@ -73,9 +73,19 @@ public class ManageRecipient_Page extends Keywords {
 
 	public void doAddRecipient_AccountNameErrorMessage() throws Throwable {
 		Wait.forSeconds(4000);
-		click.elementBy(keybankName);
-		Wait.forSeconds(2000);
-		click.elementBy(keyBankNameUCPB);
+
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			get.elementBy(keybankName).click();
+			Wait.forSeconds(2000);
+			get.elementBy(keyBankNameUCPB).click();
+		}
+		else{
+			click.elementBy(keybankName);
+			Wait.forSeconds(2000);
+			click.elementBy(keyBankNameUCPB);
+		}
+
 		Wait.forSeconds(2000);
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",3));
 		commonMethods.verifyAccNumErrMsg("Account name should be at least 4 characters long");

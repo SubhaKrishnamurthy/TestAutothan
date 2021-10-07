@@ -83,7 +83,9 @@ public class LoginPage extends Keywords {
 
 
 	public void clickkeepmeloggedinbtn() throws Throwable {
+		Wait.forSeconds(5000);
 		try {
+
 			if(keepmeloggedinbtn!=null)
 			{
 				jsClick.elementBy(keepmeloggedinbtn);

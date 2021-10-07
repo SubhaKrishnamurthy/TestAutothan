@@ -20,7 +20,7 @@ public class SendMoney_Pesonet extends Keywords {
 
 
 	public void clickPesonet() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		click.elementBy(keyPesonet);
 	}
 
@@ -49,8 +49,12 @@ public class SendMoney_Pesonet extends Keywords {
 
 	public void selectthereason2(String Reason) throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keyPesonetreason2);
-
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			get.elementBy(keyPesonetreason2).click();
+		}
+		else {
+			click.elementBy(keyPesonetreason2);
+		}
 		Wait.forSeconds(5000);
 		driver.findElement(By.xpath("("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]" +"|"+ "("+"//*[text()="+"'"+Reason+"'"+"]"+")"+"[1]")).click();
 		Wait.forSeconds(2000);

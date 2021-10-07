@@ -185,14 +185,17 @@ public class SendMoney_Ownaccount extends Keywords {
 		Wait.forSeconds(1000);
 		click.elementBy(keytoaccountedit);
 	}
+
 	public void clickamountedit() throws Throwable {
 		Wait.forSeconds(1000);
 		click.elementBy(keyamountedit);
 	}
+
 	public void clickUpdate() throws Throwable {
 		Wait.forSeconds(1000);
 		click.elementBy(keyupdate);
 	}
+
 	public void selectFrequencyonly(String Frequency) throws Throwable {
 		Wait.forSeconds(3000);
 

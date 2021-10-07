@@ -68,11 +68,11 @@ Feature: Mobile Branch Banking Functionality Validation
       And I enter account number as "0291600"
       And I enter amount as "100"
       Then I Verify the Error message in the mobile number as "Invalid account number."
-      And I enter account number as "232355454554"
-      And I enter amount as "100"
+      And I enter account number again as "232355454554"
+      And I enter amount again as "100"
       Then I verify no error message is displayed
-      And I enter account number as "23235545455456780123"
-      And I enter amount as "100"
+      And I enter account number again as "23235545455456780123"
+      And I enter amount again as "100"
       Then I verify account number value as "2323554545545678"
 
      #TS294
@@ -89,13 +89,13 @@ Feature: Mobile Branch Banking Functionality Validation
        And I enter account number as " "
        And I enter amount as " "
        Then I Verify the Error message in the mobile number as "Account number is required."
-       And I enter account number as "029160078588"
+       And I enter account number again as "029160078588"
        Then I Verify the Error message in the mobile number as "Amount is required."
-       And I enter amount as "000000"
-       And I enter account number as "029160078588"
+       And I enter amount again as "000000"
+       And I enter account number again as "029160078588"
        Then I Verify the Error message in the mobile number as "Invalid Amount."
-       And I enter account number as "0291600"
-       And I enter amount as "100000"
+       And I enter account number again as "0291600"
+       And I enter amount again as "100000"
        Then I Verify the Error message in the mobile number as "Invalid account number."
        And I logout of UB online banking application
 

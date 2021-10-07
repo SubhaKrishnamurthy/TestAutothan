@@ -78,9 +78,19 @@ public class MobileBranchBanking {
         mbbPage.enterAccNumber(arg1);
     }
 
+    @When("^I enter account number again as \"([^\"]*)\"$")
+    public void i_enter_account_number_again_as(String accNum) throws Throwable {
+        mbbPage.Re_enterAccNumber(accNum);
+    }
+
     @When("^I enter amount as \"([^\"]*)\"$")
     public void i_enter_amount_as(String arg1) throws Throwable {
         mbbPage.enterAmt(arg1);
+    }
+
+    @When("^I enter amount again as \"([^\"]*)\"$")
+    public void i_enter_amount_again_as(String arg1) throws Throwable {
+        mbbPage.Re_enterAmt(arg1);
     }
 
     @Then("^I verify no error message is displayed$")

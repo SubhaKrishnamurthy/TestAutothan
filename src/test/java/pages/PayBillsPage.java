@@ -6,9 +6,14 @@ import cucumber.api.java.eo.Se;
 import exceptions.ApplicationException;
 import gherkin.lexer.Th;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.sql.Ref;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class PayBillsPage extends Keywords {
 
@@ -169,7 +174,14 @@ public class PayBillsPage extends Keywords {
 
     public void verifyErrMsg(String Msg) throws Throwable {
         Wait.forSeconds(1000);
-        verify.elementTextContains(Review_ErrMsg,Msg);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            verify.elementTextMatching_MacSafari(Review_ErrMsg,Msg);
+        }
+        else{
+            verify.elementTextContains(Review_ErrMsg,Msg);
+        }
+
     }
 
     public void verify_VisaNumber(String no) throws Throwable {
@@ -189,17 +201,32 @@ public class PayBillsPage extends Keywords {
 
     public void verify_FromAccountNumber(String beforeMask,String afterMask) throws Throwable {
         Wait.forSeconds(1000);
-        verify.elementTextContains(FromAccountNumberMask,beforeMask);
-        jsClick.elementBy(FromAccountNumberMask);
-        verify.elementTextContains(FromAccountNumberMask,afterMask);
-
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac"))
+        {
+            verify.elementTextMatching_MacSafari(FromAccountNumberMask, beforeMask);
+            jsClick.elementBy(FromAccountNumberMask);
+            verify.elementTextMatching_MacSafari(FromAccountNumberMask, afterMask);
+        }
+        else {
+            verify.elementTextContains(FromAccountNumberMask, beforeMask);
+            jsClick.elementBy(FromAccountNumberMask);
+            verify.elementTextContains(FromAccountNumberMask, afterMask);
+        }
     }
 
     public void verify_CardNumber(String beforeMask,String afterMask) throws Throwable {
         Wait.forSeconds(2000);
-        verify.elementTextContains(BillercardNumbermask,beforeMask);
-        jsClick.elementBy(BillercardNumbermask);
-        verify.elementTextContains(BillercardNumbermask,afterMask);
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac"))
+        {
+            verify.elementTextMatching_MacSafari(BillercardNumbermask, beforeMask);
+            jsClick.elementBy(BillercardNumbermask);
+            verify.elementTextMatching_MacSafari(BillercardNumbermask, afterMask);
+        }
+        else {
+            verify.elementTextContains(BillercardNumbermask, beforeMask);
+            jsClick.elementBy(BillercardNumbermask);
+            verify.elementTextContains(BillercardNumbermask, afterMask);
+        }
     }
 
     public void click_GotitBtn() throws Throwable {
@@ -220,14 +247,29 @@ public class PayBillsPage extends Keywords {
 
     public void verify_FinalPage(String BillerName, String FromAccNumber, String PolicyOwnerNo, String AmountValue) throws Throwable {
         Wait.forSeconds(1000);
-        verify.elementTextContains(ToBilllername,BillerName);
-        verify.elementTextContains(FromAccountNumber,FromAccNumber);
-        verify.elementTextContains(BillerAccountID,PolicyOwnerNo);
-        verify.elementTextContains(Amount,AmountValue);
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac"))
+        {
+            verify.elementTextMatching_MacSafari(ToBilllername, BillerName);
+            verify.elementTextMatching_MacSafari(FromAccountNumber, FromAccNumber);
+            verify.elementTextMatching_MacSafari(BillerAccountID, PolicyOwnerNo);
+            verify.elementTextMatching_MacSafari(Amount, AmountValue);
+        }
+        else {
+            verify.elementTextContains(ToBilllername, BillerName);
+            verify.elementTextContains(FromAccountNumber, FromAccNumber);
+            verify.elementTextContains(BillerAccountID, PolicyOwnerNo);
+            verify.elementTextContains(Amount, AmountValue);
+        }
     }
 
     public void click_Calender() throws Throwable {
-        click.elementBy(DateInput);
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac"))
+        {
+            get.elementBy(DateInput).click();
+        }
+        else{
+            click.elementBy(DateInput);
+        }
         click.elementBy(CalenderNextBtn);
         click.elementBy(CalenderDate);
     }
@@ -240,9 +282,27 @@ public class PayBillsPage extends Keywords {
 
     public void edit_BillerDetails() throws Throwable {
         clickEditBtn();
-        type.data(PaybillsPAYMENTREFERENCENO, "0006992990424204");
-        Ownaccount.clickUpdate();
-        click_GotitBtn();
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            Wait.forSeconds(2000);
+            String inputTxt = get.elementBy(PaybillsPAYMENTREFERENCENO).getAttribute("value");
+            if(inputTxt != null)
+            {
+                for(int i=0;i<inputTxt.length();i++)
+                {
+                    get.elementBy(PaybillsPAYMENTREFERENCENO).sendKeys(Keys.BACK_SPACE);
+                }
+            }
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].value ='';", get.elementBy(PaybillsPAYMENTREFERENCENO));
+            get.elementBy(PaybillsPAYMENTREFERENCENO).sendKeys("0006992990424204");
+        }
+        else{
+            type.data(PaybillsPAYMENTREFERENCENO, "0006992990424204");
+            Ownaccount.clickUpdate();
+            click_GotitBtn();
+        }
+
     }
 
     public void edit_Amount() throws Throwable {

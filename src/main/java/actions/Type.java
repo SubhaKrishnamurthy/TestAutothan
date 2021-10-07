@@ -20,6 +20,7 @@ public class Type extends Keywords{
     public void data(String locatorKey,String value) throws ApplicationException {
         if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
+            log.info("Type the value ["+value+"] into element ["+locatorKey+"]");
             get.elementBy(locatorKey).click();
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].value ='';", get.elementBy(locatorKey));

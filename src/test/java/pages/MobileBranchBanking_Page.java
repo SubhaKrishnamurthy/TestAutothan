@@ -7,6 +7,7 @@ import gherkin.lexer.Th;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -170,7 +171,8 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void verifyMessgae_TodaySection() throws Throwable {
-        verify.elementTextContains(BranchTODAYmessage,"No visits found.");
+
+       // verify.elementTextContains(BranchTODAYmessage,"No visits found.");
         verify.elementTextContains(BranchUPCOMINGmessage,"No upcoming visits found.");
       //  verify.elementTextContains(BranchHISTORYmessage,"No visits found.");
     }
@@ -241,11 +243,43 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void enterAccNumber(String accNum) throws Throwable {
-        type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1,accNum);
+        Wait.forSeconds(2000);
+            type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1,accNum);
+        Wait.forSeconds(1000);
+    }
+
+    public void Re_enterAccNumber(String accNum1) throws Throwable {
+        Wait.forSeconds(2000);
+        String inputTxt = get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1).getAttribute("value");
+        if(inputTxt != null)
+        {
+            for(int i=0;i<inputTxt.length();i++)
+            {
+                get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1).sendKeys(Keys.BACK_SPACE);
+            }
+        }
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value ='';", get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1));
+        get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1).sendKeys(accNum1);
     }
 
     public void enterAmt(String amount) throws Throwable {
         type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1,amount);
+    }
+
+    public void Re_enterAmt(String amt) throws Throwable {
+        Wait.forSeconds(2000);
+        String inputTxt = get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1).getAttribute("value");
+        if(inputTxt != null)
+        {
+            for(int i=0;i<inputTxt.length();i++)
+            {
+                get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1).sendKeys(Keys.BACK_SPACE);
+            }
+        }
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value ='';", get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1));
+        get.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1).sendKeys(amt);
     }
 
     public void verify_AccNumberValue(String accNum) throws Throwable {
@@ -372,6 +406,7 @@ public class MobileBranchBanking_Page extends Keywords {
         requestPaymentPage.clickNextButton();
         type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAmount1,"100");
         requestPaymentPage.clickNextButton();
+        Wait.forSeconds(2000);
         click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWUpdateVisit);
         Wait.forSeconds(2000);
         click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWGotoDashboard);

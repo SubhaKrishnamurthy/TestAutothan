@@ -253,6 +253,7 @@ public class GoalsPage extends Keywords {
     }
 
     public void editGoalAmount() throws Throwable {
+        Wait.forSeconds(3000);
         click.elementBy(Review_targetamountedit);
         Wait.forSeconds(2000);
         click.elementBy(Edit_target_amount_minus);
@@ -273,8 +274,14 @@ public class GoalsPage extends Keywords {
 
     public void verifyGoalsAccName_GoalsAccNumber(String accName,String accNumber) throws Throwable {
         Wait.forSeconds(2000);
-        verify.elementTextMatching(Review_GoalsAccountName,accName);
-        verify.elementTextMatching(Review_GoalsAccNumber,accNumber);
+        if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
+            verify.elementTextMatching_MacSafari(Review_GoalsAccountName, accName);
+            verify.elementTextMatching_MacSafari(Review_GoalsAccNumber, accNumber);
+        }
+        else {
+            verify.elementTextMatching(Review_GoalsAccountName, accName);
+            verify.elementTextMatching(Review_GoalsAccNumber, accNumber);
+        }
     }
 
     public void selectExistingGoal() throws Throwable {
@@ -293,6 +300,7 @@ public class GoalsPage extends Keywords {
     }
 
     public void click100PHPElement() throws Throwable {
+        Wait.forSeconds(2000);
         verify.elementIsPresent(Topup_100php);
         if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
