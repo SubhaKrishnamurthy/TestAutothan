@@ -1,7 +1,0 @@
-2021-04-08 16:57:41,362  INFO [main] RunManager:23 - Hey! 9071, Logging everything from here ....
-2021-04-08 16:57:41,366  INFO [main] RunManager:24 - Run ID is --> Run-4070
-2021-04-08 16:57:41,602  INFO [main] StepsBase:19 - Executing S C E N A R I O : TSBO02_Validation of Fund transfer logs for BRM user
-2021-04-08 16:58:27,863 ERROR [main] StepsBase:27 - S C E N A R I O    F A I L E D !!!!!
-2021-04-08 16:58:27,863  INFO [main] Screenshot:22 - Capture screenshot
-2021-04-08 16:58:28,235  INFO [main] Screenshot:28 - Captured!
-2021-04-08 16:58:29,353  INFO [main] Test:48 - Report is generated @ emailable-results\Run-4070/Automation-Dashboard.html
