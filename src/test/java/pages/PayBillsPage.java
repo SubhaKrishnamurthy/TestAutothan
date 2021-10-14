@@ -155,6 +155,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void clickEditBtn() throws Throwable {
+        Wait.forSeconds(2000);
         click.elementBy(ToBillerEdit);
     }
 

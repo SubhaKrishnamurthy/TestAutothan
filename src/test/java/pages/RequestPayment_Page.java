@@ -115,6 +115,7 @@ public class RequestPayment_Page extends Keywords {
     }
 
     public void clickNextButton() throws Throwable {
+        Wait.forSeconds(2000);
         click.elementBy(Next_RequestPayment);
     }
 
