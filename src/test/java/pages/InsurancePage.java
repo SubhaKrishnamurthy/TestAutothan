@@ -5,6 +5,7 @@ import base.Test;
 import actions.Wait;
 import exceptions.ApplicationException;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 
 import static driver.DriverManager.Drivertype;
 import static driver.DriverManager.EnvironmentType;
@@ -128,6 +129,10 @@ public class InsurancePage extends Keywords {
     public void cancelPreviousAccident() throws Throwable{
         click.elementBy(ProductUnderMyInsurance1);
         try {
+            Wait.forSeconds(2000);
+            JavascriptExecutor jse = (JavascriptExecutor)driver;
+            jse.executeScript("window.scrollBy(0,250)");
+            Wait.forSeconds(2000);
             if (CancelInsuranceBtn != null)
             {
                 jsClick.elementBy(CancelInsuranceBtn);
@@ -150,8 +155,12 @@ public class InsurancePage extends Keywords {
     public void purchase_AccidentProduct() throws Throwable {
         verify.elementIsPresent(Accident);
         Wait.forSeconds(3000);
-        click.elementBy(Accident);
-        click.elementBy(AccidentInsurance1);
+        jsClick.elementBy(Accident);
+        jsClick.elementBy(AccidentInsurance1);
+        Wait.forSeconds(2000);
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,250)");
+        Wait.forSeconds(2000);
         jsClick.elementBy(PurchaseFor);
         verify.elementIsPresent(InsuranceMarketplaceTitle);
         verify.elementIsPresent(PurchaseFormTitle);
@@ -163,6 +172,7 @@ public class InsurancePage extends Keywords {
         jsClick.elementBy(PurchaseFor);
         verify.IfElementExists(ImpPopupLabel);
         click.elementBy(ProceedBtn);
+        Wait.forSeconds(3000);
        // Ownaccount.verifyOTPpageisdisplayed();
         Ownaccount.entertheOTPOTPpage("222222");
         //click.elementBy(SubmitBtn);

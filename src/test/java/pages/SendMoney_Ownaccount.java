@@ -86,7 +86,7 @@ public class SendMoney_Ownaccount extends Keywords {
 		catch (ApplicationException e) {
 			e.printStackTrace();
 		}
-		Wait.forSeconds(4000);
+		Wait.forSeconds(8000);
 		loginPage.clickkeepmeloggedinbtn();
 	}
 

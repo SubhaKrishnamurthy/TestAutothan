@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import actions.Wait;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
@@ -139,7 +140,8 @@ public class PayBills {
     @Then("^I click the GotIt button if displayed$")
     public void i_click_the_GotIt_button_if_displayed() throws Throwable {
         payBills.click_GotitBtn();
-       loginPage.clickkeepmeloggedinbtn();
+        Wait.forSeconds(8000);
+        loginPage.clickkeepmeloggedinbtn();
     }
 
     @Then("^I click new payment button in final page$")
