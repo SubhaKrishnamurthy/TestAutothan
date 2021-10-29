@@ -6,6 +6,12 @@ import gherkin.lexer.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static driver.DriverManager.Drivertype;
+import static driver.DriverManager.EnvironmentType;
 
 public class WesternUnionPage extends Keywords {
 
@@ -43,6 +49,7 @@ public class WesternUnionPage extends Keywords {
         click.elementBy(getStartedBtn);
         Wait.forSeconds(8000);
         click.elementBy(WesternUnion);
+        Wait.forSeconds(3000);
         goalsPage.clickNextBtn();
     }
 
@@ -51,6 +58,7 @@ public class WesternUnionPage extends Keywords {
     }
 
     public void enterMTCNCode(String code) throws Throwable{
+        Wait.forSeconds(3000);
         type.data(MTCNCode,code);
     }
 
@@ -78,11 +86,41 @@ public class WesternUnionPage extends Keywords {
     public void enterOtherDetails_WU() throws Throwable {
         common.clickkeySelectAcc();
         click.elementBy(WUAccount);
-        click.elementBy(Purpose);
-        click.elementBy(PurposeGift);
-        click.elementBy(RelationShip);
+
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            Wait.forSeconds(2000);
+            WebElement element = driver.findElement(By.cssSelector("#root > div > section:nth-child(2) > section > main > div > main > div > div > div > div > form > div:nth-child(2) > div > div.panel-body > div > div > div:nth-child(3) > div.ant-col.ant-legacy-form-item-control-wrapper > div > span > div > div > div"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).click().build().perform();
+            Wait.forSeconds(2000);
+            get.elementBy(PurposeGift).click();
+        }
+        else {
+            click.elementBy(Purpose);
+            click.elementBy(PurposeGift);
+        }
+
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            Wait.forSeconds(2000);
+            WebElement element = driver.findElement(By.cssSelector("#root > div > section:nth-child(2) > section > main > div > main > div > div > div > div > form > div:nth-child(2) > div > div.panel-body > div > div > div:nth-child(4) > div.ant-col.ant-legacy-form-item-control-wrapper > div > span > div > div > div"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).click().build().perform();
+            Wait.forSeconds(2000);
+
+        }
+        else {
+            click.elementBy(RelationShip);
+        }
+
         verify.IfElementExists(RelationShipFamily);
-        click.elementBy(RelationShipFamily);
+
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+            Wait.forSeconds(2000);
+            get.elementBy(RelationShipFamily).click();
+        }
+        else {
+            click.elementBy(RelationShipFamily);
+        }
     }
 
     public void verifyMTCNAlreadyClaimed() throws Throwable {

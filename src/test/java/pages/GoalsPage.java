@@ -193,10 +193,8 @@ public class GoalsPage extends Keywords {
     public void clickTomorrowDate() throws Throwable {
         if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
-            Wait.forSeconds(1000);
-            WebElement element2= driver.findElement(By.xpath("//input[@placeholder='Saving Start Date']"));
-            Actions action= new Actions(driver);
-            action.moveToElement(element2).click().perform();
+            Wait.forSeconds(2000);
+            get.elementBy(date).click();
             click.elementBy(Tommorowsdate);
         }
         else {

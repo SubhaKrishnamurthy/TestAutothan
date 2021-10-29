@@ -43,7 +43,8 @@ public class Type extends Keywords{
             get.elementBy(locatorKey).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
             get.elementBy(locatorKey).sendKeys(value);
             // keyboard.hideIOS();
-            log.info("Type Successful!");}
+            log.info("Type Successful!");
+        }
     }
 
     public void sensitiveData(String locatorKey,String value) throws ApplicationException {
@@ -92,6 +93,15 @@ public class Type extends Keywords{
         log.info("Type the value ["+value.substring(0,2)+"*****] into element ["+locator+"]");
         get.elementBy(locator).sendKeys(value);
 
+        log.info("Type Successful!");
+    }
+
+    public void data_safari(String locatorKey,String value) throws ApplicationException {
+        log.info("Type the value ["+value+"] into element ["+locatorKey+"]");
+        get.elementBy(locatorKey).clear();
+        get.elementBy(locatorKey).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+        get.elementBy(locatorKey).sendKeys(value);
+        // keyboard.hideIOS();
         log.info("Type Successful!");
     }
 

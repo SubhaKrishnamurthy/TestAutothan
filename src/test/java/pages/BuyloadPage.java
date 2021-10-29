@@ -180,7 +180,9 @@ public class BuyloadPage extends Keywords {
 		Wait.forSeconds(3000);
 	}
 	public void clickSearchicon() throws Throwable {
+		Wait.forSeconds(3000);
 		click.elementBy(keybtnsearchicon);
+		Wait.forSeconds(3000);
 	}
 
 	public void verifySearcresult(String result1,String result2) throws Throwable {

@@ -63,9 +63,11 @@ public class GreenPinPage extends Keywords {
         jse.executeScript("window.scrollBy(0,250)");
         Wait.forSeconds(2000);
         jsClick.elementBy(ChangePin);
+        Wait.forSeconds(2000);
     }
 
     public void enter_Pin(String pin1,String pin2,String pin3,String pin4,String pin5,String pin6) throws Throwable {
+        Wait.forSeconds(2000);
         type.data(Pin1,pin1);
         type.data(Pin2,pin2);
         type.data(Pin3,pin3);

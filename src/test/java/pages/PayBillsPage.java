@@ -96,7 +96,13 @@ public class PayBillsPage extends Keywords {
 
     public void searchBiller_BillersList(String name) throws Throwable {
         Wait.forSeconds(3000);
-        jsClick.elementBy(BillerList);
+        if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+        {
+            get.elementBy(BillerList).click();
+        }
+        else {
+            jsClick.elementBy(BillerList);
+        }
         Wait.forSeconds(2000);
         type.data(Searchbiller,name);
         Wait.forSeconds(2000);
@@ -126,6 +132,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void clickSearchResult() throws Throwable {
+       Wait.forSeconds(3000);
         click.elementBy(Billersearchresult1);
     }
 
@@ -170,8 +177,10 @@ public class PayBillsPage extends Keywords {
 
     public void enterVisaNumber(String no) throws Throwable {
        Wait.forSeconds(2000);
-        type.data(VisaNumber,no);
-    }
+
+            type.data(VisaNumber, no);
+
+        }
 
     public void verifyErrMsg(String Msg) throws Throwable {
         Wait.forSeconds(1000);
@@ -278,7 +287,7 @@ public class PayBillsPage extends Keywords {
     public void edit_AccountNumber() throws Throwable {
         Ownaccount.clickFromaccountedit();
         common.clickFromAccNumber();
-        click_GotitBtn();
+        //click_GotitBtn();
     }
 
     public void edit_BillerDetails() throws Throwable {
@@ -297,11 +306,15 @@ public class PayBillsPage extends Keywords {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].value ='';", get.elementBy(PaybillsPAYMENTREFERENCENO));
             get.elementBy(PaybillsPAYMENTREFERENCENO).sendKeys("0006992990424204");
+            Wait.forSeconds(3000);
+            Ownaccount.clickUpdate();
+            //click_GotitBtn();
         }
         else{
             type.data(PaybillsPAYMENTREFERENCENO, "0006992990424204");
+            Wait.forSeconds(3000);
             Ownaccount.clickUpdate();
-            click_GotitBtn();
+            //click_GotitBtn();
         }
 
     }
@@ -310,7 +323,7 @@ public class PayBillsPage extends Keywords {
         Ownaccount.clickamountedit();
         type.data(keyAmount,"150");
         Ownaccount.clickUpdate();
-        click_GotitBtn();
+        //click_GotitBtn();
     }
 
     public void click_BackBtn() throws Throwable {

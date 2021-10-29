@@ -30,14 +30,14 @@ Feature: Manage Recipients functionalities Validation
 
     #TS080
     @MR03
-    Scenario: Validation of   account number field in  Add recipient page
+    Scenario: Validation of account number field in  Add recipient page
       Given I'm on login page of UB online banking application
       When I click on Send/Request link in dashboard
       And I click the manage recipient link
       And I click the Add recipient button
       Then I enter accountNumber less than 12 digits and verify Error message
-      And I delete the recipient
-      And I logout of UB online banking application
+      #And I delete the recipient
+      #And I logout of UB online banking application
 
       #TS081
   @MR04

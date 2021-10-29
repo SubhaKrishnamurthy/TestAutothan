@@ -60,7 +60,13 @@ public class ManageRecipient_Page extends Keywords {
 
 	public void doAddFavoriteRecipient() throws Throwable {
 		Wait.forSeconds(4000);
-		click.elementBy(keybankName);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			get.elementBy(keybankName).click();
+		}
+		else {
+			click.elementBy(keybankName);
+		}
 		Wait.forSeconds(2000);
 		click.elementBy(keyBankNameUCPB);
 		Wait.forSeconds(2000);
@@ -98,7 +104,12 @@ public class ManageRecipient_Page extends Keywords {
 
 	public void doAddRecipient_AccountNumberErrMsg() throws Throwable {
 		Wait.forSeconds(4000);
-		click.elementBy(keybankName);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+		get.elementBy(keybankName).click();
+		}
+		else{
+			click.elementBy(keybankName);
+		}
 		Wait.forSeconds(2000);
 		click.elementBy(keyBankNameUCPB);
 		Wait.forSeconds(2000);
@@ -106,14 +117,16 @@ public class ManageRecipient_Page extends Keywords {
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		Wait.forSeconds(2000);
 		commonMethods.verifyAccNumErrMsg("Account number should be 12 digits long");
-		Wait.forSeconds(2000);
-		type.data(accountNumber, randomAccountNumber);
-		commonMethods.clickSaveBtn();
-		verify.IfElementExists(addRecipient);
+		Wait.forSeconds(6000);
+		//type.data(accountNumber, randomAccountNumber);
+		//Wait.forSeconds(2000);
+		//commonMethods.clickSaveBtn();
+		//Wait.forSeconds(2000);
+		//verify.IfElementExists(addRecipient);
 	}
 
 	public void doDeleteRecipient() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(6000);
 		type.data(accountNumberSearch,randomAccountNumber);
 		aReturn.clickEnter(accountNumberSearch);
 		Wait.forSeconds(6000);
@@ -235,7 +248,15 @@ public class ManageRecipient_Page extends Keywords {
 			if (keyAllertErrMsg != null) {
 				click.elementBy(addRecipient);
 				Wait.forSeconds(2000);
-				click.elementBy(keybankName);
+
+				if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+				{
+					get.elementBy(keybankName).click();
+				}
+				else {
+					click.elementBy(keybankName);
+				}
+
 				Wait.forSeconds(2000);
 				click.elementBy(keyBankNameUCPB);
 				Wait.forSeconds(2000);

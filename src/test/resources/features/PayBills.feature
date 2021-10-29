@@ -94,7 +94,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
   Scenario: Validate Frequency and End Date fields are displayed when the user checks Repeat checkbox
     Given I'm on login page of UB online banking application
     When I am on the PayBills page
-    And I search for the biller "MAPFRE INSULAR INSURANCE CORP" in Billers list
+    And I search for the biller "MAPFRE INSULAR INSURANCE" in Billers list
     Then I click the search result1
     And I enter paymentReferenceNo as "0006992990424204" PayorsName as "MANUEL CANAPI SUNGA" and PolicyNo as "2312001000781"
     And I click the Next Button
