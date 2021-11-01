@@ -91,6 +91,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void clickTransferbutton() throws Throwable {
+		Wait.forSeconds(5000);
 		click.elementBy(keytransfer);
 	}
 
