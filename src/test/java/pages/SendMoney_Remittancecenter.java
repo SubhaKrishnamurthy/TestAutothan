@@ -143,7 +143,13 @@ public class SendMoney_Remittancecenter extends Keywords {
 			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys("Filipino");
 			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys(Keys.RETURN);
 		}
+		else if(Drivertype.equalsIgnoreCase("firefox") && EnvironmentType.equalsIgnoreCase("windows") ){
+			get.elementBy(keynationality).click();
+			Wait.forSeconds(2000);
+			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys("Filipino");
+			driver.findElement(By.xpath("(//*[@class='ant-select-selection-search-input'])[1]")).sendKeys(Keys.RETURN);
 
+		}
 		else {
 
 			type.data(keynationality, "Filipino");
@@ -238,7 +244,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 	}
 
 	public void clickRemittanceCenterEdit() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		click.elementBy(keyRemittanceCenterEdit);
 		Wait.forSeconds(3000);
 	}

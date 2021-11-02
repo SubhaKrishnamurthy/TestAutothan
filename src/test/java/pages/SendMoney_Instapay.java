@@ -49,7 +49,7 @@ public class SendMoney_Instapay extends Keywords {
 	}
 
 	public void verifyFieldisDisabled() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		verify.elementIsnotEnabled(keysAccountsearchresult);
 	}
 

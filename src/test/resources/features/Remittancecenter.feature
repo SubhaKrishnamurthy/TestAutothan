@@ -219,7 +219,7 @@ Feature: Remittancecenter
       And I Verify the from accountno"1756" accountname"BAUTISTA,SALVEREGINA,M" transferamt"PHP100.00"purpose"Test"
       And I verify the  name "Lname,FnameM." and DOB"2004" nationality"FILIPINO"
       And I verify the mobileno"639841011885" mailid"sundaresan.jeyamani@unionbankph.com"adddress"25,B1GarnerStreet,SanAntonio,Manila,MetroManila"
-      And I verify the Gotit button displayed or not
+      #And I verify the Gotit button displayed or not
       And I click the edit button in remittance center
       And I enter the Firstname "Fchangename" and Middlename"Mchangename" and Lastname"Lchangename"
       And I click the update button in remittance center

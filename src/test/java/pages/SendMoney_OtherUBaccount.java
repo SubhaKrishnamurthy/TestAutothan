@@ -109,7 +109,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 
 
 	public void searchRecipientfrommyrecipient(String Recipient) throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(5000);
 		click.elementBy(keyselectfromrecipient);
 		click.elementBy(keybtnmyrecipient);
 		Wait.forSeconds(5000);
