@@ -114,7 +114,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Request
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "10057003788"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
