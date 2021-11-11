@@ -73,7 +73,7 @@ public class SendMoney_Ownaccount extends Keywords {
 		type.data(KeyRemarks,Remarks);
 	}
 	public void clickNextbutton() throws Throwable {
-		Wait.forSeconds(4000);
+		Wait.forSeconds(5000);
 		click.elementBy(KeyNext);
 	}
 	public void verifytheGotitbutton() throws Throwable {

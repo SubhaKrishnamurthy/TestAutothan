@@ -69,7 +69,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 		click.elementBy(keysearchrecipientresult);
 	}
 	public void entertheMobileEmailRemarks(String Email,String Mobile,String Remarks) throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(4000);
 		type.data(keyinputemail,Email);
 		type.data(keymobilenumber,Mobile);
 		type.data(keymsgtorecipient,Remarks);

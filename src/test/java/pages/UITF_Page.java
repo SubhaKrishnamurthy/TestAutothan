@@ -229,7 +229,8 @@ public class UITF_Page extends Keywords {
         public void enterNonExistingNum_VerifyErrMsg() throws Throwable {
             type.data(AccNumberTxt,"123456789112");
             click.elementBy(NextButton);
-          //  verify.elementIsPresent(Errormessage_NonExistingUITFAccNo);
+           verify.elementIsPresent(Errormessage_NonExistingUITFAccNo);
+            Wait.forSeconds(3000);
             click.elementBy(ErrorOKButton);
         }
 }

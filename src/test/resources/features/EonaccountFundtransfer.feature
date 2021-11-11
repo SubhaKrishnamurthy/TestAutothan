@@ -133,7 +133,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Quarterly"
@@ -145,7 +145,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Daily"
@@ -157,7 +157,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Weekly"
@@ -169,7 +169,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Every 2 weeks"
@@ -181,7 +181,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Monthly"
@@ -193,7 +193,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Semi-Annually"
@@ -205,7 +205,7 @@ Feature: EonAccount Fund Transfer
     And I click the from account number
     And Enter the Eon Account Number "109453257914"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"EON Account Transfer"
-    And I verify Next button is enabled
+    #And I verify Next button is enabled
     And I click the Next Button
     And I Enter the Amount "1" in ub account transfer
     And I click the Repeat checkbox and select frequency as "Annually"
