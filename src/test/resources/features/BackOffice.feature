@@ -1,5 +1,5 @@
 # Author: Subha
-# Functionality: Login page validation
+# Functionality: Backoffice validation
 # Jira ID: ?
 # Jira URL: ?
 

@@ -1,5 +1,5 @@
 # Author: Subha
-# Functionality: FX validation
+# Functionality: RequestPayment validation
 # Jira ID: ?
 # Jira URL: ?
 

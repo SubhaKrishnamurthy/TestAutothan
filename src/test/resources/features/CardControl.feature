@@ -1,5 +1,5 @@
 # Author: Subha
-# Functionality: FX validation
+# Functionality:  Card Control validation
 # Jira ID: ?
 # Jira URL: ?
 
