@@ -162,7 +162,7 @@ public class PayBillsPage extends Keywords {
     }
 
     public void clickEditBtn() throws Throwable {
-        Wait.forSeconds(2000);
+        Wait.forSeconds(3000);
         click.elementBy(ToBillerEdit);
     }
 

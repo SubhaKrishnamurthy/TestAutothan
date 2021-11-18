@@ -35,12 +35,12 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I search for the biller "UNION" in Billers list
     Then I verify the value as "UNIONBANK MASTERCARD" in search result1
     #And I verify the value as "UNIONBANKMASTERCARD" in search result2
-    And I search for the billler "Autotest" in Favorites list
-    Then I verify the value as "Autotest2" in search result1
-    #And I verify the value as "Autotest2" in search result2
-    And I search for the biller "Autotest" in MyBillers
-    Then I verify the value as "Autotest2" in search result1
-    #And I verify the value as "Autotest2" in search result2
+    And I search for the billler "UBPRegressionBiller" in Favorites list
+    Then I verify the value as "UBPRegressionBiller1" in search result1
+    And I verify the value as "UBPRegressionBiller2" in search result2
+    And I search for the biller "UBPRegressionBiller" in MyBillers
+    Then I verify the value as "UBPRegressionBiller1" in search result1
+    And I verify the value as "UBPRegressionBiller2" in search result2
     Then I logout of UB online banking application
 
     #TS165
@@ -313,8 +313,11 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the Submit Button
       And I click the GotIt button if displayed
       And I edit from account number
+      And I click the GotIt button if displayed
       And I edit the biller details
+      And I click the GotIt button if displayed
       And I edit the amount
+      And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
       And I Enter the OTP "222222" in OTP Page

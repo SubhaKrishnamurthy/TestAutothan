@@ -110,7 +110,7 @@ Feature: PDDTS Fund Transfer
     And I select the reason "ADVERTISING"
     And I click the Next Button
     And I Verify the Fromaccount"**** **** 0695" and Toaccount "1014 0000 1643" and Amount"USD 10.00"and
-    And I verify the Gotit button displayed
+    #And I verify the Gotit button displayed
 
   @PDDTS8
   Scenario:Validation of Transfer from screen for user with single USD account
