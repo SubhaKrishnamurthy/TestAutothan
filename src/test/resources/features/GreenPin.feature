@@ -9,7 +9,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
   ##Change Pin
   @CP01
   Scenario: Verify whether User is redirected to the page where user will enter PIN upon clicking 'Change Pin' option
-    Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+    Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Change Pin
@@ -17,7 +17,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @CP02
     Scenario: Verify whether user receives an error prompt when users input the consecutive digits as PIN
-    Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+    Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Change Pin
@@ -29,7 +29,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @CP03
   Scenario: Verify whether user receives an error prompt when users input the same digits as PIN
-    Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+    Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Change Pin
@@ -41,7 +41,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
    @CP04
    Scenario: Verify whether user receives error message that inputted PIN doesn't match the previous PIN input
-     Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+     Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
      When user clicks an playeveryday card
      And Click on manage cards
      And Click on Change Pin
@@ -55,7 +55,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @CP05
     Scenario: Verify whether user is  displayed with the correct reminders upon changing a pin
-      Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+      Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
       When user clicks an playeveryday card
       And Click on manage cards
       And Click on Change Pin
@@ -63,7 +63,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @CP06
     Scenario: Verify whether user is displayed with the error prompt when users input invalid otp
-      Given I'm on login page of UB online banking application with user "wu0003" otp "111111"
+      Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
       When user clicks an playeveryday card
       And Click on manage cards
       And Click on Change Pin
