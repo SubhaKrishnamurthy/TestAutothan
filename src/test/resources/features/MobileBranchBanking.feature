@@ -134,7 +134,7 @@ Feature: Mobile Branch Banking Functionality Validation
    #TS300
   @MBB11
     Scenario:  Validation of error message and completing the flow when user tries to schedule a visit for current day
-    Given I'm on login page of UB online banking application with user "Accnumtest5"
+    Given I'm on login page of UB online banking application with user "Accnumtest5" otp "111111"
     When I click visit branch from dashboard
     And I click the select branch option
     And I search the branch as Medical City

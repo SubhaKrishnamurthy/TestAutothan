@@ -78,7 +78,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -98,7 +98,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -153,7 +153,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -168,7 +168,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -187,7 +187,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
     And I click the Next Button
@@ -231,10 +231,10 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    #And I click the favourite link
+    And I click the favourite link
     And I enter the name "Sundar" in search field
     And I click the search result
-    #And I enter the mobilenumber "09457946537"
+    And I enter the mobilenumber "09457946537"
     And I Verify the next button is enabled
     And I enter the mobilenumber "09841011885"
     And I verify the "Please enter a valid PH Mobile Number." error message
