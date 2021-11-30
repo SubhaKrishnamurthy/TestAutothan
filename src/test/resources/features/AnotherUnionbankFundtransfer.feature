@@ -11,7 +11,7 @@ Feature: Another Unionbank FundTransfer
   Scenario: Validation of navigating transfer to UB Account for valid Account number
     When I store the version of the application
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
@@ -32,7 +32,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount2
   Scenario: Validation of navigating transfer to UBP Account for Invalid OTP
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
@@ -49,7 +49,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount3
   Scenario: Validation of navigating transfer to UBP Account for Invalid Account number
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I enter the UBP account number "111122223333" and account name "Other UBP InvalidAccount"
@@ -66,7 +66,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount4
   Scenario: Validation of Edit functionality in the Review page of UBP Account
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
@@ -98,7 +98,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount5
   Scenario: Validation of selecting target account number from saved receipient in Transfer to UBP
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from saved recipient "100570037881"
@@ -111,7 +111,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount6
   Scenario: Validation of selecting target account number from Favourite receipient in Transfer to UBP
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from favourite recipient "10057003788"
@@ -130,7 +130,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount7
   Scenario: Validation of navigating to transfer clicking the cancel button for UBP Account Transfer
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
@@ -146,7 +146,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount8
   Scenario:Validation of entering remarks greater than 256 characters in UBP Account
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from saved recipient "100570037881"
@@ -159,7 +159,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount9
   Scenario:Verifying the UBP Account Transfer transaction for various frequency in Transfer Details page
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from saved recipient "100570037881"
@@ -251,7 +251,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount10
   Scenario: Validation of Transfer to another UBP account with future date
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from favourite recipient "100570037881"
@@ -267,7 +267,7 @@ Feature: Another Unionbank FundTransfer
   @OtherUBaccount11
    Scenario:Validation of amount field in the Transfer Page
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
     And I select the Account number from favourite recipient "100570037881"

@@ -10,7 +10,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS1
   Scenario:Validaiton of PDDTS Transfer option content
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I Verify PDDTS link isexist
     And I Verify the PDDTS Text verification "PHP 50,000 transaction limit." and "No cut-off."
@@ -18,7 +18,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS2
   Scenario:Validation of error message when transaction amount less than 10 USD
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -31,7 +31,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS3
   Scenario:Validation of error message when transaction amount more than the account balance
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -44,7 +44,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS4
   Scenario:Validation of error message when transaction amount is more than transaction Limit
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -57,7 +57,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS5
   Scenario: Verify if Review and Transfer screen is as per template
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -72,7 +72,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS6
   Scenario: Verification of Pop-up content before successful transaction
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -99,7 +99,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS7
   Scenario:Verification of Pop-up when same transfer is made on the same day
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I select the Account number from saved recipient "101400001643"
@@ -115,7 +115,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS8
   Scenario:Validation of Transfer from screen for user with single USD account
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     Then I verify the Sendto page is displayed
@@ -123,7 +123,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS9
   Scenario:Validation of Transfer from screen for user with mutliple USD account
     Given I'm on login page of UB online banking application with user "huawei" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
     And I click the from account number
@@ -132,7 +132,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS10
   Scenario:Verification of blank field error content in Transfer To screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
 
@@ -140,7 +140,7 @@ Feature: PDDTS Fund Transfer
   @PDDTS11
   Scenario:Verification of invalid data error content in Transfer To screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click PDDTS Link
 

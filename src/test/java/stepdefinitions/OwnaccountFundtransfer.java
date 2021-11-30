@@ -19,7 +19,7 @@ public class OwnaccountFundtransfer {
 
 
 
-    @When("^I click the Send/Request$")
+    @When("^I click the Send/Receive Money$")
     public void iClickTheSendRequest() throws Throwable {
         dashboard.clickSendReceive();
     }
@@ -170,7 +170,7 @@ public class OwnaccountFundtransfer {
         Ownaccount.StoreTxndateandReferencenumber();
     }
 
-    @Then("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\"  and \"([^\"]*)\" in Recenent transactions$")
+    @Then("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" in Recenent transactions$")
     public void iVerifyTheValuesAndAndInRecenentTransactions(String arg0, String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
 

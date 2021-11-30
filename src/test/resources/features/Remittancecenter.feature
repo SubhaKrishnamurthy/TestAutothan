@@ -10,7 +10,7 @@ Feature: Remittancecenter
   @RC1
   Scenario:Validation of remittance center option if user is able to login into convergent web application
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -19,7 +19,7 @@ Feature: Remittancecenter
   @RC2
   Scenario:ValidaRC10tion if user is able to initiate a Palwan Express transaction when click Next transaction details screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -36,7 +36,7 @@ Feature: Remittancecenter
   @RC3
   Scenario:Validation if user is able to complete a Palwan Express transaction - Review and Send screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -61,7 +61,7 @@ Feature: Remittancecenter
   @RC4
   Scenario:Valiadtion of valid Recipient details in Remittance center Recipient details screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -83,7 +83,7 @@ Feature: Remittancecenter
   @RC5
   Scenario:Validation when Click NewTransaction button in the summary screen to navigate to SendRequest screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -121,7 +121,7 @@ Feature: Remittancecenter
   @RC6
   Scenario:Validation if user is able to initiate a Palwan Express transaction amount field - Transaction details screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I verify the remittancecenter link
     And I click the remittancecenter link
     And I click the getstarted link
@@ -135,7 +135,7 @@ Feature: Remittancecenter
     @RC7
     Scenario: Validation if user is able to perform cancel and Proceed with transfer - Review and Send screen
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-      When I click the Send/Request
+      When I click the Send/Receive Money
       Then I verify the remittancecenter link
       And I click the remittancecenter link
       And I click the getstarted link
@@ -166,7 +166,7 @@ Feature: Remittancecenter
     @RC8
     Scenario:Validation if user is able to initiate a Palwan Express transaction purpose field - Transaction details screen
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-      When I click the Send/Request
+      When I click the Send/Receive Money
       Then I verify the remittancecenter link
       And I click the remittancecenter link
       And I click the getstarted link
@@ -179,7 +179,7 @@ Feature: Remittancecenter
     @RC9
     Scenario:Validation of Recipient Address field with leave it as blank in Remittance center Recipient details screen
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-      When I click the Send/Request
+      When I click the Send/Receive Money
       Then I verify the remittancecenter link
       And I click the remittancecenter link
       And I click the getstarted link
@@ -198,7 +198,7 @@ Feature: Remittancecenter
     @RC10
     Scenario:Validation if user is able to edit Palwan Express transaction - Review and Send screen
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-      When I click the Send/Request
+      When I click the Send/Receive Money
       Then I verify the remittancecenter link
       And I click the remittancecenter link
       And I click the getstarted link

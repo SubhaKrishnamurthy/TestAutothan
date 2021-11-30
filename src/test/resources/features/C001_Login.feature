@@ -10,7 +10,7 @@ Feature: Login Page Validation
   @Login1
   Scenario: Validation of Login functionality with valid and Invalid inputs
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Request
+    When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
