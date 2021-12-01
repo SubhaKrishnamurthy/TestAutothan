@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 
+import actions.Wait;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +25,7 @@ public class Dashboard_Home {
 
     @When("^I click on Foreign Exchange button in dashboard$")
     public void I_click_on_Foreign_Exchange_button_in_dashboard() throws Throwable {
-        dashboard.clickFX();
+       dashboard.clickFX();
     }
 
     @When("^I store the version of the application$")

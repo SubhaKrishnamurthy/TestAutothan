@@ -38,3 +38,50 @@ Scenario: Validate that the error message is displayed when the user has no USD 
     And I click BUYUSD button, select account and enter USD amount "200001"
     Then I verify the amount exceeds error message
 
+    #TCN003-007
+  @FX05
+  Scenario: Validate Foreign Exchange BUY USD transaction page
+    Given I'm on login page of UB online banking application
+    When I click on Foreign Exchange button in dashboard
+    And I click BUYUSD button, select account and enter USD amount "5"
+    And I select the value "Travel" in purpose dropdown section
+    And I click the Next Button in FX
+    And I click the SIGNATURE button
+    And I click the save button in Signature screen
+    And I click on Terms and Conditions options in E-Signature screen
+    Then I Verify Terms and Conditions title in E-Signature screen
+    And I click on OK button in E-Signature screen
+    And I click the Next Button
+    When I Click the Edit button in FX
+    And I select USD amount "10"
+    And I click the Update button in Buy USD section
+    Then I Verify the Buying "USD 10.00" and Fromaccount "1314 9000 0695" and Purpose"Travel"
+    When I click the Buy USD button in FX convert page
+    And I Enter the OTP "222222" in OTP Page
+    Then I verify the Deal Received Title message
+    And I verify the DealSuccess message
+    And I click the OK button
+
+
+  @FX06
+  Scenario: Validate Foreign Exchange SELL USD transaction page
+    Given I'm on login page of UB online banking application
+    When I click on Foreign Exchange button in dashboard
+    And I click SELLUSD button, select account and enter USD amount "5"
+    #And I select the value "Travel" in purpose dropdown section
+    And I click the Next Button in FX
+    And I click the SIGNATURE button
+    And I click the save button in Signature screen
+    And I click on Terms and Conditions options in E-Signature screen
+    Then I Verify Terms and Conditions title in E-Signature screen
+    And I click on OK button in E-Signature screen
+    And I click the Next Button
+    When I Click the Edit button in FX
+    And I select USD amount "10"
+    And I click the Update button in Buy USD section
+    Then I Verify the Selling amount "USD 10.00" and Fromaccount "1314 9000 0695"
+    When I click the Sell USD button in FX convert page
+    And I Enter the OTP "222222" in OTP Page
+    Then I verify the Deal Received Title message
+    And I verify the DealSuccess message
+    And I click the OK button
