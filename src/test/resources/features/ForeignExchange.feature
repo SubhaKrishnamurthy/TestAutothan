@@ -55,7 +55,7 @@ Scenario: Validate that the error message is displayed when the user has no USD 
     When I Click the Edit button in FX
     And I select USD amount "10"
     And I click the Update button in Buy USD section
-    Then I Verify the Buying "USD 10.00" and Fromaccount "1314 9000 0695" and Purpose"Travel"
+    Then I Verify the Buying "USD 10.00" and Fromaccount "1022 2002 1750" and Purpose"Travel"
     When I click the Buy USD button in FX convert page
     And I Enter the OTP "222222" in OTP Page
     Then I verify the Deal Received Title message

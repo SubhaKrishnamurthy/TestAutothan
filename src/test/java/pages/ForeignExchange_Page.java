@@ -114,7 +114,7 @@ public class ForeignExchange_Page extends Keywords {
 			Wait.forSeconds(4000);
 //			String DataToSelectXpath= "(//*[text()='"+purposeValue+"'])";
 //			driver.findElement(By.xpath(DataToSelectXpath)).click();
-			driver.findElement(By.xpath("//span[@title=\"Travel\"]")).click();
+			driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"Travel\"]")).click();
 		}
 
 	}
