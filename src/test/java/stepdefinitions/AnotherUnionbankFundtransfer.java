@@ -17,20 +17,11 @@ public class AnotherUnionbankFundtransfer {
     private SendMoney_Ownaccount  Ownaccount= new SendMoney_Ownaccount();
     private SendMoney_OtherUBaccount  OtherUBaccount= new SendMoney_OtherUBaccount();
 
-
-
-
-
-
-
     @Then("^I Click UBacount link$")
     public void iClickUBacountLink() throws Throwable {
         OtherUBaccount.clickUBaccount();
 
     }
-
-
-
 
     @And("^I enter the UBP account number \"([^\"]*)\" and account name \"([^\"]*)\"$")
     public void iEnterTheUBPAccountNumberAndAccountName(String arg0, String arg1) throws Throwable {

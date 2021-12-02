@@ -94,9 +94,12 @@ public class BuyloadPage extends Keywords {
 		driver.findElement(By.xpath(Datatoselectxpath)).click();
 	}
 	public void clickSelectfromlist() throws Throwable {
+		Wait.forSeconds(5000);
 		click.elementBy(keyselectfromlist);
+
 	}
 	public void enterSearchcontact(String name) throws Throwable {
+		Wait.forSeconds(5000);
 		type.data(keySearchcontact,name);
 	}
 	public void clickSearchresult() throws Throwable {

@@ -59,7 +59,6 @@ public class BuyLoad {
 
     @And("^I enter the name \"([^\"]*)\" in search field$")
     public void iEnterTheNameInSerachField(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
         Buyload.enterSearchcontact(arg0);
     }
 

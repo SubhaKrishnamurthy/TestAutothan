@@ -1,25 +1,2 @@
-2021-04-03 14:55:35,528  INFO [main] StepsBase:19 - Executing S C E N A R I O : Validation of Manage clients tab for BRM user
-2021-04-03 14:55:43,319  INFO [main] Type:14 - Type the value [SubhaBrm] into element [onlineBanking.backoffice.login.username]
-2021-04-03 14:55:43,490  INFO [main] Type:18 - Type Successful!
-2021-04-03 14:55:43,491  INFO [main] Type:14 - Type the value [p@55w0rd] into element [onlineBanking.backoffice.login.password]
-2021-04-03 14:55:43,680  INFO [main] Type:18 - Type Successful!
-2021-04-03 14:55:43,709  INFO [main] Click:30 - Click element [onlineBanking.backoffice.homePage.accounts]
-2021-04-03 14:55:44,055  INFO [main] RunManager:23 - Hey! Manager, Logging everything from here ....
-2021-04-03 14:55:44,055  INFO [main] RunManager:24 - Run ID is --> Run-4034
-2021-04-03 14:55:44,055  INFO [main] Screenshot:22 - Capture screenshot
-2021-04-03 14:55:44,497  INFO [main] Screenshot:28 - Captured!
-2021-04-03 14:55:44,501  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
-null
-2021-04-03 14:55:44,596  INFO [main] Click:34 - Click Successful!
-2021-04-03 14:55:44,596  INFO [main] Click:30 - Click element [onlineBanking.backoffice.accountsPage.manageClients]
-2021-04-03 14:55:44,596  INFO [main] Screenshot:22 - Capture screenshot
-2021-04-03 14:55:45,078  INFO [main] Screenshot:28 - Captured!
-2021-04-03 14:55:45,078  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
-null
-2021-04-03 14:55:45,159  INFO [main] Click:34 - Click Successful!
-2021-04-03 14:55:45,162  INFO [main] Type:14 - Type the value [onlineBanking.backoffice.accountSearchPage.search] into element [Subha1]
-2021-04-03 14:55:45,169 ERROR [main] StepsBase:27 - S C E N A R I O    F A I L E D !!!!!
-2021-04-03 14:55:45,170  INFO [main] Screenshot:22 - Capture screenshot
-2021-04-03 14:55:45,543  INFO [main] Screenshot:28 - Captured!
-2021-04-03 14:55:45,544  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
-null
+2021-11-26 12:46:03,783  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of Fund transfer - to Another UnionBank Account transferred tab
+2021-11-26 12:46:04,101 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
