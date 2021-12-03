@@ -1178,7 +1178,6 @@ public class BackOffice {
     @And("^I Edit the biller and update details$")
     public void iEditTheBillerAndUpdateDetails() throws Throwable {
         BillerPage.updatetheBillerdetails();
-
         RegisterPage.clickLogout();
     }
 
