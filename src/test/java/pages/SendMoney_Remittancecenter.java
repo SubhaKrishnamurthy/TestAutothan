@@ -58,7 +58,8 @@ public class SendMoney_Remittancecenter extends Keywords {
 
 	public void clickRemittancecenter() throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keyRemittancecenter);
+		jsClick.elementBy(keyRemittancecenter);
+		//click.elementBy(keyRemittancecenter);
 		Wait.forSeconds(3000);
 	}
 	public void verifyRemittancecenterisexist() throws Throwable {

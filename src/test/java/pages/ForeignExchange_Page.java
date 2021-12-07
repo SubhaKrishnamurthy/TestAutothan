@@ -136,7 +136,8 @@ public class ForeignExchange_Page extends Keywords {
 
 	public void clickEditBtn() throws Throwable {
 		Wait.forSeconds(5000);
-		click.elementBy(Edit);
+		//click.elementBy(Edit);
+		jsClick.elementBy(Edit);
 	}
 
 	public void enterUSDAmount(String usd) throws Throwable {
@@ -146,16 +147,19 @@ public class ForeignExchange_Page extends Keywords {
 
 	public void clickUpdateButton() throws Throwable {
 		Wait.forSeconds(5000);
-		click.elementBy(Update);
+		//click.elementBy(Update);
+		jsClick.elementBy(Update);
 	}
 
 	public void clickBuyUSDAmountButton() throws Throwable {
 		Wait.forSeconds(1000);
-		click.elementBy(BuyUSDAmount);
+		// click.elementBy(BuyUSDAmount);
+		jsClick.elementBy(BuyUSDAmount);
 	}
 	public void clickSellUSDAmountButton() throws Throwable {
 		Wait.forSeconds(1000);
-		click.elementBy(SellUSDAmount);
+		// click.elementBy(SellUSDAmount);
+		jsClick.elementBy(SellUSDAmount);
 	}
 
 	public void verifyDealReceivedTitle() throws Throwable {
