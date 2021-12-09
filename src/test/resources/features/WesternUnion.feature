@@ -52,8 +52,8 @@ Feature: WesternUnion Functionality Validation
     Given I'm on login page of UB online banking application with user "wu0003" otp "222222"
     When I am on the western union page
     Then I verify the western union header
-    And I enter mtcn code as "2879312115"
-    And I enter mtcn amount as "31"
+    And I enter mtcn code as "9589354923"
+    And I enter mtcn amount as "1.01"
     And I enter the other details
     And I click the goals next button
     Then I verify mtcn code already claimed error message

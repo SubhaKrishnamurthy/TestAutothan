@@ -69,7 +69,7 @@ public class Dashboard_Home_Page extends Keywords {
 	}
 
 	public void clickUITFAccount() throws Throwable {
-		Wait.forSeconds(8000);
+		Wait.forSeconds(4000);
 		click.elementBy(UITFAccount);
 	}
 
