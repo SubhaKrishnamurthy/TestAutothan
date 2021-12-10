@@ -72,7 +72,7 @@ Feature: ManageTransfer
     And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
-    And I Enter the Amount "10" in ub account transfer
+    And I Enter the Amount "200" in ub account transfer
     And I select the reason "ADVERTISING"
     And I click the Next Button
     And I verify the Gotit button displayed or not
@@ -83,4 +83,4 @@ Feature: ManageTransfer
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     #And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 1,500.00"and
-    And I Verify the values "PHP 10.00" and "**** **** 1750" and "1014 0000 1643""" in Recent transactions
+    And I Verify the values "PHP 200.00" and "**** **** 1750" and "1014 0000 1643""" in Recent transactions
