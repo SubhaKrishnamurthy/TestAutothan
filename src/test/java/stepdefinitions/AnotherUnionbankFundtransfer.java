@@ -80,4 +80,9 @@ public class AnotherUnionbankFundtransfer {
     public void iSelectTheFutureDate() throws ApplicationException {
         OtherUBaccount.Selectthefututdate();
     }
+
+    @And("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"\" in Recent transactions$")
+    public void iVerifyTheValuesAndAndInRecentTransactions(String arg0, String arg1, String arg2) throws Throwable {
+        Ownaccount.verifytheRecenttransactionPage(arg0,arg1,arg2);
+    }
 }

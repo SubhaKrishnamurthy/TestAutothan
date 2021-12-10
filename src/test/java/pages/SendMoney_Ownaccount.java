@@ -3,6 +3,7 @@ package pages;
 import actions.Wait;
 import base.Keywords;
 import com.aventstack.extentreports.model.TestAttribute;
+import cucumber.deps.com.thoughtworks.xstream.mapper.Mapper;
 import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
@@ -43,11 +44,12 @@ public class SendMoney_Ownaccount extends Keywords {
 	private String keyamountedit="onlineBanking.Fundtransfer.Btnamountedit";
 	private String keytxndatetransfersuccessful="onlineBanking.Fundtransfer.lbltxndatetransfersuccessful";
 	private String keyReferenceNumbertransfersuccessful="onlineBanking.Fundtransfer.lblReferenceNumbertransfersuccessful";
-	private String keyManageTransfers="onlineBanking.Fundtransfer.txtManageTransfers.XPATH";
+	private String keyManageTransfers="onlineBanking.Fundtransfer.txtManageTransfers";
 	private String keySearchRecent="onlineBanking.Fundtransfer.txtSearchRecent";
+	private String keySearchButton="onlineBanking.Fundtransfer.txtSearchRecent";
 
-   public String txndate;
-   public String ReferenceNumber;
+//   public String txndate;
+//   public String ReferenceNumber;
 	private LoginPage loginPage = new LoginPage();
 	private GreenPinPage greenPinPage = new GreenPinPage();
 
@@ -219,15 +221,22 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	public void StoreTxndateandReferencenumber() throws Throwable {
 		Wait.forSeconds(3000);
-		txndate=driver.findElement(By.xpath("//*[text()='Transaction Date']/following-sibling::output")) .getText();
-		ReferenceNumber=driver.findElement(By.xpath("//*[text()='Reference Number']/following-sibling::output")) .getText();
+		String ReferenceNumber=driver.findElement(By.xpath("//*[text()='Reference Number']/following-sibling::output")).getText();
 	}
 
-	public void verifytheRecenttrasaction(String Amount,String fromacc,String toacc) throws Throwable {
-		Wait.forSeconds(3000);
+	public void verifytheRecenttransactionPage(String Amount,String fromacc,String toacc) throws Throwable {
+		String ReferenceNumber=driver.findElement(By.xpath("//*[text()='Reference Number']/following-sibling::output")).getText();
+		String txndate=driver.findElement(By.xpath("//*[text()='Transaction Date']/following-sibling::output")).getText();
+		System.out.println(ReferenceNumber);
+		Wait.forSeconds(5000);
 		click.elementBy(keytransfersuccessfulnewtransaction);
+		Wait.forSeconds(3000);
 		click.elementBy(keyManageTransfers);
-		click.elementBy(keySearchRecent);
+//		Wait.forSeconds(3000);
+//		click.elementBy(keySearchRecent);
+//		type.data(keySearchRecent,ReferenceNumber);
+//		click.elementBy(keySearchButton);
+		Wait.forSeconds(7000);
 		String txndateval=txndate;
 		String txndatevalout[]=txndateval.split(" ");
 		String monthval1=txndatevalout[0].substring(0, 1);
@@ -243,7 +252,10 @@ public class SendMoney_Ownaccount extends Keywords {
 		txndateval=monthval+" "+txndatevalout[1]+" "+txndatevalout[2]+","+" "+txndatevalout[3]+" "+txndatevalout[4];
 		String dbval="//*[contains(text(),'"+txndateval+"')]";
 		driver.findElement(By.xpath(dbval)).click();
+		Wait.forSeconds(3000);
+		verify.elementTextMatching(keytransfersuccessfultoacct,toacc);
+		verify.elementTextMatching(keytransfersuccessfulfromacct,fromacc);
+		verify.elementTextMatching(keytransfersuccessfulamt,Amount);
 	}
 
-
-}
+	}

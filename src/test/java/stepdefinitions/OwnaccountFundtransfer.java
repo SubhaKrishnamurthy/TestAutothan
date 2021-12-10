@@ -170,9 +170,10 @@ public class OwnaccountFundtransfer {
         Ownaccount.StoreTxndateandReferencenumber();
     }
 
-    @Then("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" in Recenent transactions$")
-    public void iVerifyTheValuesAndAndInRecenentTransactions(String arg0, String arg1, String arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+    @And("^I Verify the values \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" in Recent transactions$")
+    public void iVerifyTheValuesAndAndInRecentTransactions(String arg0, String arg1, String arg2) throws Throwable {
+        Ownaccount.verifytheRecenttransactionPage(arg0,arg1,arg2);
 
     }
+
 }
