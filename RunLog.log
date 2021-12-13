@@ -1,2 +1,37 @@
-2021-11-26 12:46:03,783  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of Fund transfer - to Another UnionBank Account transferred tab
-2021-11-26 12:46:04,101 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2021-12-13 13:05:16,545  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of card control functionality in Transaction control screen when the card is unlocked
+2021-12-13 13:05:46,949  INFO [main] Type:41 - Type the value [creditcard002] into element [convergent.login.textboxUsername]
+2021-12-13 13:05:47,259  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:05:52,265  INFO [main] Type:41 - Type the value [p@55w0rd] into element [convergent.login.textboxPassword]
+2021-12-13 13:05:52,477  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:21,857  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin1]
+2021-12-13 13:06:22,002  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:22,003  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin2]
+2021-12-13 13:06:22,141  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:22,141  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin3]
+2021-12-13 13:06:22,295  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:22,295  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin4]
+2021-12-13 13:06:22,429  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:22,430  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin5]
+2021-12-13 13:06:22,577  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:22,577  INFO [main] Type:41 - Type the value [2] into element [onlineBanking.GreenPin.Pin6]
+2021-12-13 13:06:22,707  INFO [main] Type:46 - Type Successful!
+2021-12-13 13:06:31,746  INFO [main] Click:39 - Click element [onlineBanking.CC.CreditCard]
+2021-12-13 13:06:32,082  INFO [main] RunManager:23 - Hey! 11524, Logging everything from here ....
+2021-12-13 13:06:32,082  INFO [main] RunManager:24 - Run ID is --> Run-Auto-13-12-2021-01-06-32
+2021-12-13 13:06:32,082  INFO [main] Screenshot:22 - Capture screenshot
+2021-12-13 13:06:32,323  INFO [main] Screenshot:28 - Captured!
+2021-12-13 13:06:32,330  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
+null
+2021-12-13 13:06:35,193  INFO [main] Click:50 - Click Successful!
+2021-12-13 13:06:39,196  INFO [main] Click:39 - Click element [onlineBanking.CC.ManageCards]
+2021-12-13 13:06:39,198  INFO [main] Screenshot:22 - Capture screenshot
+2021-12-13 13:06:39,530  INFO [main] Screenshot:28 - Captured!
+2021-12-13 13:06:39,532  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
+null
+2021-12-13 13:08:39,924 ERROR [main] Get:27 - Element [onlineBanking.CC.ManageCards] not found!
+2021-12-13 13:08:39,925  INFO [main] Click:56 - Error while clicking the element onlineBanking.CC.ManageCards
+2021-12-13 13:08:39,930 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2021-12-13 13:08:39,931  INFO [main] Screenshot:22 - Capture screenshot
+2021-12-13 13:08:40,354  INFO [main] Screenshot:28 - Captured!
+2021-12-13 13:08:40,356  WARN [main] Screenshot:42 - Problem while attaching the screenshot to extent report
+null

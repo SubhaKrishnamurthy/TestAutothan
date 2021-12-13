@@ -18,6 +18,7 @@ public class CardControl_Page extends Keywords {
     private String Unlock = "onlineBanking.CC.Unlock";
     private String Lock = "onlineBanking.CC.Lock";
     private String ManageCard = "onlineBanking.CC.ManageCard";
+    private String ManageCards = "onlineBanking.CC.ManageCards";
 
     LoginPage login = new LoginPage();
     SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
@@ -29,7 +30,7 @@ public class CardControl_Page extends Keywords {
         //jsClick.elementBy(AccountsNextslide);
         //jsClick.elementBy(AccountsNextslide);
         click.elementBy(CreditCard);
-    }
+        }
 
     public void clickTransactionControls() throws Throwable {
         click.elementBy(Transaction_Controls);
@@ -97,6 +98,8 @@ public class CardControl_Page extends Keywords {
     }
 
     public void ManageCard() throws Throwable {
-        click.elementBy(ManageCard);
+        Wait.forSeconds(4000);
+        jsClick.elementBy(ManageCards);
+        //click.elementBy(ManageCards);
     }
 }
