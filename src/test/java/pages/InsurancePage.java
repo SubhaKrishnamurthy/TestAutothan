@@ -5,6 +5,7 @@ import base.Test;
 import actions.Wait;
 import exceptions.ApplicationException;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
 import static driver.DriverManager.Drivertype;
@@ -59,6 +60,7 @@ public class InsurancePage extends Keywords {
     private String Inbox = "onlineBanking.Insurance.Inbox";
     private String Transactions = "onlineBanking.Insurance.Transactions";
     private String SubmitBtn = "onlineBanking.Insurance.SubmitBtn";
+    private  String CloseBtn = "onlineBanking.Dashboard.CloseBtn";
 
     CommonMethodsPage commonMethods = new CommonMethodsPage();
     SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
@@ -127,29 +129,31 @@ public class InsurancePage extends Keywords {
     }
 
     public void cancelPreviousAccident() throws Throwable{
+        Wait.forSeconds(4000);
+        if(driver.findElement(By.xpath("//div[@class='wm-close-button walkme-x-button']")).isDisplayed())
+        {
+            jsClick.elementBy(CloseBtn);
+         }
         click.elementBy(ProductUnderMyInsurance1);
-        try {
-            Wait.forSeconds(2000);
-            JavascriptExecutor jse = (JavascriptExecutor)driver;
-            jse.executeScript("window.scrollBy(0,250)");
-            Wait.forSeconds(2000);
-            if (CancelInsuranceBtn != null)
-            {
-                jsClick.elementBy(CancelInsuranceBtn);
-                verify.elementIsPresent(CancelPurchasePopUpTilte);
-                jsClick.elementBy(CancelReason);
-                jsClick.elementBy(CancelPurchaseBtn);
-                verify.elementIsPresent(PurchaseCancelledTitle);
-                verify.elementIsPresent(ContinueBrowsingBtn);
-                jsClick.elementBy(ContinueBrowsingBtn);
+            try {
+                Wait.forSeconds(2000);
+                JavascriptExecutor jse = (JavascriptExecutor) driver;
+                jse.executeScript("window.scrollBy(0,250)");
+                Wait.forSeconds(2000);
+                if (CancelInsuranceBtn != null) {
+                    jsClick.elementBy(CancelInsuranceBtn);
+                    verify.elementIsPresent(CancelPurchasePopUpTilte);
+                    jsClick.elementBy(CancelReason);
+                    jsClick.elementBy(CancelPurchaseBtn);
+                    verify.elementIsPresent(PurchaseCancelledTitle);
+                    verify.elementIsPresent(ContinueBrowsingBtn);
+                    jsClick.elementBy(ContinueBrowsingBtn);
+                } else {
+                    verify.elementIsPresent(Accident);
+                }
+            } catch (ApplicationException e) {
+                e.printStackTrace();
             }
-            else {
-                verify.elementIsPresent(Accident);
-            }
-        }
-        catch (ApplicationException e) {
-            e.printStackTrace();
-        }
     }
 
     public void purchase_AccidentProduct() throws Throwable {

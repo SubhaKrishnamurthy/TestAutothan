@@ -194,7 +194,7 @@ public class CommonMethods {
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
                 actions.Wait.forSeconds(8000);
             }
-        }
+            }
         dashboardHomePage.clickClose_Popup();
     }
 
