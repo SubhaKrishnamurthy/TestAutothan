@@ -2,6 +2,7 @@ package pages;
 
 import actions.Wait;
 import base.Keywords;
+import exceptions.ApplicationException;
 import gherkin.lexer.Da;
 import gherkin.lexer.Th;
 import org.openqa.selenium.By;
@@ -41,6 +42,9 @@ public class Dashboard_Home_Page extends Keywords {
 	private String buyLoad = "onlineBanking.Dashboard.BuyLoadLink";
 	private String MBBSection = "onlineBanking.Dashboard.MBBSection";
 	private String Dashboard = "onlineBanking.HomePage.DashboardLink";
+	private String PopUp = "onlineBanking.Dashboard.PopUp";
+	private String CloseBtn = "onlineBanking.Dashboard.CloseBtn";
+
 
 	public void clickSendReceive() throws Throwable {
 		Wait.forSeconds(10000);
@@ -160,5 +164,17 @@ public class Dashboard_Home_Page extends Keywords {
 		Wait.forSeconds(2000);
 		verify.IfElementExists(MBBSection);
 		click.elementBy(MBBSection);
+	}
+
+	public void clickClose_Popup() throws Throwable {
+		try{
+			if(PopUp!=null)
+			{
+				jsClick.elementBy(CloseBtn);
+			}
+		}
+		catch (ApplicationException e) {
+			e.printStackTrace();
+		}
 	}
 }

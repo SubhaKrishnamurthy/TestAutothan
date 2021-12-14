@@ -14,6 +14,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.CommonMethodsPage;
+import pages.Dashboard_Home_Page;
 import pages.GreenPinPage;
 import pages.LoginPage;
 import runners.ConvergentTestRunner;
@@ -27,6 +28,7 @@ public class CommonMethods {
     private LoginPage login = new LoginPage();
     private CommonMethodsPage common = new CommonMethodsPage();
     GreenPinPage greenPinPage = new GreenPinPage();
+    private Dashboard_Home_Page dashboardHomePage = new Dashboard_Home_Page();
    // private static Logger log = Logger.getLogger(Click.class);
 
     WebDriver driver;
@@ -65,6 +67,7 @@ public class CommonMethods {
             actions.Wait.forSeconds(3000);
             greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
         }
+        dashboardHomePage.clickClose_Popup();
     }
 
     @And("^I logout of UB online banking application$")
@@ -89,7 +92,9 @@ public class CommonMethods {
             greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
                     String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
             actions.Wait.forSeconds(3000);
-        } else {
+        }
+        else
+            {
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
                 actions.Wait.forSeconds(50000);
             }
@@ -109,6 +114,7 @@ public class CommonMethods {
             greenPinPage.enter_Pin(String.valueOf(ch[0]), String.valueOf(ch[1]), String.valueOf(ch[2]),
                     String.valueOf(ch[3]), String.valueOf(ch[4]), String.valueOf(ch[5]));
         }
+        dashboardHomePage.clickClose_Popup();
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\"$")
@@ -145,6 +151,7 @@ public class CommonMethods {
             }
             greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
         }
+        dashboardHomePage.clickClose_Popup();
     }
 
     @Given("^I'm on login page of UB online banking application with user \"([^\"]*)\" otp \"([^\"]*)\"$")
@@ -188,6 +195,7 @@ public class CommonMethods {
                 actions.Wait.forSeconds(8000);
             }
         }
+        dashboardHomePage.clickClose_Popup();
     }
 
 
