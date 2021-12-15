@@ -30,6 +30,9 @@ Scenario: Validation of installment history transactions, upcoming due date remi
   Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
   When user selects credit card2 listed in dashboard
   When user clicks installment history icon
+  Then Application should navigate to installment history screen
+  When user selects any transaction listed under installment history
+  Then Application should navigate to installment details screen
   Then user verifies installment history and due date reminder and broken down payment schedules
 
 @IH04
