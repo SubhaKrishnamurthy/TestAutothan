@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.InstallmentHistoryPage;
@@ -59,5 +60,51 @@ public class InstallmentHistory {
     @Then("^user verifies installment history and due date reminder and broken down payment schedules$")
     public void userVerifiesInstallmentHistoryAndDueDateReminderAndBrokenDownPaymentSchedules() throws Throwable {
          installmentHistoryPage.verify_ReminderandBreakDownPayment();
+    }
+
+    @And("^user click to view statement icon$")
+    public void userClickToViewStatementIcon() throws Throwable {
+        installmentHistoryPage.clickViewStatement();
+
+    }
+
+    @Then("^Verify application displays all the details under view statement$")
+    public void verifyApplicationDisplaysAllTheDetailsUnderViewStatement() throws Throwable {
+        installmentHistoryPage.verify_ViewStatementDetails();
+
+    }
+
+    @And("^user to click DOWNLOAD STATEMENT$")
+    public void userToClickDOWNLOADSTATEMENT() throws Throwable {
+        installmentHistoryPage.clickDownloadStatement();
+
+    }
+
+    @When("^user to select month and year$")
+    public void userToSelectMonthAndYear() throws Throwable {
+        installmentHistoryPage.clickMonthYear();
+        installmentHistoryPage.selectMonthYear();
+
+    }
+
+    @And("^user to click DOWNLOAD PDF$")
+    public void userToClickDOWNLOADPDF() throws Throwable {
+        installmentHistoryPage.clickDownloadPDF();
+
+    }
+
+    @Then("^Verify Application is display Download status message$")
+    public void verifyApplicationIsDisplayDownloadStatusMessage() throws Throwable {
+        installmentHistoryPage.verifyDownloadStatus();
+    }
+
+    @And("^Verify Application is display success screen message$")
+    public void verifyApplicationIsDisplaySuccessScreenMessage() throws Throwable {
+        installmentHistoryPage.verifyDownloadSuccessMessage();
+    }
+
+    @When("^user to click DOWNLOAD STATEMENT in View Statement$")
+    public void userToClickDOWNLOADSTATEMENTInViewStatement() throws Throwable {
+        installmentHistoryPage.clickDownloadStatementView();
     }
 }

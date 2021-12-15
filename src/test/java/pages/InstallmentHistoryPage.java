@@ -35,7 +35,22 @@ public class InstallmentHistoryPage extends Keywords {
     private String checkMarkIndicator = "onlineBanking.InstallmentHistory.checkMarkIndicator";
     private String ViewStatement = "onlineBanking.InstallmentHistory.ViewStatement";
     private String DownloadStatement = "onlineBanking.InstallmentHistory.DownloadStatement";
+    private String DownloadStatementView = "onlineBanking.InstallmentHistory.DownloadStatementView";
     private String ManageCards = "onlineBanking.CC.ManageCards";
+    private String ClickMonth = "onlineBanking.InstallmentHistory.ClickMonth";
+    private String SelectMonth = "onlineBanking.InstallmentHistory.SelectMonth";
+    private String StatementBalance = "onlineBanking.InstallmentHistory.StatementBalance";
+    private String MinimumAmountDue = "onlineBanking.InstallmentHistory.MinimumAmountDue";
+    private String StatementDate = "onlineBanking.InstallmentHistory.StatementDate";
+    private String PreviousBalance = "onlineBanking.InstallmentHistory.PreviousBalance";
+    private String PurchasesAdvances = "onlineBanking.InstallmentHistory.PurchasesAdvances";
+    private String PaymentsCredits = "onlineBanking.InstallmentHistory.PaymentsCredits";
+    private String TotalAmountDue = "onlineBanking.InstallmentHistory.TotalAmountDue";
+    private String DownloadPDF = "onlineBanking.InstallmentHistory.DownloadPDF";
+    private String DownloadHeader = "onlineBanking.InstallmentHistory.DownloadHeader";
+    private String DownloadSuccessMessage = "onlineBanking.InstallmentHistory.DownloadSuccessMessage";
+
+
     private Wait wait;
 
     public void select_CreditCard2() throws Throwable {
@@ -50,7 +65,7 @@ public class InstallmentHistoryPage extends Keywords {
 
     public void verify_Icons() throws Throwable {
         Wait.forSeconds(6000);
-        verify.elementIsPresent(InstallmentHistory);
+        verify.elementIsPresent(InstallmentHistoryTitle);
         verify.elementIsPresent(ViewStatement);
         verify.elementIsPresent(DownloadStatement);
         verify.elementIsPresent(ManageCards);
@@ -58,7 +73,7 @@ public class InstallmentHistoryPage extends Keywords {
 
     public void click_InstallmentHistoryIcon() throws Throwable {
         Wait.forSeconds(6000);
-        jsClick.elementBy(InstallmentHistory);
+        jsClick.elementBy(InstallmentHistoryTitle);
     }
 
     public void verify_installemntHistoryScreen() throws Throwable {
@@ -98,6 +113,50 @@ public class InstallmentHistoryPage extends Keywords {
         verify.elementIsPresent(DueDate);
         verify.elementIsPresent(InstallmentAmt);
         verify.elementIsPresent(checkMarkIndicator);
-
     }
+    public void clickViewStatement() throws Throwable {
+        Wait.forSeconds(4000);
+        click.elementBy(ViewStatement);
+    }
+    public void verify_ViewStatementDetails() throws Throwable {
+        Wait.forSeconds(4000);
+        verify.elementIsPresent(StatementBalance);
+        verify.elementIsPresent(MinimumAmountDue);
+        verify.elementIsPresent(DueDate);
+        verify.elementIsPresent(StatementDate);
+        verify.elementIsPresent(PreviousBalance);
+        verify.elementIsPresent(PurchasesAdvances);
+        verify.elementIsPresent(PaymentsCredits);
+        verify.elementIsPresent(TotalAmountDue);
+    }
+    public void clickMonthYear() throws Throwable {
+        Wait.forSeconds(4000);
+        click.elementBy(ClickMonth);
+        //jsClick.elementBy(ClickMonth);
+    }
+    public void selectMonthYear() throws Throwable {
+        Wait.forSeconds(2000);
+        click.elementBy(SelectMonth);
+    }
+    public void clickDownloadStatement() throws Throwable {
+        Wait.forSeconds(4000);
+        click.elementBy(DownloadStatement);
+    }
+    public void clickDownloadStatementView() throws Throwable {
+        Wait.forSeconds(4000);
+        click.elementBy(DownloadStatement);
+    }
+    public void clickDownloadPDF() throws Throwable {
+        Wait.forSeconds(4000);
+        click.elementBy(DownloadPDF);
+    }
+    public void verifyDownloadStatus() throws Throwable {
+      verify.IfElementExists(DownloadHeader);
+    }
+    public void verifyDownloadSuccessMessage() throws Throwable {
+        Wait.forSeconds(2000);
+        //verify.IfElementExists(DownloadSuccessMessage);
+        verify.elementIsPresent(DownloadSuccessMessage);
+    }
+
 }

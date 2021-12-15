@@ -32,6 +32,30 @@ Scenario: Validation of installment history transactions, upcoming due date remi
   When user clicks installment history icon
   Then user verifies installment history and due date reminder and broken down payment schedules
 
+@IH04
+Scenario: Validation of view statement
+  Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+  When user selects credit card2 listed in dashboard
+  And user click to view statement icon
+  And user to select month and year
+  Then Verify application displays all the details under view statement
+  When user to click DOWNLOAD STATEMENT in View Statement
+  And user to click DOWNLOAD PDF
+  Then Verify Application is display Download status message
+  And Verify Application is display success screen message
+  And I click the OK button
+
+  @IH05
+  Scenario: Validation Download Statement
+    Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+    When user selects credit card2 listed in dashboard
+    And user to click DOWNLOAD STATEMENT
+    And user to select month and year
+     And user to click DOWNLOAD PDF
+    Then Verify Application is display Download status message
+    And Verify Application is display success screen message
+    And I click the OK button
+
 
 
 
