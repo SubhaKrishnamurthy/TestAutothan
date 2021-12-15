@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@InstallmentHistory
+@InstallmentHistory @Regression
 Feature: Installment History Functionality Validation
 
   @IH01
