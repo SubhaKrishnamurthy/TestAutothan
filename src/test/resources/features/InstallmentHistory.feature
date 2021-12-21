@@ -8,7 +8,7 @@ Feature: Installment History Functionality Validation
 
   @IH01
 Scenario: Validation of viewing installment history when user has installments
-  Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+  Given I'm on login page of UB online banking application with user "krelotatest" otp "111111"
   When user selects credit card2 listed in dashboard
   Then user able to verify icons and other details of the screen
   When user clicks installment history icon
@@ -19,7 +19,7 @@ Scenario: Validation of viewing installment history when user has installments
 
 @IH02
 Scenario: Validation of viewing installment history when user has no installments
-  Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+  Given I'm on login page of UB online banking application with user "krelotatest" otp "111111"
   When user selects credit card1 listed in dashboard
   When user clicks installment history icon
   Then Verify application displays "You currently do not have any installments" under installment history
@@ -27,7 +27,7 @@ Scenario: Validation of viewing installment history when user has no installment
 
 @IH03
 Scenario: Validation of installment history transactions, upcoming due date reminder section, broken-down payment schedules
-  Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+  Given I'm on login page of UB online banking application with user "krelotatest" otp "111111"
   When user selects credit card2 listed in dashboard
   When user clicks installment history icon
   Then Application should navigate to installment history screen
@@ -37,7 +37,7 @@ Scenario: Validation of installment history transactions, upcoming due date remi
 
 @IH04
 Scenario: Validation of view statement
-  Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+  Given I'm on login page of UB online banking application with user "krelotatest" otp "111111"
   When user selects credit card2 listed in dashboard
   And user click to view statement icon
   And user to select month and year
@@ -50,7 +50,7 @@ Scenario: Validation of view statement
 
   @IH05
   Scenario: Validation Download Statement
-    Given I'm on login page of UB online banking application with user "krelotatest" otp "222222"
+    Given I'm on login page of UB online banking application with user "krelotatest" otp "111111"
     When user selects credit card2 listed in dashboard
     And user to click DOWNLOAD STATEMENT
     And user to select month and year
