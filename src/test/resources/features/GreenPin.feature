@@ -89,7 +89,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP08
   Scenario: Verify whether User want to re-enter his/her PIN so that correct PIN is entered
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin
@@ -101,7 +101,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP09
   Scenario: Verify whether user receives an error prompt when users input the consecutive digits as PIN
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin
@@ -113,7 +113,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP10
   Scenario: Verify whether user receives an error prompt when users input the same digits as PIN
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin
@@ -125,7 +125,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP11
   Scenario: Verify whether user receives error message that inputted PIN doesn't match the previous PIN input
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin
@@ -137,7 +137,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP12
   Scenario: Verify whether user is  displayed with the correct reminders upon setting a pin
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin
