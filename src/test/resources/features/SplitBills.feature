@@ -80,8 +80,8 @@ Feature: SplitBills Functionality Validation
       And I add one participant as "Aa"
       And I click the update Button
       And I click the Request payemnt php button
-      Then I Verify Congratulation message,"<FromAccountName>","<FromAccountNumber>","<RequesingAmount>","<TotalBill>","<YourAmount>","<message>","<DepositToAccName>","<DepositToAccNumber>"
       Then I Click the New Transaction button Link
+      #Then I Verify Congratulation message,"<FromAccountName>","<FromAccountNumber>","<RequesingAmount>","<TotalBill>","<YourAmount>","<message>","<DepositToAccName>","<DepositToAccNumber>"
       Then I verify dashboard page
       And I Click the Logout Button
 

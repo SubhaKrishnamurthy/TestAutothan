@@ -81,7 +81,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @SP07
    Scenario: Verify whether User is redirected to the page where he/she will enter PIN upon clicking 'Set Pin' option
-    Given I'm on login page of UB online banking application with user "gdtrono04" otp "111111"
+    Given I'm on login page of UB online banking application with user "gdtrono04" otp "222222"
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Set Pin

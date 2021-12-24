@@ -383,9 +383,9 @@ public class MobileBranchBanking_Page extends Keywords {
         click.elementBy(Clickcardformoredetails);
         Wait.forSeconds(2000);
         click.elementBy(CancelVisit);
-        commonMethodsPage.clickYesBtn();
         Wait.forSeconds(2000);
-    }
+        commonMethodsPage.clickYesBtn();
+      }
 
     public void editTodaysVisit() throws Throwable {
         dashboardHomePage.clickMBBSection();

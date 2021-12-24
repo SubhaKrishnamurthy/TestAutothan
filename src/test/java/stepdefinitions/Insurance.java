@@ -2,17 +2,20 @@ package stepdefinitions;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pages.Dashboard_Home_Page;
 import pages.InsurancePage;
 import pages.WesternUnionPage;
 
 public class Insurance {
 
     InsurancePage insurancePage = new InsurancePage();
+    private Dashboard_Home_Page dashboardHomePage = new Dashboard_Home_Page();
 
 
     @When("^I am on the insurance page$")
     public void i_am_on_the_insurance_page() throws Throwable {
         insurancePage.click_viewInsuranceBtn();
+        dashboardHomePage.clickClose_Popup();
     }
 
     @Then("^i verify the market place page$")
