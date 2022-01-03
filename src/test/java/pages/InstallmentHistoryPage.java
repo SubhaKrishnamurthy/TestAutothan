@@ -68,7 +68,7 @@ public class InstallmentHistoryPage extends Keywords {
         verify.elementIsPresent(InstallmentHistoryTitle);
         verify.elementIsPresent(ViewStatement);
         verify.elementIsPresent(DownloadStatement);
-        verify.elementIsPresent(ManageCards);
+        //verify.elementIsPresent(ManageCards);
     }
 
     public void click_InstallmentHistoryIcon() throws Throwable {

@@ -202,11 +202,11 @@ public class ManageRecipient_Page extends Keywords {
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",30));
 		type.data(accountNumber, Tools.RANDOMTEXT("RANDOMNUMBER",12));
 		commonMethods.verifyAccNumNoErrMsg();
-		Wait.forSeconds(2000);
-		WebElement element = driver.findElement(By.cssSelector("div.header-foreground > div > div.left.part > a > svg"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().build().perform();
-		Wait.forSeconds(2000);
+//		Wait.forSeconds(2000);
+//		WebElement element = driver.findElement(By.cssSelector("div.header-foreground > div > div.left.part > a > svg"));
+//		Actions actions = new Actions(driver);
+//		actions.moveToElement(element).click().build().perform();
+//		Wait.forSeconds(2000);
 	}
 
 	public void editAccountNumber1() throws Throwable {

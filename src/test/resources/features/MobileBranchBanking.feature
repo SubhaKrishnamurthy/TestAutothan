@@ -152,15 +152,14 @@ Feature: Mobile Branch Banking Functionality Validation
       And I search the branch as Ayala Insular "The Ark"
       And I select todays date
       And I click the next button
-      And I click add transaction button
-      And I click add cash deposit button
+#      And I click add transaction button
+#      And I click add cash deposit button
       And I enter account number as "029160078588"
       And I enter amount as "100"
       And I click the next button
       And I edit the amount from review page
       Then I click book visit button
-      And I cancel the visit
-      #And I logout of UB online banking application
+      And I logout of UB online banking application
 
 
 

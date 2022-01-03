@@ -146,6 +146,7 @@ public class MobileBranchBanking {
     @Then("^I click book visit button$")
     public void i_click_book_visit_button() throws Throwable {
         mbbPage.click_BookVisit();
+
     }
 
     @Then("^I cancel the visit$")

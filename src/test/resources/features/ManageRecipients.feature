@@ -111,7 +111,7 @@ Feature: Manage Recipients functionalities Validation
       When I click on Send/Request link in dashboard
       And I click the manage recipient link
       And I click the Add recipient button
-      Then I select bank name and enter details and Save as favorite
+      When I select bank name and enter details and Save as favorite
       And I search for the recipient, change accountNumber1 and update
       And I search for the recipient, change accountNumber2 and update
       And I search for the recipient, change accountNumber3 and update

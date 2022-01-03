@@ -130,10 +130,10 @@ public class InsurancePage extends Keywords {
 
     public void cancelPreviousAccident() throws Throwable{
         Wait.forSeconds(4000);
-        if(driver.findElement(By.xpath("//div[@class='wm-close-button walkme-x-button']")).isDisplayed())
-        {
-            jsClick.elementBy(CloseBtn);
-         }
+//        if(driver.findElement(By.xpath("//div[@class='wm-close-button walkme-x-button']")).isDisplayed())
+//        {
+//            jsClick.elementBy(CloseBtn);
+//         }
         click.elementBy(ProductUnderMyInsurance1);
             try {
                 Wait.forSeconds(2000);

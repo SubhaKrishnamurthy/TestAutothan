@@ -353,12 +353,16 @@ public class MobileBranchBanking_Page extends Keywords {
         if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
         {
             get.elementBy(SelectDate).click();
+            commonMethodsPage.clickYesBtn();
+            Wait.forSeconds(2000);
         }
         else
             {
             click.elementBy(SelectDate);
         }
             click.elementBy(SelectdateTodaydate);
+        commonMethodsPage.clickYesBtn();
+        Wait.forSeconds(2000);
         }
 
 
@@ -370,7 +374,8 @@ public class MobileBranchBanking_Page extends Keywords {
     }
 
     public void click_BookVisit() throws Throwable {
-        click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWBookVisit);
+        //click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWBookVisit);
+        click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWUpdateVisit);
         verify.elementIsPresent(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWThankYou);
         Wait.forSeconds(2000);
         click.elementBy(PG_MOBILEBRANCHBANKINGBOOKVISITREVIEWGotoDashboard);

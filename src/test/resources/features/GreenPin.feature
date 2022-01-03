@@ -132,6 +132,8 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     Then User able to enter six digits as 130495
     And I click greenPin next Button
     Then User able to enter six digits as 664805
+    And I click greenPin next Button
+    Then User able to enter six digits as 675432
     And I click greenPin Confirm Button
     Then User should be displayed with Pin Doesnt Match ErrMsg
 

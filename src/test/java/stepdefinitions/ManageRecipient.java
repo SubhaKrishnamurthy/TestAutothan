@@ -5,6 +5,7 @@ import actions.Wait;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import helper.PropertyReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -59,7 +60,7 @@ public class ManageRecipient {
         manageRecipient.doAddRecipient_AccountNumberErrMsg();
     }
 
-    @Then("^I select bank name and enter details and Save as favorite$")
+    @When("^I select bank name and enter details and Save as favorite$")
     public void I_select_bank_name_and_enter_details_and_Save_as_favorite() throws Throwable {
         manageRecipient.doAddFavoriteRecipient();
     }
