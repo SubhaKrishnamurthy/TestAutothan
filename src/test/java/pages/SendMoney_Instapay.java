@@ -32,6 +32,9 @@ public class SendMoney_Instapay extends Keywords {
 	}
 	public void clickInstapay() throws Throwable {
 		Wait.forSeconds(5000);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") ) {
+			Wait.forSeconds(5000);
+		}
 		click.elementBy(keyInstapay);
 	}
 	public void verifyErrormessage(String Errormsg) throws Throwable {

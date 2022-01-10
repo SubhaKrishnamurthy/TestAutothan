@@ -17,7 +17,7 @@ Feature: Instapay Fund Transfer
     And I select the Account number from saved recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "500" in ub account transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button

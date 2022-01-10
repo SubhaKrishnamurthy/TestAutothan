@@ -106,7 +106,10 @@ public class ForeignExchange_Page extends Keywords {
 
 			get.elementBy(Purpose).click();
 			Wait.forSeconds(3000);
-			driver.findElement(By.xpath("//span[@title=\"Travel\"]")).click();
+			//driver.findElement(By.xpath("//span[@title=\"Travel\"]")).click();
+			//driver.findElement(By.xpath("//*[text()=\"Travel\"]")).click();
+			driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"Travel\"]")).click();
+
 
 		} else {
 
@@ -135,13 +138,14 @@ public class ForeignExchange_Page extends Keywords {
 	}
 
 	public void clickEditBtn() throws Throwable {
-		Wait.forSeconds(5000);
+		Wait.forSeconds(10000);
 		//click.elementBy(Edit);
 		jsClick.elementBy(Edit);
+		Wait.forSeconds(2000);
 	}
 
 	public void enterUSDAmount(String usd) throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(10000);
 		type.data(EnterUSD, usd);
 	}
 

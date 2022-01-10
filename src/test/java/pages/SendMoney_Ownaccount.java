@@ -75,8 +75,8 @@ public class SendMoney_Ownaccount extends Keywords {
 		type.data(KeyRemarks,Remarks);
 	}
 	public void clickNextbutton() throws Throwable {
-		Wait.forSeconds(5000);
-		click.elementBy(KeyNext);
+		Wait.forSeconds(8000);
+		jsClick.elementBy(KeyNext);
 	}
 	public void verifytheGotitbutton() throws Throwable {
 		try{
@@ -121,9 +121,18 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	public void verifytransferdetailsinsuccessfulpage(String Fromacc,String Toacc,String Amount) throws Throwable {
 		Wait.forSeconds(3000);
-		verify.elementTextMatching(keytransfersuccessfultoacct,Toacc);
-		verify.elementTextMatching(keytransfersuccessfulfromacct,Fromacc);
-		verify.elementTextMatching(keytransfersuccessfulamt,Amount);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			verify.elementTextMatching_MacSafari(keytransfersuccessfultoacct, Toacc);
+			verify.elementTextMatching_MacSafari(keytransfersuccessfulfromacct, Fromacc);
+			verify.elementTextMatching_MacSafari(keytransfersuccessfulamt, Amount);
+
+		}
+		else {
+			verify.elementTextMatching(keytransfersuccessfultoacct, Toacc);
+			verify.elementTextMatching(keytransfersuccessfulfromacct, Fromacc);
+			verify.elementTextMatching(keytransfersuccessfulamt, Amount);
+		}
 
 	}
 	public void clickNewtransaction() throws Throwable {
@@ -253,9 +262,20 @@ public class SendMoney_Ownaccount extends Keywords {
 		String dbval="//*[contains(text(),'"+txndateval+"')]";
 		driver.findElement(By.xpath(dbval)).click();
 		Wait.forSeconds(3000);
-		verify.elementTextMatching(keytransfersuccessfultoacct,toacc);
-		verify.elementTextMatching(keytransfersuccessfulfromacct,fromacc);
-		verify.elementTextMatching(keytransfersuccessfulamt,Amount);
+
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+		{
+			verify.elementTextMatching_MacSafari(keytransfersuccessfultoacct, toacc);
+			verify.elementTextMatching_MacSafari(keytransfersuccessfulfromacct, fromacc);
+			verify.elementTextMatching_MacSafari(keytransfersuccessfulamt, Amount);
+
+		}
+		else
+		{
+			verify.elementTextMatching(keytransfersuccessfultoacct, toacc);
+			verify.elementTextMatching(keytransfersuccessfulfromacct, fromacc);
+			verify.elementTextMatching(keytransfersuccessfulamt, Amount);
+		}
 	}
 
 	}

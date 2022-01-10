@@ -32,7 +32,7 @@ public class SendMoney_EONaccount extends Keywords {
 	public void enterEONaccountNumber(String Accountnumber) throws Throwable {
 		Wait.forSeconds(4000);
 		type.data(keyEonaccounttnumber,Accountnumber);
-		Wait.forSeconds(4000);
+		Wait.forSeconds(5000);
 	}
 
 	public void verifyEONaccountexist() throws Throwable {

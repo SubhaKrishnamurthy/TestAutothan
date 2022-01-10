@@ -53,7 +53,7 @@ public class CommonMethods {
         }
         else {
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
-                actions.Wait.forSeconds(50000);
+                actions.Wait.forSeconds(60000);
             }
             actions.Wait.forSeconds(3000);
             login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
