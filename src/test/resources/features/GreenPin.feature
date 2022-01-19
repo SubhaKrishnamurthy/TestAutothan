@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@GreenPin @Regression
+@GreenPin @Regression1
 Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   ##Change Pin
