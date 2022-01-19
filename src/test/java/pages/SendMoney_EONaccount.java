@@ -25,7 +25,7 @@ public class SendMoney_EONaccount extends Keywords {
 
 
 	public void clickEONaccount() throws Throwable {
-		Wait.forSeconds(3000);
+		Wait.forSeconds(4000);
 		click.elementBy(keyEonaccount);
 	}
 

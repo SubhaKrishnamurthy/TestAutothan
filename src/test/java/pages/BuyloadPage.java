@@ -239,7 +239,7 @@ public class BuyloadPage extends Keywords {
 		verify.elementIsPresent(keynameisrequired);
 		verify.elementIsPresent(keyMobileNumbershouldhave11digits);
 		Wait.forSeconds(3000);
-		driver.findElement(By.cssSelector("div > div > div.ant-drawer-header > div > div > div.header-foreground > div > div.left.part > a > svg")).click();
+		//driver.findElement(By.cssSelector("div > div > div.ant-drawer-header > div > div > div.header-foreground > div > div.left.part > a > svg")).click();
 
 	}
 

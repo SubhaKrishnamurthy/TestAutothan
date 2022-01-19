@@ -191,9 +191,18 @@ public class SendMoney_Remittancecenter extends Keywords {
 	}
 	public void verifynamedetails(String name,String DOB,String Nationality) throws Throwable {
 		Wait.forSeconds(3000);
-		verify.elementText(keyRemittanceCenterReviewandsendReceipientname,name);
-		verify.elementText(keyRemittanceCenterReviewandsendReceipientbirthdate,DOB);
-		verify.elementText(keyRemittanceCenterReviewandsendReceipientnationality,Nationality);
+		if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac"))
+		{
+			verify.elementTextMatching_MacSafari(keyRemittanceCenterReviewandsendReceipientname, name);
+			verify.elementTextMatching_MacSafari(keyRemittanceCenterReviewandsendReceipientbirthdate, DOB);
+			verify.elementTextMatching_MacSafari(keyRemittanceCenterReviewandsendReceipientnationality, Nationality);
+		}
+		else
+		{
+			verify.elementText(keyRemittanceCenterReviewandsendReceipientname, name);
+			verify.elementText(keyRemittanceCenterReviewandsendReceipientbirthdate, DOB);
+			verify.elementText(keyRemittanceCenterReviewandsendReceipientnationality, Nationality);
+		}
 	}
 	public void verifyEmailMobileandaddress(String Mobile,String Email,String Address) throws Throwable {
 		Wait.forSeconds(3000);
@@ -245,7 +254,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 	}
 
 	public void clickRemittanceCenterEdit() throws Throwable {
-		Wait.forSeconds(4000);
+		Wait.forSeconds(5000);
 		jsClick.elementBy(keyRemittanceCenterEdit);
 		Wait.forSeconds(3000);
 	}
