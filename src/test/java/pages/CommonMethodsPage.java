@@ -55,6 +55,7 @@ public class CommonMethodsPage extends Keywords {
 	}
 
 	public void verifyAccNumErrMsg(String message) throws Throwable {
+		Wait.forSeconds(2000);
 		verify.elementTextMatching(keyAccNumErrMsg,message);
 	}
 
@@ -66,7 +67,6 @@ public class CommonMethodsPage extends Keywords {
 	public void verifyAccNumNoErrMsg() throws Throwable {
 		verify.IfElementNotExists(keyAccNumErrMsg);
 	}
-
 	public void clickCancelBtn() throws Throwable {
 		verify.IfElementExists(keyCancelBtn);
 		click.elementBy(keyCancelBtn);

@@ -67,7 +67,7 @@ Feature: Mobile Branch Banking Functionality Validation
       And I click add cash deposit button
       And I enter account number as "0291600"
       And I enter amount as "100"
-      Then I Verify the Error message in the mobile number as "Invalid account number."
+      Then I Verify the Error message in the mobile number/Amount as "Invalid account number."
       And I enter account number again as "232355454554"
       And I enter amount again as "100"
       Then I verify no error message is displayed
@@ -88,15 +88,15 @@ Feature: Mobile Branch Banking Functionality Validation
        And I click add cash deposit button
        And I enter account number as " "
        And I enter amount as " "
-       Then I Verify the Error message in the mobile number as "Account number is required."
+       Then I Verify the Error message in the mobile number/Amount as "Account number is required."
        And I enter account number again as "029160078588"
-       Then I Verify the Error message in the mobile number as "Amount is required."
+       Then I Verify the Error message in the mobile number/Amount as "Amount is required."
        And I enter amount again as "000000"
        And I enter account number again as "029160078588"
-       Then I Verify the Error message in the mobile number as "Invalid Amount."
+       Then I Verify the Error message in the mobile number/Amount as "Invalid Amount."
        And I enter account number again as "0291600"
        And I enter amount again as "100000"
-       Then I Verify the Error message in the mobile number as "Invalid account number."
+       Then I Verify the Error message in the mobile number/Amount as "Invalid account number."
        And I logout of UB online banking application
 
      #TS295
