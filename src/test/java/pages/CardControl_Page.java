@@ -99,7 +99,7 @@ public class CardControl_Page extends Keywords {
 
     public void ManageCard() throws Throwable {
         Wait.forSeconds(4000);
-        jsClick.elementBy(ManageCards);
+        jsClick.elementBy(ManageCard);
         //click.elementBy(ManageCards);
     }
 }
