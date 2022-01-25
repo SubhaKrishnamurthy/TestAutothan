@@ -131,7 +131,7 @@ public class RequestPayment {
         requestPaymentPage.enterMobileNumber(arg1);
     }
 
-    @Then("^I Verify the Error message in the mobile number as \"([^\"]*)\"$")
+    @Then("^I Verify the Error message in the mobile number/Amount as \"([^\"]*)\"$")
     public void i_Verify_the_Error_message_in_the_mobile_number_as(String arg1) throws Throwable {
         common.verifyAccNumErrMsg(arg1);
     }

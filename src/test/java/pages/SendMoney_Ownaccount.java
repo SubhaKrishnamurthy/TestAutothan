@@ -99,7 +99,8 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	public void verifyOTPpageisdisplayed() throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keyOTPfield);
+		//click.elementBy(keyOTPfield);
+		verify.elementIsPresent(keyOTPfield);
 	}
 
 	public void entertheOTPOTPpage(String OTP) throws Throwable {

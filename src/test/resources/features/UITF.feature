@@ -71,14 +71,14 @@ Feature: UITF Validation
     Then I verify the success message in Subscription Success page
 
 #TCUITF06
-  @UITF07
-  Scenario: Validation of user can perform UITF Redemption
-    Given I'm on login page of UB online banking application with user "padmapriyah1" otp "222222"
-    When I click on the UITF account in the dashboard
-    And I click on redeem button
-    And I provide all redemption details in Redemption Form page
-    And I proceed redeem in Redemption Review page
-    Then I verify the success message in Redemption Success page
+#  @UITF07
+#  Scenario: Validation of user can perform UITF Redemption
+#    Given I'm on login page of UB online banking application with user "padmapriyah1" otp "222222"
+#    When I click on the UITF account in the dashboard
+#    And I click on redeem button
+#    And I provide all redemption details in Redemption Form page
+#    And I proceed redeem in Redemption Review page
+#    Then I verify the success message in Redemption Success page
 
 
 
