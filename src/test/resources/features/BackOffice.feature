@@ -110,7 +110,7 @@ Feature: Backoffice functionalities Validation
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit profile button
-      And I edit customer last name as "Test"
+      And I edit customer last name as "Tester"
       And I click the edit user ID update button
       And I enter edit reason as "Name change" and click on Save button
       Then I successfully logout by clicking the Logout Button

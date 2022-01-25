@@ -16,7 +16,7 @@ Feature: Another Unionbank FundTransfer
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "10" in ub account transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
@@ -24,7 +24,7 @@ Feature: Another Unionbank FundTransfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 10.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -71,7 +71,7 @@ Feature: Another Unionbank FundTransfer
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "1000" in ub account transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I Click the fromaccountnumber edit
@@ -82,7 +82,7 @@ Feature: Another Unionbank FundTransfer
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I Click the Amount details edit
-    And I Enter the Amount "2500" in ub account transfer
+    And I Enter the Amount "1100" in ub account transfer
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
@@ -90,7 +90,7 @@ Feature: Another Unionbank FundTransfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 2,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0000 1011 8779" and Amount"PHP 1100.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -105,7 +105,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "10" in ub account transfer
     And I click the Next Button
 
   @OtherUBaccount6
@@ -118,7 +118,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "10" in ub account transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
@@ -135,7 +135,7 @@ Feature: Another Unionbank FundTransfer
     And I click the from account number
     And I enter the UBP account number "000010118779" and account name "Other UBP Account"
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "10" in ub account transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Cancel button
@@ -153,7 +153,7 @@ Feature: Another Unionbank FundTransfer
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks morethan 256
     And I verify Next button is enabled
     And I click the Next Button
-    And I Enter the Amount "1500" in ub account transfer
+    And I Enter the Amount "10" in ub account transfer
     And I click the Next Button
 
   @OtherUBaccount9
