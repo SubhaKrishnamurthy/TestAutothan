@@ -38,7 +38,7 @@ Feature: Card Control Functionality Validation
   #TS129
   @CC03
   Scenario: Validation of card control functionality in Transaction control screen when the card is unlocked
-    Given I'm on login page of UB online banking application with user "creditcard002" otp "222222"
+    Given I'm on login page of UB online banking application with user "creditcard002" otp "111111"
     When I Select the card number in the dashboard
     And Click on manage cards only
     Then I unlock the card if card id locked
