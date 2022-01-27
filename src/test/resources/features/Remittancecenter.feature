@@ -25,7 +25,7 @@ Feature: Remittancecenter
     And I click the getstarted link
     And I click palawan express link
     And I click the remittancecenter proceed link
-    And I enter the amount "200" and enter the purpose "Remittancecenter"
+    And I enter the amount "100" and enter the purpose "Remittancecenter"
     And I click the click to select account and select account from list
     And I click the Next Button
     Then I verify the Servive fee should be displayed
@@ -42,7 +42,7 @@ Feature: Remittancecenter
     And I click the getstarted link
     And I click palawan express link
     And I click the remittancecenter proceed link
-    And I enter the amount "200" and enter the purpose "Remittancecenter"
+    And I enter the amount "100" and enter the purpose "Remittancecenter"
     And I click the click to select account and select account from list
     And I click the Next Button
     Then I verify the Servive fee should be displayed
@@ -67,7 +67,7 @@ Feature: Remittancecenter
     And I click the getstarted link
     And I click palawan express link
     And I click the remittancecenter proceed link
-    And I enter the amount "200" and enter the purpose "Remittancecenter"
+    And I enter the amount "100" and enter the purpose "Remittancecenter"
     And I click the click to select account and select account from list
     And I click the Next Button
     Then I verify the Servive fee should be displayed
@@ -89,7 +89,7 @@ Feature: Remittancecenter
     And I click the getstarted link
     And I click palawan express link
     And I click the remittancecenter proceed link
-    And I enter the amount "200" and enter the purpose "Remittancecenter"
+    And I enter the amount "100" and enter the purpose "Remittancecenter"
     And I click the click to select account and select account from list
     And I click the Next Button
     Then I verify the Servive fee should be displayed
@@ -141,7 +141,7 @@ Feature: Remittancecenter
       And I click the getstarted link
       And I click palawan express link
       And I click the remittancecenter proceed link
-      And I enter the amount "200" and enter the purpose "Remittancecenter"
+      And I enter the amount "100" and enter the purpose "Remittancecenter"
       And I click the click to select account and select account from list
       And I click the Next Button
       Then I verify the Servive fee should be displayed
@@ -185,7 +185,7 @@ Feature: Remittancecenter
       And I click the getstarted link
       And I click palawan express link
       And I click the remittancecenter proceed link
-      And I enter the amount "200" and enter the purpose "Remittancecenter"
+      And I enter the amount "100" and enter the purpose "Remittancecenter"
       And I click the click to select account and select account from list
       And I click the Next Button
       Then I verify the Servive fee should be displayed
@@ -204,7 +204,7 @@ Feature: Remittancecenter
       And I click the getstarted link
       And I click palawan express link
       And I click the remittancecenter proceed link
-      And I enter the amount "200" and enter the purpose "Remittancecenter"
+      And I enter the amount "100" and enter the purpose "Remittancecenter"
       And I click the click to select account and select account from list
       And I click the Next Button
       Then I verify the Servive fee should be displayed
