@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import actions.Wait;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
@@ -179,5 +180,9 @@ public class PayBills {
     public void I_Click_pay_Bills_Back_button() throws Throwable {
         payBills.click_BackBtn();
     }
+    @Then("^I Verify the Error message in the amount field as \"([^\"]*)\" in PayBills$")
+    public void iVerifyTheErrorMessageInTheAmountFieldAsInPayBills(String arg0) throws Throwable {
+        payBills.verifyPBMobileErrMsg(arg0);
 
-}
+    }
+    }

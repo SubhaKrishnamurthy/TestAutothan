@@ -54,7 +54,8 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I Select the from account
     And I enter the amount field as "9999999999999"
     #And I click the Date field
-    Then I Verify the Error message in the mobile number as "Amount is greater than your current balance"
+    #Then I Verify the Error message in the a as "Amount is greater than your current balance"
+    Then I Verify the Error message in the amount field as "Amount is greater than your current balance" in PayBills
 
   #TS167
   @PB05

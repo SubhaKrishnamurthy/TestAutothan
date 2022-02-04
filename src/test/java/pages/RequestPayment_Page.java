@@ -68,6 +68,7 @@ public class RequestPayment_Page extends Keywords {
     private String AddPeople_MobileNumber= "onlineBanking.RequestPayment.AddPeople.MobileNumber";
     private String Search = "onlineBanking.SENDREQUEST_MANAGEDTRANSFERS.Search";
     private String SplitBills = "onlineBanking.RequestPayment.SplitBills";
+    private String MobileErrorMessage = "onlineBanking.RequestPayment.AddParticipant.MobileErrorMessage";
 
 
     public void clickRequestPaymentLink() throws Throwable
@@ -171,7 +172,8 @@ public class RequestPayment_Page extends Keywords {
     }
 
     public void clickAddIcon() throws Throwable {
-       click.elementBy(ADDPATRICIPANT);
+       //click.elementBy(ADDPATRICIPANT);
+       jsClick.elementBy(ADDPATRICIPANT);
         Wait.forSeconds(2000);
         WebElement element = driver.findElement(By.cssSelector("div > div > div.header-foreground > div > div.right.part > a"));
         Actions actions = new Actions(driver);
@@ -264,5 +266,9 @@ public class RequestPayment_Page extends Keywords {
         Wait.forSeconds(2000);
         type.data(Amount1,YourPortionAmt);
         type.data(Amount2,RequesingAmt);
+    }
+    public void verifyMobileErrMsg(String arg0) throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementTextMatching(MobileErrorMessage, arg0);
     }
 }

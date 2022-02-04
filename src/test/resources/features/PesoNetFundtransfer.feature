@@ -186,7 +186,8 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from favourite recipient "101400001643"
+    # And I select the Account number from favourite recipient "101400001643"
+    And I select the Account number from saved recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -434,7 +435,8 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from favourite recipient "101400001643"
+    #And I select the Account number from favourite recipient "101400001643"
+    And I select the Account number from saved recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer

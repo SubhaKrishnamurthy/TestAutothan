@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -248,5 +249,9 @@ public class RequestPayment {
     }
 
 
+    @Then("^I Verify the Error message in the mobile number as \"([^\"]*)\"$")
+    public void iVerifyTheErrorMessageInTheMobileNumberAs(String arg0) throws Throwable {
+        requestPaymentPage.verifyMobileErrMsg(arg0);
+    }
 
 }

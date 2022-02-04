@@ -74,6 +74,7 @@ public class PayBillsPage extends Keywords {
     private String CalenderDate = "onlineBanking.Common.WrbBtn_CalendarDate";
     private String keyAmount="onlineBanking.Fundtransfer.TxtAmount";
     private String BackButton = "onlineBanking.PayBills.BackButton";
+    private String verifyPBMobileErrMsg = "onlineBanking.PayBills.verifyPBMobileErrMsg";
 
     public SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
     public ManageRecipient_Page manageRecipientPage = new ManageRecipient_Page();
@@ -329,5 +330,9 @@ public class PayBillsPage extends Keywords {
     public void click_BackBtn() throws Throwable {
         Wait.forSeconds(1000);
         click.elementBy(BackButton);
+    }
+    public void verifyPBMobileErrMsg(String arg0) throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementTextMatching(verifyPBMobileErrMsg, arg0);
     }
 }
