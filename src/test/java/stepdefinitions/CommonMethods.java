@@ -42,6 +42,7 @@ public class CommonMethods {
             actions.Wait.forSeconds(5000);
             login.clickRecaptcha();
             actions.Wait.forSeconds(3000);
+
             login.enterUsernme(PropertyReader.testDataOf("Account1_UserID").trim());
             actions.Wait.forSeconds(3000);
             login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
