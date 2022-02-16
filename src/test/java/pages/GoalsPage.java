@@ -141,6 +141,7 @@ public class GoalsPage extends Keywords {
     }
 
     public void enterGoalName(String name) throws Throwable {
+        Wait.forSeconds(2000);
         type.data(Goalname,name);
     }
 

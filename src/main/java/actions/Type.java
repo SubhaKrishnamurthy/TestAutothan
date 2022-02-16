@@ -40,7 +40,9 @@ public class Type extends Keywords{
         else{
             log.info("Type the value ["+value+"] into element ["+locatorKey+"]");
             get.elementBy(locatorKey).clear();
-            // get.elementBy(locatorKey).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+            //get.elementBy(locatorKey).sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+            get.elementBy(locatorKey).sendKeys(Keys.CONTROL + "a");
+            get.elementBy(locatorKey).sendKeys(Keys.DELETE);
             get.elementBy(locatorKey).sendKeys(value);
             // keyboard.hideIOS();
             log.info("Type Successful!");
