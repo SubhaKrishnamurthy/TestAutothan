@@ -78,20 +78,25 @@ public class SendMoney_Ownaccount extends Keywords {
 		Wait.forSeconds(8000);
 		jsClick.elementBy(KeyNext);
 	}
-	public void verifytheGotitbutton() throws Throwable {
-		try{
-		if(keygotit!=null)
-		{
-			jsClick.elementBy(keygotit);
-		}
-		}
-		catch (ApplicationException e) {
-			e.printStackTrace();
-		}
-		Wait.forSeconds(8000);
-		loginPage.clickkeepmeloggedinbtn();
+//	public void verifytheGotitbutton() throws Throwable {
+//		try{
+//		if(keygotit!=null)
+//		{
+//			jsClick.elementBy(keygotit);
+//		}
+//		}
+//		catch (ApplicationException e) {
+//			e.printStackTrace();
+//		}
+//		Wait.forSeconds(8000);
+//		loginPage.clickkeepmeloggedinbtn();
+//	}
+    public void verifytheGotitbutton_new() throws Throwable {
+	if(verify.IfElementExistsboolean(keygotit))
+	{
+		jsClick.elementBy(keygotit);
 	}
-
+    }
 	public void clickTransferbutton() throws Throwable {
 		Wait.forSeconds(5000);
 		click.elementBy(keytransfer);
