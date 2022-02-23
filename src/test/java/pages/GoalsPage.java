@@ -253,7 +253,7 @@ public class GoalsPage extends Keywords {
 
     public void editGoalAmount() throws Throwable {
         Wait.forSeconds(2000);
-        jsClick.elementBy(Review_targetamountedit);
+        click.elementBy(Review_targetamountedit);
         Wait.forSeconds(2000);
         click.elementBy(Edit_target_amount_minus);
         click.elementBy(Edit_target_amount_Save);

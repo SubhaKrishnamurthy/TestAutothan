@@ -22,6 +22,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	private String keybtnmyrecipient="onlineBanking.Fundtransfer.BtnMyRecipients";
 	private String keysearchrecipient="onlineBanking.Fundtransfer.TxtSearchRecipients";
 	private String keysearchrecipientresult="onlineBanking.Fundtransfer.LnkSearchRecipientsresults";
+	private String keySearchHere="onlineBanking.Fundtransfer.btnSearchhere";
 	private String keyinputemail="onlineBanking.Fundtransfer.TxtInputEmail";
 	private String keymobilenumber="onlineBanking.Fundtransfer.TxtMobilenumber";
 	private String keymsgtorecipient="onlineBanking.Fundtransfer.TxtMessagetorecipient";
@@ -31,7 +32,7 @@ public class SendMoney_OtherUBaccount extends Keywords {
 	private String keyCalendarnextbutton="onlineBanking.Fundtransfer.btnCalendarnextbutton";
 	private String keyCalendardate="onlineBanking.Fundtransfer.btnCalendardate";
 	private String keyCalendarpreviousdate="onlineBanking.Fundtransfer.lnkpreviousdate";
-
+	private String keybtnsearchicon="onlineBanking.BuyLoad.btnSearchicon";
 
 
 	public void clickUBaccount() throws Throwable {
@@ -86,7 +87,8 @@ public class SendMoney_OtherUBaccount extends Keywords {
 		click.elementBy(keyfavourite);
 		Wait.forSeconds(5000);
 		type.data(keysearchrecipient,Recipient);
-		Wait.forSeconds(10000);
+		jsClick.elementBy(keySearchHere);
+		Wait.forSeconds(2000);
 		click.elementBy(keysearchrecipientresult);
 	}
 

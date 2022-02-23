@@ -21,6 +21,7 @@ public class SendMoney_EONaccount extends Keywords {
 	private String keymsgtorecipient="onlineBanking.Fundtransfer.TxtMessagetorecipient";
 	private String KeyNext="onlineBanking.Fundtransfer.BtnNext";
 	private String keyfavourite="onlineBanking.Fundtransfer.BtnFavouriteRecipients";
+	private String keySendReceive="onlineBanking.Fundtransfer.TxtSendReceive";
 
 
 
@@ -44,6 +45,10 @@ public class SendMoney_EONaccount extends Keywords {
 	public void verifyinvalidEONaccounterror(String Error) throws Throwable {
 		Wait.forSeconds(3000);
 		verify.elementTextMatching(keyInvalidEONccountnumbererror,Error);
+
+	}
+	public void verifySendReceiveexist() throws Throwable {
+		verify.elementIsPresent(keySendReceive);
 
 	}
 }

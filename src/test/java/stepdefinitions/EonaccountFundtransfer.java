@@ -42,4 +42,9 @@ public class EonaccountFundtransfer {
     public void iVerifyTheValuesAndAndInRecentTransactions(String arg0, String arg1, String arg2, String arg3) throws Throwable {
         Ownaccount.verifytheRecenttransactionPage(arg0,arg1,arg2);
     }
+
+    @And("^I Verify the Send/Receive page is displayed$")
+    public void iVerifyTheSendReceivePageIsDisplayed() throws Throwable {
+        Eonaccount.verifySendReceiveexist();
+    }
 }

@@ -192,6 +192,7 @@ Feature: Own Account FundTransfer
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
+    And I click the to account number
     And I Enter the Amount "10" and remarks "OwnaccountDeposit"
     And I click the Next Button
     And I verify the Gotit button displayed or not

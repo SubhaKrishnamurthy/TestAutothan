@@ -30,9 +30,10 @@ public class BackOffice_ScheduledActivitiesPage extends Keywords {
 		click.elementBy(keyFailedScheduledBillsPayment);
 	}
 
-	public void clickFailedScheduledBillsPaymentSearch(String data) throws Throwable {
+	public void
+	clickFailedScheduledBillsPaymentSearch(String data) throws Throwable {
 		select.backOffice_selectValueInAnyList(keyFailedScheduledBillsPaymentSearch2,data);
-		click.elementBy(keyFailedScheduledPaymentSearchBtn);
+		jsClick.elementBy(keyFailedScheduledPaymentSearchBtn);
 	}
 
 	public void selectSearch1EnterSearchTxtClickSearchBtn(String data,String text) throws Throwable {
