@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @PesoNet @Regression
+ @PesoNet @Regression @RegressionNew
 Feature: PesoNet Fund Transfer
 
   @PesoNet1
@@ -14,7 +14,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "1500" in ub account transfer
@@ -27,7 +27,7 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 1,500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -39,7 +39,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "100" in ub account transfer
@@ -52,7 +52,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "1500" in ub account transfer
@@ -73,7 +73,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -86,7 +86,7 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 200.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -98,7 +98,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Enter the Amount "9999999999" in ub account transfer
@@ -111,7 +111,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from favourite recipient "101400001643"
+    And I select the Account number from favourite recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -124,7 +124,7 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 200.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -136,7 +136,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -147,7 +147,7 @@ Feature: PesoNet Fund Transfer
     And I click the from account number
     And I verify the Gotit button displayed or not
     And I Click the toaccountnumber edit
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I Click the Amount details edit
@@ -160,7 +160,7 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 210.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 210.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -172,7 +172,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Click Back button
@@ -187,7 +187,7 @@ Feature: PesoNet Fund Transfer
     And I click the Pesonet link
     And I click the from account number
     # And I select the Account number from favourite recipient "101400001643"
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -201,7 +201,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -217,7 +217,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -233,7 +233,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -249,7 +249,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -265,7 +265,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -282,7 +282,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     #And I select the Account number from favourite recipient "101400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
@@ -298,34 +298,34 @@ Feature: PesoNet Fund Transfer
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 200.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
 
-  @PesoNet10
-  Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts
-    Given I'm on login page of UB online banking application with user "cbautotest2" otp "222222"
-    When I click the Send/Receive Money
-    Then I click the Other banks or Ewallet
-    And I click the Pesonet link
-    And I click the from account number
-    And I select the Account number from favourite recipient "101400001643"
-    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
-    And I click the Next Button
-    And I Enter the Amount "200" in ub account transfer
-    And I select the reason "ADVERTISING"
-    And I click the Next Button
-    And I verify the Gotit button displayed or not
-    And I click the Transfer button
-    And I click the proceed with transfer
-    #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
-    #And I click the Submit Button
-    Then I verify the Successful message is displayed
-    Then I Click the New Transaction button Link
-    And I Verify the Ownaccount Link
-    And I Click the Logout Button
+#  @PesoNet10
+#  Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts
+#    Given I'm on login page of UB online banking application with user "cbautotest2" otp "222222"
+#    When I click the Send/Receive Money
+#    Then I click the Other banks or Ewallet
+#    And I click the Pesonet link
+#    And I click the from account number
+#    And I select the Account number from favourite recipient "106400001643"
+#    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
+#    And I click the Next Button
+#    And I Enter the Amount "200" in ub account transfer
+#    And I select the reason "ADVERTISING"
+#    And I click the Next Button
+#    And I verify the Gotit button displayed or not
+#    And I click the Transfer button
+#    And I click the proceed with transfer
+#    #Then I Verify the OTP Filed is page is displayed
+#    And I Enter the OTP "222222" in OTP Page
+#    #And I click the Submit Button
+#    Then I verify the Successful message is displayed
+#    Then I Click the New Transaction button Link
+#    And I Verify the Ownaccount Link
+#    And I Click the Logout Button
 
   @PesoNet11
   Scenario:Validation of Leave a purpose filed only when user select OTHERS(Please specify)
@@ -334,7 +334,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -350,7 +350,7 @@ Feature: PesoNet Fund Transfer
     And I click the Pesonet link
     And I click the from account number
     #And I select the Account number from favourite recipient "101400001643"
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -371,7 +371,7 @@ Feature: PesoNet Fund Transfer
     And I click the Pesonet link
     And I click the from account number
     #And I select the Account number from favourite recipient "101400001643"
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -436,7 +436,7 @@ Feature: PesoNet Fund Transfer
     And I click the Pesonet link
     And I click the from account number
     #And I select the Account number from favourite recipient "101400001643"
-    And I select the Account number from saved recipient "101400001643"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "200" in ub account transfer
@@ -453,7 +453,7 @@ Feature: PesoNet Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
     And I click the from account number
-    And I select the Account number from favourite recipient "101400001643"
+    And I select the Account number from favourite recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"PesoNet Transfer"
     And I click the Next Button
     And I Enter the Amount "2500" in ub account transfer

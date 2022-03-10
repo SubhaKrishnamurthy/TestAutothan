@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.balabharathi.jayaraman</groupId>
     <artifactId>Cucumber-Java</artifactId>
@@ -14,16 +14,11 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <includes>
-                        <include>
-                            <test>ConvergentTestRunner.java</test>
-                        </include>
-                    </includes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <dependencies>
+     <dependencies>
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
@@ -42,7 +37,7 @@
         <dependency>
             <groupId>com.vimalselvam</groupId>
             <artifactId>cucumber-extentsreport</artifactId>
-                <version>3.0.2</version>
+            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>com.aventstack</groupId>
@@ -87,3 +82,4 @@
         </dependency>
     </dependencies>
 </project>
+

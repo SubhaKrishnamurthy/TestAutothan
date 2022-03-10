@@ -3,9 +3,8 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @OtherUBaccount @Regression
+ @OtherUBaccount @Regression @RegressionNew
 Feature: Another Unionbank FundTransfer
-
 
   @OtherUBaccount1
   Scenario: Validation of navigating transfer to UB Account for valid Account number
@@ -101,7 +100,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from saved recipient "100570037881"
+    And I select the Account number from saved recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -114,7 +113,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "10057003788"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -149,7 +148,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from saved recipient "100570037881"
+    And I select the Account number from saved recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks morethan 256
     And I verify Next button is enabled
     And I click the Next Button
@@ -162,7 +161,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from saved recipient "100570037881"
+    And I select the Account number from saved recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -174,7 +173,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from saved recipient "100570037881"
+    And I select the Account number from saved recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -186,7 +185,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -198,7 +197,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -210,7 +209,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -222,7 +221,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -234,7 +233,7 @@ Feature: Another Unionbank FundTransfer
     And I click the Yes button
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -254,7 +253,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button
@@ -270,7 +269,7 @@ Feature: Another Unionbank FundTransfer
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
-    And I select the Account number from favourite recipient "100570037881"
+    And I select the Account number from favourite recipient "029160078588"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"UB Account Transfer"
     And I verify Next button is enabled
     And I click the Next Button

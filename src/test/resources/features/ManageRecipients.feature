@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@ManageRecipient @Regression
+@ManageRecipient @Regression @RegressionNew
 Feature: Manage Recipients functionalities Validation
 
   #TS078

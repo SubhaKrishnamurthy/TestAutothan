@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @EonAccount @Regression
+ @EonAccount @Regression @RegressionNew
 Feature: EonAccount Fund Transfer
 
   @EonAccount1

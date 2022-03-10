@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @Ownaccount @Regression
+ @Ownaccount @Regression @RegressionNew
 Feature: Own Account FundTransfer
 
 
@@ -186,24 +186,24 @@ Feature: Own Account FundTransfer
     And I Verify the Ownaccount Link
     And I Click the Logout Button
 
-  @Ownaccount8
-  Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts for own transfer
-    Given I'm on login page of UB online banking application with user "cbautotest2" otp "222222"
-    When I click the Send/Receive Money
-    Then I Click Ownacount link
-    And I click the from account number
-    And I click the to account number
-    And I Enter the Amount "10" and remarks "OwnaccountDeposit"
-    And I click the Next Button
-    And I verify the Gotit button displayed or not
-    And I click the Transfer button
-    #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
-    #And I click the Submit Button
-    Then I verify the Successful message is displayed
-    Then I Click the New Transaction button Link
-    And I Verify the Ownaccount Link
-    And I Click the Logout Button
+#  @Ownaccount8
+#  Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts for own transfer
+#    Given I'm on login page of UB online banking application with user "cbautotest2" otp "222222"
+#    When I click the Send/Receive Money
+#    Then I Click Ownacount link
+#    And I click the from account number
+##    And I click the to account number
+#    And I Enter the Amount "10" and remarks "OwnaccountDeposit"
+#    And I click the Next Button
+#    And I verify the Gotit button displayed or not
+#    And I click the Transfer button
+#    #Then I Verify the OTP Filed is page is displayed
+#    And I Enter the OTP "222222" in OTP Page
+#    #And I click the Submit Button
+#    Then I verify the Successful message is displayed
+#    Then I Click the New Transaction button Link
+#    And I Verify the Ownaccount Link
+#    And I Click the Logout Button
 
   @Ownaccount9
   Scenario: Validation of back button in Review Own account
