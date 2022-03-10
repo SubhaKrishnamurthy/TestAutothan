@@ -3,20 +3,20 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@PayBills @Regression
+@PayBills @Regression @RegressionNew
 Feature: PayBills Functionality Validation
 
   #TS159
-  @PB01
-  Scenario: Navigation of Pay bills screen,Billers tab and search in MyBillers and Favourites and biller List
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "ABRA" in Billers list
-    Then I verify the value as "ABRA" in search result1
-    And I search for the billler "Automation" in Favorites list
-    Then I verify the value as "Automation" in search result1
-    And I search for the biller "Automation" in MyBillers
-    Then I verify the value as "Automation" in search result1
+#  @PB01
+#  Scenario: Navigation of Pay bills screen,Billers tab and search in MyBillers and Favourites and biller List
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "ABRA" in Billers list
+#    Then I verify the value as "ABRA" in search result1
+#    And I search for the billler "Automation" in Favorites list
+#    Then I verify the value as "Automation" in search result1
+#    And I search for the biller "Automation" in MyBillers
+#    Then I verify the value as "Automation" in search result1
 
 #TS160
   @PB02
@@ -28,67 +28,67 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
   Then I logout of UB online banking application
 
     #TS161
-  @PB03
-  Scenario: Validation of Pay bills screen,Billers tab and search in MyBillers and Favourites and biller List
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "UNION" in Billers list
-    Then I verify the value as "UNIONBANK MASTERCARD" in search result1
-    #And I verify the value as "UNIONBANKMASTERCARD" in search result2
-    And I search for the billler "UBPRegressionBiller" in Favorites list
-    Then I verify the value as "UBPRegressionBiller1" in search result1
-    And I verify the value as "UBPRegressionBiller2" in search result2
-    And I search for the biller "UBPRegressionBiller" in MyBillers
-    Then I verify the value as "UBPRegressionBiller1" in search result1
-    And I verify the value as "UBPRegressionBiller2" in search result2
-    Then I logout of UB online banking application
-
-    #TS165
-  @PB04
-  Scenario: Validation of displaying error message in "Amount" field when user enters amount more than the current balance
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "Veco" in MyBillers
-    Then I click the search result1
-    And I click the Next Button
-    And I Select the from account
-    And I enter the amount field as "9999999999999"
-    #And I click the Date field
-    #Then I Verify the Error message in the a as "Amount is greater than your current balance"
-    Then I Verify the Error message in the amount field as "Amount is greater than your current balance" in PayBills
-
-  #TS167
-  @PB05
-  Scenario: Validation of  clicking cancel button in Review and Pay screen for Pay Bill Transaction
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "Veco" in MyBillers
-    Then I click the search result1
-    And I Enter the account in account ID filed as "82028711016"
-    And I click the Next Button
-    And I Select the from account
-    And I enter the amount field as "100"
-    And I click the Submit Button
-    And I click the cancel button
-    And I click the Yes button
-    And I am on the PayBills page
-    Then I logout of UB online banking application
+#  @PB03
+#  Scenario: Validation of Pay bills screen,Billers tab and search in MyBillers and Favourites and biller List
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "UNION" in Billers list
+#    Then I verify the value as "UNIONBANK MASTERCARD" in search result1
+#    #And I verify the value as "UNIONBANKMASTERCARD" in search result2
+#    And I search for the billler "UBPRegressionBiller" in Favorites list
+#    Then I verify the value as "UBPRegressionBiller1" in search result1
+#    And I verify the value as "UBPRegressionBiller2" in search result2
+#    And I search for the biller "UBPRegressionBiller" in MyBillers
+#    Then I verify the value as "UBPRegressionBiller1" in search result1
+#    And I verify the value as "UBPRegressionBiller2" in search result2
+#    Then I logout of UB online banking application
+#
+#    #TS165
+#  @PB04
+#  Scenario: Validation of displaying error message in "Amount" field when user enters amount more than the current balance
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "Veco" in MyBillers
+#    Then I click the search result1
+#    And I click the Next Button
+#    And I Select the from account
+#    And I enter the amount field as "9999999999999"
+#    #And I click the Date field
+#    #Then I Verify the Error message in the a as "Amount is greater than your current balance"
+#    Then I Verify the Error message in the amount field as "Amount is greater than your current balance" in PayBills
+#
+#  #TS167
+#  @PB05
+#  Scenario: Validation of  clicking cancel button in Review and Pay screen for Pay Bill Transaction
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "Veco" in MyBillers
+#    Then I click the search result1
+#    And I Enter the account in account ID filed as "82028711016"
+#    And I click the Next Button
+#    And I Select the from account
+#    And I enter the amount field as "100"
+#    And I click the Submit Button
+#    And I click the cancel button
+#    And I click the Yes button
+#    And I am on the PayBills page
+#    Then I logout of UB online banking application
 
   #TS170
-  @PB06
-    Scenario: validate user lands in Review and pay screen when user clicks back button from editing Biller Information Screen
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "Veco" in MyBillers
-    Then I click the search result1
-    And I click the Next Button
-    And I Select the from account
-    And I enter the amount field as "100"
-    And I click the Submit Button
-    And I Click the Edit button
-    And I Click pay Bills Back button
-    Then I verify the pay php button
-    Then I logout of UB online banking application
+#  @PB06
+#    Scenario: validate user lands in Review and pay screen when user clicks back button from editing Biller Information Screen
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "Veco" in MyBillers
+#    Then I click the search result1
+#    And I click the Next Button
+#    And I Select the from account
+#    And I enter the amount field as "100"
+#    And I click the Submit Button
+#    And I Click the Edit button
+#    And I Click pay Bills Back button
+#    Then I verify the pay php button
+#    Then I logout of UB online banking application
 
   #TS171
   @PB07
@@ -281,25 +281,25 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       Then I logout of UB online banking application
 
    #TS166
-  @PB18
-    Scenario: Validate user is able to select future date in Date in the payment details screen
-    Given I'm on login page of UB online banking application
-    When I am on the PayBills page
-    And I search for the biller "VECO" in MyBillers
-    Then I click the search result1
-    And I Enter the account in account ID filed as "82028711016"
-    And I click the Next Button
-    And I Select the from account
-    And I enter the amount field as "100"
-    And I click calender date
-    And I click the Next Button
-    And I click the Pay Bills php button
-    #And I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
-    #And I click the Submit Button
-    Then I verify pay Bills payment successful message
-    And I Verify BillerName as "VECO UNINON BANK OF PHILIPPINES" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "82028711016" Amount as "PHP 100.00"
-    Then I logout of UB online banking application
+#  @PB18
+#    Scenario: Validate user is able to select future date in Date in the payment details screen
+#    Given I'm on login page of UB online banking application
+#    When I am on the PayBills page
+#    And I search for the biller "VECO" in MyBillers
+#    Then I click the search result1
+#    And I Enter the account in account ID filed as "82028711016"
+#    And I click the Next Button
+#    And I Select the from account
+#    And I enter the amount field as "100"
+#    And I click calender date
+#    And I click the Next Button
+#    And I click the Pay Bills php button
+#    #And I Verify the OTP Filed is page is displayed
+#    And I Enter the OTP "222222" in OTP Page
+#    #And I click the Submit Button
+#    Then I verify pay Bills payment successful message
+#    And I Verify BillerName as "VECO UNINON BANK OF PHILIPPINES" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "82028711016" Amount as "PHP 100.00"
+#    Then I logout of UB online banking application
 
    #TS168
     @PB19
