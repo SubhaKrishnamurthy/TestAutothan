@@ -140,28 +140,28 @@ Feature: Instapay Fund Transfer
     And I Verify the Eonaccount Link
     And I Click the Logout Button
 
-  @Instapay9
-  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Receive Money
-    Then I click the Other banks or Ewallet
-    And I click the Instapay link
-    And I click the from account number
-    And I search the Account number from saved recipient "147690634725"
-    Then I verify Account number is disabled
-    And I Verify "Not eligible for InstaPay" message displayed in the account number
-
-
-  @Instapay10
-  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient in favourite tab
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
-    When I click the Send/Receive Money
-    Then I click the Other banks or Ewallet
-    And I click the Instapay link
-    And I click the from account number
-    And I search the Account number from favourite recipient "147690634725"
-    Then I verify Account number is disabled
-    And I Verify "Not eligible for InstaPay" message displayed in the account number
+#  @Instapay9
+#  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient screen
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+#    When I click the Send/Receive Money
+#    Then I click the Other banks or Ewallet
+#    And I click the Instapay link
+#    And I click the from account number
+#    And I search the Account number from saved recipient "147690634725"
+#    Then I verify Account number is disabled
+#    And I Verify "Not eligible for InstaPay" message displayed in the account number
+#
+#
+#  @Instapay10
+#  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient in favourite tab
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+#    When I click the Send/Receive Money
+#    Then I click the Other banks or Ewallet
+#    And I click the Instapay link
+#    And I click the from account number
+#    And I search the Account number from favourite recipient "147690634725"
+#    Then I verify Account number is disabled
+#    And I Verify "Not eligible for InstaPay" message displayed in the account number
 
   @Instapay11
   Scenario:Validation of selecting target account number from saved favourite recipient

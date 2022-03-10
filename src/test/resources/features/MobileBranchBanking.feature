@@ -9,7 +9,7 @@ Feature: Mobile Branch Banking Functionality Validation
   #TS281
   @MBB01
   Scenario: Validation MBB section in Dashboard and MBB screen
-  Given I'm on login page of UB online banking application with user "Autoloan1"
+  Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
   When I click visit branch from dashboard
   Then I Verfiy the Mobile branch banking screen
   And I logout of UB online banking application
@@ -25,7 +25,7 @@ Feature: Mobile Branch Banking Functionality Validation
     #TS283
   @MBB03
  Scenario: Validation of Select branch screen and error message validation
-    Given I'm on login page of UB online banking application with user "Autoloan1"
+    Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
     When I click visit branch from dashboard
     When I click the select branch option
     And I click the search icon
@@ -34,21 +34,22 @@ Feature: Mobile Branch Banking Functionality Validation
     #TS285
   @MBB04
  Scenario: Validation of sections in MBB screen when no current day visit,no upcoming visit and no history details
-   Given I'm on login page of UB online banking application with user "Autoloan1"
+   Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
    When I click visit branch from dashboard
    Then I Verify the message in the today section
 
     #TS302
   @MBB05
     Scenario: Validate View more  button is not displayed in upcoming and History section when visits in that section are less than 3
-    Given I'm on login page of UB online banking application with user "Autoloan1"
+#    Given I'm on login page of UB online banking application with user "autotest01"
+    Given I'm on login page of UB online banking application with user "autotest01" otp "222222"
     When I click visit branch from dashboard
     Then I verify no View more buttton in upcoming section and History section
 
   #TS284
   @MBB06
    Scenario: Validation of searching a branch from Select Branch screen and verify the branch address
-    Given I'm on login page of UB online banking application with user "Autoloan1"
+    Given I'm on login page of UB online banking application with user "autotest01" otp "222222"
     When I click visit branch from dashboard
     And I click the select branch option
     And I search the branch as Medical City
@@ -57,7 +58,7 @@ Feature: Mobile Branch Banking Functionality Validation
     #TS290
     @MBB07
     Scenario: Validation of  Enter Account number  field in Book visit screen under Check Deposit and Cash Withdrawal and Cash Deposit sections in MBB
-      Given I'm on login page of UB online banking application with user "Autoloan1"
+      Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
       When I click visit branch from dashboard
       And I click the select branch option
       And I search the branch as Vigan
@@ -78,7 +79,7 @@ Feature: Mobile Branch Banking Functionality Validation
      #TS294
      @MBB08
     Scenario: Validation of error messages in Visit DETAILS screen in Mobile branch banking
-       Given I'm on login page of UB online banking application with user "Autoloan1"
+       Given I'm on login page of UB online banking application with user "autotest01" otp "222222"
        When I click visit branch from dashboard
        And I click the select branch option
        And I search the branch as Vigan
@@ -102,7 +103,7 @@ Feature: Mobile Branch Banking Functionality Validation
      #TS295
      @MBB09
     Scenario: Validation of cancelling the Visit from Review screen
-       Given I'm on login page of UB online banking application with user "Autoloan1"
+       Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
        When I click visit branch from dashboard
        And I click the select branch option
        And I search the branch as Medical City
@@ -122,7 +123,7 @@ Feature: Mobile Branch Banking Functionality Validation
      #TS299
       @MBB10
       Scenario: Validation of error message in field when user tries to schedule a visit for current day
-        Given I'm on login page of UB online banking application with user "Autoloan1"
+        Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
         When I click visit branch from dashboard
         And I click the select branch option
         And I search the branch as Medical City
@@ -134,7 +135,7 @@ Feature: Mobile Branch Banking Functionality Validation
    #TS300
   @MBB11
     Scenario:  Validation of error message and completing the flow when user tries to schedule a visit for current day
-    Given I'm on login page of UB online banking application with user "Accnumtest5" otp "111111"
+    Given I'm on login page of UB online banking application with user "autotest02" otp "111111"
     When I click visit branch from dashboard
     And I click the select branch option
     And I search the branch as Medical City
@@ -146,7 +147,7 @@ Feature: Mobile Branch Banking Functionality Validation
     #TS303
     @MBB12
     Scenario: Validation of edit functionality in review page in MBB
-      Given I'm on login page of UB online banking application with user "Autoloan1"
+      Given I'm on login page of UB online banking application with user "autotest01" otp "111111"
       When I click visit branch from dashboard
       And I click the select branch option
       And I search the branch as Ayala Insular "The Ark"
