@@ -18,8 +18,8 @@ public class MobileBranchBanking {
        dashboardHomePage.clickMBBSection();
     }
 
-    @Then("^I Verfiy the Mobile branch banking screen$")
-    public void i_Verfiy_the_Mobile_branch_banking_screen() throws Throwable {
+    @Then("^I Verifiy the Mobile branch banking screen$")
+    public void i_Verifiy_the_Mobile_branch_banking_screen() throws Throwable {
         mbbPage.verifyMBBScreen();
     }
 

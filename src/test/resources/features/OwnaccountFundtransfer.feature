@@ -8,16 +8,16 @@
 Feature: Own Account FundTransfer
 
 
-  @Ownaccount1
-  Scenario: Validation of not allowing own account transfer with one source account
-    #Given I'm on login page of UB online banking application with otp "222222"
-    Given I'm on login page of UB online banking application with user "Autoloan1" otp "222222"
-    When I click the Send/Receive Money
-    Then Ownacount link should not displayed
+#  @Ownaccount1
+#  Scenario: Validation of not allowing own account transfer with one source account
+#    #Given I'm on login page of UB online banking application with otp "222222"
+#    Given I'm on login page of UB online banking application with user "Autoloan1" otp "222222"
+#    When I click the Send/Receive Money
+#    Then Ownacount link should not displayed
 
   @Ownaccount2
   Scenario: Validation of allowing own account transfer with mutilple source account
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -37,7 +37,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount3
   Scenario: Validation of navigating to transfer clicking the cancel button for own account transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -52,7 +52,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount4
   Scenario: Validation of back button in transfer to Own account
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -62,7 +62,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount5
   Scenario: Validation of Edit functionality in the Review page in Own Account with frequency
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -93,7 +93,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount6
   Scenario: Verifying the Own Account Transfer transaction for various frequency in Transfer Details page
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -168,7 +168,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount7
   Scenario: Validation of entering remarks greater than 256 characters in own transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -207,7 +207,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount9
   Scenario: Validation of back button in Review Own account
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -222,7 +222,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount10
   Scenario: Validation of Edit functionality in the Review page in Own Account without frequency
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -252,7 +252,7 @@ Feature: Own Account FundTransfer
 
   @Ownaccount11
   Scenario:Validation of amount field in the Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number

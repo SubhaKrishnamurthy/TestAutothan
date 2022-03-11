@@ -9,7 +9,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet1
   Scenario:Validation of navigating transfer to Other Bank PesoNet
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -47,7 +47,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet3
   Scenario: Validation of Validation of entering invalid OTP in Pesonet transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -68,7 +68,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet4
   Scenario:Validation of selecting target account number from saved favourite recipient
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -93,7 +93,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet5
   Scenario:Validation of entering amount more than account balance in Pesonet transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -106,7 +106,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet6
   Scenario:Validation of selecting target account number from saved favourite recipient
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -131,7 +131,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet7
   Scenario:Validating the Edit functionality in Transfer review page in the PesoNet Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -167,7 +167,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet8
   Scenario:Validation of navigating to Transfer to screen on clicking back button from Transfer details screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -181,7 +181,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet9
   Scenario:Validation of setting various frequency for scheduled Pesonet transfer for scheduled Pesonet transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -329,7 +329,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet11
   Scenario:Validation of Leave a purpose filed only when user select OTHERS(Please specify)
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -344,7 +344,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet12
   Scenario:Validation click the cancel button in Pesonet transfer transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -365,7 +365,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet13
   Scenario:Validation of proceeding to next page without selecting purpose in PesoNet Transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -380,7 +380,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet14
   Scenario:Validation of Amount Number digits in Pesonet
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -406,7 +406,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet16
   Scenario:Validation of Account Name filed in transfer page for Other Bank
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -418,7 +418,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet17
   Scenario:Validation of Account Number filed in transfer page for Other Bank Pesonet
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -430,7 +430,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet18
   Scenario:Validation of entering future date in date field for PesoNet Transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -448,7 +448,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet19
   Scenario:Validation of entering previous date in date field
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -462,7 +462,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet20
   Scenario:Validation of submit transaction when recipient bank select from bank list and enter the mandatory fields
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link

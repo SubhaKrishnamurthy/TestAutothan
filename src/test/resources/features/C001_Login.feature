@@ -3,13 +3,13 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @Login @Regression
+ @Login @Regression @RegressionNew
 Feature: Login Page Validation
 
  #TS075
   @Login1
   Scenario: Validation of Login functionality with valid and Invalid inputs
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link

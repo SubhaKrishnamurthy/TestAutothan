@@ -9,7 +9,8 @@ Feature: Manage Recipients functionalities Validation
   #TS078
   @MR01
   Scenario: Validation of adding new recipient screen- Manage Receipent
-    Given I'm on login page of UB online banking application
+#    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I click the Add recipient button
@@ -20,7 +21,7 @@ Feature: Manage Recipients functionalities Validation
   #TS079
   @MR02
   Scenario: Validation of   account name field in  Add recipient page
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I click the Add recipient button
@@ -31,7 +32,7 @@ Feature: Manage Recipients functionalities Validation
     #TS080
     @MR03
     Scenario: Validation of account number field in  Add recipient page
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click on Send/Request link in dashboard
       And I click the manage recipient link
       And I click the Add recipient button
@@ -42,7 +43,7 @@ Feature: Manage Recipients functionalities Validation
       #TS081
   @MR04
   Scenario: Validation of adding new favourite recipient successfully
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I click the Add recipient button
@@ -53,7 +54,7 @@ Feature: Manage Recipients functionalities Validation
   #TS083
   @MR05
   Scenario: Validation of entering  account name field for Update recipient
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I search for the recipient "testts"
@@ -63,7 +64,7 @@ Feature: Manage Recipients functionalities Validation
     #TS084
   @MR06
   Scenario: Validation of entering  account number field for Update recipient
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I search for the recipient "testts"
@@ -73,7 +74,7 @@ Feature: Manage Recipients functionalities Validation
     #TS086
   @MR07
     Scenario: Validation of changing the normal recipient to favourite recipient in edit recipient screen
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I search for the recipient "Atest2"
@@ -85,7 +86,7 @@ Feature: Manage Recipients functionalities Validation
     #TS088
   @MR08
     Scenario: Validation of display of all favourite recipients under favourite tab
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click on Send/Request link in dashboard
     And I click the manage recipient link
     And I click on the favorite tab
@@ -97,7 +98,7 @@ Feature: Manage Recipients functionalities Validation
     #TS087
     @MR09
     Scenario: Validation of deleting the existing recipient
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click on Send/Request link in dashboard
       And I click the manage recipient link
       And I click on the existing recipient
@@ -107,7 +108,7 @@ Feature: Manage Recipients functionalities Validation
       #TS085
     @MR10
      Scenario: Validation of updating existing normal recipient and favourite successfully
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click on Send/Request link in dashboard
       And I click the manage recipient link
       And I click the Add recipient button

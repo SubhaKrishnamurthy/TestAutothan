@@ -9,7 +9,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay1
   Scenario: Validation of navigating transfer to Other Bank InstaPay
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -32,7 +32,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay2
   Scenario: Validation of Invalid OTP in the Instapay transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -51,7 +51,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay3
   Scenario: Validation of entering amount more than account current balance
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -64,7 +64,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay4
   Scenario: Validation of Next Button enabled only when all valid fields are entered
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -76,7 +76,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay5
   Scenario:Validation of entering remarks greater than 256 characters in InstaPay
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -86,7 +86,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay6
   Scenario:Validating the Transfer details screen without giving the amount and select purpose
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -98,7 +98,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay7
   Scenario:Validating the Edit functionality in Transfer review page in the InstaPay Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -132,7 +132,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay8
   Scenario:Validation of navigating to send/Request to other banks Send money via page on clicking back button in Transfer from screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -142,7 +142,7 @@ Feature: Instapay Fund Transfer
 
 #  @Instapay9
 #  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient screen
-#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
 #    When I click the Send/Receive Money
 #    Then I click the Other banks or Ewallet
 #    And I click the Instapay link
@@ -154,7 +154,7 @@ Feature: Instapay Fund Transfer
 #
 #  @Instapay10
 #  Scenario:Validation of Not Eligible for Instapay and disabled for ineligible accounts in select recipient in favourite tab
-#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
 #    When I click the Send/Receive Money
 #    Then I click the Other banks or Ewallet
 #    And I click the Instapay link
@@ -165,7 +165,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay11
   Scenario:Validation of selecting target account number from saved favourite recipient
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -176,7 +176,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay12
   Scenario:Validation click the cancel button in Instapay transfer transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -194,7 +194,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay13
   Scenario:Validation of Amount Number digits in InstaPay
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -208,7 +208,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay14
   Scenario:Validation of Account Name filed in transfer page for Other Bank
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -220,7 +220,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay15
   Scenario:Validation of Account Number filed in transfer page for Other Bank InstaPay
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link
@@ -232,7 +232,7 @@ Feature: Instapay Fund Transfer
 
   @Instapay16
   Scenario:Validation of Next button is enabled when recipient bank select from bank list and enter the mandatory fields
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Instapay link

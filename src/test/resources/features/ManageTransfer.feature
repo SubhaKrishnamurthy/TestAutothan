@@ -9,7 +9,7 @@ Feature: ManageTransfer
 
   @ManageTransfer1
   Scenario:Validation of Fund transfer - to own bank under transferred tab
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click Ownacount link
     And I click the from account number
@@ -27,7 +27,7 @@ Feature: ManageTransfer
 
   @ManageTransfer2
   Scenario:Validation of Fund transfer - to another UBP bank transfer details under transferred tab and Transaction history
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click UBacount link
     And I click the from account number
@@ -46,7 +46,7 @@ Feature: ManageTransfer
 
   @ManageTransfer3
   Scenario:Validation of Fund transfer - to EON account transfer details under transferred tab and Transaction history
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -64,7 +64,7 @@ Feature: ManageTransfer
 
   @ManageTransfer4
   Scenario:Validation of Fund transfer - to Pesonet account transfer details under transferred tab and Transaction history
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link

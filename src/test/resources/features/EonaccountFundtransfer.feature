@@ -8,7 +8,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount1
   Scenario: Validation of Login functionality with valid and Invalid inputs
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -29,7 +29,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount2
   Scenario:Validation of navigating transfer to EON Account for Invalid Account number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -38,7 +38,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount3
   Scenario:Validation of back button in transferfrom EON account
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I Click Back button
@@ -48,7 +48,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount4
   Scenario:Validation of selecting target account number from saved receipient in EON Account Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -57,7 +57,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount5
   Scenario:Validation of Edit functionality in the Review page of EON Account Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -89,7 +89,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount6
   Scenario:Validation of navigating to transfer clicking the cancel button for EON Account Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -105,7 +105,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount7
   Scenario:Validation of selecting target account number from favourite receipient in EON Account Transfer
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -128,7 +128,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount8
   Scenario:Verifying the EON Account Transfer transaction for various frequency in Transfer Details page
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
@@ -220,7 +220,7 @@ Feature: EonAccount Fund Transfer
 
   @EonAccount9
   Scenario:Validation of amount field in the Transfer Page
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I Click the EOnaccount fundtransfer Link
     And I click the from account number
