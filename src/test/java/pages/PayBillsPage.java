@@ -150,7 +150,7 @@ public class PayBillsPage extends Keywords {
         Wait.forSeconds(4000);
         type.data(PaybillsPAYMENTREFERENCENO, RefNo);
         type.data(PaybillsPAYORSNAME,PayorName);
-        type.data(PaybillsPOLICYNO,PolicyNo);
+        //type.data(PaybillsPOLICYNO,PolicyNo);
     }
 
     public void clickRepeatCheckBox() throws Throwable {

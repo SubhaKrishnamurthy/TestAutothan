@@ -75,7 +75,7 @@ public class InsurancePage extends Keywords {
     public void Verify_MarketPlacePage() throws Throwable {
         verify.elementIsPresent(Accident);
         verify.elementIsPresent(Life);
-        verify.elementIsPresent(ViewMore);
+//        verify.elementIsPresent(ViewMore);
         jsClick.elementBy(Accident);
         verify.elementIsPresent(AccidentInsurance1);
         verify.elementIsPresent(AccidentInsurance2);
@@ -92,8 +92,8 @@ public class InsurancePage extends Keywords {
     public void verify_InlifePurchasedProduct() throws ApplicationException {
         verify.elementIsPresent(Accident);
         verify.elementIsPresent(Life);
-        verify.elementIsPresent(ViewMore);
-        jsClick.elementBy(ViewMore);
+        //verify.elementIsPresent(ViewMore);
+        //jsClick.elementBy(ViewMore);
         Wait.forSeconds(2000);
         if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
             verify.elementISPresent_MacSafari(MyInsurancesTitle);

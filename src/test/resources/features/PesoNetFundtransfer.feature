@@ -24,7 +24,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 1,500.00"and
@@ -83,7 +83,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
@@ -121,7 +121,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
@@ -157,7 +157,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 210.00"and
@@ -295,7 +295,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
@@ -479,7 +479,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     Then I Click the New Transaction button Link

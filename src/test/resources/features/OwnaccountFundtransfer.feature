@@ -27,7 +27,7 @@ Feature: Own Account FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 10.00"and
@@ -83,7 +83,7 @@ Feature: Own Account FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 2.00"and
@@ -158,7 +158,7 @@ Feature: Own Account FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 1.00"and
@@ -178,7 +178,7 @@ Feature: Own Account FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 10.00"and
@@ -242,7 +242,7 @@ Feature: Own Account FundTransfer
     And I verify the Gotit button displayed or not
     And I click the Transfer button
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     And I Verify the Fromaccount"**** **** 1750" and Toaccount "1023 1001 1756" and Amount"PHP 250.00"and

@@ -21,7 +21,7 @@ Feature: PayBills Functionality Validation
 #TS160
   @PB02
 Scenario: Validation of navigating back to Pay bills screen on closing the select billers screen
-  Given I'm on login page of UB online banking application
+  Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
   When I am on the PayBills page
   And I search for the biller "ABRA" in Billers list
   And I Click Back button
@@ -93,7 +93,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
   #TS171
   @PB07
   Scenario: Validate Frequency and End Date fields are displayed when the user checks Repeat checkbox
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page
     And I search for the biller "MAPFRE INSULAR INSURANCE" in Billers list
     Then I click the search result1
@@ -108,7 +108,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     #TS172
   @PB08
   Scenario: Validation of displaying error message in Biller information and payment details screen when fileds are blank
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page
     And I search for the biller "UNIONBANK VISA" in Billers list
     Then I click the search result1
@@ -125,7 +125,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     #TS173
   @PB09
     Scenario: Validate next button is disabled by default in Biller information and Review screen when user doesn’t enter any fields
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page
     And I search for the biller "UNIONBANK VISA" in Billers list
     Then I click the search result1
@@ -139,7 +139,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
  #TS174
   @PB10
   Scenario: Validation of displaying error message when user enters invalid card number in biller information screen
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page
     And I search for the biller "UNIONBANK VISA" in Billers list
     Then I click the search result1
@@ -149,13 +149,14 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     And I enter the amount field as "100"
     And I click the Next Button
     And I click the Pay Bills php button
-    Then I verify review page error message as "Card Number you entered is invalid."
+#    Then I verify review page error message as "Card Number you entered is invalid."
+    Then I verify review page error message as "Visa card number you entered is invalid."
     #Then I logout of UB online banking application
 
     #TS175
   @PB11
   Scenario: Validation of user not able to enter any text characters in card number field in Biller information screen
-    Given I'm on login page of UB online banking application
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page
     And I search for the biller "UNIONBANK VISA" in Billers list
     Then I click the search result1
@@ -166,7 +167,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
    #TS176
    @PB12
    Scenario: Validate current date is displayed by default in Date field
-     Given I'm on login page of UB online banking application
+     Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
      When I am on the PayBills page
      And I search for the biller "UNIONBANK VISA" in Billers list
      Then I click the search result1
@@ -180,7 +181,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
      #TS177
     @PB13
     Scenario: Validate Account Number should be unmasked when user clicks Account number and card number in payment scuccessful screen
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
       And I search for the biller "New Visa Card" in MyBillers
       Then I click the search result1
@@ -191,17 +192,17 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
-      And I Enter the OTP "222222" in OTP Page
+      And I Enter the OTP "111111" in OTP Page
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify from account number field masked as "**** **** 1750" and after unmasking as "1022 2002 1750"
-      And I verify card number filed masked as "**** **** **** 6843" and after unmaking as "**** **** **** 6843"
+      And I verify card number filed masked as "**** **** **** 9031" and after unmaking as "**** **** **** 9031"
       #Then I logout of UB online banking application
 
     #TS178
      @PB14
    Scenario: validate user lands in pay bills screen when user clicks New payment button Payment Successful Screen
-       Given I'm on login page of UB online banking application
+       Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
        When I am on the PayBills page
        And I search for the biller "New Visa Card" in MyBillers
        Then I click the search result1
@@ -212,7 +213,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
        And I click the GotIt button if displayed
        And I click the Pay Bills php button
        #And I Verify the OTP Filed is page is displayed
-       And I Enter the OTP "222222" in OTP Page
+       And I Enter the OTP "111111" in OTP Page
        #And I click the Submit Button
        Then I verify pay Bills payment successful message
        And I click new payment button in final page
@@ -222,7 +223,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
      #TS162
     @PB15
     Scenario: Validation of making payment to biller from My billers tab
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
       And I search for the biller "MAPFRE" in MyBillers
       Then I click the search result1
@@ -233,7 +234,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
-      And I Enter the OTP "222222" in OTP Page
+      And I Enter the OTP "111111" in OTP Page
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 100.00"
@@ -242,7 +243,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     #TS163
     @PB16
   Scenario: Validation of making payment to biller from Favourites tab
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
       And I search for the billler "New Visa Card" in Favorites list
       Then I click the search result1
@@ -253,16 +254,16 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
-      And I Enter the OTP "222222" in OTP Page
+      And I Enter the OTP "111111" in OTP Page
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
-      And I Verify BillerName as "UNIONBANK VISA" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "**** **** **** 6843" Amount as "PHP 100.00"
+      And I Verify BillerName as "UNIONBANK VISA" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "**** **** **** 9031" Amount as "PHP 100.00"
       Then I logout of UB online banking application
 
     #TS164
     @PB17
     Scenario: Validation of making payment to biller from Biller list tab
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
       And I search for the biller "MAPFRE INSULAR INSURANCE CORP" in Billers list
       Then I click the search result1
@@ -274,7 +275,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
-      And I Enter the OTP "222222" in OTP Page
+      And I Enter the OTP "111111" in OTP Page
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 10.00"
@@ -304,7 +305,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
    #TS168
     @PB19
     Scenario: validation of clicking Edit buttons  in Review and Pay screen for Pay Bill Transaction
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
       And I search for the biller "MAPFRE" in MyBillers
       Then I click the search result1
@@ -321,7 +322,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       And I click the GotIt button if displayed
       And I click the Pay Bills php button
       #And I Verify the OTP Filed is page is displayed
-      And I Enter the OTP "222222" in OTP Page
+      And I Enter the OTP "111111" in OTP Page
       #And I click the Submit Button
       Then I verify pay Bills payment successful message
       And I Verify BillerName as "MAPFRE INSULAR INSURANCE CORP" FromAccountNumber as "**** **** 1750" PolicyOwnerNumber as "0006992990424204" Amount as "PHP 150.00"
@@ -330,7 +331,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
       #TS169
       @PB20
       Scenario: Validation of account number getting masked and unmasked on clicking from account and card number in review pay screen
-        Given I'm on login page of UB online banking application
+        Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
         When I am on the PayBills page
         And I search for the biller "UNIONBANK VISA" in Billers list
         Then I click the search result1
