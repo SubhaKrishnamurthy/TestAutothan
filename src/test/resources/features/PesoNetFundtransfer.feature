@@ -34,7 +34,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet2
   Scenario:Validation of transfering amount less than 200 for Pesonet transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link
@@ -62,7 +62,7 @@ Feature: PesoNet Fund Transfer
     And I click the Transfer button
     And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
-    And I Enter the OTP "111111" in OTP Page
+    And I Enter the OTP "234123" in OTP Page
     #And I click the Submit Button
     Then I verify the Invalid OTP error message
 
@@ -392,7 +392,7 @@ Feature: PesoNet Fund Transfer
 
   @PesoNet15
   Scenario:Validation of Next button is enabled when recipient bank select from bank list and enter the mandatory fields
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I click the Pesonet link

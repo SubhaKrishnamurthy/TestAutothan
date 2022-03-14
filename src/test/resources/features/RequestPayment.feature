@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@RequestPayment @Regression
+@RequestPayment @Regression @RegressionNew
 Feature: Request Payment Functionality Validation
 
   #TS093

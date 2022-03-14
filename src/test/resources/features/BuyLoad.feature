@@ -3,19 +3,19 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @BuyLoad @Regression
+ @BuyLoad @Regression @RegressionNew
 Feature: BuyLoad
 
   @BuyLoad1
   Scenario:Validation of Buyload on clicking Select Contact from buyload
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
 
   @BuyLoad2
   Scenario:Validation of contacts in contacts screen using name of user in MyContacts
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -27,14 +27,14 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad3
   Scenario:Validation of contacts in contacts screen using Mobile number of user in MyContacts
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -46,14 +46,14 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad4
   Scenario:Validation of contacts in contacts screen using Mobile number of user in Favorites
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -66,14 +66,14 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad5
   Scenario:Validation of contacts in contacts screen using name of user in Favorites
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -86,14 +86,14 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
 
   @BuyLoad6
   Scenario:Validation of Buyload more than account current balance
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -109,7 +109,7 @@ Feature: BuyLoad
 
   @BuyLoad7
     Scenario: Validation of navigating to Buy load screen on clicking new purchase button in Buy load success page
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -122,7 +122,7 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I verify the new purchase link
@@ -130,7 +130,7 @@ Feature: BuyLoad
 
   @BuyLoad8
   Scenario: Validation of navigating to Buyload screen on clicking back button in Review and purchase
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -148,7 +148,7 @@ Feature: BuyLoad
 
   @BuyLoad9
   Scenario: Validation of navigating to Buyload screen on clicking back button in purachase from
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -163,7 +163,7 @@ Feature: BuyLoad
 
   @BuyLoad10
   Scenario:Validation of entering invalid OTP in Buy Load Transaction
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -182,7 +182,7 @@ Feature: BuyLoad
 
   @BuyLoad11
   Scenario:Validation of editing from account,amount and mobile number in review and purchase screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -208,7 +208,7 @@ Feature: BuyLoad
 
   @BuyLoad12
   Scenario:Validation of navigating to cancel purchase popup on clicking Cancel button in Review and Purchase
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -226,7 +226,7 @@ Feature: BuyLoad
 
   @BuyLoad13
   Scenario:Validation of entering valid and invalid Mobile number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -241,7 +241,7 @@ Feature: BuyLoad
 
   @BuyLoad14
   Scenario:Validation of mycontacts and favourites search using Name,Mobile Number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I enter the name"sundar"
@@ -260,7 +260,7 @@ Feature: BuyLoad
 
   @BuyLoad15
   Scenario:Validation of edit and delete contact in mycontacts
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the addcontact in buyload
@@ -285,7 +285,7 @@ Feature: BuyLoad
 
   @BuyLoad16
   Scenario:Validation of edit and delete contact in favuorites
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the favourite link in buyload
@@ -312,7 +312,7 @@ Feature: BuyLoad
 
   @BuyLoad17
   Scenario:Validation of add Contact with Invalid Name and Mobile number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the favourite link in buyload
@@ -323,7 +323,7 @@ Feature: BuyLoad
 
   @BuyLoad18
   Scenario:Validation of add Contact with Invalid Name and Mobile number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the favourite link in buyload
@@ -334,7 +334,7 @@ Feature: BuyLoad
 
   @BuyLoad19
   Scenario:Validation of add Contact with Invalid Name and Mobile number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the favourite link in buyload
@@ -345,7 +345,7 @@ Feature: BuyLoad
 
   @BuyLoad20
   Scenario:Validation of add Contact with Invalid Name and Mobile number
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I Click the Manage contacts link in the Buyload
     And I click the favourite link in buyload
@@ -356,7 +356,7 @@ Feature: BuyLoad
 
   @BuyLoad21
   Scenario:Validation of buy load related queries and answers in buy load FAQ
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click the FAQ link in Buyload page
     And I verify the FAQ links are exist in FAQ page
@@ -364,14 +364,14 @@ Feature: BuyLoad
 
   @BuyLoad22
   Scenario:Validation of searching of any queries related to buy load in buy load FAQ Screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I enter the value"Can I buy load for others?" in search filed
     And I verify the results displayed
 
   @BuyLoad23
  Scenario:Validation Mobile Number,Amount and account deatils in buyload successful screen
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "222222"
+    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
@@ -383,7 +383,7 @@ Feature: BuyLoad
     And I select the value "100" in buy load screen
     And I click the Next Button
     And I click purchaseload button
-    And I Enter the OTP "222222" in OTP Page
+    And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
     And I verify tansfer successful displayed
     And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"

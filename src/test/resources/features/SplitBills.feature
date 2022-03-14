@@ -3,13 +3,13 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@SplitBills @Regression
+@SplitBills @Regression @RegressionNew
 Feature: SplitBills Functionality Validation
 
   #TSSB01
   @SB01
   Scenario Outline: Validation of successful SPLIT BILL transfer for  Evenly Split option where amount requested is divided equally and navigate to New transcation
-  Given  I'm on login page of UB online banking application
+  Given  I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the Split bills under receive money
     And I enter the amount field as "100"
     And I select the split option as "Evenly"
@@ -28,7 +28,7 @@ Feature: SplitBills Functionality Validation
     #TSSB02
     @SB02
     Scenario Outline: Validation of successful SPLIT BILL  transfer for Unevenly split option where Participent amount details is requested separately and navigate to Dashboard
-      Given  I'm on login page of UB online banking application
+      Given  I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click the Split bills under receive money
       And I enter the amount field as "200"
       And I select the split option as "Unevenly"
@@ -48,7 +48,7 @@ Feature: SplitBills Functionality Validation
     #TSSB03
     @SB03
     Scenario Outline: Validation of  successful SPLIT BILL  transfer for Each as split option where Amount Requested is the same for each participants and navigate to New transcation
-      Given  I'm on login page of UB online banking application
+      Given  I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click the Split bills under receive money
       And I enter the amount field as "200"
       And I select the split option as "Each"
@@ -68,7 +68,7 @@ Feature: SplitBills Functionality Validation
       #TSSB04
       @SB04
     Scenario Outline: Validation of Edit option in Review and Request page
-      Given I'm on login page of UB online banking application
+      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I click the Split bills under receive money
       And I enter the amount field as "100"
       And I select the split option as "Each"
@@ -77,7 +77,7 @@ Feature: SplitBills Functionality Validation
       And I Select the from account in the displayed account list
       And I click the next button
       And I click the edit button
-      And I add one participant as "Aa"
+      And I add one participant as "Ya"
       And I click the update Button
       And I click the Request payemnt php button
       Then I Click the New Transaction button Link
@@ -92,7 +92,7 @@ Feature: SplitBills Functionality Validation
      #TSSB05
     @SB05
    Scenario: Validation of Cancel option in Review and Request page
-     Given I'm on login page of UB online banking application
+     Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
      When I click the Split bills under receive money
      And I enter the amount field as "100"
      And I select the split option as "Each"
