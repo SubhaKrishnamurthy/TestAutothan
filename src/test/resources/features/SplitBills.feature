@@ -23,7 +23,7 @@ Feature: SplitBills Functionality Validation
     And I Click the Logout Button
     Examples:
     |FromAccountName| FromAccountNumber |RequesingAmount|TotalBill  |YourAmount|message   |DepositToAccName|DepositToAccNumber|
-    |Sundar         | 09457946537       | PHP 50.00     | PHP 100.00|PHP 50.00 |Testing01 |CARIN - ACTIVE  | 1022 2002 1750   |
+    |Sundar         | 09457946537       | PHP 50.00     | PHP 100.00|PHP 50.00 |Testing01 |CARIN ANGELICA MUNOZ BERINA  | 1022 2002 1750   |
 
     #TSSB02
     @SB02
@@ -43,7 +43,7 @@ Feature: SplitBills Functionality Validation
       And I Click the Logout Button
       Examples:
         |FromAccountName| FromAccountNumber |RequesingAmount|TotalBill   |YourAmount |message  |DepositToAccName|DepositToAccNumber|
-        |Sundar         | 09457946537        | PHP 50.00    | PHP 200.00 |PHP 150.00 |Testing02|CARIN - ACTIVE  |  1022 2002 1750 |
+        |Sundar         | 09457946537        | PHP 50.00    | PHP 200.00 |PHP 150.00 |Testing02|CARIN ANGELICA MUNOZ BERINA  |  1022 2002 1750 |
 
     #TSSB03
     @SB03
@@ -63,7 +63,7 @@ Feature: SplitBills Functionality Validation
       And I Click the Logout Button
       Examples:
         |FromAccountName| FromAccountNumber |RequesingAmount|TotalBill   |YourAmount |message  |DepositToAccName|DepositToAccNumber|
-        |Sundar         | 09457946537       | PHP 200.00    | PHP 400.00 |PHP 200.00 |Testing02|CARIN - ACTIVE   | 1022 2002 1750  |
+        |Sundar         | 09457946537       | PHP 200.00    | PHP 400.00 |PHP 200.00 |Testing02|CARIN ANGELICA MUNOZ BERINA   | 1022 2002 1750  |
 
       #TSSB04
       @SB04
@@ -87,7 +87,7 @@ Feature: SplitBills Functionality Validation
 
         Examples:
           |FromAccountName     | FromAccountNumber |RequesingAmount|TotalBill   |YourAmount |message  |DepositToAccName|DepositToAccNumber|
-          |aaOKG1kLcFJs1DVkZaed | 62235584891      | PHP 100.00    | PHP 300.00 |PHP 100.00 |Testing04|CARIN - ACTIVE  | 1022 2002 1750 |
+          |aaOKG1kLcFJs1DVkZaed | 62235584891      | PHP 100.00    | PHP 300.00 |PHP 100.00 |Testing04|CARIN ANGELICA MUNOZ BERINA  | 1022 2002 1750 |
 
      #TSSB05
     @SB05

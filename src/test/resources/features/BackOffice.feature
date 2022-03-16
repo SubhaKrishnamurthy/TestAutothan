@@ -10,9 +10,9 @@ Feature: Backoffice functionalities Validation
   Scenario: TSB001_Validation of Manage clients tab for BRM user
     Given I am on login page of online banking backoffice application as SubhaBrm user
     When I click on the manage clients tab
-    When I search for first name as "Subha1"
+    When I search for first name as "AZUCENA"
     Then I verify the list of users related to search
-    When I search for last name as "Krish1"
+    When I search for last name as "DASMARINAS"
     Then I verify the list of users related to search
     When I search for mobileNumber as "9177164171"
     Then I verify the list of users related to search
@@ -90,9 +90,9 @@ Feature: Backoffice functionalities Validation
       Scenario: TSBO06_Validation of searching client user in search bar by firstName,lastName,Mobile,Email,Account number for SSO user
         Given I am on login page of online banking backoffice application as SubhaBrm user
         When I click on the manage clients tab
-        When I search for first name as "Subha1"
+        When I search for first name as "AZUCENA"
         Then I verify the list of users related to search
-        When I search for first name as "Krish1"
+        When I search for first name as "DASMARINAS"
         Then I verify the list of users related to search
         When I search for first name as "9177164171"
         Then I verify the list of users related to search
@@ -106,33 +106,33 @@ Feature: Backoffice functionalities Validation
       Scenario: TSBO07_Validation of Edit profile for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
-      When I search for first name as "Subha2"
+      When I search for first name as "EXTERNAL"
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit profile button
-      And I edit customer last name as "Tester"
+      And I edit customer last name as "TEST"
       And I click the edit user ID update button
       And I enter edit reason as "Name change" and click on Save button
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage profile changes for approval
-      And I click users approve for "Subha2"
+      And I click users approve for "EXTERNAL"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
             #Repeat steps to edit profile back to original profile
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
-      When I search for first name as "Subha2"
+      When I search for first name as "EXTERNAL"
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit profile button
-      And I edit customer last name as "Krish2"
+      And I edit customer last name as "TEST"
       And I click the edit user ID update button
       And I enter edit reason as "Name change" and click on Save button
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage profile changes for approval
-      And I click users approve for "Subha2"
+      And I click users approve for "EXTERNAL"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
@@ -140,7 +140,7 @@ Feature: Backoffice functionalities Validation
     Scenario:  TSBO08_Validation of Edit User ID for SSO user
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
-      When I search for first name as "Subha2"
+      When I search for first name as "EXTERNAL"
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit UserID button
@@ -150,13 +150,13 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage User ID changes for approval
-      And I click users approve for User ID "Subha2"
+      And I click users approve for User ID "EXTERNAL"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
       #Repeat steps to edit back to original ID
       Given I am on login page of online banking backoffice application as Subha user
       When I click on the manage clients tab
-      When I search for first name as "Subha2"
+      When I search for first name as "EXTERNAL"
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit UserID button
@@ -166,7 +166,7 @@ Feature: Backoffice functionalities Validation
       Then I successfully logout by clicking the Logout Button
       Given I am on login page of online banking backoffice application as SubhaBrm user
       And I click manage User ID changes for approval
-      And I click users approve for User ID "Subha2"
+      And I click users approve for User ID "EXTERNAL"
       And I enter approve reason as "Please Approve" and click confirm approve button
       Then I successfully logout by clicking the Logout Button
 
@@ -174,7 +174,7 @@ Feature: Backoffice functionalities Validation
         Scenario:  TSBO09_Validation of Confirm approval for deactivation of user for SSO user
         Given I am on login page of online banking backoffice application as Subha user
         When I click on the manage clients tab
-        When I search for first name as "Subha2"
+        When I search for first name as "EXTERNAL"
         Then I verify the list of users related to search
         When I click on the active user
         And I verify customer Information Title
@@ -183,13 +183,13 @@ Feature: Backoffice functionalities Validation
         Then I successfully logout by clicking the Logout Button
         Given I am on login page of online banking backoffice application as SubhaBrm user
         And I click manage profile changes for approval
-        And I click users approve for "Subha2"
+        And I click users approve for "EXTERNAL"
         And I enter approve reason as "Please Approve" and click confirm approve button
         Then I successfully logout by clicking the Logout Button
         #Repeat to activate
         Given I am on login page of online banking backoffice application as Subha user
         When I click on the manage clients tab
-        When I search for first name as "Subha2"
+        When I search for first name as "EXTERNAL"
         Then I verify the list of users related to search
         When I click on the active user
         And I verify customer Information Title
@@ -198,7 +198,7 @@ Feature: Backoffice functionalities Validation
         Then I successfully logout by clicking the Logout Button
         Given I am on login page of online banking backoffice application as SubhaBrm user
         And I click manage profile changes for approval
-        And I click users approve for "Subha2"
+        And I click users approve for "EXTERNAL"
         And I enter approve reason as "Please Approve" and click confirm approve button
         Then I successfully logout by clicking the Logout Button
 
@@ -206,7 +206,7 @@ Feature: Backoffice functionalities Validation
   Scenario: TSBO10_Validation of Confirm disapproval for deactivation of user for SSO user
     Given I am on login page of online banking backoffice application as Subha user
     When I click on the manage clients tab
-    When I search for first name as "Subha2"
+    When I search for first name as "EXTERNAL"
     Then I verify the list of users related to search
     When I click on the active user
     And I verify customer Information Title
@@ -215,13 +215,13 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
     Given I am on login page of online banking backoffice application as SubhaBrm user
     And I click manage profile changes for approval
-    And I click users dispprove for "Subha2"
+    And I click users dispprove for "EXTERNAL"
     And I enter disapprove reason as "Please disApprove" and click confirm disapprove button
     Then I successfully logout by clicking the Logout Button
     #Repeat for confirmation
     Given I am on login page of online banking backoffice application as Subha user
     When I click on the manage clients tab
-    When I search for first name as "Subha2"
+    When I search for first name as "EXTERNAL"
     When I click on the active user
     And I verify customer Information Title
     And I verify customer information Deactivate button
@@ -230,7 +230,7 @@ Feature: Backoffice functionalities Validation
   Scenario: TSBO11_Validation of Confirm cancel for deactivation of same user for SSO user
     Given I am on login page of online banking backoffice application as Subha user
     When I click on the manage clients tab
-    When I search for first name as "Subha2"
+    When I search for first name as "EXTERNAL"
     Then I verify the list of users related to search
     When I click on the active user
     And I verify customer Information Title
@@ -238,10 +238,10 @@ Feature: Backoffice functionalities Validation
     And I enter deactivate reason as "Testing" and click confirm deactivate button
     When I click on the accounts tab
     And I click manage profile changes for approval
-    And I click users cancel for "Subha2"
+    And I click users cancel for "EXTERNAL"
     And I enter cancel reason as "PleaseApprove" and click confirm cancel button
     When I click on the manage clients tab
-    When I search for first name as "Subha2"
+    When I search for first name as "EXTERNAL"
     Then I verify the list of users related to search
     When I click on the active user
     And I verify customer Information Title
@@ -249,14 +249,14 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
 
     #TS260
-  @B12
-    Scenario: TS260_Validation Schedule Fund Transfer Valid Transaction dates
-      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
-      When I click on the Scheduled Activities Link
-      And I click on the Failed scheduled Fund Transfer search Link
-      And I select transaction type as "For investigation" and click search button
-      Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-      Then I successfully logout by clicking the Logout Button
+#  @B12
+#    Scenario: TS260_Validation Schedule Fund Transfer Valid Transaction dates
+#      Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+#      When I click on the Scheduled Activities Link
+#      And I click on the Failed scheduled Fund Transfer search Link
+#      And I select transaction type as "For investigation" and click search button
+#      Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#      Then I successfully logout by clicking the Logout Button
 
       #TS261
  @B13
@@ -301,8 +301,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of register,Endorse and user access the user Bills Pay Onboarding role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills pay onboarding  role details
-    Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
-    Then I Login with user "UBPSAC2" and second approve the user Bills pay onboarding  role
+    Then I Login with user "sacrole01" and approve the user Bills pay onboarding  role
+    Then I Login with user "sacrole02" and second approve the user Bills pay onboarding  role
     And I Login with new "Bills pay onboarding" user and logout
 
 
@@ -311,8 +311,8 @@ Feature: Backoffice functionalities Validation
       Scenario: Validation of Register Endorse and user access the user SAC role
       Given I'm click the register button in the backoffice application
       When I enter the firstname lastname and user creation SAC details
-      Then I Login with user "UBPSAC1" and approve the user SAC
-      Then I Login with user "UBPSAC2" and second approve the user SAC
+      Then I Login with user "sacrole01" and approve the user SAC
+      Then I Login with user "sacrole02" and second approve the user SAC
       And I Login with new "SAC" user and logout
 
     #181
@@ -320,8 +320,8 @@ Feature: Backoffice functionalities Validation
     Scenario: Validation of Register Endorse and user access the user CEG Team Lead role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Team Lead details
-    Then I Login with user "UBPSAC1" and approve the user CEG Team Lead
-    Then I Login with user "UBPSAC2" and second approve the user CEG Team Lead
+    Then I Login with user "sacrole01" and approve the user CEG Team Lead
+    Then I Login with user "sacrole02" and second approve the user CEG Team Lead
     And I Login with new "CEG Team Lead" user and logout
 
      #182
@@ -329,8 +329,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user CEG Agent role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Agent role details
-    Then I Login with user "UBPSAC1" and approve the user CEG Agent role
-    Then I Login with user "UBPSAC2" and second approve the user CEG Agent role
+    Then I Login with user "sacrole01" and approve the user CEG Agent role
+    Then I Login with user "sacrole02" and second approve the user CEG Agent role
     And I Login with new "CEG Agent role" user and logout
 
       #183
@@ -338,8 +338,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user AFU role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation AFU role details
-    Then I Login with user "UBPSAC1" and approve the user AFU role
-    Then I Login with user "UBPSAC2" and second approve the user AFU role
+    Then I Login with user "sacrole01" and approve the user AFU role
+    Then I Login with user "sacrole02" and second approve the user AFU role
     And I Login with new "AFU role" user and logout
 
   #184
@@ -347,8 +347,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user Bills Pay Innovation role role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills Pay Innovation role details
-    Then I Login with user "UBPSAC1" and approve the user Bills Pay Innovation role
-    Then I Login with user "UBPSAC2" and second approve the user Bills Pay Innovation role
+    Then I Login with user "sacrole01" and approve the user Bills Pay Innovation role
+    Then I Login with user "sacrole02" and second approve the user Bills Pay Innovation role
     And I Login with new "Bills Pay Innovation role" user and logout
 
      #185
@@ -356,8 +356,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user Help Desk role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Help Desk role details
-    Then I Login with user "UBPSAC1" and approve the user Help Desk role
-    Then I Login with user "UBPSAC2" and second approve the user Help Desk role
+    Then I Login with user "sacrole01" and approve the user Help Desk role
+    Then I Login with user "sacrole02" and second approve the user Help Desk role
     And I Login with new "Help Desk role" user and logout
 
          #186
@@ -365,8 +365,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user App Support role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation App Support  role details
-    Then I Login with user "UBPSAC1" and approve the user App Support  role
-    Then I Login with user "UBPSAC2" and second approve the user App Support  role
+    Then I Login with user "sacrole01" and approve the user App Support  role
+    Then I Login with user "sacrole01" and second approve the user App Support  role
     And I Login with new "App Support  role" user and logout
 
              #187
@@ -374,8 +374,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user Union Bank Online Product role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Union Bank Online Product  role details
-    Then I Login with user "UBPSAC1" and approve the user Union Bank Online Product  role
-    Then I Login with user "UBPSAC2" and second approve the user Union Bank Online Product  role
+    Then I Login with user "sacrole01" and approve the user Union Bank Online Product  role
+    Then I Login with user "sacrole02" and second approve the user Union Bank Online Product  role
     And I Login with new "Union Bank Online Product role" user and logout
 
                 #188
@@ -383,8 +383,8 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Register Endorse and user access the user QR Maker role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation QR Maker  role details
-    Then I Login with user "UBPSAC1" and approve the user QR Maker role
-    Then I Login with user "UBPSAC2" and second approve the user QR Maker  role
+    Then I Login with user "sacrole01" and approve the user QR Maker role
+    Then I Login with user "sacrole02" and second approve the user QR Maker  role
     And I Login with new "QR Maker role" user and logout
     #Register cases ends here
   #Disapproe cases starts here
@@ -392,132 +392,132 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Disapproving Endorsement SAC user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation SAC details
-    Then I Login with user "UBPSAC1" and Disapprove the user SAC
+    Then I Login with user "sacrole01" and Disapprove the user SAC
 
   @B26
   Scenario: Validation of Disapproving Endorsement CEG Team Lead user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Team Lead details
-    Then I Login with user "UBPSAC1" and Disapprove the user CEG Team Lead
+    Then I Login with user "sacrole01" and Disapprove the user CEG Team Lead
 
   @B27
   Scenario: Validation of Disapproving Endorsement CEG Agent role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Agent role details
-    Then I Login with user "UBPSAC1" and Disapprove the user CEG Agent role
+    Then I Login with user "sacrole01" and Disapprove the user CEG Agent role
 
   @B28
   Scenario: Validation of Disapproving Endorsement AFU role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation AFU role details
-    Then I Login with user "UBPSAC1" and Disapprove the user AFU role
+    Then I Login with user "sacrole01" and Disapprove the user AFU role
 
   @B29
   Scenario: Validation of Disapproving Endorsement QR Maker role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation QR Maker  role details
-    Then I Login with user "UBPSAC1" and Disapprove the user QR Maker role
+    Then I Login with user "sacrole01" and Disapprove the user QR Maker role
 
   @B30
   Scenario: Validation of Disapproving Endorsement Bills Pay Innovation role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills Pay Innovation role details
-    Then I Login with user "UBPSAC1" and Disapprove the user Bills Pay Innovation role
+    Then I Login with user "sacrole01" and Disapprove the user Bills Pay Innovation role
 
   @B31
   Scenario: Validation of Disapproving Endorsement Help Desk role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Help Desk role details
-    Then I Login with user "UBPSAC1" and Disapprove the user Help Desk role
+    Then I Login with user "sacrole01" and Disapprove the user Help Desk role
 
   @B32
 
   Scenario: Validation of Disapproving Endorsement App Support role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation App Support  role details
-    Then I Login with user "UBPSAC1" and Disapprove the user App Support  role
+    Then I Login with user "sacrole01" and Disapprove the user App Support  role
 
   @B33
   Scenario: Validation of Disapproving Endorsement Union Bank Online Product role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Union Bank Online Product  role details
-    Then I Login with user "UBPSAC1" and Disapprove the user Union Bank Online Product  role
+    Then I Login with user "sacrole01" and Disapprove the user Union Bank Online Product  role
 
   @B34
   Scenario: Validation of Disapproving Endorsement Bills pay onboarding role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills pay onboarding  role details
-    Then I Login with user "UBPSAC1" and Disapprove the user Bills pay onboardingProduct  role
+    Then I Login with user "sacrole01" and Disapprove the user Bills pay onboardingProduct  role
 
   @B35
   Scenario: Validation of Disapproving Endorsement Request Approval SAC user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation SAC details
-    Then I Login with user "UBPSAC1" and approve the user SAC
-    Then I Login with user "UBPSAC2" and Disapprove the user SAC
+    Then I Login with user "sacrole01" and approve the user SAC
+    Then I Login with user "sacrole02" and Disapprove the user SAC
 
   @B36
   Scenario: Validation of Disapproving Endorsement Request Approval CEG Team Lead user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Team Lead details
-    Then I Login with user "UBPSAC1" and approve the user CEG Team Lead
-    Then I Login with user "UBPSAC2" and Disapprove the user CEG Team Lead
+    Then I Login with user "sacrole01" and approve the user CEG Team Lead
+    Then I Login with user "sacrole02" and Disapprove the user CEG Team Lead
 
   @B37
   Scenario: Validation of Disapproving Endorsement Request Approval CEG Agent role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation CEG Agent role details
-    Then I Login with user "UBPSAC1" and approve the user CEG Agent role
-    Then I Login with user "UBPSAC2" and Disapprove the user CEG Agent role
+    Then I Login with user "sacrole01" and approve the user CEG Agent role
+    Then I Login with user "sacrole02" and Disapprove the user CEG Agent role
 
   @B38
   Scenario: Validation of Disapproving Endorsement Request Approval AFU role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation AFU role details
-    Then I Login with user "UBPSAC1" and approve the user AFU role
-    Then I Login with user "UBPSAC2" and Disapprove the user AFU role
+    Then I Login with user "sacrole01" and approve the user AFU role
+    Then I Login with user "sacrole02" and Disapprove the user AFU role
 
   @B39
   Scenario: Validation of Disapproving Endorsement Request Approval QR Maker role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation QR Maker  role details
-    Then I Login with user "UBPSAC1" and approve the user QR Maker role
-    Then I Login with user "UBPSAC2" and Disapprove the user QR Maker role
+    Then I Login with user "sacrole01" and approve the user QR Maker role
+    Then I Login with user "sacrole02" and Disapprove the user QR Maker role
 
   @B40
   Scenario: Validation of Disapproving Endorsement Request Approval Bills Pay Innovation role user request
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills Pay Innovation role details
-    Then I Login with user "UBPSAC1" and approve the user Bills Pay Innovation role
-    Then I Login with user "UBPSAC2" and Disapprove the user Bills Pay Innovation role
+    Then I Login with user "sacrole01" and approve the user Bills Pay Innovation role
+    Then I Login with user "sacrole02" and Disapprove the user Bills Pay Innovation role
 
   @B41
   Scenario: Validation of Disapproving Endorsement Request Approval Help Desk role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Help Desk role details
-    Then I Login with user "UBPSAC1" and approve the user Help Desk role
-    Then I Login with user "UBPSAC2" and Disapprove the user Help Desk role
+    Then I Login with user "sacrole01" and approve the user Help Desk role
+    Then I Login with user "sacrole02" and Disapprove the user Help Desk role
 
   @B42
   Scenario: Validation of Disapproving Endorsement Request Approval App Support role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation App Support  role details
-    Then I Login with user "UBPSAC1" and approve the user App Support  role
-    Then I Login with user "UBPSAC2" and Disapprove the user App Support  role
+    Then I Login with user "sacrole01" and approve the user App Support  role
+    Then I Login with user "sacrole02" and Disapprove the user App Support  role
 
   @B43
   Scenario: Validation of Disapproving Endorsement Request Approval Union Bank Online Product role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Union Bank Online Product  role details
-    Then I Login with user "UBPSAC1" and approve the user Union Bank Online Product  role
-    Then I Login with user "UBPSAC2" and Disapprove the user Union Bank Online Product  role
+    Then I Login with user "sacrole01" and approve the user Union Bank Online Product  role
+    Then I Login with user "sacrole02" and Disapprove the user Union Bank Online Product  role
 
   @B44
   Scenario: Validation of Disapproving Endorsement Request Approval Bills pay onboarding role
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation Bills pay onboarding  role details
-    Then I Login with user "UBPSAC1" and approve the user Bills pay onboarding  role
-    Then I Login with user "UBPSAC2" and Disapprove the user Bills pay onboardingProduct  role
+    Then I Login with user "sacrole01" and approve the user Bills pay onboarding  role
+    Then I Login with user "sacrole02" and Disapprove the user Bills pay onboardingProduct  role
     #Disapprove cases ends here
 
   #253
@@ -534,78 +534,78 @@ Feature: Backoffice functionalities Validation
     Then I successfully logout by clicking the Logout Button
 
     #252
-  @B46
-  Scenario: Validation Schedule Bill Payment valid UserId,Account Number,Biller name and Reference Number
-    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
-    When I click on the Failed scheduled Bills Payment search Link
-    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select source type as "Biller",Enter text as "VECO" and click Search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    Then I successfully logout by clicking the Logout Button
-
-    #254
-  @B47
-  Scenario: Validation Schedule Bill Payment various frequency
-    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
-    When I click on the Failed scheduled Bills Payment search Link
-    And I select source type as "Frequency"
-    And I select transaction type as "Never" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Daily" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Weekly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Every 2 weeks" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Monthly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Quarterly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Semi-annually" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Annually" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    Then I successfully logout by clicking the Logout Button
-
-    #257
-  @B48
-  Scenario:Validation Schedule Bill Payment valid UserId,Account Number,Reference id and Bank Name
-    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
-    When I click on the Scheduled Activities Link
-    And I click on the Failed scheduled Fund Transfer search Link
-    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select source type as "Source Account",Enter text as "102310011756" and click Search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select source type as "Target Bank",Enter text as "UnionBank of the Philippines" and click Search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    Then I successfully logout by clicking the Logout Button
-
-    #259
-  @B49
-  Scenario: Validation Schedule Fund Transfer various frequency
-    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
-    When I click on the Scheduled Activities Link
-    And I click on the Failed scheduled Fund Transfer search Link
-    And I select source type as "Frequency"
-    And I select transaction type as "Never" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Daily" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Weekly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Every 2 weeks" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Monthly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Quarterly" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Semi-annually" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    And I select transaction type as "Annually" and click search button
-    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
-    Then I successfully logout by clicking the Logout Button
+#  @B46
+#  Scenario: Validation Schedule Bill Payment valid UserId,Account Number,Biller name and Reference Number
+#    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+#    When I click on the Failed scheduled Bills Payment search Link
+#    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select source type as "Biller",Enter text as "VECO" and click Search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    Then I successfully logout by clicking the Logout Button
+#
+#    #254
+#  @B47
+#  Scenario: Validation Schedule Bill Payment various frequency
+#    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+#    When I click on the Failed scheduled Bills Payment search Link
+#    And I select source type as "Frequency"
+#    And I select transaction type as "Never" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Daily" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Weekly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Every 2 weeks" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Monthly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Quarterly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Semi-annually" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Annually" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    Then I successfully logout by clicking the Logout Button
+#
+#    #257
+#  @B48
+#  Scenario:Validation Schedule Bill Payment valid UserId,Account Number,Reference id and Bank Name
+#    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+#    When I click on the Scheduled Activities Link
+#    And I click on the Failed scheduled Fund Transfer search Link
+#    And I select source type as "User ID",Enter text as "accnumtestubp" and click Search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select source type as "Source Account",Enter text as "102310011756" and click Search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select source type as "Target Bank",Enter text as "UnionBank of the Philippines" and click Search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    Then I successfully logout by clicking the Logout Button
+#
+#    #259
+#  @B49
+#  Scenario: Validation Schedule Fund Transfer various frequency
+#    Given I am on login page of online banking backoffice application as UBPProductAuto1 user
+#    When I click on the Scheduled Activities Link
+#    And I click on the Failed scheduled Fund Transfer search Link
+#    And I select source type as "Frequency"
+#    And I select transaction type as "Never" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Daily" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Weekly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Every 2 weeks" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Monthly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Quarterly" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Semi-annually" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    And I select transaction type as "Annually" and click search button
+#    Then I verify DailyID,AccountNumbers,Transaction,Message,Status,Action
+#    Then I successfully logout by clicking the Logout Button
 
     #251
    @B50
@@ -625,7 +625,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of QR CODE generation
     Given I am on login page of online banking backoffice application as UBPQRMakerAuto user
     When I click on manage biller
-    Then I search for the biller "7335"
+    Then I search for the biller "7334"
     And I enter payors name "PINOYID", pin "1357564" and generate QR code
     And I cancel the QR maker
     #Then I successfully logout by clicking the Logout Button
@@ -811,18 +811,18 @@ Feature: Backoffice functionalities Validation
 #Edit profile starts here
   @B62
   Scenario: Validation of updating in Edit profile screen and Approval
-    Given Login with user "UBPSAC1"
-    When I search the client user id "senthilactive"
+    Given Login with user "sacrole01"
+    When I search the client user id "REVATHY"
     Then I Click the user and Edit profile change the mobilnumber and mailid
-    And I approve the profile change user "UBPSAC2"
-    And I verify the user profile changed for user "UBPSAC1" "senthilactive"
+    And I approve the profile change user "sacrole02"
+    And I verify the user profile changed for user "sacrole01" "REVATHY"
 
   @B63
   Scenario: Validation of updating in Edit profile screen and DisApproval
-    Given Login with user "UBPSAC1"
-    When I search the client user id "senthilactive"
+    Given Login with user "sacrole01"
+    When I search the client user id "REVATHY"
     Then I Click the user and Edit profile change the mobilnumber and mailid
-    And I Disapprove the profile change user "UBPSAC2"
+    And I Disapprove the profile change user "sacrole02"
 #Edit profile ends here
 
 #Biller starts here
@@ -889,7 +889,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Updating Favorite Billers
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "BILLERUBPP" in biller search and click the search icon
+    Then I Enter the biller code "MYTAXIPH" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And Approve the the biller approval
@@ -918,7 +918,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of DisApproval for updated biller field for Favorite biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "BILLERUBPP" in biller search and click the search icon
+    Then I Enter the biller code "MYTAXIPH" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
