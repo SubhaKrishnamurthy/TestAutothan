@@ -27,6 +27,11 @@ public class GreenPin {
         greenPin.click_ManageCards();
         greenPin.click_CardImg();
     }
+    @And("^Click on manage cards2$")
+    public void Click_on_manage_cards2() throws Throwable {
+        greenPin.click_ManageCards();
+        greenPin.click_CardImg2();
+    }
 
     @And("^Click on Change Pin$")
     public void Click_on_Change_Pin() throws Throwable {

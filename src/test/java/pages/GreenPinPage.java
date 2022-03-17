@@ -11,6 +11,7 @@ public class GreenPinPage extends Keywords {
     private String PlayEverDayCard2 = "onlineBanking.GreenPin.PlayEverDayCard2";
     private String ManageCards = "onlineBanking.GreenPin.ManageCards";
     private String PlayEveryDayCardImg = "onlineBanking.GreenPin.PlayEveryDayCardImg";
+    private String PlayEveryDayCardImg2 = "onlineBanking.GreenPin.PlayEveryDayCardImg2";
     private String ChangePin ="onlineBanking.GreenPin.ChangePin";
     private String Pin1 = "onlineBanking.GreenPin.Pin1";
     private String Pin2 = "onlineBanking.GreenPin.Pin2";
@@ -42,9 +43,10 @@ public class GreenPinPage extends Keywords {
         jsClick.elementBy(PlayEverDayCard);
     }
     public void click_PlayEveryDayCard2() throws Throwable {
-        verify.elementIsPresent(PlayEverDayCard2);
-        jsClick.elementBy(AccountsNextslide);
-        jsClick.elementBy(AccountsNextslide);
+//        verify.elementIsPresent(PlayEverDayCard2);
+//        jsClick.elementBy(AccountsNextslide);
+//        jsClick.elementBy(AccountsNextslide);
+        Wait.forSeconds(6000);
         jsClick.elementBy(PlayEverDayCard2);
     }
     public void click_ManageCards() throws Throwable {
@@ -55,6 +57,10 @@ public class GreenPinPage extends Keywords {
     public void click_CardImg() throws Throwable {
         Wait.forSeconds(8000);
         jsClick.elementBy(PlayEveryDayCardImg);
+    }
+    public void click_CardImg2() throws Throwable {
+        Wait.forSeconds(8000);
+        jsClick.elementBy(PlayEveryDayCardImg2);
     }
 
     public void click_ChangePin() throws Throwable {
