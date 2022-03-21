@@ -49,7 +49,7 @@ public class CommonMethods {
             actions.Wait.forSeconds(3000);
             login.clickLoginbutton();
             actions.Wait.forSeconds(3000);
-            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+            greenPinPage.enter_Pin("1", "1", "1", "1", "1", "1");
             actions.Wait.forSeconds(3000);
         }
         else {
@@ -66,7 +66,7 @@ public class CommonMethods {
                 actions.Wait.forSeconds(3000);
             }
             actions.Wait.forSeconds(3000);
-            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+            greenPinPage.enter_Pin("1", "1", "1", "1", "1", "1");
         }
         dashboardHomePage.clickClose_Popup();
     }
@@ -132,7 +132,7 @@ public class CommonMethods {
             actions.Wait.forSeconds(3000);
             login.clickLoginbutton();
             actions.Wait.forSeconds(3000);
-            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+            greenPinPage.enter_Pin("1", "1", "1", "1", "1", "1");
             actions.Wait.forSeconds(3000);
         }
         else {
@@ -150,7 +150,7 @@ public class CommonMethods {
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
                 actions.Wait.forSeconds(3000);
             }
-            greenPinPage.enter_Pin("2", "2", "2", "2", "2", "2");
+            greenPinPage.enter_Pin("1", "1", "1", "1", "1", "1");
         }
         dashboardHomePage.clickClose_Popup();
     }

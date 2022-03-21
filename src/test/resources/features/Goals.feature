@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@Goals @Regression
+@Goals @Regression @RegressionNew
 Feature: Goals Functionality Validation
 
     #TS306
