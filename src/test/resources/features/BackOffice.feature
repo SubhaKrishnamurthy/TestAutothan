@@ -366,7 +366,7 @@ Feature: Backoffice functionalities Validation
     Given I'm click the register button in the backoffice application
     When I enter the firstname lastname and user creation App Support  role details
     Then I Login with user "sacrole01" and approve the user App Support  role
-    Then I Login with user "sacrole01" and second approve the user App Support  role
+    Then I Login with user "sacrole02" and second approve the user App Support  role
     And I Login with new "App Support  role" user and logout
 
              #187
@@ -918,7 +918,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of DisApproval for updated biller field for Favorite biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "MYTAXIPH" in biller search and click the search icon
+    Then I Enter the biller code "8FORBES" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval
@@ -929,7 +929,7 @@ Feature: Backoffice functionalities Validation
     When I Click the Managebiller link
     Then I Enter the biller code "TA001" in biller search and click the search icon
     And I click the view button
-    And Verify the view Biller details "AUTOMATIONBILLER" "TA001" "000000090001" "1001"
+    And Verify the view Biller details "New Biller" "TA001" "000000090001" "1001"
 
 #Biller ends here
 
