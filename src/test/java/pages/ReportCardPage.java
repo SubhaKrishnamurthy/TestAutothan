@@ -130,6 +130,7 @@ public class ReportCardPage extends Keywords {
     }
     public void verify_CardReplacementDetailsHeader() throws Throwable {
         Wait.forSeconds(1000);
+        click.elementBy(GoBackButton);
         verify.elementIsPresent(CardReplacementDetails);
     }
     public void verify_ViewTheCardReplacement() throws Throwable {
@@ -152,7 +153,7 @@ public class ReportCardPage extends Keywords {
     }
     public void clickUpdateAddress() throws ApplicationException {
         Wait.forSeconds(1000);
-        click.elementBy(UpdateAddress);
+        jsClick.elementBy(UpdateAddress);
     }
     public void verify_UpdateAddressPopupsection() throws Throwable {
         Wait.forSeconds(1000);
@@ -166,7 +167,7 @@ public class ReportCardPage extends Keywords {
     public void verify_UpdateMyAddressPopupsection() throws Throwable {
         Wait.forSeconds(1000);
         //verify.elementIsPresent(GoBackButton);
-        verify.elementIsPresent(EmailCustomerService);
+        verify.elementIsPresent(MaybeLaterButton);
         verify.elementIsPresent(EmailNowButton);
     }
     public void clickConfirmDeliveryaddress() throws Throwable {

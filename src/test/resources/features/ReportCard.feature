@@ -3,13 +3,13 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@Reportcard
+@Reportcard @RegressionNew
 Feature: ReportCard Functionality Validation
 
    #TCN_001
   @ReportCard01
   Scenario: Verify whether application allows the user to View Report Card
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -17,7 +17,7 @@ Feature: ReportCard Functionality Validation
    #TCN_002
   @ReportCard02
   Scenario: Validation of  clicking "'REPORT CARD" option
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -28,7 +28,7 @@ Feature: ReportCard Functionality Validation
    #TCN_003
   @ReportCard03
   Scenario: Validation of Clicking "Lock my card" option
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -40,7 +40,7 @@ Feature: ReportCard Functionality Validation
    #TCN_004
   @ReportCard04
   Scenario: Validation of clicking "Go Back" option
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -51,7 +51,7 @@ Feature: ReportCard Functionality Validation
  #TCN_005
   @ReportCard05
   Scenario: Validation of "MAYBE LATER" button on card locked Success screen
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -63,7 +63,7 @@ Feature: ReportCard Functionality Validation
    #TCN_006
   @ReportCard06
   Scenario: Validation of "PROCEED TO CARD REPORTING" button on card locked Success screen
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -77,7 +77,7 @@ Feature: ReportCard Functionality Validation
    #TCN_007
   @ReportCard07
   Scenario: Validation of "Work address" functionality
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -91,7 +91,7 @@ Feature: ReportCard Functionality Validation
    #TCN_008
   @ReportCard08
   Scenario: Validation of "update Address button of Home Address/Work Adress"
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -109,7 +109,7 @@ Feature: ReportCard Functionality Validation
    #TCN_009
   @ReportCard09
   Scenario: Validation of "CONFIRM DELIVERY ADDRESS" and Validation of "Report My Lost Card" button
-    Given I'm on login page of UB online banking application with user "reportcard4" otp "111111"
+    Given I'm on login page of UB online banking application with user "reportcard4" otp "222222"
     When I click the Playeveryday credit card listed in dashboard
     And  I Click on Manage card link
     Then I Verify user can able to view Report Card
@@ -120,7 +120,7 @@ Feature: ReportCard Functionality Validation
     When User is able to click on the UPDATE ADDRESS button
     Then I Verify to view the details on Update address poup section
     And I Verify whether the user is able to navigate to card replacement details page upon clicking GO BACK
-    When User is able to click on the UPDATE ADDRESS button
+#    When User is able to click on the UPDATE ADDRESS button
     And I user is able to click on  CONFIRM DELIVERY ADDRESS button
     Then I Verify whether user is able to navigate to Report CardPage
     And  I user is able to view I lost my card and My card got stolen in Report Card page
