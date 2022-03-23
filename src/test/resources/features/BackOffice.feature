@@ -889,7 +889,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Updating Favorite Billers
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "MYTAXIPH" in biller search and click the search icon
+    Then I Enter the biller code "ABBInc" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And Approve the the biller approval

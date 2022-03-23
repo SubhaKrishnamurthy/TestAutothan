@@ -64,7 +64,7 @@ public class BackOffice_FAQ extends Keywords {
 
 	public void editFAQ() throws Throwable {
 		Wait.forSeconds(10000);
- 		click.elementBy(keyEditFAQ);
+ 		jsClick.elementBy(keyEditFAQ);
 		//click.elementFromStoredData(keyEditFAQ,storeValue);
 		type.data(keyEditFAQTitle,Tools.RANDOMTEXT("RANDOMTEXT",10));
 		type.data(keyFAQBody,"TEXT FAQ Test Automation Updating");
