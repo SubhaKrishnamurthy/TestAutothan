@@ -81,7 +81,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @SP07 @Regression
    Scenario: Verify whether User is redirected to the page where he/she will enter PIN upon clicking 'Set Pin' option
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
@@ -89,7 +89,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 #
   @SP08 @Regression
   Scenario: Verify whether User want to re-enter his/her PIN so that correct PIN is entered
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
@@ -103,7 +103,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP09 @Regression
   Scenario: Verify whether user receives an error prompt when users input the consecutive digits as PIN
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
@@ -115,19 +115,19 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP10 @Regression
   Scenario: Verify whether user receives an error prompt when users input the same digits as PIN
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
-    Then User able to enter six digits as 111111
+    Then User able to enter six digits as 222222
     And I click greenPin next Button
-    Then User able to enter six digits as 111111
+    Then User able to enter six digits as 222222
     And I click greenPin next Button
     Then User should be displayed with same Pin ErrMsg
 
   @SP11 @Regression
   Scenario: Verify whether user receives error message that inputted PIN doesn't match the previous PIN input
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
@@ -141,7 +141,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   @SP12 @Regression
   Scenario: Verify whether user is  displayed with the correct reminders upon setting a pin
-    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
