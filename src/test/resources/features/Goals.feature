@@ -240,9 +240,9 @@ Feature: Goals Functionality Validation
         And I click the next button
         And I click the Deposit PHP button
         And I verify the review page header
-        And I verify the Goals account name as "BAUTISTA, SALVE REGINA, M" and account number as "**** **** 1756"
+        And I verify the Goals account name as "SALVE REGINA BAUTISTA" and account number as "**** **** 1756"
         And I edit the goal account
-        And I verify the Goals account name as "CARIN - ACTIVE" and account number as "**** **** 1750"
+        And I verify the Goals account name as "CARIN ANGELICA MUNOZ BERINA" and account number as "**** **** 1750"
 
     #TS314
     @G09

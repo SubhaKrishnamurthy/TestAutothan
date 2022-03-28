@@ -79,7 +79,7 @@ Feature: Foreign Exchange functionality Validation
     When I Click the Edit button in FX
     And I select USD amount "10"
     And I click the Update button in Buy USD section
-    Then I Verify the Selling amount "USD 10.00" and Fromaccount "1314 9000 0695"
+    Then I Verify the Selling amount "USD 10.00" and Fromaccount "0300 1000 0249"
     When I click the Sell USD button in FX convert page
     And I Enter the OTP "111111" in OTP Page
     Then I verify the Deal Received Title message

@@ -366,7 +366,7 @@ Feature: BuyLoad
   Scenario:Validation of searching of any queries related to buy load in buy load FAQ Screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I click the BuyLoad link in the send request page
-    Then I enter the value"Can I buy load for others?" in search filed
+    Then I enter the value"Can I purchase load for others?" in search filed
     And I verify the results displayed
 
   @BuyLoad23
