@@ -110,7 +110,7 @@ Feature: Backoffice functionalities Validation
       When I click on the active user
       And I verify customer Information Title
       And I click on customer information Edit profile button
-      And I edit customer last name as "TEST"
+      And I edit customer last name as "TEST1"
       And I click the edit user ID update button
       And I enter edit reason as "Name change" and click on Save button
       Then I successfully logout by clicking the Logout Button
@@ -889,7 +889,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of Updating Favorite Billers
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "ABBInc" in biller search and click the search icon
+    Then I Enter the biller code "ABENSON" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And Approve the the biller approval
