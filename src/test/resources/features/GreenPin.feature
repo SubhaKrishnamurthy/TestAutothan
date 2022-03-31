@@ -81,7 +81,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
     @SP07 @Regression
    Scenario: Verify whether User is redirected to the page where he/she will enter PIN upon clicking 'Set Pin' option
-    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
@@ -89,7 +89,7 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
 #
   @SP08 @Regression
   Scenario: Verify whether User want to re-enter his/her PIN so that correct PIN is entered
-    Given I'm on login page of UB online banking application with user "useraccount" otp "222222"
+    Given I'm on login page of UB online banking application with user "useraccount" otp "111111"
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
