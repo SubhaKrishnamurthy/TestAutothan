@@ -71,7 +71,7 @@ public class ReportCardPage extends Keywords {
     public void clickReportCard() throws Throwable {
          if(verify.IfElementExistsboolean(CardUnlocked))
         {
-            click.elementBy(ReportCard);
+            jsClick.elementBy(ReportCard);
         }
         else
         {
@@ -83,7 +83,7 @@ public class ReportCardPage extends Keywords {
             greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                     String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
             Wait.forSeconds(3000);
-            click.elementBy(ReportCard);
+            jsClick.elementBy(ReportCard);
         }
     }
     public void verify_LockYourCallPopup() throws Throwable {
@@ -125,7 +125,7 @@ public class ReportCardPage extends Keywords {
         click.elementBy(MaybeLaterButton);
     }
     public void clickProceedToCardReporting() throws Throwable {
-        Wait.forSeconds(1000);
+        Wait.forSeconds(2000);
         click.elementBy(ProceedToCardReportingButton);
     }
     public void verify_CardReplacementDetailsHeader() throws Throwable {

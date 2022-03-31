@@ -57,8 +57,8 @@ public class OwnaccountFundtransfer {
 
     @And("^I verify the Gotit button displayed or not$")
     public void iVerifyTheGotitButtonDisplayedOrNot() throws Throwable {
-        //Ownaccount.verifytheGotitbutton();
-        Ownaccount.verifytheGotitbutton_new();
+        Ownaccount.verifytheGotitbutton();
+        //Ownaccount.verifytheGotitbutton_new();
     }
 
     @And("^I click the Transfer button$")
