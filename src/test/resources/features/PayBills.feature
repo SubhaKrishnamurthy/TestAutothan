@@ -225,7 +225,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     Scenario: Validation of making payment to biller from My billers tab
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
-      And I search for the biller "MAPFRE" in MyBillers
+      And I search for the biller "MAP" in MyBillers
       Then I click the search result1
       And I click the Next Button
       And I Select the from account
@@ -307,7 +307,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     Scenario: validation of clicking Edit buttons  in Review and Pay screen for Pay Bill Transaction
       Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
       When I am on the PayBills page
-      And I search for the biller "MAPFRE" in MyBillers
+      And I search for the biller "MAP" in MyBillers
       Then I click the search result1
       And I click the Next Button
       And I Select the from account

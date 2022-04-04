@@ -262,13 +262,13 @@ public class PayBillsPage extends Keywords {
         {
             verify.elementTextMatching_MacSafari(ToBilllername, BillerName);
             verify.elementTextMatching_MacSafari(FromAccountNumber, FromAccNumber);
-            verify.elementTextMatching_MacSafari(BillerAccountID, PolicyOwnerNo);
+            //verify.elementTextMatching_MacSafari(BillerAccountID, PolicyOwnerNo);
             verify.elementTextMatching_MacSafari(Amount, AmountValue);
         }
         else {
             verify.elementTextContains(ToBilllername, BillerName);
             verify.elementTextContains(FromAccountNumber, FromAccNumber);
-            verify.elementTextContains(BillerAccountID, PolicyOwnerNo);
+            //verify.elementTextContains(BillerAccountID, PolicyOwnerNo);
             verify.elementTextContains(Amount, AmountValue);
         }
     }
