@@ -119,12 +119,12 @@ public class GoalsPage extends Keywords {
     public void clickManageBtn() throws Throwable {
         Wait.forSeconds(5000);
         verify.IfElementExists(GoalsManageBtn);
-        click.elementBy(GoalsManageBtn);
+        jsClick.elementBy(GoalsManageBtn);
     }
 
     public void clickAddBtn() throws Throwable {
         Wait.forSeconds(4000);
-        click.elementBy(Dashboard_Add);
+        jsClick.elementBy(Dashboard_Add);
     }
 
     public void verifyHeader() throws Throwable {

@@ -37,25 +37,19 @@ public class Click extends Keywords {
 
     public void elementBy(String locatorKey) throws ApplicationException {
         log.info("Click element [" + locatorKey + "]");
-        try {
-                if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
+
+            if(Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac") )
             {
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", get.elementBy(locatorKey));
                 log.info("Click Successful!");
             }
             else {
-                Keywords.screenshot.attachScreenshot("Click");
-                get.elementBy(locatorKey).click();
-                log.info("Click Successful!");
-            }
-        } catch (StaleElementReferenceException ex) {
-            get.elementBy(locatorKey).click();
-        } catch (Exception e) {
-            // TODO: handle exception
-            log.info("Error while clicking the element " + locatorKey);
-            throw new ApplicationException(e.getMessage());
-        }
+                    Keywords.screenshot.attachScreenshot("Click");
+                    get.elementBy(locatorKey).click();
+                    log.info("Click Successful!");
+
+                }
     }
 
     public void elementBy(By locator) throws ApplicationException {

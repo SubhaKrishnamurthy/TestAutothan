@@ -80,9 +80,11 @@ public class DriverManager {
         switch (Drivertype) {
 
             case "FIREFOX" :
+
                 System.setProperty("webdriver.gecko.driver","src/main/java/driver/mac/geckodriver" );
                 driver = new FirefoxDriver();
                 break;
+
             case "CHROME" :
                 System.setProperty("webdriver.chrome.driver","src/main/java/driver/mac/chromedriver" );
                 driver = new ChromeDriver();

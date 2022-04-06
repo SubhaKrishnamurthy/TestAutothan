@@ -39,7 +39,7 @@ public class CommonMethods {
     {
         if (Drivertype.equalsIgnoreCase("firefox"))
         {
-            actions.Wait.forSeconds(5000);
+            //actions.Wait.forSeconds(5000);
             login.clickRecaptcha();
             actions.Wait.forSeconds(3000);
 

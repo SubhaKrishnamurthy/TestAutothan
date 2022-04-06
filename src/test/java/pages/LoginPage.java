@@ -9,6 +9,7 @@ import gherkin.lexer.Th;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.zaproxy.zap.ZAP;
 
 public class LoginPage extends Keywords {
 
@@ -20,6 +21,7 @@ public class LoginPage extends Keywords {
 	private String keyLoginBtn="onlineBanking.backoffice.login.loginBtn";
 	private String keepmeloggedinbtn = "convergent.login.keepmeloggedinbtn";
 	private String Version = "convergent.login.Version";
+	private String ZAPPopup = "onlineBanking.ZAPPopup";
 
 	public void enterUsernme(String usernmae) throws ApplicationException {
 		type.data(Keyusername,usernmae);
@@ -57,7 +59,13 @@ public class LoginPage extends Keywords {
 	}
 
 	public void clickRecaptcha() throws ApplicationException {
-
+/*
+		Wait.forSeconds(2000);
+		if(verify.IfElementExistsboolean(ZAPPopup))
+		{
+			jsClick.elementBy(ZAPPopup);
+		}
+*/
 		WebElement iframeSwitch = driver.findElement(By.xpath("(//div/iframe)[1]"));
 		actions.Wait.forSeconds(3000);
 		driver.switchTo().frame(iframeSwitch);
@@ -71,7 +79,10 @@ public class LoginPage extends Keywords {
 	}
 
 	public void clickLoginbutton() throws ApplicationException {
-		driver.findElement(By.xpath("//*[text()='Log In']/parent::button")).click();
+		//driver.findElement(By.xpath("//*[text()='Log In']/parent::button")).click();
+		element = driver.findElement(By.xpath("//*[text()='Log In']/parent::button"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
 	}
 	public void enterOTP(String otp) throws ApplicationException {
 		Wait.forSeconds(5000);

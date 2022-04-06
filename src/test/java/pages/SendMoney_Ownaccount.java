@@ -47,6 +47,7 @@ public class SendMoney_Ownaccount extends Keywords {
 	private String keyManageTransfers="onlineBanking.Fundtransfer.txtManageTransfers";
 	private String keySearchRecent="onlineBanking.Fundtransfer.txtSearchRecent";
 	private String keySearchButton="onlineBanking.Fundtransfer.txtSearchRecent";
+	private String keepmeloggedinbtn = "convergent.login.keepmeloggedinbtn";
 
 //   public String txndate;
 //   public String ReferenceNumber;
@@ -91,15 +92,20 @@ public class SendMoney_Ownaccount extends Keywords {
 		Wait.forSeconds(8000);
 		loginPage.clickkeepmeloggedinbtn();
 	}
+
     public void verifytheGotitbutton_new() throws Throwable {
-		Wait.forSeconds(2000);
+		//Wait.forSeconds(2000);
 	if(verify.IfElementExistsboolean(keygotit))
 	{
-		jsClick.elementBy(keygotit);
+		click.elementBy(keygotit);
 	}
+	//else {
+//		click.elementBy(keepmeloggedinbtn);
+//	}
 	}
+
 	public void clickTransferbutton() throws Throwable {
-		Wait.forSeconds(2000);
+		//Wait.forSeconds(2000);
 		click.elementBy(keytransfer);
 	}
 

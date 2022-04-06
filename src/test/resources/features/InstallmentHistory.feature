@@ -9,7 +9,7 @@ Feature: Installment History Functionality Validation
   @IH01
 Scenario: Validation of viewing installment history when user has installments
   Given I'm on login page of UB online banking application with user "creditcard" otp "111111"
-  When user selects credit card2 listed in dashboard
+  When user selects credit card1 listed in dashboard
   Then user able to verify icons and other details of the screen
   When user clicks installment history icon
   Then Application should navigate to installment history screen
@@ -20,7 +20,7 @@ Scenario: Validation of viewing installment history when user has installments
 @IH02
 Scenario: Validation of viewing installment history when user has no installments
   Given I'm on login page of UB online banking application with user "creditcard" otp "111111"
-  When user selects credit card1 listed in dashboard
+  When user selects credit card2 listed in dashboard
   When user clicks installment history icon
   Then Verify application displays "You currently do not have any installments" under installment history
 
