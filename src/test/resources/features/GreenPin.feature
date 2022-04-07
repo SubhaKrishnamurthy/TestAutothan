@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@GreenPin @RegressionNew
+@GreenPin
 Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   ##Change Pin
@@ -22,9 +22,9 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     And Click on manage cards
     And Click on Change Pin
     Then User able to enter six digits as 123456
-    And I click greenPin next Button
-    Then User able to enter six digits as 123456
-    And I click greenPin next Button
+#    And I click greenPin next Button
+#    Then User able to enter six digits as 123456
+#    And I click greenPin next Button
     Then User should be displayed with consecutive Numeric Values ErrMsg
 
   @CP03 @Regression
@@ -33,10 +33,10 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Change Pin
-    Then User able to enter six digits as 111111
-    And I click greenPin next Button
-    Then User able to enter six digits as 111111
-    And I click greenPin next Button
+    Then User able to enter six digits as 136801
+#    And I click greenPin next Button
+    Then User able to enter six digits as 136801
+#    And I click greenPin next Button
     Then User should be displayed with same Pin ErrMsg
 
    @CP04 @Regression
@@ -46,11 +46,11 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
      And Click on manage cards
      And Click on Change Pin
      Then User able to enter six digits as 130495
-     And I click greenPin next Button
+#     And I click greenPin next Button
      Then User able to enter six digits as 998875
-     And I click greenPin next Button
+#     And I click greenPin next Button
      Then User able to enter six digits as 664805
-     And I click greenPin Confirm Button
+#     And I click greenPin Confirm Button
      Then User should be displayed with Pin Doesnt Match ErrMsg
 
     @CP05 @Regression

@@ -72,7 +72,6 @@ public class PayBills {
         payBills.clickCancel();
     }
 
-
     @Then("^I enter paymentReferenceNo as \"([^\"]*)\" PayorsName as \"([^\"]*)\" and PolicyNo as \"([^\"]*)\"$")
     public void i_enter_paymentReferenceNo_as_PayorsName_as_and_PolicyNo_as(String arg1, String arg2, String arg3) throws Throwable {
         payBills.enterAccountDetails(arg1,arg2,arg3);
@@ -185,4 +184,5 @@ public class PayBills {
         payBills.verifyPBMobileErrMsg(arg0);
 
     }
-    }
+
+}

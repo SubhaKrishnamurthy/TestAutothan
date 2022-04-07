@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@PayBills @Regression @RegressionNew
+@PayBills @Regression
 Feature: PayBills Functionality Validation
 
   #TS159

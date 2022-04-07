@@ -136,7 +136,6 @@ public class PayBillsPage extends Keywords {
        Wait.forSeconds(3000);
         click.elementBy(Billersearchresult1);
     }
-
     public void enterAccount(String accountID) throws Throwable {
         type.data(AccountID,accountID);
     }
