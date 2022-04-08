@@ -28,7 +28,7 @@ Scenario: Validation of viewing installment history when user has no installment
 @IH03
 Scenario: Validation of installment history transactions, upcoming due date reminder section, broken-down payment schedules
   Given I'm on login page of UB online banking application with user "creditcard" otp "111111"
-  When user selects credit card2 listed in dashboard
+  When user selects credit card1 listed in dashboard
   When user clicks installment history icon
   Then Application should navigate to installment history screen
   When user selects any transaction listed under installment history
