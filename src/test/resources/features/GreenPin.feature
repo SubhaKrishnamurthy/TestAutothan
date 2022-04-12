@@ -68,11 +68,11 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
       And Click on manage cards
       And Click on Change Pin
       Then User able to enter six digits as 130495
-      And I click greenPin next Button
+#      And I click greenPin next Button
       Then User able to enter six digits as 998875
-      And I click greenPin next Button
+#      And I click greenPin next Button
       Then User able to enter six digits as 998875
-      And I click greenPin Confirm Button
+#      And I click greenPin Confirm Button
       And I Enter the OTP Pin "445509" in OTP Page
       #And I click the Submit Button
       Then I verify greenPin Invalid OTP error message

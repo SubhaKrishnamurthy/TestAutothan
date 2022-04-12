@@ -5,6 +5,7 @@ import base.Keywords;
 import gherkin.lexer.Th;
 import helper.Tools;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebElement;
 
@@ -49,8 +50,9 @@ public class ManageRecipient_Page extends Keywords {
 		else {
 			click.elementBy(keybankName);
 		}
-		Wait.forSeconds(2000);
-		click.elementBy(keyBankNameUCPB);
+//		Wait.forSeconds(2000);
+//		click.elementBy(keyBankNameUCPB);
+		driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		Wait.forSeconds(2000);
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		type.data(accountNumber,randomAccountNumber);
@@ -68,7 +70,8 @@ public class ManageRecipient_Page extends Keywords {
 			click.elementBy(keybankName);
 		}
 		Wait.forSeconds(2000);
-		click.elementBy(keyBankNameUCPB);
+		//click.elementBy(keyBankNameUCPB);
+		driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		Wait.forSeconds(2000);
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		type.data(accountNumber,randomAccountNumber);
@@ -84,12 +87,14 @@ public class ManageRecipient_Page extends Keywords {
 		{
 			get.elementBy(keybankName).click();
 			Wait.forSeconds(2000);
-			get.elementBy(keyBankNameUCPB).click();
+			//get.elementBy(keyBankNameUCPB).click();
+			driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		}
 		else{
 			click.elementBy(keybankName);
 			Wait.forSeconds(2000);
-			click.elementBy(keyBankNameUCPB);
+			//click.elementBy(keyBankNameUCPB);
+			driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		}
 
 		Wait.forSeconds(2000);
@@ -111,7 +116,8 @@ public class ManageRecipient_Page extends Keywords {
 			click.elementBy(keybankName);
 		}
 		Wait.forSeconds(2000);
-		click.elementBy(keyBankNameUCPB);
+		//click.elementBy(keyBankNameUCPB);
+		driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		Wait.forSeconds(2000);
 		type.data(accountNumber, Tools.RANDOMTEXT("RANDOMNUMBER",4));
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));

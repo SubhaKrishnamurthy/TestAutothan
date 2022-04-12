@@ -111,7 +111,7 @@ public class RequestPayment_Page extends Keywords {
     }
 
     public void verifyAmountErrMsg(String msg) throws Throwable {
-        click.elementBy(Header_RequestPayment);
+        //click.elementBy(Header_RequestPayment);
         verify.elementTextMatching(Errormsg_amountexceed,msg);
     }
 

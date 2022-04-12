@@ -84,4 +84,4 @@ Feature: ManageTransfer
     #And I click the Submit Button
     Then I verify the Successful message is displayed
     #And I Verify the Fromaccount"**** **** 1750" and Toaccount "1014 0000 1643" and Amount"PHP 1,500.00"and
-    And I Verify the values "PHP 200.00" and "**** **** 1750" and "1064 0000 1643""" in Recent transactions
+    And I Verify the values "PHP 200.00" and "**** **** 1750" and "1064 0000 1643" in Recent transactions
