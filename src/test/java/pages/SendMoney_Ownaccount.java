@@ -150,7 +150,11 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 	public void clickNewtransaction() throws Throwable {
 		Wait.forSeconds(2000);
-		click.elementBy(keytransfersuccessfulnewtransaction);
+		//click.elementBy(keytransfersuccessfulnewtransaction);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)", "");
+		Wait.forSeconds(2000);
+		jsClick.elementBy(keytransfersuccessfulnewtransaction);
 	}
 
 	public void verifyOwnaccountsexist() throws Throwable {
