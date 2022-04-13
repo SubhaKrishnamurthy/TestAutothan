@@ -122,7 +122,7 @@ public class ManageRecipient_Page extends Keywords {
 		type.data(accountNumber, Tools.RANDOMTEXT("RANDOMNUMBER",4));
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		Wait.forSeconds(2000);
-		commonMethods.verifyAccNumErrMsg("Account number should be 12 digits long");
+		commonMethods.verifyAccNumErrMsg("Account number should be at least 8 digits long");
 		Wait.forSeconds(6000);
 		//type.data(accountNumber, randomAccountNumber);
 		//Wait.forSeconds(2000);
@@ -264,7 +264,8 @@ public class ManageRecipient_Page extends Keywords {
 				}
 
 				Wait.forSeconds(2000);
-				click.elementBy(keyBankNameUCPB);
+				//click.elementBy(keyBankNameUCPB);
+				driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 				Wait.forSeconds(2000);
 				type.data(accountName, "testautomation4");
 				type.data(accountNumber, randomAccountNumber);
