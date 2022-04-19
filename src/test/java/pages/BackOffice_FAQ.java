@@ -68,7 +68,7 @@ public class BackOffice_FAQ extends Keywords {
 		//click.elementFromStoredData(keyEditFAQ,storeValue);
 		type.data(keyEditFAQTitle,Tools.RANDOMTEXT("RANDOMTEXT",10));
 		//type.data(keyFAQBody,"TEXT FAQ Test Automation Updating");
-		Wait.forSeconds(2000);
+		Wait.forSeconds(1500);
 		jsClick.elementBy(keyNextStep);
 		type.data(keyUpdateReason,"update reason");
 		commonMethods.clickSaveBtn();
