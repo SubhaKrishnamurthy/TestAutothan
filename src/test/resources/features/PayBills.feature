@@ -154,7 +154,7 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     #Then I logout of UB online banking application
 
     #TS175
-  @PB11
+  @PB11 @PayBills1
   Scenario: Validation of user not able to enter any text characters in card number field in Biller information screen
     Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
     When I am on the PayBills page

@@ -178,7 +178,7 @@ public class InsurancePage extends Keywords {
         click.elementBy(ProceedBtn);
         Wait.forSeconds(3000);
        // Ownaccount.verifyOTPpageisdisplayed();
-        Ownaccount.entertheOTPOTPpage("222222");
+        Ownaccount.entertheOTPOTPpage("111111");
         //click.elementBy(SubmitBtn);
     }
 

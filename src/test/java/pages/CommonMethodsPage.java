@@ -83,6 +83,7 @@ public class CommonMethodsPage extends Keywords {
 	}
 
 	public void clickFromAccNumber() throws Throwable {
+		jsClick.elementBy(keySelectAcc);
 		verify.IfElementExists(keyFromAccNumber);
 		jsClick.elementBy(keyFromAccNumber);
 	}
