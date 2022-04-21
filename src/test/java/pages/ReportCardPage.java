@@ -70,7 +70,7 @@ public class ReportCardPage extends Keywords {
     }
     public void clickReportCard() throws Throwable {
         Wait.forSeconds(3000);
-        if(verify.IfElementExistsboolean(CardUnlocked))
+       if(verify.IfElementExistsboolean(CardUnlocked))
         {
             jsClick.elementBy(ReportCard);
         }
