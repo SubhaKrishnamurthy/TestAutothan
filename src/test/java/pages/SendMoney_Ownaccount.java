@@ -8,6 +8,7 @@ import exceptions.ApplicationException;
 import helper.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import static driver.DriverManager.Drivertype;
@@ -105,8 +106,11 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void clickTransferbutton() throws Throwable {
-		//Wait.forSeconds(2000);
-		click.elementBy(keytransfer);
+		Wait.forSeconds(2000);
+		WebElement element = driver.findElement(By.xpath("//span[@class='d-block']/span"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keytransfer);
 	}
 
 	public void verifyOTPpageisdisplayed() throws Throwable {
@@ -172,7 +176,10 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 	public void clickCancel() throws Throwable {
 		Wait.forSeconds(3000);
-		click.elementBy(keycancel);
+		WebElement element = driver.findElement(By.xpath("//button[@type='reset']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keycancel);
 	}
 	public void navigatetoBack() throws Throwable {
 		Wait.forSeconds(1000);

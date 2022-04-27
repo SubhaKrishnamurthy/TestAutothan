@@ -120,7 +120,7 @@ Feature: Request Payment Functionality Validation
       And I enter the amount field as "100"
       And I select the split option as "Evenly"
       And I add one participant as "Jaya"
-      And I add one participant as "09228499484"
+      And I add one participant as "09291971101"
       And I enter the request payment message as "Test"
       And I Select the from account in the displayed account list
       And I click the next button

@@ -89,7 +89,7 @@ public class RequestPayment_Page extends Keywords {
     public void AddParticipant(String name) throws Throwable {
         Wait.forSeconds(2000);
         jsClick.elementBy(ADDPATRICIPANT);
-        type.data(SearchContacts,name);
+        //type.data(SearchContacts,name);
         click.elementBy(SelectionofParticipant);
         click.elementBy(ADD);
     }
@@ -150,9 +150,9 @@ public class RequestPayment_Page extends Keywords {
         public void verifyCongMsg_OtherDetails_2Participants(String amount1,String amount2,String totalAmt) throws Throwable{
         Wait.forSeconds(2000);
         verify.IfElementExists(Congratulations);
-        verify.elementTextMatching(RequestingFrom_name2, PropertyReader.testDataOf("Requestingfrom_name2"));
-        verify.elementTextMatching(RequestingFrom_mobile2,PropertyReader.testDataOf("Requestingfrom_mobile2"));
-        verify.elementTextMatching(RequestingFrom_amount2,amount2);
+//        verify.elementTextMatching(RequestingFrom_name2, PropertyReader.testDataOf("Requestingfrom_name2"));
+//        verify.elementTextMatching(RequestingFrom_mobile2,PropertyReader.testDataOf("Requestingfrom_mobile2"));
+//        verify.elementTextMatching(RequestingFrom_amount2,amount2);
         verify.elementTextMatching(RequestingFrom_name1, PropertyReader.testDataOf("Requestingfrom_name1"));
         verify.elementTextMatching(RequestingFrom_mobile1,PropertyReader.testDataOf("Requestingfrom_mobile1"));
         verify.elementTextMatching(RequestingFrom_amount1,amount1);

@@ -50,9 +50,9 @@ public class ManageRecipient_Page extends Keywords {
 		else {
 			click.elementBy(keybankName);
 		}
-//		Wait.forSeconds(2000);
-//		click.elementBy(keyBankNameUCPB);
-		driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
+        Wait.forSeconds(2000);
+        jsClick.elementBy(keyBankNameUCPB);
+		//driver.findElement(By.xpath("//div[@class='rc-virtual-list']//div[text()=\"BDO Network Bank\"]")).click();
 		Wait.forSeconds(2000);
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		type.data(accountNumber,randomAccountNumber);

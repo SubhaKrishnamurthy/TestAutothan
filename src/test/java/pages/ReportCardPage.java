@@ -4,6 +4,9 @@ import actions.Verify;
 import actions.Wait;
 import base.Keywords;
 import exceptions.ApplicationException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class ReportCardPage extends Keywords {
 
@@ -72,7 +75,10 @@ public class ReportCardPage extends Keywords {
         Wait.forSeconds(2000);
        if(verify.IfElementExistsboolean(CardUnlocked))
         {
-            jsClick.elementBy(ReportCard);
+            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).click().build().perform();
+            //jsClick.elementBy(ReportCard);
         }
         else
         {
@@ -84,7 +90,10 @@ public class ReportCardPage extends Keywords {
             greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                     String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
             Wait.forSeconds(3000);
-            jsClick.elementBy(ReportCard);
+            //jsClick.elementBy(ReportCard);
+            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).click().build().perform();
         }
     }
     public void verify_LockYourCallPopup() throws Throwable {
@@ -122,7 +131,7 @@ public class ReportCardPage extends Keywords {
         //verify.IfElementExistsboolean(CardLocked)
     }
     public void clickMaybeLater() throws Throwable {
-        Wait.forSeconds(1000);
+        Wait.forSeconds(3000);
         click.elementBy(MaybeLaterButton);
     }
     public void clickProceedToCardReporting() throws Throwable {
