@@ -215,16 +215,25 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 	public void clickFromaccountedit() throws Throwable {
 		Wait.forSeconds(1000);
-		click.elementBy(keyfromaccountedit);
+		WebElement element = driver.findElement(By.xpath("//*[text()='From Account']//parent::div//preceding-sibling::div/a[text()='Edit']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keyfromaccountedit);
 	}
 	public void clickToaccountedit() throws Throwable {
 		Wait.forSeconds(1000);
-		click.elementBy(keytoaccountedit);
+		WebElement element = driver.findElement(By.xpath("//*[text()='To Account']//parent::div//preceding-sibling::div/a[text()='Edit']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keytoaccountedit);
 	}
 
 	public void clickamountedit() throws Throwable {
 		Wait.forSeconds(1000);
-		click.elementBy(keyamountedit);
+		WebElement element = driver.findElement(By.xpath("//*[text()='Amount']//parent::div//preceding-sibling::div/a[text()='Edit']"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keyamountedit);
 	}
 
 	public void clickUpdate() throws Throwable {

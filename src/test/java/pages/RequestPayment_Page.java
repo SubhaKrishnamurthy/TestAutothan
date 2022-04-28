@@ -89,7 +89,7 @@ public class RequestPayment_Page extends Keywords {
     public void AddParticipant(String name) throws Throwable {
         Wait.forSeconds(2000);
         jsClick.elementBy(ADDPATRICIPANT);
-        //type.data(SearchContacts,name);
+        type.data(SearchContacts,name);
         click.elementBy(SelectionofParticipant);
         click.elementBy(ADD);
     }
