@@ -75,7 +75,7 @@ public class ReportCardPage extends Keywords {
         Wait.forSeconds(2000);
        if(verify.IfElementExistsboolean(CardUnlocked))
         {
-            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
+            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().build().perform();
             //jsClick.elementBy(ReportCard);
@@ -91,7 +91,7 @@ public class ReportCardPage extends Keywords {
                     String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
             Wait.forSeconds(3000);
             //jsClick.elementBy(ReportCard);
-            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
+            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().build().perform();
         }
