@@ -122,7 +122,7 @@ public class ManageRecipient_Page extends Keywords {
 		type.data(accountNumber, Tools.RANDOMTEXT("RANDOMNUMBER",4));
 		type.data(accountName, Tools.RANDOMTEXT("RANDOMTEXT",8));
 		Wait.forSeconds(2000);
-		commonMethods.verifyAccNumErrMsg("Account number should be at least 8 digits long");
+		commonMethods.verifyAccNumErrMsg("Account number should be 12 digits long");
 		Wait.forSeconds(6000);
 		//type.data(accountNumber, randomAccountNumber);
 		//Wait.forSeconds(2000);
@@ -294,6 +294,7 @@ public class ManageRecipient_Page extends Keywords {
 	}
 
 	public void clickUpdate() throws Throwable {
+		Wait.forSeconds(2000);
 		click.elementBy(Update);
 	}
 
