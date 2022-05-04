@@ -295,7 +295,10 @@ public class ManageRecipient_Page extends Keywords {
 
 	public void clickUpdate() throws Throwable {
 		Wait.forSeconds(2000);
-		click.elementBy(Update);
+		WebElement element = driver.findElement(By.xpath("//button[@type=\"submit\"]"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(Update);
 	}
 
 }

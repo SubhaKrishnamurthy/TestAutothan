@@ -5,6 +5,7 @@ import actions.Wait;
 import base.Keywords;
 import exceptions.ApplicationException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -56,7 +57,7 @@ public class ReportCardPage extends Keywords {
 
 
 
-
+    private LoginPage loginPage = new LoginPage();
     private GreenPinPage greenPinPage = new GreenPinPage();
 
     public void select_PlayeverydayCreditCard() throws Throwable {
@@ -72,24 +73,25 @@ public class ReportCardPage extends Keywords {
         verify.elementIsPresent(ReportCard);
     }
     public void clickReportCard() throws Throwable {
-        Wait.forSeconds(2000);
-       if(verify.IfElementExistsboolean(CardUnlocked))
+        //Wait.forSeconds(2000);
+        if(verify.IfElementExistsboolean(CardUnlocked))
         {
-            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
+           WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().build().perform();
             //jsClick.elementBy(ReportCard);
         }
         else
         {
-         jsClick.elementBy(SwitchButton);
-         click.elementBy(UnlockMyCardButton);
+          loginPage.clickkeepmeloggedinbtn();
+          jsClick.elementBy(SwitchButton);
+          jsClick.elementBy(UnlockMyCardButton);
             String OTP="111111";
             Wait.forSeconds(3000);
             char[] ch=OTP.toCharArray();
             greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
                     String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
-            Wait.forSeconds(3000);
+            Wait.forSeconds(5000);
             //jsClick.elementBy(ReportCard);
             WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
             Actions actions = new Actions(driver);
@@ -140,7 +142,7 @@ public class ReportCardPage extends Keywords {
     }
     public void verify_CardReplacementDetailsHeader() throws Throwable {
         Wait.forSeconds(1000);
-        click.elementBy(GoBackButton);
+        //click.elementBy(GoBackButton);
         verify.elementIsPresent(CardReplacementDetails);
     }
     public void verify_ViewTheCardReplacement() throws Throwable {
@@ -169,6 +171,7 @@ public class ReportCardPage extends Keywords {
         Wait.forSeconds(1000);
         verify.elementIsPresent(GoBackButton);
         verify.elementIsPresent(UpdateMyAddress);
+        jsClick.elementBy(GoBackButton);
     }
     public void clickUpdateMyaddress() throws Throwable {
         Wait.forSeconds(1000);

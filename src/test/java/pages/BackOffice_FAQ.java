@@ -3,6 +3,10 @@ package pages;
 import actions.Wait;
 import base.Keywords;
 import helper.Tools;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BackOffice_FAQ extends Keywords {
 		BackOffice_UsersPage usersPage = new BackOffice_UsersPage();
@@ -68,7 +72,7 @@ public class BackOffice_FAQ extends Keywords {
 		//click.elementFromStoredData(keyEditFAQ,storeValue);
 		type.data(keyEditFAQTitle,Tools.RANDOMTEXT("RANDOMTEXT",10));
 		//type.data(keyFAQBody,"TEXT FAQ Test Automation Updating");
-		Wait.forSeconds(1500);
+		Wait.forSeconds(3000);
 		jsClick.elementBy(keyNextStep);
 		type.data(keyUpdateReason,"update reason");
 		commonMethods.clickSaveBtn();

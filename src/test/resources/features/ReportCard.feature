@@ -23,7 +23,7 @@ Feature: ReportCard Functionality Validation
     Then I Verify user can able to view Report Card
     When I  user to click on Report Card
     #Then I Verify whether application navigates to Let’s lock your card first popup.
-    And  I Verify the popup buttons "GO BACK" and "LOCK MY CARD"
+    And  I Verify the popup buttons "GO BACK" and "Lock my Card"
 
    #TCN_003
   @ReportCard03
