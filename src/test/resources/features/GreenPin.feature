@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@GreenPin
+@GreenPin @RegressionNew
 Feature: GreenPin - ChangePin and SetPin Functionality Validation
 
   ##Change Pin
@@ -33,9 +33,9 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     When user clicks an playeveryday card
     And Click on manage cards
     And Click on Change Pin
-    Then User able to enter six digits as 136801
+    Then User able to enter six digits as 111111
 #    And I click greenPin next Button
-    Then User able to enter six digits as 136801
+    Then User able to enter six digits as 111111
 #    And I click greenPin next Button
     Then User should be displayed with same Pin ErrMsg
 
@@ -69,9 +69,9 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
       And Click on Change Pin
       Then User able to enter six digits as 130495
 #      And I click greenPin next Button
-      Then User able to enter six digits as 998875
+      Then User able to enter six digits as 130495
 #      And I click greenPin next Button
-      Then User able to enter six digits as 998875
+#      Then User able to enter six digits as 998875
 #      And I click greenPin Confirm Button
       And I Enter the OTP Pin "445509" in OTP Page
       #And I click the Submit Button
@@ -93,12 +93,12 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     When user clicks an playeveryday card2
     And Click on manage cards2
     And Click on Set Pin
-    Then User able to enter six digits as 999999
-    And I click greenPin next Button
+#    Then User able to enter six digits as 999999
+#    And I click greenPin next Button
     Then User able to enter six digits as 998875
-    And I click greenPin next Button
+#    And I click greenPin next Button
     Then User able to enter six digits as 998875
-    And I click greenPin Confirm Button
+#    And I click greenPin Confirm Button
     And I Verify the OTP Filed is page is displayed
 
   @SP09 @Regression
@@ -108,9 +108,9 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     And Click on manage cards2
     And Click on Set Pin
     Then User able to enter six digits as 123456
-    And I click greenPin next Button
-    Then User able to enter six digits as 123456
-    And I click greenPin next Button
+#    And I click greenPin next Button
+#    Then User able to enter six digits as 123456
+#    And I click greenPin next Button
     Then User should be displayed with consecutive Numeric Values ErrMsg
 
   @SP10 @Regression
@@ -120,9 +120,9 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     And Click on manage cards2
     And Click on Set Pin
     Then User able to enter six digits as 111111
-    And I click greenPin next Button
-    Then User able to enter six digits as 111111
-    And I click greenPin next Button
+#    And I click greenPin next Button
+#    Then User able to enter six digits as 111111
+#    And I click greenPin next Button
     Then User should be displayed with same Pin ErrMsg
 
   @SP11 @Regression
@@ -132,11 +132,11 @@ Feature: GreenPin - ChangePin and SetPin Functionality Validation
     And Click on manage cards2
     And Click on Set Pin
     Then User able to enter six digits as 130495
-    And I click greenPin next Button
+#    And I click greenPin next Button
     Then User able to enter six digits as 664805
-    And I click greenPin next Button
-    Then User able to enter six digits as 675432
-    And I click greenPin Confirm Button
+#    And I click greenPin next Button
+#    Then User able to enter six digits as 675432
+#    And I click greenPin Confirm Button
     Then User should be displayed with Pin Doesnt Match ErrMsg
 
   @SP12 @Regression

@@ -46,6 +46,14 @@ public class PayBills {
     public void i_search_for_the_biller_in_MyBillers(String arg1) throws Throwable {
         payBills.searchBiller_MyBillers(arg1);
     }
+    @Then("^I search for the biller1 \"([^\"]*)\" in MyBillers$")
+    public void i_search_for_the_biller1_in_MyBillers(String arg1) throws Throwable {
+        payBills.searchBiller_MyBillers1(arg1);
+    }
+    @Then("^I search for the biller2 \"([^\"]*)\" in MyBillers$")
+    public void i_search_for_the_biller2_in_MyBillers(String arg1) throws Throwable {
+        payBills.searchBiller_MyBillers2(arg1);
+    }
 
     @Then("^I click the search result(\\d+)$")
     public void i_click_the_search_result(int arg1) throws Throwable {
@@ -185,4 +193,27 @@ public class PayBills {
 
     }
 
+    @And("^I Select the CreditCards Pay from account$")
+    public void iSelectTheCreditCardsPayFromAccount() throws Throwable {
+        payBills.select_CreditcardsAccount();
+    }
+
+    @Then("^I verify Payment Request successful message$")
+    public void iVerifyPaymentRequestSuccessfulMessage() throws Throwable {
+        payBills.verify_PaymentRequestsuccessful();
+    }
+
+    @And("^I Click to Select Account from payment details$")
+    public void iClickToSelectAccountFromPaymentDetails() throws Throwable {
+        payBills.click_selectAccount();
+    }
+
+    @And("^I Select the Card is locked Pay from account$")
+    public void iSelectTheCardIsLockedPayFromAccount() throws Throwable {
+        payBills.select_CreditcardLocked();
+    }
+
+    @Then("^I verify Card is locked message$")
+    public void iVerifyCardIsLockedMessage() {
+    }
 }

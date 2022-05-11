@@ -113,104 +113,104 @@ Feature: Request Payment Functionality Validation
         Then I Verify the Error message in the mobile number as "Mobile Number should have 11 digits"
 
       #TS101
-  @RP09
-      Scenario: Validation of Amount Requested is divided equally within the participants for Evenly split option
-      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-      When I click the Request payment under receive money
-      And I enter the amount field as "100"
-      And I select the split option as "Evenly"
-      And I add one participant as "Jaya"
-      And I add one participant as "09291971101"
-      And I enter the request payment message as "Test"
-      And I Select the from account in the displayed account list
-      And I click the next button
-      And I click the Request payemnt php button
-    Then I Verify Congratulation message,split amount as "PHP 50.00","PHP 50.00",total amt as "PHP 100.00" along with other details in request payment final page
-    Then I Click the New Transaction button Link
-      And I Click the Logout Button
-
-    #TS102
-  @RP10
-  Scenario: Validation of Participent amount details in Requesting from when split option is selected as Unevenly
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-    When I click the Request payment under receive money
-    And I enter the amount field as "100"
-    And I select the split option as "Unevenly"
-    And I add one participant as "Jaya"
-    And I add one participant as "09228499484"
-    And I split the amount as "40" and "60"
-    And I enter the request payment message as "Test"
-    And I Select the from account in the displayed account list
-    And I click the next button
-    And I click the Request payemnt php button
-    Then I Verify Congratulation message,split amount as "PHP 40.00","PHP 60.00",total amt as "PHP 100.00" along with other details in request payment final page
-    Then I Click the New Transaction button Link
-    And I Click the Logout Button
-
-     #TS103
-    @RP11
-    Scenario: Validation of Amount Requested is the same for each participants for Each split option
-      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-      When I click the Request payment under receive money
-      And I enter the amount field as "100"
-      And I select the split option as "Each"
-      And I add one participant as "Jaya"
-      And I add one participant as "09228499484"
-      And I enter the request payment message as "Test"
-      And I Select the from account in the displayed account list
-      And I click the next button
-      And I click the Request payemnt php button
-      Then I Verify Congratulation message,split amount as "PHP 100.00","PHP 100.00",total amt as "PHP 200.00" along with other details in request payment final page
-      Then I Click the New Transaction button Link
-      And I Click the Logout Button
-
-      #TS107
-    @RP12
-      Scenario: Validation of Error message under total amount requested,Next button is disabled if the Total Amount is not equal with the Requested Amount when split option is selected as Unevenly
-      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-      When I click the Request payment under receive money
-      And I enter the amount field as "100"
-      And I select the split option as "Unevenly"
-      And I add one participant as "Jaya"
-      And I add one participant as "09228499484"
-      And I split the amount as "40" and "40"
-      And I enter the request payment message as "Test"
-      Then I Verify the total amount error message in the total amount field
-
-    #TS108
-  @RP13
-    Scenario: Validation of Editing the Participent amount details in  Requesting from when split option is selected as Evenly
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-    When I click the Request payment under receive money
-    And I enter the amount field as "100"
-    And I add one participant as "Jaya"
-    And I add one participant as "09228499484"
-    And I enter the request payment message as "Test"
-    Then I verify that amount is splitted to the participants as "50" "50" and input for amount is disabled
-
-    #TS109
-  @RP14
-    Scenario: Validation of Editing Requesting from fields when split option is selected as Each
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-    When I click the Request payment under receive money
-    And I enter the amount field as "100"
-    And I select the split option as "Each"
-    And I add one participant as "Jaya"
-    And I add one participant as "09228499484"
-    And I enter the request payment message as "Test"
-    Then I verify that amount is splitted to the participants as "100" "100" and input for amount is disabled
-
-     #TS110
-  @RP15
-    Scenario: Validation of Editing Participent amount details in Requesting from when split option is selected as Unevenly
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-    When I click the Request payment under receive money
-    And I enter the amount field as "100"
-    And I select the split option as "Unevenly"
-    And I add one participant as "Jaya"
-    And I add one participant as "09228499484"
-    And I split the amount as "40" and "60"
-    Then I verify that amount is splitted to the participants as "40" "60" and input for amount is enabled
+#  @RP09
+#      Scenario: Validation of Amount Requested is divided equally within the participants for Evenly split option
+#      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#      When I click the Request payment under receive money
+#      And I enter the amount field as "100"
+#      And I select the split option as "Evenly"
+#      And I add one participant as "Jaya"
+#      And I add one participant as "09291971101"
+#      And I enter the request payment message as "Test"
+#      And I Select the from account in the displayed account list
+#      And I click the next button
+#      And I click the Request payemnt php button
+#    Then I Verify Congratulation message,split amount as "PHP 50.00","PHP 50.00",total amt as "PHP 100.00" along with other details in request payment final page
+#    Then I Click the New Transaction button Link
+#      And I Click the Logout Button
+#
+#    #TS102
+#  @RP10
+#  Scenario: Validation of Participent amount details in Requesting from when split option is selected as Unevenly
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#    When I click the Request payment under receive money
+#    And I enter the amount field as "100"
+#    And I select the split option as "Unevenly"
+#    And I add one participant as "Jaya"
+#    And I add one participant as "09228499484"
+#    And I split the amount as "40" and "60"
+#    And I enter the request payment message as "Test"
+#    And I Select the from account in the displayed account list
+#    And I click the next button
+#    And I click the Request payemnt php button
+#    Then I Verify Congratulation message,split amount as "PHP 40.00","PHP 60.00",total amt as "PHP 100.00" along with other details in request payment final page
+#    Then I Click the New Transaction button Link
+#    And I Click the Logout Button
+#
+#     #TS103
+#    @RP11
+#    Scenario: Validation of Amount Requested is the same for each participants for Each split option
+#      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#      When I click the Request payment under receive money
+#      And I enter the amount field as "100"
+#      And I select the split option as "Each"
+#      And I add one participant as "Jaya"
+#      And I add one participant as "09228499484"
+#      And I enter the request payment message as "Test"
+#      And I Select the from account in the displayed account list
+#      And I click the next button
+#      And I click the Request payemnt php button
+#      Then I Verify Congratulation message,split amount as "PHP 100.00","PHP 100.00",total amt as "PHP 200.00" along with other details in request payment final page
+#      Then I Click the New Transaction button Link
+#      And I Click the Logout Button
+#
+#      #TS107
+#    @RP12
+#      Scenario: Validation of Error message under total amount requested,Next button is disabled if the Total Amount is not equal with the Requested Amount when split option is selected as Unevenly
+#      Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#      When I click the Request payment under receive money
+#      And I enter the amount field as "100"
+#      And I select the split option as "Unevenly"
+#      And I add one participant as "Jaya"
+#      And I add one participant as "09228499484"
+#      And I split the amount as "40" and "40"
+#      And I enter the request payment message as "Test"
+#      Then I Verify the total amount error message in the total amount field
+#
+#    #TS108
+#  @RP13
+#    Scenario: Validation of Editing the Participent amount details in  Requesting from when split option is selected as Evenly
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#    When I click the Request payment under receive money
+#    And I enter the amount field as "100"
+#    And I add one participant as "Jaya"
+#    And I add one participant as "09228499484"
+#    And I enter the request payment message as "Test"
+#    Then I verify that amount is splitted to the participants as "50" "50" and input for amount is disabled
+#
+#    #TS109
+#  @RP14
+#    Scenario: Validation of Editing Requesting from fields when split option is selected as Each
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#    When I click the Request payment under receive money
+#    And I enter the amount field as "100"
+#    And I select the split option as "Each"
+#    And I add one participant as "Jaya"
+#    And I add one participant as "09228499484"
+#    And I enter the request payment message as "Test"
+#    Then I verify that amount is splitted to the participants as "100" "100" and input for amount is disabled
+#
+#     #TS110
+#  @RP15
+#    Scenario: Validation of Editing Participent amount details in Requesting from when split option is selected as Unevenly
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#    When I click the Request payment under receive money
+#    And I enter the amount field as "100"
+#    And I select the split option as "Unevenly"
+#    And I add one participant as "Jaya"
+#    And I add one participant as "09228499484"
+#    And I split the amount as "40" and "60"
+#    Then I verify that amount is splitted to the participants as "40" "60" and input for amount is enabled
 
     #TS111
     @RP16

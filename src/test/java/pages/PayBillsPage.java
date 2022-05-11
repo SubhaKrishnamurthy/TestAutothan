@@ -61,6 +61,8 @@ public class PayBillsPage extends Keywords {
     private String Payphp = "onlineBanking.PayBills.Payphp";
     private String PayBills = "onlineBanking.PayBills.PayBills";
     private String Searchbiller = "onlineBanking.PayBills.Searchbiller";
+    private String Searchbiller1 = "onlineBanking.PayBills.Searchbiller1";
+    private String Searchbiller2 = "onlineBanking.PayBills.Searchbiller2";
     private String DateInput = "onlineBanking.Common.DateInput";
     private String CancelVisitReview = "onlineBanking.MBB.CancelVisitReview";
     private String keyRepeatCheckBox ="onlineBanking.Fundtransfer.ChkRepeat";
@@ -75,6 +77,11 @@ public class PayBillsPage extends Keywords {
     private String keyAmount="onlineBanking.Fundtransfer.TxtAmount";
     private String BackButton = "onlineBanking.PayBills.BackButton";
     private String verifyPBMobileErrMsg = "onlineBanking.PayBills.verifyPBMobileErrMsg";
+    private String SelectCreditcardAccount = "onlineBanking.PayBills.SelectCreditcardAccount";
+    private String select_CreditcardLocked = "onlineBanking.PayBills.select_CreditcardLocked";
+    private String PaymentRequestsuccessful = "onlineBanking.PayBills.PaymentRequestsuccessful";
+    private String keySelectAcc = "onlineBanking.common.ClickToSelectAcc";
+    private String cardisLockedMessage  = "onlineBanking.PayBills.cardisLockedMessage";
 
     public SendMoney_Ownaccount Ownaccount = new SendMoney_Ownaccount();
     public ManageRecipient_Page manageRecipientPage = new ManageRecipient_Page();
@@ -125,7 +132,18 @@ public class PayBillsPage extends Keywords {
 
     public void searchBiller_MyBillers(String name) throws Throwable {
         click.elementBy(MyBillers);
-        type.data(Searchbiller,name);
+        jsClick.elementBy(Searchbiller);
+        //type.data(Searchbiller,name);
+    }
+    public void searchBiller_MyBillers1(String name) throws Throwable {
+        click.elementBy(MyBillers);
+        jsClick.elementBy(Searchbiller1);
+        //type.data(Searchbiller,name);
+    }
+    public void searchBiller_MyBillers2(String name) throws Throwable {
+        click.elementBy(MyBillers);
+        jsClick.elementBy(Searchbiller2);
+        //type.data(Searchbiller,name);
     }
 
     public void clickDate() throws Throwable {
@@ -334,4 +352,26 @@ public class PayBillsPage extends Keywords {
         Wait.forSeconds(1000);
         verify.elementTextMatching(verifyPBMobileErrMsg, arg0);
     }
-}
+    public void select_CreditcardsAccount() throws Throwable {
+        jsClick.elementBy(keySelectAcc);
+        Wait.forSeconds(1000);
+        click.elementBy(SelectCreditcardAccount);
+    }
+    public void verify_PaymentRequestsuccessful() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(PaymentRequestsuccessful);
+    }
+    public void click_selectAccount() throws Throwable {
+        jsClick.elementBy(keySelectAcc);
+
+    }
+    public void select_CreditcardLocked() throws Throwable {
+        jsClick.elementBy(keySelectAcc);
+        Wait.forSeconds(1000);
+        click.elementBy(select_CreditcardLocked);
+    }
+    public void verify_CardisLocked() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(cardisLockedMessage);
+    }
+  }
