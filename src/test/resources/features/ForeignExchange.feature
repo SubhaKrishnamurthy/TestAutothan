@@ -7,12 +7,12 @@
 Feature: Foreign Exchange functionality Validation
 
   #TCN003
-#@FX01
-#Scenario: Validate that the error message is displayed when the user has no USD and PHP accounts enrolled.
-#  Given I'm on login page of UB online banking application with user "subbu1" otp "222222"
-#  When I click on Foreign Exchange button in dashboard
-#  Then I verify Add Account and Cancel buttons by clicking SELLUSD button
-#  Then I verify Add Account and Cancel buttons by clicking BUYUSD button
+@FX01
+Scenario: Validate that the error message is displayed when the user has no USD and PHP accounts enrolled.
+  Given I'm on login page of UB online banking application with user "billpay01" otp "111111"
+  When I click on Foreign Exchange button in dashboard
+  Then I verify Add Account and Cancel buttons by clicking SELLUSD button
+  Then I verify Add Account and Cancel buttons by clicking BUYUSD button
 
   #TCN004
   @FX02
@@ -56,6 +56,7 @@ Feature: Foreign Exchange functionality Validation
     And I select USD amount "10"
     And I click the Update button in Buy USD section
     Then I Verify the Buying "USD 10.00" and Fromaccount "1022 2002 1750" and Purpose"Travel"
+    When I click the Request Deal button in FX convert page
     When I click the Buy USD button in FX convert page
     And I Enter the OTP "111111" in OTP Page
     Then I verify the Deal Received Title message
@@ -80,6 +81,7 @@ Feature: Foreign Exchange functionality Validation
     And I select USD amount "10"
     And I click the Update button in Buy USD section
     Then I Verify the Selling amount "USD 10.00" and Fromaccount "0300 1000 0249"
+    When I click the Request Deal button in FX convert page
     When I click the Sell USD button in FX convert page
     And I Enter the OTP "111111" in OTP Page
     Then I verify the Deal Received Title message

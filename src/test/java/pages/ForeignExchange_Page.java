@@ -181,7 +181,7 @@ public class ForeignExchange_Page extends Keywords {
 	}
 
 	public void clickRequestDealButton() throws Throwable {
-		Wait.forSeconds(1000);
+		Wait.forSeconds(10000);
 		click.elementBy(RequestDealButton);
 	}
 
