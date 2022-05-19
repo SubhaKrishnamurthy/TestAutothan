@@ -43,9 +43,7 @@ public class GreenPinPage extends Keywords {
         jsClick.elementBy(PlayEverDayCard);
     }
     public void click_PlayEveryDayCard2() throws Throwable {
-//        verify.elementIsPresent(PlayEverDayCard2);
-//        jsClick.elementBy(AccountsNextslide);
-//        jsClick.elementBy(AccountsNextslide);
+//
         Wait.forSeconds(6000);
         jsClick.elementBy(PlayEverDayCard2);
     }

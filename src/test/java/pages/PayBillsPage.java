@@ -190,7 +190,7 @@ public class PayBillsPage extends Keywords {
 
     public void click_PayPHP() throws Throwable {
       Wait.forSeconds(2000);
-        jsClick.elementBy(Payphp);
+      jsClick.elementBy(Payphp);
     }
 
     public void enterVisaNumber(String no) throws Throwable {
