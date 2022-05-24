@@ -379,14 +379,14 @@ Scenario: Validation of navigating back to Pay bills screen on closing the selec
     Then I verify review page error message as "Sorry, none of your accounts are eligible for this feature."
 
   # #Validation of Navigation in Payment Details screen when the card is Locked
-  @PB23
-  Scenario: Validation of making payment to biller from Biller list tab through CC
-    Given I'm on login page of UB online banking application with user "billpay01" otp "111111"
-    When I am on the PayBills page
-    And I search for the biller "MAPFRE INSULAR INSURANCE CORP" in Billers list
-    Then I click the search result1
-    And I enter paymentReferenceNo as "0006992990424204" PayorsName as "MANUEL CANAPI SUNGA" and PolicyNo as "2312001000781"
-    And I click the Next Button
-    And I Select the Card is locked Pay from account
-    Then I verify Card is locked message
+#  @PB23
+#  Scenario: Validation of making payment to biller from Biller list tab through CC
+#    Given I'm on login page of UB online banking application with user "billpay01" otp "111111"
+#    When I am on the PayBills page
+#    And I search for the biller "MAPFRE INSULAR INSURANCE CORP" in Billers list
+#    Then I click the search result1
+#    And I enter paymentReferenceNo as "0006992990424204" PayorsName as "MANUEL CANAPI SUNGA" and PolicyNo as "2312001000781"
+#    And I click the Next Button
+#    And I Select the Card is locked Pay from account
+#    Then I verify Card is locked message
 

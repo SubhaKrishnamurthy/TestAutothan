@@ -71,13 +71,13 @@ Feature: Backoffice functionalities Validation
       And I enter "test" in search text and click search button
       Then I verify Invalid signup search results
       And I select Add FAQ Type as "Account Number"
-      And I enter "109340000703" in search text and click search button
+      And I enter "102040027529" in search text and click search button
       Then I verify Invalid signup search results
       And I select Add FAQ Type as "Mobile No"
       And I enter "639494082075" in search text and click search button
       Then I verify Invalid signup search results
       And I select Add FAQ Type as "CIF"
-      And I enter "R802017092" in search text and click search button
+      And I enter "90011267228" in search text and click search button
       Then I verify Invalid signup search results
       And I select Add FAQ Type as "CIF Type"
       And I select CIF type as "Finacle" and click search button

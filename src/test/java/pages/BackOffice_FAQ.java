@@ -5,6 +5,7 @@ import base.Keywords;
 import helper.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -73,7 +74,10 @@ public class BackOffice_FAQ extends Keywords {
 		type.data(keyEditFAQTitle,Tools.RANDOMTEXT("RANDOMTEXT",10));
 		//type.data(keyFAQBody,"TEXT FAQ Test Automation Updating");
 		Wait.forSeconds(3000);
-		jsClick.elementBy(keyNextStep);
+		WebElement element = driver.findElement(By.xpath("//*[text()='Next Step'] | //span[text()='Update']/parent::button"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element).click().build().perform();
+		//click.elementBy(keyNextStep);
 		type.data(keyUpdateReason,"update reason");
 		commonMethods.clickSaveBtn();
 	}

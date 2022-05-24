@@ -214,6 +214,7 @@ public class PayBills {
     }
 
     @Then("^I verify Card is locked message$")
-    public void iVerifyCardIsLockedMessage() {
+    public void iVerifyCardIsLockedMessage() throws Throwable {
+        payBills.verify_CardisLocked();
     }
 }
