@@ -32,9 +32,11 @@ public class CreditLimitIncreasePage extends Keywords {
     public void click_Slider() throws Throwable {
         Wait.forSeconds(2000);
         WebElement slider = driver.findElement(By.xpath("//div[@class='ant-slider-handle']"));
+//        Actions move = new Actions(driver);
+//        Actions action = (Actions) move.dragAndDropBy(slider, 30, 0).build();
+//        action.perform();
         Actions move = new Actions(driver);
-        Actions action = (Actions) move.dragAndDropBy(slider, 30, 0).build();
-        action.perform();
+        move.moveToElement(slider).clickAndHold().moveByOffset(0,250).release().perform();
     }
 
 }
