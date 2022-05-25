@@ -13,7 +13,9 @@ public class CreditLimitIncreasePage extends Keywords {
     private String RIPopupMessage  = "onlineBanking.CreditLimit.RIPopupMessage";
     private String CurrentLimitMessage  = "onlineBanking.CreditLimit.CurrentLimitMessage";
     private String keygotit="onlineBanking.Fundtransfer.BtnGotit";
-
+    private String CreditAmount ="onlineBanking.CreditLimit.CreditAmount";
+    private String MaximumAllowedMessage ="onlineBanking.CreditLimit.MaximumAllowedMessage";
+    private String IncrementMessage ="onlineBanking.CreditLimit.IncrementMessage";
     public void click_CreditCardAccount() throws Throwable {
         Wait.forSeconds(5000);
         click.elementBy(CreditcardAccount);
@@ -40,5 +42,17 @@ public class CreditLimitIncreasePage extends Keywords {
     public void Verify_CurrentLimitMessage() throws Throwable {
         Wait.forSeconds(5000);
         verify.elementIsPresent(CurrentLimitMessage);
+    }
+    public void Verify_MaximumAllowedMessage() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(MaximumAllowedMessage);
+    }
+    public void Verify_IncrementMessage() throws Throwable {
+        Wait.forSeconds(2000);
+        verify.elementIsPresent(IncrementMessage);
+    }
+    public void creditLimitAmount(String Amt) throws Throwable {
+        Wait.forSeconds(3000);
+        type.data(CreditAmount,Amt);
     }
 }

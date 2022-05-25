@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,7 +22,7 @@ public class CreditLimitIncrease {
     public void iVerifyTheApplicationDisplayThePopMessage() throws Throwable {
         CreditLimitIncreasePage.Verify_RIPopupMessage();
     }
-    @And("^I Click on GotIt button$")
+    @When("^I Click on GotIt button$")
     public void iClickOnGotItButton() throws Throwable {
         CreditLimitIncreasePage.click_GotIt();
     }
@@ -32,12 +33,17 @@ public class CreditLimitIncrease {
     }
 
     @And("^Check Application allow to enter the amount entered is above maximum allowed$")
-    public void checkApplicationAllowToEnterTheAmountEnteredIsAboveMaximumAllowed() {
-        
+    public void checkApplicationAllowToEnterTheAmountEnteredIsAboveMaximumAllowed() throws Throwable {
+        CreditLimitIncreasePage.Verify_MaximumAllowedMessage();
     }
 
     @And("^Check Application allow to enter the amount is not in increments of (\\d+)s$")
-    public void checkApplicationAllowToEnterTheAmountIsNotInIncrementsOfS(int arg0) {
+    public void checkApplicationAllowToEnterTheAmountIsNotInIncrementsOfS(int arg0) throws Throwable {
+        CreditLimitIncreasePage.Verify_IncrementMessage();
     }
 
+    @And("^I Enter the Amount \"([^\"]*)\" in new credit limit$")
+    public void iEnterTheAmountInNewCreditLimit(String arg0) throws Throwable {
+        CreditLimitIncreasePage.creditLimitAmount(arg0);
+    }
 }

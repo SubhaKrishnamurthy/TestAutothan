@@ -49,6 +49,7 @@ public class Keywords {
 
     public void goBack() throws ApplicationException{
         driver.navigate().back();
+
     }
 
     public static void refreshPage() throws ApplicationException{
