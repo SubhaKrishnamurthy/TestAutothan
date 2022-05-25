@@ -11,6 +11,7 @@ public class CreditLimitIncreasePage extends Keywords {
     private String CreditcardAccount  = "onlineBanking.CreditLimit.CreditcardAccount";
     private String RequestIncreaseButton  = "onlineBanking.CreditLimit.RequestIncreaseButton";
     private String RIPopupMessage  = "onlineBanking.CreditLimit.RIPopupMessage";
+    private String CurrentLimitMessage  = "onlineBanking.CreditLimit.CurrentLimitMessage";
     private String keygotit="onlineBanking.Fundtransfer.BtnGotit";
 
     public void click_CreditCardAccount() throws Throwable {
@@ -31,12 +32,13 @@ public class CreditLimitIncreasePage extends Keywords {
     }
     public void click_Slider() throws Throwable {
         Wait.forSeconds(2000);
-        WebElement slider = driver.findElement(By.xpath("//div[@class='ant-slider-handle']"));
-//        Actions move = new Actions(driver);
-//        Actions action = (Actions) move.dragAndDropBy(slider, 30, 0).build();
-//        action.perform();
+        WebElement slider = driver.findElement(By.xpath("//*[@class=\"ant-slider ant-slider-horizontal\"]"));
         Actions move = new Actions(driver);
-        move.moveToElement(slider).clickAndHold().moveByOffset(0,250).release().perform();
+        move.moveToElement(slider).clickAndHold().moveByOffset(0, 100).release().perform();
+        move.moveToElement(slider).clickAndHold().moveByOffset(-500, 0).release().perform();
     }
-
+    public void Verify_CurrentLimitMessage() throws Throwable {
+        Wait.forSeconds(5000);
+        verify.elementIsPresent(CurrentLimitMessage);
+    }
 }

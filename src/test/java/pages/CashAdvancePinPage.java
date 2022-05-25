@@ -23,7 +23,7 @@ public class CashAdvancePinPage extends Keywords {
     }
 
     public void verifySetCashAdvancedPin(String PIN)throws Throwable {
-        Wait.forSeconds(4000);
+        Wait.forSeconds(5000);
         verify.elementTextMatching(SetCashAdvancePin, PIN);
     }
     public void verifySixDigitPin(String SixDigit)throws Throwable {
@@ -45,7 +45,7 @@ public class CashAdvancePinPage extends Keywords {
         click.elementBy(ClearPin);
     }
     public void verifyResetCashAdvancedPin(String PIN)throws Throwable {
-        //Wait.forSeconds(2000);
+        Wait.forSeconds(5000);
         verify.elementTextMatching(ResetCashAdvancePin, PIN);
     }
 

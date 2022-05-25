@@ -3,8 +3,8 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@CAPin @RegressionNew
-Feature: Cash Advance Pin - Set Cash Advance Pin and Reset Cash Advance Pin Functionality Validation
+@CAPin
+Feature: CashAdvancePin
 
   ##Set Cash Advance Pin
   @CA01 @Regression

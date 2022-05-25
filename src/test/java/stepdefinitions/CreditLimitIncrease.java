@@ -28,6 +28,7 @@ public class CreditLimitIncrease {
     @And("^Check Application allow to enter \\(or\\) Slide less than the Current Limit$")
     public void checkApplicationAllowToEnterOrSlideLessThanTheCurrentLimit() throws Throwable {
         CreditLimitIncreasePage.click_Slider();
+        CreditLimitIncreasePage.Verify_CurrentLimitMessage();
     }
 
     @And("^Check Application allow to enter the amount entered is above maximum allowed$")
