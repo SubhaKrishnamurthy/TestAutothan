@@ -78,6 +78,7 @@ public class BackOffice_FAQ extends Keywords {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().build().perform();
 		//click.elementBy(keyNextStep);
+		Wait.forSeconds(3000);
 		type.data(keyUpdateReason,"update reason");
 		commonMethods.clickSaveBtn();
 	}
