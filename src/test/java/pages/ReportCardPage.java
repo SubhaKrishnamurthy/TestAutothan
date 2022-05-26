@@ -63,6 +63,7 @@ public class ReportCardPage extends Keywords {
     public void select_PlayeverydayCreditCard() throws Throwable {
         Wait.forSeconds(6000);
         click.elementBy(PlayeverydayCreditCard);
+
     }
     public void clickManageCard() throws Throwable {
         Wait.forSeconds(4000);
@@ -76,7 +77,7 @@ public class ReportCardPage extends Keywords {
         //Wait.forSeconds(2000);
         if(verify.IfElementExistsboolean(CardUnlocked))
         {
-           WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
+           WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().build().perform();
             //jsClick.elementBy(ReportCard);
@@ -93,7 +94,7 @@ public class ReportCardPage extends Keywords {
                     String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
             Wait.forSeconds(5000);
             //jsClick.elementBy(ReportCard);
-            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']"));
+            WebElement element = driver.findElement(By.xpath("//*[text()='Report Card']/parent::div"));
             Actions actions = new Actions(driver);
             actions.moveToElement(element).click().build().perform();
         }
