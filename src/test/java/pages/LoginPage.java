@@ -93,7 +93,7 @@ public class LoginPage extends Keywords {
 
 
 	public void clickkeepmeloggedinbtn() throws Throwable {
-		Wait.forSeconds(5000);
+		Wait.forSeconds(2000);
 		try {
 
 			if(keepmeloggedinbtn!=null)
