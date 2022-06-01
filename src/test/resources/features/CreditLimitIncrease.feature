@@ -14,6 +14,7 @@ Feature: Credit Limit Increase Request Validation
     And  click the Request Increase button for Credit Card
     Then I Verify the Application display the Pop Message
     When I Click on GotIt button
+    And I Enter the Amount "6001" in new credit limit
     And  Check Application allow to enter (or) Slide less than the Current Limit
 
   @CLI02

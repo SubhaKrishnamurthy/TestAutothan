@@ -107,7 +107,7 @@ public class SendMoney_Ownaccount extends Keywords {
 
 	public void clickTransferbutton() throws Throwable {
 		Wait.forSeconds(2000);
-		WebElement element = driver.findElement(By.xpath("//span[@class='d-block']//parent::span/parent::span/parent::button[@class=\"action-button btn -wide btn-primary\"]"));
+		WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().build().perform();
 		//click.elementBy(keytransfer);

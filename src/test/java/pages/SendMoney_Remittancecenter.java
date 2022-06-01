@@ -154,7 +154,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 		else {
 
 			type.data(keynationality, "Filipino");
-			Wait.forSeconds(2000);
+			Wait.forSeconds(4000);
 			Robot robot = new Robot();
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyPress(KeyEvent.VK_TAB);
@@ -170,7 +170,7 @@ public class SendMoney_Remittancecenter extends Keywords {
 			click.elementBy(keybirthcalendardate);
 		}
 
-		String Datatoselect="2";
+		String Datatoselect="1";
 		Wait.forSeconds(3000);
 		String Datatoselectxpath= "("+"//*[text()="+"'"+Datatoselect+"'"+"]"+")"+"[1]";
         driver.findElement(By.xpath(Datatoselectxpath)).click();
