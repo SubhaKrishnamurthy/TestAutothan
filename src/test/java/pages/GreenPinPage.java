@@ -48,12 +48,12 @@ public class GreenPinPage extends Keywords {
         jsClick.elementBy(PlayEverDayCard2);
     }
     public void click_ManageCards() throws Throwable {
-       Wait.forSeconds(8000);
+       Wait.forSeconds(10000);
         click.elementBy(ManageCards);
     }
 
     public void click_CardImg() throws Throwable {
-        Wait.forSeconds(8000);
+        Wait.forSeconds(10000);
         jsClick.elementBy(PlayEveryDayCardImg);
     }
     public void click_CardImg2() throws Throwable {
