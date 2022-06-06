@@ -244,7 +244,7 @@ public class MobileBranchBanking_Page extends Keywords {
 
     public void enterAccNumber(String accNum) throws Throwable {
         Wait.forSeconds(2000);
-            type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1,accNum);
+        type.data(PG_MOBILEBRANCHBANKINGBOOKVISITDETAILSAccountNumber1,accNum);
         Wait.forSeconds(1000);
     }
 

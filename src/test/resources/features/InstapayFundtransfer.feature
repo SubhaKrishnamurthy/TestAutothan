@@ -21,6 +21,7 @@ Feature: Instapay Fund Transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
+    And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
@@ -44,6 +45,7 @@ Feature: Instapay Fund Transfer
     And I click the Next Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
+    And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "222222" in OTP Page
     #And I click the Submit Button
@@ -121,6 +123,7 @@ Feature: Instapay Fund Transfer
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I click the Transfer button
+    And I click the proceed with transfer
     #Then I Verify the OTP Filed is page is displayed
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
