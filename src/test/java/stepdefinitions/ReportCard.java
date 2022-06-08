@@ -95,7 +95,7 @@ public class ReportCard {
 
     @Then("^I Verify whether the user is able to view the work address\\.$")
     public void iVerifyWhetherTheUserIsAbleToViewTheWorkAddress() throws Throwable {
-        reportCardPage.verify_NoWorkAddressMessage();
+        reportCardPage.verify_WorkAddressMessage();
     }
 
     @And("^User is able to click on the UPDATE ADDRESS button$")

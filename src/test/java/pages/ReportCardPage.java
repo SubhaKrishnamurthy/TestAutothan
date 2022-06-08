@@ -33,6 +33,7 @@ public class ReportCardPage extends Keywords {
     private String Landmark = "onlineBanking.ReportCard.Landmark";
     private String DeliveryAddress= "onlineBanking.ReportCard.DeliveryAddress";
     private String NoWorkAddressMessage= "onlineBanking.ReportCard.NoWorkAddressMessage";
+    private String WorkAddressMessage= "onlineBanking.ReportCard.WorkAddressMessage";
     private String UpdateMyAddress= "onlineBanking.ReportCard.UpdateMyAddress";
     private String EmailCustomerService= "onlineBanking.ReportCard.EmailCustomerService";
     private String EmailNowButton= "onlineBanking.ReportCard.EmailNowButton";
@@ -157,12 +158,16 @@ public class ReportCardPage extends Keywords {
 
     }
     public void clickWorkAddress() throws ApplicationException {
-        Wait.forSeconds(1000);
-        click.elementBy(WorkAddress);
+        Wait.forSeconds(2000);
+        jsClick.elementBy(WorkAddress);
     }
     public void verify_NoWorkAddressMessage() throws Throwable {
         Wait.forSeconds(1000);
         verify.elementIsPresent(NoWorkAddressMessage);
+    }
+    public void verify_WorkAddressMessage() throws Throwable {
+        Wait.forSeconds(1000);
+        verify.elementIsPresent(WorkAddressMessage);
     }
     public void clickUpdateAddress() throws ApplicationException {
         Wait.forSeconds(1000);
