@@ -38,6 +38,11 @@ public class SendMoney_PDDTS extends Keywords {
 		verify.elementTextMatching(keyPDDTStext1,text1);
 		verify.elementTextMatching(keyPDDTStext2,text2);
 	}
+	public void verifyPDDTStextvalidation() throws Throwable {
+		Wait.forSeconds(3000);
+		verify.IfElementExists(keyPDDTStext1);
+		verify.IfElementExists(keyPDDTStext2);
+	}
 
 	public void entertheAddressfield() throws Throwable{
       type.data(keyPDDTSAddresshousenumber,"25");

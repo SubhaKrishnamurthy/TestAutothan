@@ -21,7 +21,8 @@ public class PDDTSFundtransfer {
 
 
     @And("^I Verify the PDDTS Text verification$")
-    public void iVerifyThePDDTSTextVerification() {
+    public void iVerifyThePDDTSTextVerification() throws Throwable {
+        PDDTS.verifyPDDTStextvalidation();
 
     }
 

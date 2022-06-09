@@ -13,7 +13,8 @@ Feature: PDDTS Fund Transfer
     When I click the Send/Receive Money
     Then I click the Other banks or Ewallet
     And I Verify PDDTS link isexist
-    And I Verify the PDDTS Text verification "PHP 50,000 transaction limit." and "No cut-off."
+#    And I Verify the PDDTS Text verification "PHP 50,000 transaction limit." and "No cut-off."
+    And I Verify the PDDTS Text verification
 
   @PDDTS2
   Scenario:Validation of error message when transaction amount less than 10 USD
