@@ -110,9 +110,8 @@ public class SendMoney_Ownaccount extends Keywords {
 		if(Drivertype.equalsIgnoreCase("firefox"))
 		{
 			Wait.forSeconds(2000);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,1000)", "");
 			WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).click().build().perform();
 		}
@@ -189,10 +188,9 @@ public class SendMoney_Ownaccount extends Keywords {
 	public void clickCancel() throws Throwable {
 
 		if (Drivertype.equalsIgnoreCase("firefox")) {
-			Wait.forSeconds(3000);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,1000)", "");
-			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
+			Wait.forSeconds(2000);
+			WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).click().build().perform();
 		} else {
