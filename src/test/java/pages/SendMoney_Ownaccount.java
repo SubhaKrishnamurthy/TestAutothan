@@ -106,11 +106,23 @@ public class SendMoney_Ownaccount extends Keywords {
 	}
 
 	public void clickTransferbutton() throws Throwable {
-		Wait.forSeconds(2000);
-		WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().build().perform();
-		//click.elementBy(keytransfer);
+
+		if(Drivertype.equalsIgnoreCase("firefox"))
+		{
+			Wait.forSeconds(2000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,1000)", "");
+			WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).click().build().perform();
+		}
+		else{
+			Wait.forSeconds(2000);
+			WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).click().build().perform();
+		}
+
 	}
 
 	public void verifyOTPpageisdisplayed() throws Throwable {
@@ -175,11 +187,20 @@ public class SendMoney_Ownaccount extends Keywords {
 		click.elementBy(keyYes);
 	}
 	public void clickCancel() throws Throwable {
-		Wait.forSeconds(3000);
-		WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(element).click().build().perform();
-		//click.elementBy(keycancel);
+
+		if (Drivertype.equalsIgnoreCase("firefox")) {
+			Wait.forSeconds(3000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,1000)", "");
+			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).click().build().perform();
+		} else {
+			Wait.forSeconds(3000);
+			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element).click().build().perform();
+		}
 	}
 	public void navigatetoBack() throws Throwable {
 		Wait.forSeconds(1000);
