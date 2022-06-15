@@ -45,7 +45,7 @@ public class CashAdvancePinPage extends Keywords {
         click.elementBy(ClearPin);
     }
     public void verifyResetCashAdvancedPin(String PIN)throws Throwable {
-        Wait.forSeconds(5000);
+        Wait.forSeconds(10000);
         verify.elementTextMatching(ResetCashAdvancePin, PIN);
     }
 
