@@ -14,7 +14,7 @@ Feature: Instapay Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Instapay link
     And I click the from account number
-    And I select the Account number from saved recipient "106400001643"
+    And I select the Account number from saved recipient "09560823094"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Enter the Amount "500" in ub account transfer
@@ -26,7 +26,7 @@ Feature: Instapay Fund Transfer
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 1,500.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0956 0823 094" and Amount"PHP 500.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
@@ -105,7 +105,7 @@ Feature: Instapay Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Instapay link
     And I click the from account number
-    And I select the Account number from saved recipient "106400001643"
+    And I select the Account number from saved recipient "09560823094"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Enter the Amount "100" in ub account transfer
@@ -115,7 +115,7 @@ Feature: Instapay Fund Transfer
     And I click the from account number
     And I verify the Gotit button displayed or not
     And I Click the toaccountnumber edit
-    And I select the Account number from saved recipient "106400001643"
+    And I select the Account number from saved recipient "09560823094"
     And I click the update Button
     And I verify the Gotit button displayed or not
     And I Click the Amount details edit
@@ -128,7 +128,7 @@ Feature: Instapay Fund Transfer
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button
     Then I verify the Successful message is displayed
-    And I Verify the Fromaccount"**** **** 1750" and Toaccount "1064 0000 1643" and Amount"PHP 200.00"and
+    And I Verify the Fromaccount"**** **** 1750" and Toaccount "0956 0823 094" and Amount"PHP 200.00"and
     Then I Click the New Transaction button Link
     And I Verify the Ownaccount Link
     And I Click the Logout Button
