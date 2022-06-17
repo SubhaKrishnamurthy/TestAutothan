@@ -189,7 +189,7 @@ public class SendMoney_Ownaccount extends Keywords {
 
 		if (Drivertype.equalsIgnoreCase("firefox")) {
 			Wait.forSeconds(2000);
-			WebElement element = driver.findElement(By.xpath("//button[@class=\"action-button btn -wide btn-primary\"]"));
+			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).click().build().perform();
