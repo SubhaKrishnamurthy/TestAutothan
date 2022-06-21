@@ -46,8 +46,8 @@ public class BuyLoad {
         Buyload.clickSelectfromlist();
     }
 
-    @And("^I verify tansfer successful displayed$")
-    public void iVerifyTansferSuccessfulDisplayed() throws Throwable {
+    @And("^I verify transfer successful displayed$")
+    public void iVerifyTransferSuccessfulDisplayed() throws Throwable {
         Buyload.verifypurchasesuccessful();
     }
 

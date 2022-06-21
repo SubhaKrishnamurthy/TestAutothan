@@ -20,7 +20,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I enter the name "Sundar" in search field
+    And I enter the name "Sandeep" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -29,8 +29,8 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
+    And I verify transfer successful displayed
+    And I Verify the buyload details "**** **** 1750" and "09286524657" and "PHP 100.00"
 
   @BuyLoad3
   Scenario:Validation of contacts in contacts screen using Mobile number of user in MyContacts
@@ -39,7 +39,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I enter the name "9457946537" in search field
+    And I enter the name "09286524657" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -48,8 +48,8 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
+    And I verify transfer successful displayed
+    And I Verify the buyload details "**** **** 1750" and "09286524657" and "PHP 100.00"
 
   @BuyLoad4
   Scenario:Validation of contacts in contacts screen using Mobile number of user in Favorites
@@ -59,7 +59,7 @@ Feature: BuyLoad
     And I verify the mobile number is exist
     And I click the select from list
     And I click the favourite link
-    And I enter the name "9457946537" in search field
+    And I enter the name "09286524657" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -68,8 +68,8 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
+    And I verify transfer successful displayed
+    And I Verify the buyload details "**** **** 1750" and "09286524657" and "PHP 100.00"
 
   @BuyLoad5
   Scenario:Validation of contacts in contacts screen using name of user in Favorites
@@ -79,7 +79,7 @@ Feature: BuyLoad
     And I verify the mobile number is exist
     And I click the select from list
     And I click the favourite link
-    And I enter the name "Sundar" in search field
+    And I enter the name "Sandeep" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -88,8 +88,8 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
+    And I verify transfer successful displayed
+    And I Verify the buyload details "**** **** 1750" and "09286524657" and "PHP 100.00"
 
   @BuyLoad6
   Scenario:Validation of Buyload more than account current balance
@@ -115,7 +115,7 @@ Feature: BuyLoad
     And I verify the mobile number is exist
     And I click the select from list
     #And I click the favourite link
-    And I enter the name "Sundar" in search field
+    And I enter the name "Sandeep" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -124,7 +124,7 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
+    And I verify transfer successful displayed
     And I verify the new purchase link
     And I verify the select contact is exist
 
@@ -376,7 +376,7 @@ Feature: BuyLoad
     Then I click select contact in the buyload page
     And I verify the mobile number is exist
     And I click the select from list
-    And I enter the name "Sundar" in search field
+    And I enter the name "Sandeep" in search field
     And I click the search result
     And I click the Next Button
     And I click the from account number
@@ -385,7 +385,7 @@ Feature: BuyLoad
     And I click purchaseload button
     And I Enter the OTP "111111" in OTP Page
     #And I click the Submit Button in buyload
-    And I verify tansfer successful displayed
-    And I Verify the buyload details "**** **** 1750" and "09457946537" and "PHP 100.00"
+    And I verify transfer successful displayed
+    And I Verify the buyload details "**** **** 1750" and "09286524657" and "PHP 100.00"
 
     #279Validation of Recent purchases by clicking Recent purchase tab

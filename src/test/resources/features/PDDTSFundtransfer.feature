@@ -42,18 +42,19 @@ Feature: PDDTS Fund Transfer
     And I enter the amount "999999" more than account balance
     Then I verify the error "Amount is greater than your current balance"
 
-  @PDDTS4
-  Scenario:Validation of error message when transaction amount is more than transaction Limit
-    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
-    When I click the Send/Receive Money
-    Then I click the Other banks or Ewallet
-    And I click PDDTS Link
-    And I select the Account number from saved recipient "106400001643"
-    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
-    And I enter the Address details in PDDTS Address field
-    And I click the Next Button
-    And I enter the amount "600"
-    Then I verify the error "The amount entered is greater than the current set limit. Please check your Transaction Limits settings"
+#  Test data issue(06/21/2022 by Rajasekar)
+#  @PDDTS4
+#  Scenario:Validation of error message when transaction amount is more than transaction Limit
+#    Given I'm on login page of UB online banking application with user "cbautotest1" otp "111111"
+#    When I click the Send/Receive Money
+#    Then I click the Other banks or Ewallet
+#    And I click PDDTS Link
+#    And I select the Account number from saved recipient "106400001643"
+#    And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
+#    And I enter the Address details in PDDTS Address field
+#    And I click the Next Button
+#    And I enter the amount "600"
+#    Then I verify the error "The amount entered is greater than the current set limit. Please check your Transaction Limits settings"
 
   @PDDTS5
   Scenario: Verify if Review and Transfer screen is as per template

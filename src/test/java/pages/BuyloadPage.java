@@ -65,6 +65,9 @@ public class BuyloadPage extends Keywords {
 	private String keyfromaccountnumber="onlineBanking.BuyLoad.lblfromaccountnumber";
 	private String keymobilenumbervalidate="onlineBanking.BuyLoad.lblmobilenumber";
 	private String keyamount="onlineBanking.BuyLoad.lblamount";
+	private String OkButton = "onlineBanking.FX.Ok";
+
+	private GreenPinPage greenPinPage = new GreenPinPage();
 
 	public void clickManageContacts() throws Throwable {
 		verify.IfElementExists(ManageContacts);
@@ -110,9 +113,23 @@ public class BuyloadPage extends Keywords {
 	}
 
 	public void verifypurchasesuccessful() throws Throwable {
-		verify.IfElementExists(keypurchasesuccessful);
-
-	}
+		if(verify.IfElementExistsboolean(keypurchasesuccessful))
+			{
+				verify.IfElementExists(keypurchasesuccessful);
+			}
+			else{
+				Wait.forSeconds(2000);
+				click.elementBy(OkButton);
+				click.elementBy(keypurchaseload);
+				Wait.forSeconds(3000);
+				String OTP="111111";
+				char[] ch=OTP.toCharArray();
+				greenPinPage.enter_Pin(String.valueOf(ch[0]),String.valueOf(ch[1]),String.valueOf(ch[2]),
+						String.valueOf(ch[3]),String.valueOf(ch[4]),String.valueOf(ch[5]));
+				Wait.forSeconds(3000);
+				verify.IfElementExists(keypurchasesuccessful);
+			}
+		}
 	public void clickLnkfavourites() throws Throwable {
 		click.elementBy(keylnkfavourites);
 	}
