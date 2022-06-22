@@ -105,7 +105,7 @@ Feature: Instapay Fund Transfer
     Then I click the Other banks or Ewallet
     And I click the Instapay link
     And I click the from account number
-    And I select the Account number from saved recipient "09560823094"
+    And I select the Account number from saved recipient "106400001643"
     And I enter the recipient email "ubpcbautomation1@gmail.com" mobilenumber "9457946537" and remarks"Instapay Transfer"
     And I click the Next Button
     And I Enter the Amount "100" in ub account transfer
@@ -114,9 +114,9 @@ Feature: Instapay Fund Transfer
     And I Click the fromaccountnumber edit
     And I click the from account number
     And I verify the Gotit button displayed or not
-    And I Click the toaccountnumber edit
-    And I select the Account number from saved recipient "09560823094"
-    And I click the update Button
+#    And I Click the toaccountnumber edit
+#    And I select the Account number from saved recipient "09560823094"
+     And I click the update Button
     And I verify the Gotit button displayed or not
     And I Click the Amount details edit
     And I Enter the Amount "200" in ub account transfer
