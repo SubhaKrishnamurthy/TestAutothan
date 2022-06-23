@@ -116,8 +116,8 @@ Feature: Instapay Fund Transfer
     And I verify the Gotit button displayed or not
 #    And I Click the toaccountnumber edit
 #    And I select the Account number from saved recipient "09560823094"
-     And I click the update Button
-    And I verify the Gotit button displayed or not
+#    And I click the update Button
+#    And I verify the Gotit button displayed or not
     And I Click the Amount details edit
     And I Enter the Amount "200" in ub account transfer
     And I click the update Button
