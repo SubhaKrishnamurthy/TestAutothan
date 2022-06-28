@@ -95,8 +95,8 @@ public class InstallmentHistoryPage extends Keywords {
         Wait.forSeconds(5000);
         verify.elementIsPresent(ReferenceNumber);
         verify.elementIsPresent(PurchasedOn);
-        verify.elementIsPresent(MerchantName);
-        verify.elementIsPresent(ProgressBar);
+//        verify.elementIsPresent(MerchantName);
+//        verify.elementIsPresent(ProgressBar);
         verify.elementIsPresent(Installments);
         verify.elementIsPresent(RemainingBalance);
         verify.elementIsPresent(PurchaseAmount);
