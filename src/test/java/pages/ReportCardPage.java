@@ -139,7 +139,7 @@ public class ReportCardPage extends Keywords {
         click.elementBy(MaybeLaterButton);
     }
     public void clickProceedToCardReporting() throws Throwable {
-        Wait.forSeconds(2000);
+        Wait.forSeconds(5000);
         click.elementBy(ProceedToCardReportingButton);
     }
     public void verify_CardReplacementDetailsHeader() throws Throwable {
