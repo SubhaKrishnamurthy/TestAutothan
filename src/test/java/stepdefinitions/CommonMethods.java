@@ -178,12 +178,14 @@ public class CommonMethods {
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
                 actions.Wait.forSeconds(50000);
             }
+            actions.Wait.forSeconds(5000);
+            login.clickRecaptcha();
             actions.Wait.forSeconds(6000);
             login.enterUsernme(arg0);
             actions.Wait.forSeconds(5000);
             login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-            actions.Wait.forSeconds(8000);
-            login.clickRecaptcha();
+//            actions.Wait.forSeconds(8000);
+//            login.clickRecaptcha();
             login.clickLoginbutton();
             actions.Wait.forSeconds(3000);
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
