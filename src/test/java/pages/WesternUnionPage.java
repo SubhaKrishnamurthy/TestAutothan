@@ -15,8 +15,8 @@ import static driver.DriverManager.EnvironmentType;
 
 public class WesternUnionPage extends Keywords {
 
-    private String otherPartners ="onlineBanking.WesternUnion.otherPartners";
     private String WesternUnion ="onlineBanking.WesternUnion.WesternUnion";
+    private String WesternUnionPage ="onlineBanking.WesternUnion.WesternUnionPage";
     private String RecieveMoneyFromWU ="onlineBanking.WesternUnion.RecieveMoneyFromWU";
     private String InvalidAmount ="onlineBanking.WesternUnion.InvalidAmount";
     private String MTCNCode ="onlineBanking.WesternUnion.MTCNCode";
@@ -38,18 +38,13 @@ public class WesternUnionPage extends Keywords {
 
     public void clickWesternUnion() throws Throwable {
         dashboardHomePage.clickSendReceive();
-        verify.IfElementExists(otherPartners);
-        click.elementBy(otherPartners);
-        /*
-        if(verify.IfElementExistsboolean(OK)){
-            click.elementBy(OK);
-        }
-         */
+        verify.IfElementExists(WesternUnion);
+        click.elementBy(WesternUnion);
         Wait.forSeconds(8000);
         click.elementBy(getStartedBtn);
+        Wait.forSeconds(4000);
+        click.elementBy(WesternUnionPage);
         Wait.forSeconds(8000);
-        click.elementBy(WesternUnion);
-        Wait.forSeconds(3000);
         goalsPage.clickNextBtn();
     }
 
