@@ -189,13 +189,13 @@ public class SendMoney_Ownaccount extends Keywords {
 
 		if (Drivertype.equalsIgnoreCase("firefox")) {
 			Wait.forSeconds(2000);
-			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
+			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']/parent::button"));
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).click().build().perform();
 		} else {
 			Wait.forSeconds(3000);
-			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']"));
+			WebElement element = driver.findElement(By.xpath("//button[@type='reset']|//span[text()='Cancel']/parent::button"));
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).click().build().perform();
 		}

@@ -74,7 +74,7 @@ public class RequestPayment_Page extends Keywords {
     public void clickRequestPaymentLink() throws Throwable
     {
         click.elementBy(AnotherUnionBackAcc);
-        click.elementBy(RequestPaymentLink);
+        jsClick.elementBy(RequestPaymentLink);
     }
 
     public void clickSplitBillsLink() throws Throwable {
