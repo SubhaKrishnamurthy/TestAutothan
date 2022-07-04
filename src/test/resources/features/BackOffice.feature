@@ -918,7 +918,7 @@ Feature: Backoffice functionalities Validation
   Scenario: Validation of DisApproval for updated biller field for Favorite biller
     Given Login with user "OnboardAutomation"
     When I Click the Managebiller link
-    Then I Enter the biller code "8FORBES" in biller search and click the search icon
+    Then I Enter the biller code "1PINOY" in biller search and click the search icon
     And I Edit the biller and update details
     Then Login with user "BillsApprover"
     And DisApprove the the biller approval

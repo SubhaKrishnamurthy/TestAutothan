@@ -60,19 +60,19 @@ public class BackOffice_CustomerInformationPage extends Keywords {
 	public void verifyAndClickEmail() throws  Throwable {
 		Wait.forSeconds(5000);
 		verify.elementIsPresent(keyEmailBtn);
-		click.elementBy(keyEmailBtn);
+		jsClick.elementBy(keyEmailBtn);
 	}
 
 	public void verifyAndClickEmail_SMS() throws Throwable {
 		Wait.forSeconds(2000);
 		verify.elementIsPresent(keyEmail_SMSBtn);
-		click.elementBy(keyEmail_SMSBtn);
+		jsClick.elementBy(keyEmail_SMSBtn);
 	}
 
 	public void verifyAndClickSMS() throws Throwable {
 		Wait.forSeconds(2000);
 		verify.elementIsPresent(keySMSBtn);
-		click.elementBy(keySMSBtn);
+		jsClick.elementBy(keySMSBtn);
 	}
 
 	public void verifyTtile() throws Throwable {
