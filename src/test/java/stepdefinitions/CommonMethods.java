@@ -140,11 +140,10 @@ public class CommonMethods {
                 actions.Wait.forSeconds(50000);
             }
             actions.Wait.forSeconds(3000);
+            login.clickRecaptcha();
+            actions.Wait.forSeconds(3000);
             login.enterUsernme(arg0);
             login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-            //Thread.sleep(3000);
-            actions.Wait.forSeconds(3000);
-            login.clickRecaptcha();
             login.clickLoginbutton();
             actions.Wait.forSeconds(3000);
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
@@ -180,12 +179,10 @@ public class CommonMethods {
             }
             actions.Wait.forSeconds(5000);
             login.clickRecaptcha();
-            actions.Wait.forSeconds(6000);
+            actions.Wait.forSeconds(3000);
             login.enterUsernme(arg0);
-            actions.Wait.forSeconds(5000);
+            actions.Wait.forSeconds(2000);
             login.enterPassword(PropertyReader.testDataOf("Account1_Password").trim());
-//            actions.Wait.forSeconds(8000);
-//            login.clickRecaptcha();
             login.clickLoginbutton();
             actions.Wait.forSeconds(3000);
             if (Drivertype.equalsIgnoreCase("safari") && EnvironmentType.equalsIgnoreCase("mac")) {
@@ -200,7 +197,4 @@ public class CommonMethods {
             }
         dashboardHomePage.clickClose_Popup();
     }
-
-
-
 }

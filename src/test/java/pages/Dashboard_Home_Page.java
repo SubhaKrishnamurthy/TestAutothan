@@ -170,7 +170,7 @@ public class Dashboard_Home_Page extends Keywords {
 		try{
 			if(PopUp!=null)
 			{
-				Wait.forSeconds(3000);
+				Wait.forSeconds(4000);
 				jsClick.elementBy(CloseBtn);
 			}
 		}
