@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@FX @Regression @RegressionNew
+@FX @RegressionNew
 Feature: Foreign Exchange functionality Validation
 
   #TCN003

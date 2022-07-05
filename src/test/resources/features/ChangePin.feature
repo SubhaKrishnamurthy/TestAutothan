@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@ChangePin @RegressionNew
+@ChangePin
 Feature: ChangePin Validation
 
   ##Change Pin

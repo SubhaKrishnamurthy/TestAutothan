@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @Instapay @Regression @RegressionNew
+ @Instapay @RegressionNew
 Feature: Instapay Fund Transfer
 
   @Instapay1

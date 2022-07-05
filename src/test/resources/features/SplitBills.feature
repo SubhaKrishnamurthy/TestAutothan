@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@SplitBills @Regression @RegressionNew
+@SplitBills @RegressionNew
 Feature: SplitBills Functionality Validation
 
   #TSSB01

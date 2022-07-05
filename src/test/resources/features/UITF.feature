@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@UITF @Regression
+@UITF
 Feature: UITF Validation
 
   #TCUITF02

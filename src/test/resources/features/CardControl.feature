@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@CC @Regression @RegressionNew
+@CC
 Feature: Card Control Functionality Validation
 
   #Transaction control functionality got changed. hence removed 3 scenarios ( TS130, TS131 and TS126 )

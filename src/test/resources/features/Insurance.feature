@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@Insurance @Regression @RegressionNew
+@Insurance  @RegressionNew
 Feature: Insurance Functionality Validation
 
   #TC-INS-01

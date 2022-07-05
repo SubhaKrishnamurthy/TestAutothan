@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @Login @Regression @RegressionNew
+ @Login @RegressionNew
 Feature: Login Page Validation
 
  #TS075

@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@Reportcard @RegressionNew
+@Reportcard
 Feature: ReportCard Functionality Validation
 
    #TCN_001

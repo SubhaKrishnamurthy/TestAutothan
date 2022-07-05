@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
- @BuyLoad @Regression @RegressionNew
+ @BuyLoad @RegressionNew
 Feature: BuyLoad
 
   @BuyLoad1

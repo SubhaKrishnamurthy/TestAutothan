@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @RC @Regression @RegressionNew
+ @RC  @RegressionNew
 Feature: Remittancecenter
 
   @RC1

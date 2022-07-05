@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@WU @Regression @RegressionNew
+@WU  @RegressionNew
 Feature: WesternUnion Functionality Validation
 
     #TC-WU-01

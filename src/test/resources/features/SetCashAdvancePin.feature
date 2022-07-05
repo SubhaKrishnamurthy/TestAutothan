@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@SCAPin @RegressionNew
+@SCAPin
 Feature: SetCashAdvancePin
 
   ##Set Cash Advance Pin

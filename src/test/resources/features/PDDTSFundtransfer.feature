@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @PDDTS @Regression @RegressionNew
+ @PDDTS  @RegressionNew
 Feature: PDDTS Fund Transfer
 
   @PDDTS1

@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@MBB @Regression @RegressionNew @RegressionNew
+@MBB  @RegressionNew
 Feature: Mobile Branch Banking Functionality Validation
 
   #TS281

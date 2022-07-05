@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@RCAPin @RegressionNew
+@RCAPin
 Feature: ResetCashAdvancePin
 
  ##Reset Cash Advance Pin

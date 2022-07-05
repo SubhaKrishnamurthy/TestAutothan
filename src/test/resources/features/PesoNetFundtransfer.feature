@@ -4,7 +4,7 @@
 # Jira URL: ?
 
 
- @PesoNet @Regression @RegressionNew
+ @PesoNet @RegressionNew
 Feature: PesoNet Fund Transfer
 
   @PesoNet1

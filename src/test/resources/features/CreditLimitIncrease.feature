@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@CLI @RegressionNew
+@CLI
 Feature: Credit Limit Increase Request Validation
 
   ##Credit Limit Increase

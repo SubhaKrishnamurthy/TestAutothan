@@ -3,7 +3,7 @@
 # Jira ID: ?
 # Jira URL: ?
 
-@SetPin @RegressionNew
+@SetPin
 Feature: SetPin Validation
 
    ##Set Pin
