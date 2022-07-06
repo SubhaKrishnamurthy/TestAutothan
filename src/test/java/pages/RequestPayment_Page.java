@@ -74,6 +74,7 @@ public class RequestPayment_Page extends Keywords {
     public void clickRequestPaymentLink() throws Throwable
     {
         click.elementBy(AnotherUnionBackAcc);
+        Wait.forSeconds(2000);
         jsClick.elementBy(RequestPaymentLink);
     }
 
