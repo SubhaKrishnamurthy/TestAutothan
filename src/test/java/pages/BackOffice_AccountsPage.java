@@ -13,14 +13,5 @@ public class BackOffice_AccountsPage extends Keywords {
 		click.elementBy(keyManageClients);
 	}
 
-	public void clickInvalidSignUpsTab() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyInvalidSignUps);
-	}
-
-	public void clickManageUSerIDForApproval() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyManageUserIDforApproval);
-	}
 
 }

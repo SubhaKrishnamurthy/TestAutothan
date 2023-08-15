@@ -16,6 +16,7 @@ import java.util.Properties;
 
 public class PropertyReader {
     private static Logger log=Logger.getLogger(PropertyReader.class);
+
     public static String valueOf(String property) {
         File file=new File("src/test/resources/settings/ProjectSettings.properties");
         Properties prop=new Properties();
@@ -26,7 +27,8 @@ public class PropertyReader {
         }catch (IOException ex) {
             log.error(ex);
             ex.printStackTrace();
-        }finally {
+        }
+        finally {
             if(input!=null) {
                 try{
                     input.close();
@@ -150,7 +152,8 @@ public class PropertyReader {
             prop.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();
-        } finally {
+        }
+        finally {
             if (input != null) {
                 try {
                     input.close();

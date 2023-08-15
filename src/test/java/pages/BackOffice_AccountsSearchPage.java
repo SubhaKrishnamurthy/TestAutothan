@@ -68,10 +68,6 @@ public class BackOffice_AccountsSearchPage extends Keywords {
 		actions.Return.clickEnter(keySearchtxtBox);
 	}
 
-	public void clickActiveUser() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		click.elementBy(keyActiveUserID);
-	}
 
 
 }

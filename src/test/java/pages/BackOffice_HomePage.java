@@ -29,22 +29,5 @@ public class BackOffice_HomePage extends Keywords {
 		actions.Wait.forSeconds(2000);
 	}
 
-	public void clickScheduledActivities() throws Throwable {
-		actions.Wait.forSeconds(3000);
-		jsClick.elementBy(keyScheduledActivities);
-	}
 
-	public void clickRegister() throws Throwable {
-		actions.Wait.forSeconds(3000);
-		jsClick.elementBy(keyRegister);
-	}
-
-	public void clickSendNotification() throws Throwable {
-		actions.Wait.forSeconds(2000);
-		jsClick.elementBy(keySendNotification);
-	}
-
-	public void clickFAQ() throws Throwable {
-		jsClick.elementBy(keyFAQ);
-	}
 }

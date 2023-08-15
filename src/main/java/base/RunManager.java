@@ -1,7 +1,9 @@
+
 package base;
 
 import constants.Keys;
 import org.apache.log4j.Logger;
+import org.testng.annotations.BeforeTest;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,6 +25,7 @@ public class RunManager
         log.info("Hey! "+System.getProperty("user.name")+", Logging everything from here ....");
         log.info("Run ID is --> "+runID);
     }
+
 
     private void createRunFolder() {
         boolean dirReady=true;
@@ -51,7 +54,8 @@ public class RunManager
         Test.attributes.put(Keys.RunFolder,runFolder+"/");
     }
 
-    private String getRunID() {
+    private String getRunID()
+    {
         Properties prop=new Properties();
         FileInputStream in;
         FileOutputStream out;
@@ -81,3 +85,4 @@ public class RunManager
         return "Run-"+id;
     }
 }
+

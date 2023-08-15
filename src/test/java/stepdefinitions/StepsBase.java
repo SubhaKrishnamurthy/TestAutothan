@@ -10,7 +10,7 @@ import exceptions.EnvironmentException;
 public class StepsBase{
 	
 	private static Logger log=Logger.getLogger(StepsBase.class);
-	
+
 	@Before
     public void beforeScenario(Scenario scenario) throws EnvironmentException{
         log.info("Executing S C E N A R I O : " + scenario.getName());

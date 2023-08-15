@@ -1,5 +1,8 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.cucumber.listener.ExtentProperties;
 import com.cucumber.listener.Reporter;
 import com.github.javafaker.Faker;
@@ -7,28 +10,38 @@ import constants.Keys;
 import helper.PropertyReader;
 import helper.Tools;
 import org.apache.log4j.Logger;
+import org.testng.ITestResult;
 
 import java.io.File;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class Test {
+public class Test
+{
 
     public static Logger log;
     public static Tools tools=new Tools();
     public static HashMap<String,String> attributes=new HashMap<>();
     public static Faker faker=new Faker(Locale.CANADA);
+    public static ExtentHtmlReporter htmlReporter;
+    public static ExtentReports extent;
+    public static ExtentTest curTest;
 
     static {
         new RunManager();
         log=Logger.getLogger(Test.class);
     }
 
-    public static void setup(){
+    public static void setup()
+    {
         ExtentProperties extentProperties=ExtentProperties.INSTANCE;
-        try{
+        try
+        {
             extentProperties.setReportPath(Test.attributes.get(Keys.RunFolder)+"Automation-Dashboard.html");
-        }catch (Exception ex){
+
+        }
+        catch(Exception ex)
+        {
             log.error("Failed to intialize report \n"+ex);
         }
     }
@@ -46,8 +59,10 @@ public class Test {
             Reporter.setSystemInfo("Selenium Version",PropertyReader.valueOf("Tool.Selenium.Version"));
             Reporter.setSystemInfo("Maven Version",PropertyReader.valueOf("Tool.Maven.Version"));
             log.info("Report is generated @ "+Test.attributes.get(Keys.RunFolder)+"Automation-Dashboard.html");
-        }catch (Exception ex){
+        }
+        catch (Exception ex){
             log.error("Failed to generate report \n"+ex);
         }
     }
+
 }

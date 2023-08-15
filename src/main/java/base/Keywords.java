@@ -30,7 +30,8 @@ public class Keywords {
     public static Return aReturn = new Return();
 
 
-    public static void launchApplication() throws EnvironmentException {
+    public static void launchApplication() throws EnvironmentException
+    {
         DriverManager webDriverManager = new DriverManager();
             try{
                 driver=webDriverManager.getDriver();
@@ -38,7 +39,8 @@ public class Keywords {
                 driver.get(PropertyReader.valueOf("Driver.Applicationurl").trim());
                 driver.manage().window().maximize();
                 driver.manage().deleteAllCookies();
-            }catch (Throwable ex){
+            }
+            catch (Throwable ex){
                 throw new EnvironmentException("Driver failed to launch \n"+ex);
             }
         }

@@ -22,6 +22,8 @@ public class Get extends Keywords{
     public WebElement elementBy(String locatorKey) throws ApplicationException {
         try{
             singleTestObj=webDriverWait.until(ExpectedConditions.presenceOfElementLocated(PropertyReader.locatorOf(locatorKey)));
+
+
         }
         catch(TimeoutException ex) {
             log.error("Element ["+locatorKey+"] not found!");
