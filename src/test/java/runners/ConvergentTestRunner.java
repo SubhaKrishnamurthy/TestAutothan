@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:","pretty","json:target/json-output/Automation-Summary.json"},
         //dryRun = true,
         //tags={"@Regression"}
-        tags={"@B01"}
+        tags={"@Login01"}
 )
 
 public class ConvergentTestRunner extends Test {

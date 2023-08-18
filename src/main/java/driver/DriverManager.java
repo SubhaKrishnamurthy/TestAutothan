@@ -63,7 +63,7 @@ public class DriverManager {
                 driver = new FirefoxDriver();
                 break;
             case "CHROME" :
-                System.setProperty("webdriver.chrome.driver","src/main/java/driver/windows/chromedriver.exe" );
+             //   System.setProperty("webdriver.chrome.driver","src/main/java/driver/windows/chromedriver.exe" );
                 driver = new ChromeDriver();
                 break;
             case "EDGE" :
