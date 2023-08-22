@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         tags={"@Login01"}
 )
 
-public class ConvergentTestRunner extends Test {
+public class TestRunner extends Test {
     @BeforeClass
     public static void initialize() throws EnvironmentException{
         String Drivertype=PropertyReader.valueOf("Driver.Drivertype").trim();
