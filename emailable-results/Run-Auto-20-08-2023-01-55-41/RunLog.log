@@ -1,0 +1,6 @@
+2023-08-20 13:55:41,257  INFO [main] RunManager:25 - Hey! itexpleo, Logging everything from here ....
+2023-08-20 13:55:41,261  INFO [main] RunManager:26 - Run ID is --> Run-Auto-20-08-2023-01-55-41
+2023-08-20 13:55:41,425  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of Login functionality
+2023-08-20 13:55:41,602 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2023-08-20 13:55:41,608 ERROR [main] Test:64 - Failed to generate report 
+java.lang.NullPointerException

@@ -1,0 +1,4 @@
+2023-08-23 01:54:46,802  INFO [main] RunManager:25 - Hey! itexpleo, Logging everything from here ....
+2023-08-23 01:54:46,805  INFO [main] RunManager:26 - Run ID is --> Run-Auto-23-08-2023-01-54-46
+2023-08-23 01:54:46,907  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of Login functionality
+2023-08-23 01:55:00,836  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-23-08-2023-01-54-46/Automation-Dashboard.html

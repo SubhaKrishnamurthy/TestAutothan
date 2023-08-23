@@ -1,0 +1,8 @@
+2023-08-23 01:45:51,420  INFO [main] RunManager:25 - Hey! itexpleo, Logging everything from here ....
+2023-08-23 01:45:51,423  INFO [main] RunManager:26 - Run ID is --> Run-Auto-23-08-2023-01-45-51
+2023-08-23 01:45:51,529  INFO [main] StepsBase:16 - Executing S C E N A R I O : Validation of Login functionality
+2023-08-23 01:46:24,096  INFO [main] Click:39 - Click element [OrangeHRM.Login.LoginBtn]
+2023-08-23 01:46:24,097  INFO [main] Screenshot:22 - Capture screenshot
+2023-08-23 01:46:24,318  INFO [main] Screenshot:28 - Captured!
+2023-08-23 01:46:24,430  INFO [main] Click:50 - Click Successful!
+2023-08-23 01:46:24,635  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-23-08-2023-01-45-51/Automation-Dashboard.html
